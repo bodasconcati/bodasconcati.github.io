@@ -1,0 +1,11 @@
+COMO AÑADIR FOTOS A LA WEB
+
+1. En GitHub abre la carpeta galeria.
+2. Pulsa Add file > Upload files.
+3. Sube las nuevas fotos dentro de galeria.
+4. Haz Commit changes directamente a main.
+5. Espera unos minutos a que GitHub Pages publique los cambios.
+
+No hace falta tocar el código. La sección “Bodas reales” detecta automáticamente las imágenes de esta carpeta.
+
+Para mantener el orden, puedes empezar los nombres con 14-, 15-, 16-, etc.
