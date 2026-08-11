@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Bodas Con Cati | Wedding Planner en Mallorca</title>
+
+  <meta name="description" content="Bodas Con Cati, wedding planner en Mallorca. Organización y coordinación de bodas, planificación integral y coordinación del día de la boda.">
+  <meta name="keywords" content="wedding planner Mallorca, organizadora de bodas Mallorca, bodas Mallorca, organización de bodas, Bodas Con Cati">
+
+  <style>
+    :root {
+      --dorado: #a8794f;
+      --dorado-claro: #c9a477;
+      --crema: #faf7f2;
+      --beige: #eee3d3;
+      --texto: #3d3936;
+      --blanco: #ffffff;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Georgia, "Times New Roman", serif;
+      color: var(--texto);
+      background: var(--crema);
+      line-height: 1.7;
+    }
+
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(255,255,255,0.96);
+      border-bottom: 1px solid #e8ded2;
+      padding: 16px 5%;
+      text-align: center;
+    }
+
+    nav a {
+      color: var(--texto);
+      text-decoration: none;
+      margin: 0 14px;
+      font-size: 14px;
+      letter-spacing: 0.5px;
+    }
+
+    nav a:hover {
+      color: var(--dorado);
+    }
+
+    header {
+      min-height: 80vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 70px 20px;
+      background: var(--blanco);
+    }
+
+    .hero {
+      max-width: 900px;
+    }
+
+    .logo-text {
+      color: var(--dorado);
+      font-size: clamp(45px, 8vw, 85px);
+      font-style: italic;
+      margin-bottom: 5px;
+    }
+
+    .subtitle {
+      color: var(--dorado);
+      letter-spacing: 6px;
+      font-size: 16px;
+      margin-bottom: 35px;
+    }
+
+    .hero h1 {
+      font-size: clamp(30px, 5vw, 52px);
+      font-weight: normal;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      max-width: 700px;
+      margin: auto;
+      font-size: 19px;
+    }
+
+    .button {
+      display: inline-block;
+      margin-top: 30px;
+      padding: 14px 30px;
+      background: var(--dorado);
+      color: white;
+      text-decoration: none;
+      border-radius: 3px;
+      font-size: 16px;
+    }
+
+    .button:hover {
+      background: #8e633f;
+    }
+
+    section {
+      padding: 80px 7%;
+    }
+
+    .white {
+      background: var(--blanco);
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+
+    .section-title h2 {
+      color: var(--dorado);
+      font-size: clamp(32px, 5vw, 48px);
+      font-weight: normal;
+      font-style: italic;
+    }
+
+    .section-title p {
+      max-width: 700px;
+      margin: 15px auto 0;
+    }
+
+    .about {
+      max-width: 900px;
+      margin: auto;
+      text-align: center;
+      font-size: 18px;
+    }
+
+    .services {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 25px;
+      max-width: 1150px;
+      margin: auto;
+    }
+
+    .service {
+      background: var(--crema);
+      padding: 35px 25px;
+      text-align: center;
+      border: 1px solid #e6d9c9;
+    }
+
+    .service h3 {
+      color: var(--dorado);
+      font-size: 25px;
+      margin-bottom: 15px;
+      font-weight: normal;
+    }
+
+    .packages {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 25px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .package {
+      background: var(--blanco);
+      padding: 40px 28px;
+      border: 1px solid #dfd0bd;
+      text-align: center;
+    }
+
+    .package.featured {
+      border: 2px solid var(--dorado);
+      transform: translateY(-10px);
+    }
+
+    .package h3 {
+      color: var(--dorado);
+      font-size: 35px;
+      font-style: italic;
+      font-weight: normal;
+    }
+
+    .price {
+      font-size: 34px;
+      margin: 15px 0 25px;
+      font-weight: bold;
+    }
+
+    .package ul {
+      list-style: none;
+      text-align: left;
+    }
+
+    .package li {
+      margin: 14px 0;
+      padding-left: 20px;
+      position: relative;
+    }
+
+    .package li::before {
+      content: "✓";
+      position: absolute;
+      left: 0;
+      color: var(--dorado);
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 15px;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .gallery div {
+      height: 260px;
+      background: var(--beige);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #8d7a67;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .reviews {
+      max-width: 900px;
+      margin: auto;
+      display: grid;
+      gap: 20px;
+    }
+
+    .review {
+      background: var(--crema);
+      padding: 25px;
+      text-align: center;
+      border: 1px solid #e5d8c9;
+    }
+
+    .stars {
+      color: var(--dorado);
+      font-size: 22px;
+      letter-spacing: 3px;
+    }
+
+    .faq {
+      max-width: 850px;
+      margin: auto;
+    }
+
+    details {
+      background: var(--blanco);
+      margin-bottom: 12px;
+      padding: 20px 25px;
+      border: 1px solid #e3d7ca;
+    }
+
+    summary {
+      cursor: pointer;
+      color: var(--dorado);
+      font-size: 18px;
+    }
+
+    footer {
+      background: #3d3936;
+      color: white;
+      text-align: center;
+      padding: 50px 20px;
+    }
+
+    footer h2 {
+      color: var(--dorado-claro);
+      font-style: italic;
+      font-weight: normal;
+      font-size: 35px;
+    }
+
+    footer a {
+      color: white;
+    }
+
+    @media (max-width: 800px) {
+      nav {
+        padding: 12px 5px;
+      }
+
+      nav a {
+        margin: 0 5px;
+        font-size: 11px;
+      }
+
+      .services,
+      .packages,
+      .gallery {
+        grid-template-columns: 1fr;
+      }
+
+      .package.featured {
+        transform: none;
+      }
+
+      section {
+        padding: 60px 6%;
+      }
+
+      .gallery div {
+        height: 220px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav>
+    <a href="#inicio">Inicio</a>
+    <a href="#sobre-mi">Sobre mí</a>
+    <a href="#servicios">Servicios</a>
+    <a href="#paquetes">Paquetes</a>
+    <a href="#galeria">Galería</a>
+    <a href="#contacto">Contacto</a>
+  </nav>
+
+  <header id="inicio">
+    <div class="hero">
+
+      <div class="logo-text">Bodas Con Cati</div>
+      <div class="subtitle">WEDDING PLANNER · MALLORCA</div>
+
+      <h1>El día que siempre habéis soñado</h1>
+
+      <p>
+        Os acompaño a crear una boda única, cuidando cada detalle
+        para que vosotros podáis disfrutar de vuestro gran día.
+      </p>
+
+      <a class="button" href="#contacto">Hablemos de vuestra boda</a>
+
+    </div>
+  </header>
+
+  <section id="sobre-mi" class="white">
+
+    <div class="section-title">
+      <h2>Sobre mí</h2>
+    </div>
+
+    <div class="about">
+      <p>
+        Soy Cati y llevo más de 10 años formando parte del mundo de
+        las bodas y los eventos.
+      </p>
+
+      <br>
+
+      <p>
+        Como Wedding Planner en Mallorca, mi objetivo es acompañaros
+        durante el proceso de organización, aportando experiencia,
+        tranquilidad y atención a cada detalle.
+      </p>
+
+      <br>
+
+      <p>
+        Porque organizar una boda no debería convertirse en una fuente
+        de estrés. Vosotros disfrutáis del camino y yo me encargo de
+        que todo fluya.
+      </p>
+    </div>
+
+  </section>
+
+  <section id="servicios">
+
+    <div class="section-title">
+      <h2>Mis servicios</h2>
+      <p>
+        Organización, planificación y coordinación para que vuestra
+        boda sea exactamente como la habéis imaginado.
+      </p>
+    </div>
+
+    <div class="services">
+
+      <div class="service">
+        <h3>Organización integral</h3>
+        <p>
+          Planificación completa de vuestra boda desde el primer
+          momento hasta el último detalle.
+        </p>
+      </div>
+
+      <div class="service">
+        <h3>Coordinación</h3>
+        <p>
+          Me encargo de coordinar proveedores, horarios y montaje
+          para que vosotros solo tengáis que disfrutar.
+        </p>
+      </div>
+
+      <div class="service">
+        <h3>Wedding Planner Mallorca</h3>
+        <p>
+          Acompañamiento personalizado para parejas que celebran
+          su boda en Mallorca.
+        </p>
+      </div>
+
+    </div>
+
+  </section>
+
+  <section id="paquetes" class="white">
+
+    <div class="section-title">
+      <h2>Paquetes 2027</h2>
+      <p>
+        Tres formas diferentes de vivir vuestra boda con la
+        tranquilidad de tener a Cati a vuestro lado.
+      </p>
+    </div>
+
+    <div class="packages">
+
+      <div class="package">
+
+        <h3>Sentir</h3>
+
+        <div class="price">1.300 €</div>
+
+        <p><strong>Para parejas que ya lo tienen todo preparado.</strong></p>
+
+        <ul>
+          <li>Relevo de la organización 30 días antes</li>
+          <li>Revisión de contratos y servicios</li>
+          <li>Elaboración del timing definitivo</li>
+          <li>Coordinación con proveedores</li>
+          <li>Reuniones de planificación</li>
+          <li>Coordinación general del día de la boda</li>
+          <li>Presencia durante el montaje y el evento</li>
+        </ul>
+
+      </div>
+
+      <div class="package featured">
+
+        <h3>Soñar</h3>
+
+        <div class="price">1.500 €</div>
+
+        <p><strong>Organización de la boda de principio a fin.</strong></p>
+
+        <ul>
+          <li>Diseño y planificación integral</li>
+          <li>Creación del concepto y estilo</li>
+          <li>Selección y gestión de proveedores</li>
+          <li>Solicitud y revisión de presupuestos</li>
+          <li>Gestión de la comunicación con proveedores</li>
+          <li>Control y seguimiento del presupuesto</li>
+          <li>Reuniones de planificación</li>
+          <li>Coordinación completa del día de la boda</li>
+          <li>Presencia desde el montaje hasta el final</li>
+        </ul>
+
+      </div>
+
+      <div class="package">
+
+        <h3>Sin Fin</h3>
+
+        <div class="price">2.000 €</div>
+
+        <p><strong>Una experiencia completa de principio a fin.</strong></p>
+
+        <ul>
+          <li>Todo lo incluido en el Paquete Soñar</li>
+          <li>Organización del día después</li>
+          <li>Gestión del evento post-boda</li>
+          <li>Búsqueda y coordinación de proveedores adicionales</li>
+          <li>Presencia durante el evento del día siguiente</li>
+          <li>Gestión del desmontaje</li>
+          <li>Cierre final con proveedores</li>
+        </ul>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <section id="galeria">
+
+    <div class="section-title">
+      <h2>Bodas reales</h2>
+      <p>
+        Una pequeña muestra de momentos, detalles y celebraciones.
+      </p>
+    </div>
+
+    <div class="gallery">
+
+      <div>Tu fotografía de boda aquí</div>
+      <div>Tu fotografía de boda aquí</div>
+      <div>Tu fotografía de boda aquí</div>
+      <div>Tu fotografía de boda aquí</div>
+      <div>Tu fotografía de boda aquí</div>
+      <div>Tu fotografía de boda aquí</div>
+
+    </div>
+
+  </section>
+
+  <section id="testimonios" class="white">
+
+    <div class="section-title">
+      <h2>Lo que dicen de mí</h2>
+    </div>
+
+    <div class="reviews">
+
+      <div class="review">
+        <div class="stars">★★★★★</div>
+        <p>
+          Gracias por hacer que todo fuese mucho más fácil y por
+          cuidar cada detalle de nuestro día.
+        </p>
+      </div>
+
+      <div class="review">
+        <div class="stars">★★★★★</div>
+        <p>
+          Una profesional cercana, organizada y pendiente de todo.
+          Nos permitió disfrutar de nuestra boda sin preocupaciones.
+        </p>
+      </div>
+
+    </div>
+
+  </section>
+
+  <section id="faq">
+
+    <div class="section-title">
+      <h2>Preguntas frecuentes</h2>
+    </div>
+
+    <div class="faq">
+
+      <details>
+        <summary>¿Trabajas en toda Mallorca?</summary>
+        <p>
+          Sí. Trabajo con parejas que celebran su boda en diferentes
+          localizaciones de Mallorca.
+        </p>
+      </details>
+
+      <details>
+        <summary>¿Cuándo debemos contactar contigo?</summary>
+        <p>
+          Cuanto antes mejor, especialmente si queréis contar con
+          acompañamiento durante toda la planificación.
+        </p>
+      </details>
+
+      <details>
+        <summary>¿Podemos personalizar un servicio?</summary>
+        <p>
+          Cada pareja y cada boda son diferentes. Podemos valorar
+          vuestras necesidades y encontrar la opción que mejor encaje.
+        </p>
+      </details>
+
+      <details>
+        <summary>¿Organizas también la coordinación del día de la boda?</summary>
+        <p>
+          Sí. La coordinación del día B es una parte fundamental
+          de mis servicios.
+        </p>
+      </details>
+
+    </div>
+
+  </section>
+
+  <section id="contacto" class="white">
+
+    <div class="section-title">
+
+      <h2>Hablemos de vuestra boda</h2>
+
+      <p>
+        Si estáis pensando en casaros en Mallorca y queréis disfrutar
+        del proceso con tranquilidad, estaré encantada de conoceros.
+      </p>
+
+      <a class="button" href="mailto:bodasconcati@gmail.com">
+        Escribirme
+      </a>
+
+    </div>
+
+  </section>
+
+  <footer>
+
+    <h2>Bodas Con Cati</h2>
+
+    <p>Wedding Planner en Mallorca</p>
+
+    <p>
+      Bodas · Organización · Coordinación · Eventos
+    </p>
+
+    <br>
+
+    <p>© 2026 Bodas Con Cati</p>
+
+  </footer>
+
+</body>
+</html>
