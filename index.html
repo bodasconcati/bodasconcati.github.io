@@ -1,493 +1,2305 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+
 <meta charset="UTF-8">
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Bodas Con Cati | Wedding Planner en Mallorca</title>
 
-<meta name="description" content="Bodas Con Cati · Wedding Planner en Mallorca. Organización y coordinación de bodas para parejas que quieren disfrutar de su día sin preocuparse por nada.">
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Montserrat:wght@400;500;600&family=Parisienne&display=swap" rel="stylesheet">
+<meta name="description" content="Bodas Con Cati · Wedding Planner en Mallorca. Organización, coordinación y diseño de bodas para parejas que quieren disfrutar de su día sin preocuparse por nada.">
 
 <style>
 
-:root {
-  --cream: #f7f2ec;
-  --beige: #ede3d8;
-  --brown: #3b2921;
-  --gold: #b77a19;
-  --terracotta: #c98f72;
-  --white: #ffffff;
+/* =========================================================
+   BODAS CON CATI
+   DISEÑO GENERAL
+========================================================= */
+
+:root{
+  --blanco:#ffffff;
+  --crema:#fbf9f6;
+  --dorado:#b77a24;
+  --dorado-suave:#c99a55;
+  --marron:#3b2417;
+  --texto:#49362b;
+  --linea:#eadfd2;
+  --rosa:#f5eee7;
 }
 
-* {
-  box-sizing: border-box;
+*{
+  box-sizing:border-box;
 }
 
-html {
-  scroll-behavior: smooth;
+html{
+  scroll-behavior:smooth;
 }
 
-body {
-  margin: 0;
-  background: var(--cream);
-  color: var(--brown);
-  font-family: "Montserrat", Arial, sans-serif;
+body{
+  margin:0;
+  background:var(--blanco);
+  color:var(--texto);
+  font-family:Arial, Helvetica, sans-serif;
+  line-height:1.7;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+img{
+  max-width:100%;
+  display:block;
 }
 
-/* ---------------- HEADER ---------------- */
-
-.header {
-  width: 100%;
-  padding: 18px 5%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  background: var(--cream);
-  position: relative;
-  z-index: 10;
+a{
+  color:inherit;
+  text-decoration:none;
 }
 
-.logo {
-  width: 135px;
-  height: auto;
-  mix-blend-mode: multiply;
+.wrap{
+  width:min(1180px, calc(100% - 48px));
+  margin:0 auto;
 }
 
-.navigation {
-  display: flex;
-  align-items: center;
-  gap: 32px;
-  font-size: 11px;
-  letter-spacing: 2px;
-  text-transform: uppercase;
+
+/* =========================================================
+   TIPOGRAFÍA
+========================================================= */
+
+h1,
+h2,
+h3{
+  font-family:Georgia, "Times New Roman", serif;
+  font-weight:normal;
+  color:var(--marron);
 }
 
-.navigation a {
-  position: relative;
-  padding: 8px 0;
+.script{
+  font-family:"Brush Script MT",
+              "Segoe Script",
+              cursive;
+  font-style:italic;
+  font-weight:normal;
 }
 
-.navigation a:first-child::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  height: 1px;
-  background: var(--gold);
+.eyebrow{
+  color:var(--dorado);
+  font-size:11px;
+  text-transform:uppercase;
+  letter-spacing:3px;
+  font-weight:bold;
 }
 
-.header-button {
-  padding: 12px 20px;
-  background: var(--gold);
-  color: white;
-  border-radius: 4px;
-  font-size: 11px;
-  letter-spacing: 1.5px;
-  text-transform: uppercase;
+
+/* =========================================================
+   NAVEGACIÓN
+========================================================= */
+
+header{
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  z-index:20;
 }
 
-/* ---------------- HERO ---------------- */
+nav{
+  width:min(1450px, calc(100% - 60px));
+  margin:0 auto;
+  min-height:105px;
 
-.hero {
-  min-height: 700px;
-  display: grid;
-  grid-template-columns: 44% 56%;
-  overflow: hidden;
-  position: relative;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+
+  padding:15px 0;
 }
 
-.hero-content {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: 70px 7% 80px 10%;
-  position: relative;
-  z-index: 2;
+.nav-logo{
+  width:390px;
+  max-width:38vw;
 }
 
-.small-title {
-  margin-bottom: 24px;
-  color: var(--gold);
-  font-size: 11px;
-  font-weight: 500;
-  letter-spacing: 3px;
-  text-transform: uppercase;
+.nav-links{
+  display:flex;
+  align-items:center;
+  gap:34px;
+
+  font-size:13px;
+  letter-spacing:1.3px;
+  text-transform:uppercase;
+
+  color:#3e281b;
 }
 
-.hero h1 {
-  margin: 0;
-  font-family: "Cormorant Garamond", Georgia, serif;
-  font-size: clamp(62px, 6vw, 92px);
-  font-weight: 500;
-  line-height: 0.86;
-  letter-spacing: -2px;
+.nav-links a{
+  position:relative;
+  padding:8px 0;
 }
 
-.hero h1 .script {
-  display: block;
-  margin: 10px 0 3px 25px;
-  color: var(--terracotta);
-  font-family: "Parisienne", cursive;
-  font-size: 0.92em;
-  font-weight: 400;
-  letter-spacing: 0;
+.nav-links a::after{
+  content:"";
+  position:absolute;
+  left:0;
+  bottom:0;
+  width:0;
+  height:1px;
+  background:var(--dorado);
+  transition:width .25s ease;
 }
 
-.hero-heart {
-  margin: 28px 0 20px;
-  color: var(--gold);
-  font-family: Georgia, serif;
-  font-size: 27px;
+.nav-links a:hover::after{
+  width:100%;
 }
 
-.hero-text {
-  max-width: 500px;
-  margin: 0 0 18px;
-  font-family: "Cormorant Garamond", Georgia, serif;
-  font-size: 23px;
-  line-height: 1.35;
+.whatsapp{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:9px;
+
+  padding:13px 22px;
+
+  border-radius:7px;
+
+  background:var(--dorado);
+  color:white;
+
+  font-size:12px;
+  letter-spacing:1.2px;
+  text-transform:uppercase;
+
+  transition:.25s ease;
 }
 
-.hero-text strong {
-  color: var(--terracotta);
-  font-weight: 500;
+.whatsapp:hover{
+  background:#946016;
+  transform:translateY(-2px);
 }
 
-.personal {
-  max-width: 460px;
-  margin: 0 0 30px;
-  color: #765e50;
-  font-family: "Parisienne", cursive;
-  font-size: 27px;
-  line-height: 1.35;
+
+/* =========================================================
+   HERO / INICIO
+========================================================= */
+
+.hero{
+  min-height:760px;
+  position:relative;
+  overflow:hidden;
+
+  background:#ffffff;
 }
 
-.buttons {
-  display: flex;
-  gap: 14px;
-  flex-wrap: wrap;
+.hero-inner{
+  width:min(1450px, calc(100% - 60px));
+  min-height:760px;
+  margin:0 auto;
+
+  display:grid;
+  grid-template-columns:44% 56%;
+  align-items:stretch;
 }
 
-.button-primary,
-.button-secondary {
-  display: inline-block;
-  padding: 15px 25px;
-  border-radius: 4px;
-  font-size: 10px;
-  font-weight: 500;
-  letter-spacing: 1.7px;
-  text-transform: uppercase;
-  transition: all 0.3s ease;
+.hero-copy{
+  position:relative;
+  z-index:3;
+
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+
+  padding:135px 40px 70px 55px;
+
+  background:#ffffff;
 }
 
-.button-primary {
-  background: var(--gold);
-  color: white;
-  border: 1px solid var(--gold);
-}
+.hero-copy::after{
+  content:"";
+  position:absolute;
+  top:0;
+  right:-180px;
+  width:260px;
+  height:100%;
 
-.button-primary:hover {
-  background: var(--brown);
-  border-color: var(--brown);
-}
-
-.button-secondary {
-  color: var(--gold);
-  border: 1px solid var(--gold);
-  background: transparent;
-}
-
-.button-secondary:hover {
-  background: var(--gold);
-  color: white;
-}
-
-/* ---------------- FOTO ---------------- */
-
-.hero-image {
-  position: relative;
-  min-height: 700px;
-  overflow: hidden;
-}
-
-.hero-image::before {
-  content: "";
-  position: absolute;
-  z-index: 1;
-  left: 0;
-  top: 0;
-  bottom: 0;
-  width: 20%;
-  background: linear-gradient(
+  background:linear-gradient(
     to right,
-    var(--cream),
-    rgba(247,242,236,0)
+    #ffffff 0%,
+    rgba(255,255,255,.96) 35%,
+    rgba(255,255,255,.55) 70%,
+    rgba(255,255,255,0) 100%
   );
+
+  z-index:-1;
 }
 
-.hero-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center center;
+.hero-title{
+  margin:18px 0 25px;
+
+  font-size:clamp(52px,5.2vw,82px);
+  line-height:.98;
+
+  letter-spacing:-2px;
 }
 
-/* ---------------- PEQUEÑA FRASE ---------------- */
-
-.signature-line {
-  padding: 25px 20px;
-  text-align: center;
-  background: var(--beige);
-  color: #765e50;
-  font-size: 10px;
-  letter-spacing: 3px;
-  text-transform: uppercase;
+.hero-title .gold{
+  color:var(--dorado);
 }
 
-/* ---------------- ANIMACIONES ---------------- */
+.hero-line{
+  width:60px;
+  height:2px;
 
-.hero-content > * {
-  animation: appear 0.9s ease both;
+  background:var(--dorado);
+
+  margin:5px 0 24px;
 }
 
-.hero-content .hero h1 {
-  animation-delay: 0.1s;
+.hero-text{
+  max-width:510px;
+  font-size:17px;
+  line-height:1.7;
+  margin:0 0 20px;
 }
 
-.hero-image {
-  animation: photoAppear 1.2s ease both;
+.hero-script{
+  max-width:510px;
+
+  margin:0 0 27px;
+
+  font-family:"Brush Script MT",
+              "Segoe Script",
+              cursive;
+
+  font-size:25px;
+  line-height:1.35;
+
+  color:#49362b;
 }
 
-@keyframes appear {
-  from {
-    opacity: 0;
-    transform: translateY(18px);
+.hero-script .heart{
+  color:var(--dorado);
+}
+
+.hero-buttons{
+  display:flex;
+  flex-wrap:wrap;
+  gap:14px;
+}
+
+.button{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+
+  min-height:50px;
+
+  padding:0 27px;
+
+  border:1px solid var(--dorado);
+
+  color:var(--dorado);
+
+  font-size:12px;
+  letter-spacing:1.5px;
+  text-transform:uppercase;
+
+  transition:.25s ease;
+}
+
+.button.primary{
+  background:var(--dorado);
+  color:#fff;
+}
+
+.button:hover{
+  background:var(--dorado);
+  color:#fff;
+}
+
+.button.primary:hover{
+  background:#946016;
+  border-color:#946016;
+}
+
+.hero-photo{
+  position:relative;
+  min-height:760px;
+
+  background:#f5f3ef;
+}
+
+.hero-photo img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  object-position:center center;
+}
+
+
+/* =========================================================
+   FRANJA DE SERVICIOS RÁPIDOS
+========================================================= */
+
+.quick{
+  background:var(--crema);
+  border-top:1px solid #f0e9e1;
+  border-bottom:1px solid #f0e9e1;
+}
+
+.quick-grid{
+  display:grid;
+  grid-template-columns:1.1fr repeat(4,1fr);
+  align-items:center;
+}
+
+.quick-title{
+  padding:35px 35px 35px 0;
+
+  font-family:"Brush Script MT",
+              "Segoe Script",
+              cursive;
+
+  font-size:30px;
+  line-height:1.15;
+  color:var(--marron);
+}
+
+.quick-item{
+  min-height:105px;
+
+  padding:25px 25px;
+
+  border-left:1px solid var(--linea);
+}
+
+.quick-icon{
+  color:var(--dorado);
+  font-size:27px;
+  margin-bottom:5px;
+}
+
+.quick-item h3{
+  margin:0 0 3px;
+  font-size:18px;
+}
+
+.quick-item p{
+  margin:0;
+  font-size:12px;
+  line-height:1.5;
+}
+
+
+/* =========================================================
+   SOBRE MÍ
+========================================================= */
+
+.about{
+  padding:120px 0;
+  background:#fff;
+}
+
+.about-grid{
+  display:grid;
+  grid-template-columns:.9fr 1.1fr;
+  gap:80px;
+  align-items:center;
+}
+
+.about-photo{
+  height:620px;
+  overflow:hidden;
+}
+
+.about-photo img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+
+.about-copy h2{
+  margin:18px 0 25px;
+  font-size:clamp(42px,4.5vw,66px);
+  line-height:1.02;
+}
+
+.about-copy p{
+  max-width:650px;
+  font-size:17px;
+}
+
+.about-script{
+  margin:30px 0;
+
+  font-family:"Brush Script MT",
+              "Segoe Script",
+              cursive;
+
+  font-size:29px;
+  line-height:1.3;
+  color:var(--marron);
+}
+
+
+/* =========================================================
+   SERVICIOS
+========================================================= */
+
+.services-section{
+  padding:120px 0;
+  background:var(--crema);
+}
+
+.section-heading{
+  max-width:850px;
+  margin:0 auto 65px;
+  text-align:center;
+}
+
+.section-heading h2{
+  margin:15px 0 20px;
+
+  font-size:clamp(43px,4.5vw,66px);
+  line-height:1.02;
+}
+
+.section-heading p{
+  margin:0 auto;
+  max-width:720px;
+  font-size:16px;
+}
+
+.service-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:22px;
+}
+
+.service-card{
+  background:#f4e9d9;
+
+  border:1px solid #eadbc9;
+
+  text-align:center;
+
+  overflow:hidden;
+
+  transition:.3s ease;
+}
+
+.service-card:hover{
+  transform:translateY(-5px);
+  box-shadow:0 15px 35px rgba(75,45,20,.08);
+}
+
+.service-image{
+  width:100%;
+  height:260px;
+  overflow:hidden;
+}
+
+.service-image img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  transition:.5s ease;
+}
+
+.service-card:hover .service-image img{
+  transform:scale(1.04);
+}
+
+.service-content{
+  padding:38px 30px 42px;
+}
+
+.service-content h3{
+  margin:0 0 20px;
+
+  font-family:"Brush Script MT",
+              "Segoe Script",
+              cursive;
+
+  font-size:48px;
+  line-height:1;
+}
+
+.service-content p{
+  margin:0 0 18px;
+  font-size:15px;
+  line-height:1.65;
+}
+
+.service-content .button{
+  margin-top:10px;
+}
+
+
+/* =========================================================
+   BODAS REALES
+========================================================= */
+
+.real-weddings{
+  padding:120px 0;
+  background:#fff;
+}
+
+.gallery-title{
+  display:flex;
+  justify-content:space-between;
+  align-items:end;
+  gap:50px;
+
+  margin-bottom:50px;
+}
+
+.gallery-title h2{
+  margin:15px 0 0;
+
+  font-size:clamp(43px,4.5vw,66px);
+  line-height:1;
+}
+
+.gallery-title p{
+  max-width:440px;
+  margin:0;
+  font-size:16px;
+}
+
+
+/* Carrusel */
+
+.carousel{
+  position:relative;
+  overflow:hidden;
+}
+
+.carousel-track{
+  display:flex;
+  gap:14px;
+
+  transition:transform .6s ease;
+}
+
+.carousel-slide{
+  flex:0 0 calc((100% - 28px) / 3);
+  height:430px;
+  overflow:hidden;
+}
+
+.carousel-slide img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+
+  transition:.5s ease;
+}
+
+.carousel-slide:hover img{
+  transform:scale(1.04);
+}
+
+.carousel-buttons{
+  display:flex;
+  justify-content:center;
+  gap:12px;
+  margin-top:25px;
+}
+
+.carousel-btn{
+  width:45px;
+  height:45px;
+
+  border:1px solid var(--dorado);
+  background:white;
+
+  color:var(--dorado);
+
+  cursor:pointer;
+
+  font-size:18px;
+
+  transition:.2s ease;
+}
+
+.carousel-btn:hover{
+  background:var(--dorado);
+  color:white;
+}
+
+
+/* =========================================================
+   MALLORCA
+========================================================= */
+
+.mallorca{
+  padding:120px 0;
+
+  background:var(--rosa);
+}
+
+.mallorca-grid{
+  display:grid;
+  grid-template-columns:1.1fr .9fr;
+  gap:80px;
+  align-items:center;
+}
+
+.mallorca-copy h2{
+  margin:15px 0 25px;
+
+  font-size:clamp(43px,4.5vw,66px);
+  line-height:1.02;
+}
+
+.mallorca-copy p{
+  max-width:650px;
+  font-size:17px;
+}
+
+.mallorca-script{
+  margin-top:30px;
+
+  font-family:"Brush Script MT",
+              "Segoe Script",
+              cursive;
+
+  font-size:29px;
+  line-height:1.3;
+}
+
+.mallorca-photo{
+  height:600px;
+  overflow:hidden;
+}
+
+.mallorca-photo img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+
+
+/* =========================================================
+   REELS
+========================================================= */
+
+.reels{
+  padding:120px 0;
+  background:#fff;
+}
+
+.reels-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:20px;
+}
+
+.reel-card{
+  min-height:300px;
+
+  padding:35px;
+
+  background:var(--crema);
+
+  border:1px solid var(--linea);
+
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+}
+
+.reel-number{
+  color:var(--dorado);
+  font-size:12px;
+  letter-spacing:3px;
+}
+
+.reel-card h3{
+  margin:20px 0 10px;
+
+  font-family:"Brush Script MT",
+              "Segoe Script",
+              cursive;
+
+  font-size:42px;
+}
+
+.reel-card p{
+  font-size:14px;
+}
+
+.instagram-button{
+  display:inline-flex;
+  width:max-content;
+
+  padding:11px 18px;
+
+  border:1px solid var(--dorado);
+
+  color:var(--dorado);
+
+  font-size:11px;
+  letter-spacing:1.3px;
+  text-transform:uppercase;
+}
+
+
+/* =========================================================
+   CONTACTO
+========================================================= */
+
+.contact{
+  padding:125px 0;
+
+  background:var(--marron);
+  color:white;
+}
+
+.contact-box{
+  max-width:850px;
+  margin:0 auto;
+  text-align:center;
+}
+
+.contact .eyebrow{
+  color:#d7a65c;
+}
+
+.contact h2{
+  margin:18px 0 25px;
+
+  color:white;
+
+  font-size:clamp(43px,5vw,70px);
+  line-height:1;
+}
+
+.contact p{
+  max-width:650px;
+  margin:0 auto 30px;
+
+  color:#f4ebe3;
+
+  font-size:17px;
+}
+
+.contact .button{
+  background:white;
+  border-color:white;
+  color:var(--marron);
+}
+
+.contact .button:hover{
+  background:var(--dorado);
+  border-color:var(--dorado);
+  color:white;
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+footer{
+  padding:55px 20px;
+
+  background:#2c1a10;
+
+  color:white;
+
+  text-align:center;
+}
+
+.footer-logo{
+  width:180px;
+  margin:0 auto 20px;
+}
+
+.footer-name{
+  margin:0 0 8px;
+
+  font-family:"Brush Script MT",
+              "Segoe Script",
+              cursive;
+
+  font-size:34px;
+}
+
+footer p{
+  margin:5px 0;
+
+  color:#d9cec4;
+
+  font-size:11px;
+  letter-spacing:1px;
+}
+
+.footer-links{
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+  gap:22px;
+
+  margin:25px 0;
+}
+
+.footer-links a{
+  font-size:11px;
+  letter-spacing:1px;
+  text-transform:uppercase;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media(max-width:1050px){
+
+  .nav-links{
+    gap:18px;
   }
 
-  to {
-    opacity: 1;
-    transform: translateY(0);
+  .nav-logo{
+    width:300px;
+  }
+
+  .hero-inner{
+    grid-template-columns:45% 55%;
+  }
+
+  .hero-copy{
+    padding-left:30px;
+  }
+
+  .quick-grid{
+    grid-template-columns:1fr 1fr 1fr;
+  }
+
+  .quick-title{
+    grid-column:1/-1;
+    text-align:center;
+    padding:25px;
+  }
+
+  .about-grid,
+  .mallorca-grid{
+    gap:45px;
+  }
+
+}
+
+
+@media(max-width:800px){
+
+  header{
+    position:relative;
+    background:#fff;
+  }
+
+  nav{
+    width:100%;
+    min-height:auto;
+
+    padding:15px;
+
+    flex-direction:column;
+    gap:12px;
+  }
+
+  .nav-logo{
+    width:260px;
+    max-width:80%;
+  }
+
+  .nav-links{
+    width:100%;
+    overflow-x:auto;
+
+    justify-content:flex-start;
+
+    gap:22px;
+
+    padding-bottom:5px;
+
+    font-size:10px;
+  }
+
+  .nav-whatsapp{
+    display:none;
+  }
+
+  .hero{
+    min-height:auto;
+  }
+
+  .hero-inner{
+    width:100%;
+    min-height:auto;
+
+    display:flex;
+    flex-direction:column-reverse;
+  }
+
+  .hero-photo{
+    min-height:600px;
+  }
+
+  .hero-copy{
+    padding:65px 25px 70px;
+  }
+
+  .hero-copy::after{
+    display:none;
+  }
+
+  .hero-title{
+    font-size:52px;
+  }
+
+  .quick-grid{
+    grid-template-columns:1fr 1fr;
+  }
+
+  .quick-title{
+    grid-column:1/-1;
+  }
+
+  .quick-item:nth-child(4){
+    border-left:0;
+  }
+
+  .about-grid,
+  .mallorca-grid{
+    grid-template-columns:1fr;
+  }
+
+  .about-photo,
+  .mallorca-photo{
+    height:500px;
+  }
+
+  .service-grid{
+    grid-template-columns:1fr;
+  }
+
+  .gallery-title{
+    flex-direction:column;
+    align-items:flex-start;
+  }
+
+  .carousel-slide{
+    flex:0 0 calc((100% - 14px) / 2);
+    height:400px;
+  }
+
+  .reels-grid{
+    grid-template-columns:1fr;
+  }
+
+}
+
+
+@media(max-width:520px){
+
+  .wrap{
+    width:calc(100% - 30px);
+  }
+
+  .hero-photo{
+    min-height:500px;
+  }
+
+  .hero-title{
+    font-size:43px;
+  }
+
+  .hero-text{
+    font-size:16px;
+  }
+
+  .hero-script{
+    font-size:23px;
+  }
+
+  .hero-buttons{
+    flex-direction:column;
+    align-items:stretch;
+  }
+
+  .button{
+    width:100%;
+  }
+
+  .quick-grid{
+    grid-template-columns:1fr;
+  }
+
+  .quick-title{
+    grid-column:auto;
+  }
+
+  .quick-item{
+    border-left:0;
+    border-top:1px solid var(--linea);
+    text-align:center;
+  }
+
+  .about,
+  .services-section,
+  .real-weddings,
+  .mallorca,
+  .reels,
+  .contact{
+    padding:80px 0;
+  }
+
+  .about-photo,
+  .mallorca-photo{
+    height:420px;
+  }
+
+  .carousel-slide{
+    flex:0 0 100%;
+    height:470px;
+  }
+
+  .service-image{
+    height:230px;
+  }
+
+  .service-content{
+    padding:32px 22px 35px;
+  }
+
+}
+
+
+/* =========================================================
+   ANIMACIONES
+========================================================= */
+
+@keyframes aparecer{
+  from{
+    opacity:0;
+    transform:translateY(18px);
+  }
+
+  to{
+    opacity:1;
+    transform:translateY(0);
   }
 }
 
-@keyframes photoAppear {
-  from {
-    opacity: 0;
-    transform: scale(1.02);
-  }
-
-  to {
-    opacity: 1;
-    transform: scale(1);
-  }
+.hero-copy > *{
+  animation:aparecer .8s ease both;
 }
 
-/* ---------------- MÓVIL ---------------- */
-
-@media (max-width: 900px) {
-
-  .header {
-    padding: 15px 5%;
-  }
-
-  .navigation {
-    display: none;
-  }
-
-  .header-button {
-    padding: 10px 15px;
-  }
-
-  .hero {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .hero-image {
-    order: 1;
-    min-height: 520px;
-    height: 65vh;
-  }
-
-  .hero-content {
-    order: 2;
-    padding: 65px 8% 75px;
-  }
-
-  .hero-image::before {
-    display: none;
-  }
-
-  .hero h1 {
-    font-size: 64px;
-  }
-
-  .hero-text {
-    font-size: 21px;
-  }
-
-  .personal {
-    font-size: 25px;
-  }
+.hero-copy .eyebrow{
+  animation-delay:.1s;
 }
 
-@media (max-width: 520px) {
+.hero-copy .hero-title{
+  animation-delay:.2s;
+}
 
-  .logo {
-    width: 110px;
-  }
+.hero-copy .hero-text{
+  animation-delay:.3s;
+}
 
-  .header-button {
-    font-size: 9px;
-    padding: 9px 12px;
-  }
+.hero-copy .hero-script{
+  animation-delay:.4s;
+}
 
-  .hero-image {
-    min-height: 460px;
-    height: 65vh;
-  }
-
-  .hero-content {
-    padding: 55px 7% 65px;
-  }
-
-  .hero h1 {
-    font-size: 55px;
-    letter-spacing: -1px;
-  }
-
-  .hero h1 .script {
-    margin-left: 10px;
-  }
-
-  .hero-text {
-    font-size: 20px;
-  }
-
-  .personal {
-    font-size: 23px;
-  }
-
-  .buttons {
-    flex-direction: column;
-  }
-
-  .button-primary,
-  .button-secondary {
-    text-align: center;
-  }
-
-  .signature-line {
-    padding: 20px 15px;
-    line-height: 1.7;
-  }
+.hero-copy .hero-buttons{
+  animation-delay:.5s;
 }
 
 </style>
+
 </head>
+
 
 <body>
 
-<header class="header">
 
-  <a href="index.html">
+<!-- =====================================================
+     NAVEGACIÓN
+===================================================== -->
+
+<header>
+
+<nav>
+
+  <a href="#inicio">
     <img
+      class="nav-logo"
       src="assets/logo.jpg"
       alt="Bodas Con Cati · Wedding Planner"
-      class="logo"
     >
   </a>
 
-  <nav class="navigation">
-    <a href="index.html">Inicio</a>
-    <a href="#sobre-mi">Sobre mí</a>
-    <a href="#servicios">Servicios</a>
-    <a href="#bodas">Bodas reales</a>
-    <a href="#mallorca">Mallorca</a>
-    <a href="#contacto">Contacto</a>
-  </nav>
+  <div class="nav-links">
 
-  <a class="header-button" href="#contacto">
-    Hablemos
+    <a href="#inicio">Inicio</a>
+
+    <a href="#sobre-mi">Sobre mí</a>
+
+    <a href="#servicios">Servicios</a>
+
+    <a href="#bodas">Bodas reales</a>
+
+    <a href="#mallorca">Mallorca</a>
+
+    <a href="#contacto">Contacto</a>
+
+  </div>
+
+  <a
+    class="whatsapp nav-whatsapp"
+    href="https://wa.me/34645242153"
+    target="_blank"
+  >
+    WhatsApp · Hablemos
   </a>
+
+</nav>
 
 </header>
 
 
-<main>
+<!-- =====================================================
+     INICIO
+===================================================== -->
 
 <section class="hero" id="inicio">
 
-  <div class="hero-content">
+  <div class="hero-inner">
 
-    <div class="small-title">
-      Wedding Planner · Mallorca
+
+    <div class="hero-copy">
+
+      <div class="eyebrow">
+        Wedding Planner · Mallorca
+      </div>
+
+
+      <h1 class="hero-title">
+
+        Bodas que
+        <br>
+
+        <span class="gold script">
+          se sienten
+        </span>
+
+        <br>
+
+        como vosotros.
+
+      </h1>
+
+
+      <div class="hero-line"></div>
+
+
+      <p class="hero-text">
+
+        Organización y coordinación de bodas en Mallorca
+        para parejas que quieren
+        <strong>disfrutar de su día sin preocuparse por nada.</strong>
+
+      </p>
+
+
+      <p class="hero-script">
+
+        Detrás de cada boda hay una historia,
+        <br>
+        y me encantará acompañaros a vivir la vuestra.
+        <span class="heart">♡</span>
+
+      </p>
+
+
+      <div class="hero-buttons">
+
+        <a
+          class="button primary"
+          href="#servicios"
+        >
+          Quiero saber más →
+        </a>
+
+
+        <a
+          class="button"
+          href="#bodas"
+        >
+          Ver bodas reales
+        </a>
+
+      </div>
+
     </div>
 
-    <h1>
-      Bodas que
-      <span class="script">se sienten</span>
-      como vosotros.
-    </h1>
 
-    <div class="hero-heart">
-      ♡
-    </div>
+    <div class="hero-photo">
 
-    <p class="hero-text">
-      Organización y coordinación de bodas en Mallorca
-      para parejas que quieren
-      <strong>disfrutar de su día sin preocuparse por nada.</strong>
-    </p>
-
-    <p class="personal">
-      Detrás de cada boda hay una historia,
-      y me encantará acompañaros a vivir la vuestra. ♡
-    </p>
-
-    <div class="buttons">
-
-      <a class="button-primary" href="#servicios">
-        Quiero saber más →
-      </a>
-
-      <a class="button-secondary" href="#bodas">
-        Ver bodas reales
-      </a>
+      <img
+        src="assets/hero.jpg"
+        alt="Pareja recién casada disfrutando de su boda en Mallorca"
+      >
 
     </div>
 
-  </div>
-
-
-  <div class="hero-image">
-
-    <img
-      src="assets/hero.jpg"
-      alt="Pareja de novios durante su boda en Mallorca"
-    >
 
   </div>
 
 </section>
 
 
-<div class="signature-line">
-  Bodas Con Cati · Wedding Planner en Mallorca · Experiencias que se recuerdan toda la vida
-</div>
+<!-- =====================================================
+     ASÍ OS PUEDO AYUDAR
+===================================================== -->
 
-</main>
+<section class="quick">
+
+  <div class="wrap quick-grid">
+
+
+    <div class="quick-title">
+      Así os puedo
+      <br>
+      ayudar ♡
+    </div>
+
+
+    <div class="quick-item">
+
+      <div class="quick-icon">♡</div>
+
+      <h3>Organización completa</h3>
+
+      <p>
+        Me encargo de todo para que
+        disfrutéis del proceso.
+      </p>
+
+    </div>
+
+
+    <div class="quick-item">
+
+      <div class="quick-icon">♧</div>
+
+      <h3>Coordinación del día B</h3>
+
+      <p>
+        Para que viváis cada momento
+        sin preocuparos de nada.
+      </p>
+
+    </div>
+
+
+    <div class="quick-item">
+
+      <div class="quick-icon">❧</div>
+
+      <h3>Diseño y decoración</h3>
+
+      <p>
+        Creamos juntos una boda bonita,
+        auténtica y con alma.
+      </p>
+
+    </div>
+
+
+    <div class="quick-item">
+
+      <div class="quick-icon">⌖</div>
+
+      <h3>Mallorca</h3>
+
+      <p>
+        Conozco la isla, sus rincones
+        y a los mejores profesionales.
+      </p>
+
+    </div>
+
+
+  </div>
+
+</section>
+
+
+<!-- =====================================================
+     SOBRE MÍ
+===================================================== -->
+
+<section class="about" id="sobre-mi">
+
+  <div class="wrap about-grid">
+
+
+    <div class="about-photo">
+
+      <img
+        src="galeria/12-cati.jpg"
+        alt="Cati de Bodas Con Cati"
+      >
+
+    </div>
+
+
+    <div class="about-copy">
+
+      <div class="eyebrow">
+        Detrás de Bodas Con Cati
+      </div>
+
+
+      <h2>
+
+        Quiero que vuestra boda
+        <span class="script">
+          se parezca a vosotros.
+        </span>
+
+      </h2>
+
+
+      <p>
+
+        Porque una boda no debería sentirse como una lista interminable
+        de cosas que hacer.
+
+        Debería sentirse como vuestra historia:
+        con vuestra forma de quereros, vuestros gustos,
+        vuestras personas y esos pequeños detalles que hacen
+        que todo tenga sentido.
+
+      </p>
+
+
+      <p>
+
+        Mi trabajo es estar ahí para organizar, coordinar,
+        buscar soluciones y cuidar cada detalle para que vosotros
+        podáis dedicaros a lo importante:
+
+        <strong>disfrutar.</strong>
+
+      </p>
+
+
+      <p class="about-script">
+
+        Vosotros vivid la historia.
+        <br>
+        Yo me ocupo de que todo encaje. ♡
+
+      </p>
+
+
+      <a
+        class="button primary"
+        href="#contacto"
+      >
+        Hablemos de vuestra boda
+      </a>
+
+    </div>
+
+
+  </div>
+
+</section>
+
+
+<!-- =====================================================
+     SERVICIOS
+===================================================== -->
+
+<section
+  class="services-section"
+  id="servicios"
+>
+
+  <div class="wrap">
+
+
+    <div class="section-heading">
+
+      <div class="eyebrow">
+        Mis servicios
+      </div>
+
+
+      <h2>
+
+        Elegid cómo queréis
+        <span class="script">
+          vivir vuestra boda.
+        </span>
+
+      </h2>
+
+
+      <p>
+
+        No todas las parejas necesitan lo mismo.
+        Por eso he creado diferentes formas de acompañaros,
+        desde quienes ya lo tienen todo preparado hasta quienes
+        quieren que me encargue de todo.
+
+      </p>
+
+    </div>
+
+
+    <div class="service-grid">
+
+
+      <!-- SENTIR -->
+
+      <article class="service-card">
+
+        <div class="service-image">
+
+          <img
+            src="galeria/01-zapatos-novia.jpg"
+            alt="Detalles de una boda"
+          >
+
+        </div>
+
+
+        <div class="service-content">
+
+          <h3>
+            Sentir
+          </h3>
+
+
+          <p>
+            <strong>Planificación y consulta.</strong>
+          </p>
+
+
+          <p>
+            Para parejas que ya lo tienen
+            todo listo.
+          </p>
+
+
+          <p>
+            Os libero de preocupaciones
+            un mes antes.
+          </p>
+
+
+          <p>
+            Cuido con mimo a vuestros
+            invitados y equipo.
+          </p>
+
+
+          <p>
+            Vigilando cada instante
+            para que todo fluya.
+          </p>
+
+
+          <p>
+            Vosotros vivís el momento,
+            yo cuido los detalles.
+          </p>
+
+
+          <a
+            class="button"
+            href="sentir.html"
+          >
+            Ver servicio
+          </a>
+
+        </div>
+
+      </article>
+
+
+      <!-- SOÑAR -->
+
+      <article class="service-card">
+
+        <div class="service-image">
+
+          <img
+            src="galeria/08-familia-y-flores.jpg"
+            alt="Flores y detalles de una boda"
+          >
+
+        </div>
+
+
+        <div class="service-content">
+
+          <h3>
+            Soñar
+          </h3>
+
+
+          <p>
+            <strong>Planificación y consulta.</strong>
+          </p>
+
+
+          <p>
+            Diseñamos juntos una boda
+            con vuestra esencia.
+          </p>
+
+
+          <p>
+            Busco al equipo de proveedores
+            perfecto para vosotros.
+          </p>
+
+
+          <p>
+            Os quito el estrés del presupuesto
+            y papeleo.
+          </p>
+
+
+          <p>
+            Estoy en cada paso,
+            visita y decisión.
+          </p>
+
+
+          <p>
+            Hacemos realidad el
+            "Sí, quiero" que imagináis.
+          </p>
+
+
+          <a
+            class="button"
+            href="sonar.html"
+          >
+            Ver servicio
+          </a>
+
+        </div>
+
+      </article>
+
+
+      <!-- SIN FIN -->
+
+      <article class="service-card">
+
+        <div class="service-image">
+
+          <img
+            src="galeria/09-celebracion.jpg"
+            alt="Celebración de una boda"
+          >
+
+        </div>
+
+
+        <div class="service-content">
+
+          <h3>
+            Sin Fin
+          </h3>
+
+
+          <p>
+            <strong>Un fin de semana inolvidable.</strong>
+          </p>
+
+
+          <p>
+            Incluye toda la magia
+            del Pack Soñar.
+          </p>
+
+
+          <p>
+            ¿Y al despertar?
+            Sigo a vuestro lado.
+          </p>
+
+
+          <p>
+            Organizo vuestra post boda.
+          </p>
+
+
+          <p>
+            Gestiono el cierre final
+            para que descanséis.
+          </p>
+
+
+          <p>
+            Vuestro único plan:
+            disfrutar sin prisas.
+          </p>
+
+
+          <a
+            class="button"
+            href="sin-fin.html"
+          >
+            Ver servicio
+          </a>
+
+        </div>
+
+      </article>
+
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =====================================================
+     BODAS REALES
+===================================================== -->
+
+<section
+  class="real-weddings"
+  id="bodas"
+>
+
+  <div class="wrap">
+
+
+    <div class="gallery-title">
+
+      <div>
+
+        <div class="eyebrow">
+          Bodas reales
+        </div>
+
+
+        <h2>
+
+          Historias que ya he tenido
+          <span class="script">
+            la suerte de vivir.
+          </span>
+
+        </h2>
+
+      </div>
+
+
+      <p>
+
+        Cada boda es diferente.
+        Y precisamente por eso me encanta:
+        porque detrás de cada celebración hay una pareja,
+        una historia y una forma única de vivir ese día.
+
+      </p>
+
+    </div>
+
+
+    <div class="carousel">
+
+      <div
+        class="carousel-track"
+        id="galleryTrack"
+      >
+
+
+        <div class="carousel-slide">
+          <img
+            src="galeria/01-zapatos-novia.jpg"
+            alt="Zapatos de novia"
+          >
+        </div>
+
+
+        <div class="carousel-slide">
+          <img
+            src="galeria/02-novia-ventana.jpg"
+            alt="Novia junto a una ventana"
+          >
+        </div>
+
+
+        <div class="carousel-slide">
+          <img
+            src="galeria/03-pareja-patio.jpg"
+            alt="Pareja de novios"
+          >
+        </div>
+
+
+        <div class="carousel-slide">
+          <img
+            src="galeria/04-novio-escaleras.jpg"
+            alt="Novio durante su boda"
+          >
+        </div>
+
+
+        <div class="carousel-slide">
+          <img
+            src="galeria/05-luces-y-velas.jpg"
+            alt="Luces y velas de boda"
+          >
+        </div>
+
+
+        <div class="carousel-slide">
+          <img
+            src="galeria/06-momento-novio.jpg"
+            alt="Momento de los novios"
+          >
+        </div>
+
+
+        <div class="carousel-slide">
+          <img
+            src="galeria/07-novia-vestido.jpg"
+            alt="Novia con su vestido"
+          >
+        </div>
+
+
+        <div class="carousel-slide">
+          <img
+            src="galeria/08-familia-y-flores.jpg"
+            alt="Familia y flores"
+          >
+        </div>
+
+
+        <div class="carousel-slide">
+          <img
+            src="galeria/09-celebracion.jpg"
+            alt="Celebración de boda"
+          >
+        </div>
+
+
+        <div class="carousel-slide">
+          <img
+            src="galeria/10-detalle-novia-y-cati.jpg"
+            alt="Detalle de la novia"
+          >
+        </div>
+
+
+        <div class="carousel-slide">
+          <img
+            src="galeria/11-brindis-con-cati.jpg"
+            alt="Brindis con Cati"
+          >
+        </div>
+
+
+        <div class="carousel-slide">
+          <img
+            src="galeria/12-cati.jpg"
+            alt="Cati de Bodas Con Cati"
+          >
+        </div>
+
+
+      </div>
+
+    </div>
+
+
+    <div class="carousel-buttons">
+
+      <button
+        class="carousel-btn"
+        id="prevGallery"
+        aria-label="Fotos anteriores"
+      >
+        ←
+      </button>
+
+
+      <button
+        class="carousel-btn"
+        id="nextGallery"
+        aria-label="Fotos siguientes"
+      >
+        →
+      </button>
+
+    </div>
+
+
+  </div>
+
+</section>
+
+
+<!-- =====================================================
+     MALLORCA
+===================================================== -->
+
+<section
+  class="mallorca"
+  id="mallorca"
+>
+
+  <div class="wrap mallorca-grid">
+
+
+    <div class="mallorca-copy">
+
+      <div class="eyebrow">
+        Bodas en Mallorca
+      </div>
+
+
+      <h2>
+
+        Mallorca también forma parte
+        <span class="script">
+          de la historia.
+        </span>
+
+      </h2>
+
+
+      <p>
+
+        Casarse en Mallorca tiene algo especial.
+        La luz, el paisaje, las fincas, el mar,
+        los atardeceres y todos esos rincones que hacen
+        que una boda aquí pueda convertirse en una experiencia
+        que recuerde toda la vida.
+
+      </p>
+
+
+      <p>
+
+        Conozco la isla, sus rincones y a profesionales
+        que entienden la importancia de hacer las cosas
+        con cariño y cuidando cada detalle.
+
+      </p>
+
+
+      <p class="mallorca-script">
+
+        Porque no se trata solo de organizar una boda.
+        <br>
+        Se trata de crear un día que queráis recordar. ♡
+
+      </p>
+
+
+    </div>
+
+
+    <div class="mallorca-photo">
+
+      <img
+        src="galeria/03-pareja-patio.jpg"
+        alt="Boda en Mallorca"
+      >
+
+    </div>
+
+
+  </div>
+
+</section>
+
+
+<!-- =====================================================
+     REELS
+===================================================== -->
+
+<section class="reels">
+
+  <div class="wrap">
+
+
+    <div class="section-heading">
+
+      <div class="eyebrow">
+        Bodas Con Cati
+      </div>
+
+
+      <h2>
+
+        Un poquito de lo que hago
+        <span class="script">
+          detrás de cada boda.
+        </span>
+
+      </h2>
+
+
+      <p>
+
+        Si queréis conocerme un poquito más,
+        podéis encontrarme también en Instagram,
+        donde comparto bodas, ideas, momentos y
+        todo lo que hay detrás de organizar un día tan especial.
+
+      </p>
+
+    </div>
+
+
+    <div class="reels-grid">
+
+
+      <article class="reel-card">
+
+        <div>
+
+          <div class="reel-number">
+            REEL · 01
+          </div>
+
+
+          <h3>
+            Bodas
+          </h3>
+
+
+          <p>
+            Momentos reales, parejas reales
+            y bodas que me han dejado un recuerdo
+            muy especial.
+          </p>
+
+        </div>
+
+
+        <a
+          class="instagram-button"
+          href="https://www.instagram.com/bodasconcati/"
+          target="_blank"
+        >
+          Ver en Instagram →
+        </a>
+
+      </article>
+
+
+      <article class="reel-card">
+
+        <div>
+
+          <div class="reel-number">
+            REEL · 02
+          </div>
+
+
+          <h3>
+            Detalles
+          </h3>
+
+
+          <p>
+            Porque muchas veces son los pequeños
+            detalles los que hacen que una boda
+            tenga vuestra esencia.
+          </p>
+
+        </div>
+
+
+        <a
+          class="instagram-button"
+          href="https://www.instagram.com/bodasconcati/"
+          target="_blank"
+        >
+          Ver en Instagram →
+        </a>
+
+      </article>
+
+
+      <article class="reel-card">
+
+        <div>
+
+          <div class="reel-number">
+            REEL · 03
+          </div>
+
+
+          <h3>
+            Detrás de la boda
+          </h3>
+
+
+          <p>
+            Todo lo que no se ve:
+            organización, coordinación,
+            decisiones y mucho mimo.
+          </p>
+
+        </div>
+
+
+        <a
+          class="instagram-button"
+          href="https://www.instagram.com/bodasconcati/"
+          target="_blank"
+        >
+          Ver en Instagram →
+        </a>
+
+      </article>
+
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =====================================================
+     CONTACTO
+===================================================== -->
+
+<section
+  class="contact"
+  id="contacto"
+>
+
+  <div class="wrap">
+
+
+    <div class="contact-box">
+
+      <div class="eyebrow">
+        ¿Hablamos?
+      </div>
+
+
+      <h2>
+
+        Vuestra boda empieza
+        <span class="script">
+          con una conversación.
+
+        </span>
+
+      </h2>
+
+
+      <p>
+
+        Contadme vuestra historia,
+        qué tenéis en mente y cómo imagináis vuestro día.
+
+        Y si todavía no sabéis exactamente por dónde empezar,
+        no pasa nada.
+
+        Para eso estoy.
+
+      </p>
+
+
+      <a
+        class="button"
+        href="https://wa.me/34645242153"
+        target="_blank"
+      >
+        Quiero hablar con Cati →
+      </a>
+
+    </div>
+
+
+  </div>
+
+</section>
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer>
+
+  <img
+    class="footer-logo"
+    src="assets/logo.jpg"
+    alt="Bodas Con Cati"
+  >
+
+
+  <div class="footer-name">
+    Bodas Con Cati
+  </div>
+
+
+  <p>
+    Wedding Planner · Mallorca
+  </p>
+
+
+  <div class="footer-links">
+
+    <a href="#inicio">
+      Inicio
+    </a>
+
+    <a href="#sobre-mi">
+      Sobre mí
+    </a>
+
+    <a href="#servicios">
+      Servicios
+    </a>
+
+    <a href="#bodas">
+      Bodas reales
+    </a>
+
+    <a href="#mallorca">
+      Mallorca
+    </a>
+
+    <a href="#contacto">
+      Contacto
+    </a>
+
+  </div>
+
+
+  <p>
+    © 2026 Bodas Con Cati · Todos los derechos reservados
+  </p>
+
+</footer>
+
+
+<!-- =====================================================
+     JAVASCRIPT · CARRUSEL
+===================================================== -->
+
+<script>
+
+const track = document.getElementById("galleryTrack");
+
+const nextButton = document.getElementById("nextGallery");
+
+const prevButton = document.getElementById("prevGallery");
+
+let currentPosition = 0;
+
+
+function getSlidesVisible(){
+
+  if(window.innerWidth <= 520){
+    return 1;
+  }
+
+  if(window.innerWidth <= 800){
+    return 2;
+  }
+
+  return 3;
+
+}
+
+
+function moveGallery(direction){
+
+  const slides =
+    document.querySelectorAll(".carousel-slide");
+
+  const visible =
+    getSlidesVisible();
+
+  const maxPosition =
+    Math.max(
+      0,
+      slides.length - visible
+    );
+
+
+  currentPosition += direction;
+
+
+  if(currentPosition > maxPosition){
+    currentPosition = 0;
+  }
+
+
+  if(currentPosition < 0){
+    currentPosition = maxPosition;
+  }
+
+
+  const slideWidth =
+    slides[0].getBoundingClientRect().width + 14;
+
+
+  track.style.transform =
+    `translateX(-${currentPosition * slideWidth}px)`;
+
+}
+
+
+nextButton.addEventListener(
+  "click",
+  () => moveGallery(1)
+);
+
+
+prevButton.addEventListener(
+  "click",
+  () => moveGallery(-1)
+);
+
+
+window.addEventListener(
+  "resize",
+  () => {
+
+    currentPosition = 0;
+
+    track.style.transform =
+      "translateX(0)";
+
+  }
+);
+
+
+/* Movimiento automático */
+
+setInterval(
+  () => moveGallery(1),
+  4500
+);
+
+</script>
+
 
 </body>
 </html>
