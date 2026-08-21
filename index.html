@@ -14,7 +14,6 @@
 
 /* =========================================================
    BODAS CON CATI
-   DISEÑO GENERAL
 ========================================================= */
 
 :root{
@@ -38,7 +37,7 @@ html{
 
 body{
   margin:0;
-  background:var(--blanco);
+  background:#ffffff;
   color:var(--texto);
   font-family:Arial, Helvetica, sans-serif;
   line-height:1.7;
@@ -52,6 +51,10 @@ img{
 a{
   color:inherit;
   text-decoration:none;
+}
+
+button{
+  font-family:inherit;
 }
 
 .wrap{
@@ -116,6 +119,8 @@ nav{
 .nav-logo{
   width:390px;
   max-width:38vw;
+
+  mix-blend-mode:multiply;
 }
 
 .nav-links{
@@ -177,7 +182,7 @@ nav{
 
 
 /* =========================================================
-   HERO / INICIO
+   INICIO
 ========================================================= */
 
 .hero{
@@ -189,7 +194,7 @@ nav{
 }
 
 .hero-inner{
-  width:min(1450px, calc(100% - 60px));
+  width:100%;
   min-height:760px;
   margin:0 auto;
 
@@ -206,16 +211,18 @@ nav{
   flex-direction:column;
   justify-content:center;
 
-  padding:135px 40px 70px 55px;
+  padding:135px 35px 70px 60px;
 
   background:#ffffff;
 }
 
 .hero-copy::after{
   content:"";
+
   position:absolute;
   top:0;
   right:-180px;
+
   width:260px;
   height:100%;
 
@@ -254,8 +261,10 @@ nav{
 
 .hero-text{
   max-width:510px;
+
   font-size:17px;
   line-height:1.7;
+
   margin:0 0 20px;
 }
 
@@ -324,22 +333,29 @@ nav{
   min-height:760px;
 
   background:#f5f3ef;
+
+  overflow:hidden;
 }
 
 .hero-photo img{
   width:100%;
   height:100%;
+
   object-fit:cover;
-  object-position:center center;
+
+  /* RECORTE VERTICAL:
+     elimina parte del cielo y sube visualmente a los novios */
+  object-position:center 72%;
 }
 
 
 /* =========================================================
-   FRANJA DE SERVICIOS RÁPIDOS
+   FRANJA "ASÍ OS PUEDO AYUDAR"
 ========================================================= */
 
 .quick{
   background:var(--crema);
+
   border-top:1px solid #f0e9e1;
   border-bottom:1px solid #f0e9e1;
 }
@@ -359,13 +375,14 @@ nav{
 
   font-size:30px;
   line-height:1.15;
+
   color:var(--marron);
 }
 
 .quick-item{
   min-height:105px;
 
-  padding:25px 25px;
+  padding:25px;
 
   border-left:1px solid var(--linea);
 }
@@ -399,8 +416,11 @@ nav{
 
 .about-grid{
   display:grid;
+
   grid-template-columns:.9fr 1.1fr;
+
   gap:80px;
+
   align-items:center;
 }
 
@@ -417,12 +437,15 @@ nav{
 
 .about-copy h2{
   margin:18px 0 25px;
+
   font-size:clamp(42px,4.5vw,66px);
+
   line-height:1.02;
 }
 
 .about-copy p{
   max-width:650px;
+
   font-size:17px;
 }
 
@@ -434,7 +457,9 @@ nav{
               cursive;
 
   font-size:29px;
+
   line-height:1.3;
+
   color:var(--marron);
 }
 
@@ -445,12 +470,15 @@ nav{
 
 .services-section{
   padding:120px 0;
+
   background:var(--crema);
 }
 
 .section-heading{
   max-width:850px;
+
   margin:0 auto 65px;
+
   text-align:center;
 }
 
@@ -458,18 +486,23 @@ nav{
   margin:15px 0 20px;
 
   font-size:clamp(43px,4.5vw,66px);
+
   line-height:1.02;
 }
 
 .section-heading p{
   margin:0 auto;
+
   max-width:720px;
+
   font-size:16px;
 }
 
 .service-grid{
   display:grid;
+
   grid-template-columns:repeat(3,1fr);
+
   gap:22px;
 }
 
@@ -487,19 +520,23 @@ nav{
 
 .service-card:hover{
   transform:translateY(-5px);
+
   box-shadow:0 15px 35px rgba(75,45,20,.08);
 }
 
 .service-image{
   width:100%;
   height:260px;
+
   overflow:hidden;
 }
 
 .service-image img{
   width:100%;
   height:100%;
+
   object-fit:cover;
+
   transition:.5s ease;
 }
 
@@ -519,12 +556,15 @@ nav{
               cursive;
 
   font-size:48px;
+
   line-height:1;
 }
 
 .service-content p{
   margin:0 0 18px;
+
   font-size:15px;
+
   line-height:1.65;
 }
 
@@ -539,13 +579,17 @@ nav{
 
 .real-weddings{
   padding:120px 0;
+
   background:#fff;
 }
 
 .gallery-title{
   display:flex;
+
   justify-content:space-between;
+
   align-items:end;
+
   gap:50px;
 
   margin-bottom:50px;
@@ -555,25 +599,32 @@ nav{
   margin:15px 0 0;
 
   font-size:clamp(43px,4.5vw,66px);
+
   line-height:1;
 }
 
 .gallery-title p{
   max-width:440px;
+
   margin:0;
+
   font-size:16px;
 }
 
 
-/* Carrusel */
+/* =========================================================
+   CARRUSEL
+========================================================= */
 
 .carousel{
   position:relative;
+
   overflow:hidden;
 }
 
 .carousel-track{
   display:flex;
+
   gap:14px;
 
   transition:transform .6s ease;
@@ -581,13 +632,16 @@ nav{
 
 .carousel-slide{
   flex:0 0 calc((100% - 28px) / 3);
+
   height:430px;
+
   overflow:hidden;
 }
 
 .carousel-slide img{
   width:100%;
   height:100%;
+
   object-fit:cover;
 
   transition:.5s ease;
@@ -599,8 +653,11 @@ nav{
 
 .carousel-buttons{
   display:flex;
+
   justify-content:center;
+
   gap:12px;
+
   margin-top:25px;
 }
 
@@ -609,6 +666,7 @@ nav{
   height:45px;
 
   border:1px solid var(--dorado);
+
   background:white;
 
   color:var(--dorado);
@@ -622,6 +680,7 @@ nav{
 
 .carousel-btn:hover{
   background:var(--dorado);
+
   color:white;
 }
 
@@ -638,8 +697,11 @@ nav{
 
 .mallorca-grid{
   display:grid;
+
   grid-template-columns:1.1fr .9fr;
+
   gap:80px;
+
   align-items:center;
 }
 
@@ -647,11 +709,13 @@ nav{
   margin:15px 0 25px;
 
   font-size:clamp(43px,4.5vw,66px);
+
   line-height:1.02;
 }
 
 .mallorca-copy p{
   max-width:650px;
+
   font-size:17px;
 }
 
@@ -663,17 +727,20 @@ nav{
               cursive;
 
   font-size:29px;
+
   line-height:1.3;
 }
 
 .mallorca-photo{
   height:600px;
+
   overflow:hidden;
 }
 
 .mallorca-photo img{
   width:100%;
   height:100%;
+
   object-fit:cover;
 }
 
@@ -684,12 +751,15 @@ nav{
 
 .reels{
   padding:120px 0;
+
   background:#fff;
 }
 
 .reels-grid{
   display:grid;
+
   grid-template-columns:repeat(3,1fr);
+
   gap:20px;
 }
 
@@ -703,13 +773,17 @@ nav{
   border:1px solid var(--linea);
 
   display:flex;
+
   flex-direction:column;
+
   justify-content:space-between;
 }
 
 .reel-number{
   color:var(--dorado);
+
   font-size:12px;
+
   letter-spacing:3px;
 }
 
@@ -729,6 +803,7 @@ nav{
 
 .instagram-button{
   display:inline-flex;
+
   width:max-content;
 
   padding:11px 18px;
@@ -738,7 +813,9 @@ nav{
   color:var(--dorado);
 
   font-size:11px;
+
   letter-spacing:1.3px;
+
   text-transform:uppercase;
 }
 
@@ -751,12 +828,15 @@ nav{
   padding:125px 0;
 
   background:var(--marron);
+
   color:white;
 }
 
 .contact-box{
   max-width:850px;
+
   margin:0 auto;
+
   text-align:center;
 }
 
@@ -770,11 +850,13 @@ nav{
   color:white;
 
   font-size:clamp(43px,5vw,70px);
+
   line-height:1;
 }
 
 .contact p{
   max-width:650px;
+
   margin:0 auto 30px;
 
   color:#f4ebe3;
@@ -784,13 +866,17 @@ nav{
 
 .contact .button{
   background:white;
+
   border-color:white;
+
   color:var(--marron);
 }
 
 .contact .button:hover{
   background:var(--dorado);
+
   border-color:var(--dorado);
+
   color:white;
 }
 
@@ -811,7 +897,10 @@ footer{
 
 .footer-logo{
   width:180px;
+
   margin:0 auto 20px;
+
+  mix-blend-mode:screen;
 }
 
 .footer-name{
@@ -830,13 +919,17 @@ footer p{
   color:#d9cec4;
 
   font-size:11px;
+
   letter-spacing:1px;
 }
 
 .footer-links{
   display:flex;
+
   justify-content:center;
+
   flex-wrap:wrap;
+
   gap:22px;
 
   margin:25px 0;
@@ -844,13 +937,15 @@ footer p{
 
 .footer-links a{
   font-size:11px;
+
   letter-spacing:1px;
+
   text-transform:uppercase;
 }
 
 
 /* =========================================================
-   RESPONSIVE
+   TABLET
 ========================================================= */
 
 @media(max-width:1050px){
@@ -864,11 +959,11 @@ footer p{
   }
 
   .hero-inner{
-    grid-template-columns:45% 55%;
+    grid-template-columns:44% 56%;
   }
 
   .hero-copy{
-    padding-left:30px;
+    padding-left:35px;
   }
 
   .quick-grid{
@@ -877,7 +972,9 @@ footer p{
 
   .quick-title{
     grid-column:1/-1;
+
     text-align:center;
+
     padding:25px;
   }
 
@@ -889,30 +986,39 @@ footer p{
 }
 
 
+/* =========================================================
+   MÓVIL
+========================================================= */
+
 @media(max-width:800px){
 
   header{
     position:relative;
+
     background:#fff;
   }
 
   nav{
     width:100%;
+
     min-height:auto;
 
     padding:15px;
 
     flex-direction:column;
+
     gap:12px;
   }
 
   .nav-logo{
     width:260px;
+
     max-width:80%;
   }
 
   .nav-links{
     width:100%;
+
     overflow-x:auto;
 
     justify-content:flex-start;
@@ -934,14 +1040,20 @@ footer p{
 
   .hero-inner{
     width:100%;
+
     min-height:auto;
 
     display:flex;
+
     flex-direction:column-reverse;
   }
 
   .hero-photo{
     min-height:600px;
+  }
+
+  .hero-photo img{
+    object-position:center 72%;
   }
 
   .hero-copy{
@@ -984,11 +1096,13 @@ footer p{
 
   .gallery-title{
     flex-direction:column;
+
     align-items:flex-start;
   }
 
   .carousel-slide{
     flex:0 0 calc((100% - 14px) / 2);
+
     height:400px;
   }
 
@@ -1009,6 +1123,10 @@ footer p{
     min-height:500px;
   }
 
+  .hero-photo img{
+    object-position:center 72%;
+  }
+
   .hero-title{
     font-size:43px;
   }
@@ -1023,6 +1141,7 @@ footer p{
 
   .hero-buttons{
     flex-direction:column;
+
     align-items:stretch;
   }
 
@@ -1040,7 +1159,9 @@ footer p{
 
   .quick-item{
     border-left:0;
+
     border-top:1px solid var(--linea);
+
     text-align:center;
   }
 
@@ -1060,6 +1181,7 @@ footer p{
 
   .carousel-slide{
     flex:0 0 100%;
+
     height:470px;
   }
 
@@ -1075,19 +1197,23 @@ footer p{
 
 
 /* =========================================================
-   ANIMACIONES
+   ANIMACIÓN
 ========================================================= */
 
 @keyframes aparecer{
+
   from{
     opacity:0;
+
     transform:translateY(18px);
   }
 
   to{
     opacity:1;
+
     transform:translateY(0);
   }
+
 }
 
 .hero-copy > *{
@@ -1131,35 +1257,51 @@ footer p{
 <nav>
 
   <a href="#inicio">
+
     <img
       class="nav-logo"
       src="assets/logo.jpg"
       alt="Bodas Con Cati · Wedding Planner"
     >
+
   </a>
+
 
   <div class="nav-links">
 
-    <a href="#inicio">Inicio</a>
+    <a href="#inicio">
+      Inicio
+    </a>
 
-    <a href="#sobre-mi">Sobre mí</a>
+    <a href="#sobre-mi">
+      Sobre mí
+    </a>
 
-    <a href="#servicios">Servicios</a>
+    <a href="#servicios">
+      Servicios
+    </a>
 
-    <a href="#bodas">Bodas reales</a>
+    <a href="#bodas">
+      Bodas reales
+    </a>
 
-    <a href="#mallorca">Mallorca</a>
+    <a href="#mallorca">
+      Mallorca
+    </a>
 
-    <a href="#contacto">Contacto</a>
+    <a href="#contacto">
+      Contacto
+    </a>
 
   </div>
+
 
   <a
     class="whatsapp nav-whatsapp"
     href="https://wa.me/34645242153"
     target="_blank"
   >
-    WhatsApp · Hablemos
+    Hablemos
   </a>
 
 </nav>
@@ -1171,12 +1313,16 @@ footer p{
      INICIO
 ===================================================== -->
 
-<section class="hero" id="inicio">
+<section
+  class="hero"
+  id="inicio"
+>
 
   <div class="hero-inner">
 
 
     <div class="hero-copy">
+
 
       <div class="eyebrow">
         Wedding Planner · Mallorca
@@ -1186,6 +1332,7 @@ footer p{
       <h1 class="hero-title">
 
         Bodas que
+
         <br>
 
         <span class="gold script">
@@ -1206,7 +1353,9 @@ footer p{
 
         Organización y coordinación de bodas en Mallorca
         para parejas que quieren
-        <strong>disfrutar de su día sin preocuparse por nada.</strong>
+        <strong>
+          disfrutar de su día sin preocuparse por nada.
+        </strong>
 
       </p>
 
@@ -1215,13 +1364,18 @@ footer p{
 
         Detrás de cada boda hay una historia,
         <br>
+
         y me encantará acompañaros a vivir la vuestra.
-        <span class="heart">♡</span>
+
+        <span class="heart">
+          ♡
+        </span>
 
       </p>
 
 
       <div class="hero-buttons">
+
 
         <a
           class="button primary"
@@ -1238,7 +1392,9 @@ footer p{
           Ver bodas reales
         </a>
 
+
       </div>
+
 
     </div>
 
@@ -1268,17 +1424,23 @@ footer p{
 
 
     <div class="quick-title">
+
       Así os puedo
       <br>
       ayudar ♡
+
     </div>
 
 
     <div class="quick-item">
 
-      <div class="quick-icon">♡</div>
+      <div class="quick-icon">
+        ♡
+      </div>
 
-      <h3>Organización completa</h3>
+      <h3>
+        Organización completa
+      </h3>
 
       <p>
         Me encargo de todo para que
@@ -1290,9 +1452,13 @@ footer p{
 
     <div class="quick-item">
 
-      <div class="quick-icon">♧</div>
+      <div class="quick-icon">
+        ♧
+      </div>
 
-      <h3>Coordinación del día B</h3>
+      <h3>
+        Coordinación del día B
+      </h3>
 
       <p>
         Para que viváis cada momento
@@ -1304,9 +1470,13 @@ footer p{
 
     <div class="quick-item">
 
-      <div class="quick-icon">❧</div>
+      <div class="quick-icon">
+        ❧
+      </div>
 
-      <h3>Diseño y decoración</h3>
+      <h3>
+        Diseño y decoración
+      </h3>
 
       <p>
         Creamos juntos una boda bonita,
@@ -1318,9 +1488,13 @@ footer p{
 
     <div class="quick-item">
 
-      <div class="quick-icon">⌖</div>
+      <div class="quick-icon">
+        ⌖
+      </div>
 
-      <h3>Mallorca</h3>
+      <h3>
+        Mallorca
+      </h3>
 
       <p>
         Conozco la isla, sus rincones
@@ -1339,7 +1513,10 @@ footer p{
      SOBRE MÍ
 ===================================================== -->
 
-<section class="about" id="sobre-mi">
+<section
+  class="about"
+  id="sobre-mi"
+>
 
   <div class="wrap about-grid">
 
@@ -1356,6 +1533,7 @@ footer p{
 
     <div class="about-copy">
 
+
       <div class="eyebrow">
         Detrás de Bodas Con Cati
       </div>
@@ -1364,6 +1542,7 @@ footer p{
       <h2>
 
         Quiero que vuestra boda
+
         <span class="script">
           se parezca a vosotros.
         </span>
@@ -1373,8 +1552,8 @@ footer p{
 
       <p>
 
-        Porque una boda no debería sentirse como una lista interminable
-        de cosas que hacer.
+        Porque una boda no debería sentirse como una lista
+        interminable de cosas que hacer.
 
         Debería sentirse como vuestra historia:
         con vuestra forma de quereros, vuestros gustos,
@@ -1386,11 +1565,13 @@ footer p{
 
       <p>
 
-        Mi trabajo es estar ahí para organizar, coordinar,
-        buscar soluciones y cuidar cada detalle para que vosotros
-        podáis dedicaros a lo importante:
+        Mi trabajo es estar ahí para organizar,
+        coordinar, buscar soluciones y cuidar cada detalle
+        para que vosotros podáis dedicaros a lo importante:
 
-        <strong>disfrutar.</strong>
+        <strong>
+          disfrutar.
+        </strong>
 
       </p>
 
@@ -1410,6 +1591,7 @@ footer p{
       >
         Hablemos de vuestra boda
       </a>
+
 
     </div>
 
@@ -1433,6 +1615,7 @@ footer p{
 
     <div class="section-heading">
 
+
       <div class="eyebrow">
         Mis servicios
       </div>
@@ -1441,6 +1624,7 @@ footer p{
       <h2>
 
         Elegid cómo queréis
+
         <span class="script">
           vivir vuestra boda.
         </span>
@@ -1457,6 +1641,7 @@ footer p{
 
       </p>
 
+
     </div>
 
 
@@ -1466,6 +1651,7 @@ footer p{
       <!-- SENTIR -->
 
       <article class="service-card">
+
 
         <div class="service-image">
 
@@ -1479,13 +1665,16 @@ footer p{
 
         <div class="service-content">
 
+
           <h3>
             Sentir
           </h3>
 
 
           <p>
-            <strong>Planificación y consulta.</strong>
+            <strong>
+              Planificación y consulta.
+            </strong>
           </p>
 
 
@@ -1526,6 +1715,7 @@ footer p{
             Ver servicio
           </a>
 
+
         </div>
 
       </article>
@@ -1534,6 +1724,7 @@ footer p{
       <!-- SOÑAR -->
 
       <article class="service-card">
+
 
         <div class="service-image">
 
@@ -1547,13 +1738,16 @@ footer p{
 
         <div class="service-content">
 
+
           <h3>
             Soñar
           </h3>
 
 
           <p>
-            <strong>Planificación y consulta.</strong>
+            <strong>
+              Planificación y consulta.
+            </strong>
           </p>
 
 
@@ -1594,6 +1788,7 @@ footer p{
             Ver servicio
           </a>
 
+
         </div>
 
       </article>
@@ -1602,6 +1797,7 @@ footer p{
       <!-- SIN FIN -->
 
       <article class="service-card">
+
 
         <div class="service-image">
 
@@ -1615,13 +1811,16 @@ footer p{
 
         <div class="service-content">
 
+
           <h3>
             Sin Fin
           </h3>
 
 
           <p>
-            <strong>Un fin de semana inolvidable.</strong>
+            <strong>
+              Un fin de semana inolvidable.
+            </strong>
           </p>
 
 
@@ -1661,6 +1860,7 @@ footer p{
             Ver servicio
           </a>
 
+
         </div>
 
       </article>
@@ -1687,6 +1887,7 @@ footer p{
 
     <div class="gallery-title">
 
+
       <div>
 
         <div class="eyebrow">
@@ -1697,6 +1898,7 @@ footer p{
         <h2>
 
           Historias que ya he tenido
+
           <span class="script">
             la suerte de vivir.
           </span>
@@ -1715,10 +1917,12 @@ footer p{
 
       </p>
 
+
     </div>
 
 
     <div class="carousel">
+
 
       <div
         class="carousel-track"
@@ -1829,6 +2033,7 @@ footer p{
 
     <div class="carousel-buttons">
 
+
       <button
         class="carousel-btn"
         id="prevGallery"
@@ -1845,6 +2050,7 @@ footer p{
       >
         →
       </button>
+
 
     </div>
 
@@ -1868,6 +2074,7 @@ footer p{
 
     <div class="mallorca-copy">
 
+
       <div class="eyebrow">
         Bodas en Mallorca
       </div>
@@ -1876,6 +2083,7 @@ footer p{
       <h2>
 
         Mallorca también forma parte
+
         <span class="script">
           de la historia.
         </span>
@@ -1906,7 +2114,9 @@ footer p{
       <p class="mallorca-script">
 
         Porque no se trata solo de organizar una boda.
+
         <br>
+
         Se trata de crear un día que queráis recordar. ♡
 
       </p>
@@ -1941,6 +2151,7 @@ footer p{
 
     <div class="section-heading">
 
+
       <div class="eyebrow">
         Bodas Con Cati
       </div>
@@ -1949,6 +2160,7 @@ footer p{
       <h2>
 
         Un poquito de lo que hago
+
         <span class="script">
           detrás de cada boda.
         </span>
@@ -1965,6 +2177,7 @@ footer p{
 
       </p>
 
+
     </div>
 
 
@@ -1972,6 +2185,7 @@ footer p{
 
 
       <article class="reel-card">
+
 
         <div>
 
@@ -1986,9 +2200,11 @@ footer p{
 
 
           <p>
+
             Momentos reales, parejas reales
             y bodas que me han dejado un recuerdo
             muy especial.
+
           </p>
 
         </div>
@@ -2002,10 +2218,12 @@ footer p{
           Ver en Instagram →
         </a>
 
+
       </article>
 
 
       <article class="reel-card">
+
 
         <div>
 
@@ -2020,9 +2238,11 @@ footer p{
 
 
           <p>
+
             Porque muchas veces son los pequeños
             detalles los que hacen que una boda
             tenga vuestra esencia.
+
           </p>
 
         </div>
@@ -2036,10 +2256,12 @@ footer p{
           Ver en Instagram →
         </a>
 
+
       </article>
 
 
       <article class="reel-card">
+
 
         <div>
 
@@ -2054,9 +2276,11 @@ footer p{
 
 
           <p>
+
             Todo lo que no se ve:
             organización, coordinación,
             decisiones y mucho mimo.
+
           </p>
 
         </div>
@@ -2069,6 +2293,7 @@ footer p{
         >
           Ver en Instagram →
         </a>
+
 
       </article>
 
@@ -2094,6 +2319,7 @@ footer p{
 
     <div class="contact-box">
 
+
       <div class="eyebrow">
         ¿Hablamos?
       </div>
@@ -2102,9 +2328,9 @@ footer p{
       <h2>
 
         Vuestra boda empieza
+
         <span class="script">
           con una conversación.
-
         </span>
 
       </h2>
@@ -2131,8 +2357,8 @@ footer p{
         Quiero hablar con Cati →
       </a>
 
-    </div>
 
+    </div>
 
   </div>
 
@@ -2144,6 +2370,7 @@ footer p{
 ===================================================== -->
 
 <footer>
+
 
   <img
     class="footer-logo"
@@ -2195,20 +2422,24 @@ footer p{
     © 2026 Bodas Con Cati · Todos los derechos reservados
   </p>
 
+
 </footer>
 
 
 <!-- =====================================================
-     JAVASCRIPT · CARRUSEL
+     CARRUSEL
 ===================================================== -->
 
 <script>
 
-const track = document.getElementById("galleryTrack");
+const track =
+  document.getElementById("galleryTrack");
 
-const nextButton = document.getElementById("nextGallery");
+const nextButton =
+  document.getElementById("nextGallery");
 
-const prevButton = document.getElementById("prevGallery");
+const prevButton =
+  document.getElementById("prevGallery");
 
 let currentPosition = 0;
 
@@ -2291,7 +2522,7 @@ window.addEventListener(
 );
 
 
-/* Movimiento automático */
+/* Cambio automático */
 
 setInterval(
   () => moveGallery(1),
