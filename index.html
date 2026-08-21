@@ -9,11 +9,7 @@
 <meta name="description" content="Bodas Con Cati · Wedding Planner en Mallorca. Organización, coordinación y diseño de bodas para parejas que quieren disfrutar de su día sin preocuparse por nada.">
 
 <style>
-
-/* =========================================================
-   BODAS CON CATI
-   DISEÑO GENERAL
-========================================================= */
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@500&display=swap');
 
 :root{
   --fondo:#F5F0EA;
@@ -54,19 +50,14 @@ a{
   text-decoration:none;
 }
 
-button{
-  font:inherit;
-}
-
 .container{
-  width:min(1240px, calc(100% - 70px));
+  width:min(1240px,calc(100% - 70px));
   margin:0 auto;
 }
 
-
-/* =========================================================
-   TIPOGRAFÍA
-========================================================= */
+/* =========================
+   TEXTOS
+========================= */
 
 .eyebrow{
   color:var(--dorado);
@@ -95,10 +86,9 @@ button{
   font-size:17px;
 }
 
-
-/* =========================================================
+/* =========================
    CABECERA
-========================================================= */
+========================= */
 
 .site-header{
   position:absolute;
@@ -106,40 +96,48 @@ button{
   left:0;
   right:0;
   z-index:50;
-  padding:18px 0;
+  padding:28px 0;
 }
 
 .header-inner{
-  width:min(1400px,calc(100% - 55px));
+  width:min(1400px,calc(100% - 70px));
   margin:auto;
-  display:grid;
-  grid-template-columns:230px 1fr auto;
+  display:flex;
   align-items:center;
-  gap:35px;
+  justify-content:space-between;
+  gap:45px;
 }
 
 .logo-box{
-  width:190px;
-  height:92px;
-  overflow:hidden;
-  display:flex;
-  align-items:center;
-  justify-content:flex-start;
+  flex:0 0 auto;
+  width:auto;
+  height:auto;
+  display:block;
 }
 
-.logo{
-  width:190px;
-  height:92px;
-  object-fit:contain;
-  object-position:center;
-  background:transparent;
+.logo-wordmark{
+  display:block;
+  white-space:nowrap;
+}
+
+.logo-name{
+  display:block;
+  font-family:'Great Vibes','Allura','Brush Script MT','Segoe Script',cursive;
+  font-size:42px;
+  font-weight:400;
+  line-height:1;
+  letter-spacing:-.7px;
+  color:#A87548;
+  text-shadow:0 .7px 0 rgba(92,57,31,.18);
 }
 
 .main-nav{
   display:flex;
-  justify-content:center;
+  justify-content:flex-end;
   align-items:center;
-  gap:39px;
+  gap:34px;
+  flex:1;
+  min-width:0;
   font-family:Arial,sans-serif;
   font-size:12px;
   letter-spacing:2px;
@@ -149,6 +147,7 @@ button{
 .main-nav a{
   position:relative;
   padding:10px 0;
+  white-space:nowrap;
   transition:.25s ease;
 }
 
@@ -173,31 +172,9 @@ button{
   transform:scaleX(1);
 }
 
-.whatsapp{
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
-  gap:9px;
-  padding:14px 22px;
-  background:var(--dorado);
-  color:white;
-  border-radius:5px;
-  font-family:Arial,sans-serif;
-  font-size:11px;
-  letter-spacing:1.5px;
-  text-transform:uppercase;
-  transition:.25s ease;
-}
-
-.whatsapp:hover{
-  background:#7E5739;
-  transform:translateY(-2px);
-}
-
-
-/* =========================================================
+/* =========================
    HERO
-========================================================= */
+========================= */
 
 .hero{
   min-height:760px;
@@ -207,10 +184,11 @@ button{
 }
 
 .hero-inner{
-  min-height:760px;
+  min-height:820px;
   display:grid;
   grid-template-columns:46% 54%;
   align-items:end;
+  padding-top:150px;
 }
 
 .hero-copy{
@@ -237,7 +215,6 @@ button{
   display:block;
   color:#B99A87;
   font-style:italic;
-  font-weight:normal;
 }
 
 .hero-title .last{
@@ -256,11 +233,6 @@ button{
   margin:0;
   font-size:17px;
   line-height:1.65;
-}
-
-.hero-description strong{
-  color:var(--dorado);
-  font-weight:normal;
 }
 
 .hero-signature{
@@ -311,7 +283,7 @@ button{
 }
 
 .hero-image{
-  height:760px;
+  height:820px;
   position:relative;
   overflow:hidden;
 }
@@ -341,10 +313,9 @@ button{
   object-position:center center;
 }
 
-
-/* =========================================================
-   SERVICIOS DESTACADOS
-========================================================= */
+/* =========================
+   ASÍ OS PUEDO AYUDAR
+========================= */
 
 .intro-strip{
   background:var(--fondo-2);
@@ -357,11 +328,10 @@ button{
   display:grid;
   grid-template-columns:repeat(4,1fr);
   align-items:start;
-  gap:0;
 }
 
 .strip-title{
-  grid-column:1 / -1;
+  grid-column:1/-1;
   padding:0 0 30px;
   text-align:center;
   font-size:30px;
@@ -394,10 +364,9 @@ button{
   line-height:1.55;
 }
 
-
-/* =========================================================
+/* =========================
    SOBRE MÍ
-========================================================= */
+========================= */
 
 .about{
   padding:120px 0;
@@ -473,10 +442,9 @@ button{
   font-size:13px;
 }
 
-
-/* =========================================================
+/* =========================
    SERVICIOS
-========================================================= */
+========================= */
 
 .services{
   padding:120px 0;
@@ -573,10 +541,9 @@ button{
   margin-top:25px;
 }
 
-
-/* =========================================================
+/* =========================
    MALLORCA
-========================================================= */
+========================= */
 
 .mallorca{
   padding:120px 0;
@@ -616,48 +583,48 @@ button{
 .mallorca-note{
   margin-top:30px;
   padding:22px;
-  background:rgba(255,255,255,.45);
-  border:1px solid var(--linea);
+  background:rgba(255,255,255,.4);
+  border-left:2px solid var(--dorado);
+  font-size:20px;
   font-style:italic;
 }
 
-
-/* =========================================================
+/* =========================
    REELS
-========================================================= */
+========================= */
 
 .reels{
-  padding:110px 0;
+  padding:120px 0;
   background:var(--blanco);
 }
 
 .reels-heading{
   text-align:center;
+  margin-bottom:55px;
 }
 
 .reels-heading p{
   max-width:650px;
   margin:0 auto;
+  font-size:17px;
 }
 
 .reels-grid{
   display:grid;
   grid-template-columns:repeat(3,1fr);
-  gap:20px;
-  margin-top:55px;
+  gap:22px;
 }
 
 .reel-card{
   position:relative;
-  min-height:350px;
   overflow:hidden;
-  background:var(--marron);
+  aspect-ratio:9/14;
+  background:#241914;
 }
 
 .reel-card video{
   width:100%;
   height:100%;
-  min-height:350px;
   object-fit:cover;
 }
 
@@ -668,181 +635,200 @@ button{
   bottom:0;
   padding:45px 25px 25px;
   color:white;
-  background:linear-gradient(transparent,rgba(30,18,12,.85));
+  background:linear-gradient(transparent,rgba(0,0,0,.65));
   pointer-events:none;
 }
 
 .reel-overlay h3{
   margin:0;
-  font-size:27px;
+  font-size:23px;
   font-weight:normal;
 }
 
-
-/* =========================================================
+/* =========================
    CONTACTO
-========================================================= */
+========================= */
 
 .contact{
-  padding:120px 0;
+  padding:130px 0;
   background:var(--marron);
-  color:white;
+  color:var(--blanco);
   text-align:center;
 }
 
 .contact-inner{
   max-width:850px;
-  margin:auto;
-}
-
-.contact .eyebrow{
-  color:var(--dorado-claro);
 }
 
 .contact h2{
-  margin:18px 0 25px;
-  font-size:clamp(45px,5.5vw,76px);
+  margin:0 0 25px;
+  font-size:clamp(45px,5vw,72px);
   font-weight:normal;
-  line-height:1.02;
+  line-height:1.05;
 }
 
 .contact p{
-  max-width:680px;
-  margin:0 auto 30px;
-  font-size:17px;
+  max-width:650px;
+  margin:0 auto 35px;
+  font-size:18px;
 }
 
 .contact .button{
   margin:5px;
 }
 
-.contact .button.primary{
-  background:white;
-  color:var(--marron);
-  border-color:white;
+.contact .button.secondary{
+  color:var(--blanco);
+  border-color:var(--dorado-claro);
 }
 
-.contact .button.primary:hover{
-  background:var(--dorado);
-  color:white;
-  border-color:var(--dorado);
-}
-
-
-/* =========================================================
+/* =========================
    FOOTER
-========================================================= */
+========================= */
 
 footer{
-  padding:55px 20px 35px;
-  background:#2c201a;
-  color:white;
+  padding:55px 30px;
+  background:#241914;
+  color:#E9DED2;
   text-align:center;
 }
 
-.footer-logo{
-  width:150px;
-  height:75px;
-  margin:0 auto 20px;
-  object-fit:contain;
-  background:transparent;
+.footer-wordmark{
+  display:inline-block;
+  margin-bottom:15px;
 }
 
-.footer-name{
-  font-size:27px;
-  font-style:italic;
+.footer-wordmark .logo-name{
+  color:#B99570;
 }
 
 footer p{
-  margin:8px 0;
-  color:#cdbfb3;
+  margin:7px 0;
   font-family:Arial,sans-serif;
-  font-size:11px;
-  letter-spacing:1.5px;
+  font-size:10px;
+  letter-spacing:2px;
 }
 
+/* =========================
+   ORDENADOR
+========================= */
 
-/* =========================================================
-   RESPONSIVE
-========================================================= */
-
-@media(max-width:1050px){
-
-  .header-inner{
-    grid-template-columns:190px 1fr;
+@media(min-width:1100px){
+  .site-header{
+    padding-top:32px;
   }
 
-  .header-inner .whatsapp{
-    display:none;
+  .hero-inner{
+    padding-top:175px;
+  }
+}
+
+/* =========================
+   TABLET
+========================= */
+
+@media(max-width:1000px){
+
+  .header-inner{
+    width:min(100% - 45px,900px);
+    gap:25px;
+  }
+
+  .logo-name{
+    font-size:36px;
   }
 
   .main-nav{
     gap:20px;
+    font-size:10px;
+    letter-spacing:1.4px;
   }
 
   .hero-inner{
-    grid-template-columns:1fr 1fr;
+    grid-template-columns:1fr;
+    min-height:auto;
+    padding-top:145px;
+  }
+
+  .hero-copy{
+    padding:35px 0 65px;
   }
 
   .hero-title{
-    font-size:58px;
+    max-width:800px;
+  }
+
+  .hero-image{
+    height:600px;
   }
 
   .intro-strip-inner{
-    grid-template-columns:1fr 1fr;
+    grid-template-columns:repeat(2,1fr);
   }
 
   .strip-title{
-    grid-column:1 / -1;
-    padding:20px 20px 30px;
-  }
-
-  .strip-item{
-    margin-top:15px;
+    grid-column:1/-1;
   }
 
   .about-grid,
   .mallorca-grid{
-    gap:45px;
+    grid-template-columns:1fr;
   }
 
+  .about-photo,
+  .mallorca-photo{
+    height:520px;
+  }
+
+  .about-copy{
+    padding:0;
+  }
+
+  .services-grid{
+    grid-template-columns:1fr;
+    max-width:700px;
+  }
+
+  .reels-grid{
+    grid-template-columns:1fr 1fr;
+  }
 }
 
+/* =========================
+   MÓVIL
+========================= */
 
-@media(max-width:800px){
+@media(max-width:650px){
 
   .container{
-    width:min(100% - 34px,680px);
+    width:calc(100% - 28px);
   }
 
   .site-header{
-    position:relative;
-    background:var(--fondo);
+    position:absolute;
+    padding:20px 0;
   }
 
   .header-inner{
+    width:calc(100% - 28px);
     display:flex;
     flex-direction:column;
-    gap:12px;
+    align-items:center;
+    gap:15px;
   }
 
-  .logo-box{
-    width:190px;
-    height:80px;
-  }
-
-  .logo{
-    width:190px;
-    height:80px;
+  .logo-name{
+    font-size:38px;
   }
 
   .main-nav{
     width:100%;
-    justify-content:flex-start;
-    overflow-x:auto;
-    gap:25px;
-    padding-bottom:7px;
-    white-space:nowrap;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:12px 20px;
+    padding:0;
+    font-size:9px;
+    letter-spacing:1.3px;
   }
 
   .hero{
@@ -850,27 +836,32 @@ footer p{
   }
 
   .hero-inner{
-    display:flex;
-    flex-direction:column;
+    padding-top:185px;
   }
 
   .hero-copy{
-    padding:70px 0 50px;
-    order:1;
+    padding:35px 0 60px;
   }
 
   .hero-title{
-    font-size:50px;
+    font-size:clamp(43px,12vw,60px);
     letter-spacing:-2px;
   }
 
-  .hero-image{
-    order:2;
-    height:560px;
+  .hero-description{
+    font-size:16px;
   }
 
-  .hero-image::before{
-    display:none;
+  .hero-buttons{
+    flex-direction:column;
+  }
+
+  .button{
+    width:100%;
+  }
+
+  .hero-image{
+    height:500px;
   }
 
   .intro-strip-inner{
@@ -878,9 +869,8 @@ footer p{
   }
 
   .strip-title{
-    grid-column:1 / -1;
-    text-align:center;
-    padding:0 0 25px;
+    grid-column:1;
+    font-size:27px;
   }
 
   .strip-item{
@@ -898,74 +888,6 @@ footer p{
     padding:80px 0;
   }
 
-  .about-grid,
-  .mallorca-grid{
-    grid-template-columns:1fr;
-  }
-
-  .about-photo,
-  .mallorca-photo{
-    height:500px;
-  }
-
-  .about-copy{
-    padding:0;
-  }
-
-  .services-grid{
-    grid-template-columns:1fr;
-  }
-
-  .reels-grid{
-    grid-template-columns:1fr;
-  }
-
-}
-
-
-@media(max-width:520px){
-
-  .container{
-    width:calc(100% - 28px);
-  }
-
-  .main-nav{
-    font-size:10px;
-    letter-spacing:1.5px;
-  }
-
-  .hero-copy{
-    padding-top:55px;
-  }
-
-  .hero-title{
-    font-size:43px;
-  }
-
-  .hero-description{
-    font-size:16px;
-  }
-
-  .hero-signature{
-    font-size:18px;
-  }
-
-  .hero-buttons{
-    flex-direction:column;
-  }
-
-  .button{
-    width:100%;
-  }
-
-  .hero-image{
-    height:500px;
-  }
-
-  .section-title{
-    font-size:43px;
-  }
-
   .about-photo,
   .mallorca-photo{
     height:420px;
@@ -975,36 +897,54 @@ footer p{
     grid-template-columns:1fr;
   }
 
-}
-
-
-/* =========================================================
-   LOGO
-========================================================= */
-
-@media(min-width:801px){
-
-  .logo-box{
-    position:relative;
+  .service-content{
+    padding:30px 24px 35px;
   }
 
-  .logo{
-    width:190px;
-    height:92px;
+  .service-title{
+    font-size:42px;
   }
 
+  .reels-grid{
+    grid-template-columns:1fr;
+  }
+
+  .contact h2{
+    font-size:43px;
+  }
 }
 
+/* =========================
+   MÓVIL PEQUEÑO
+========================= */
+
+@media(max-width:420px){
+
+  .logo-name{
+    font-size:34px;
+  }
+
+  .main-nav{
+    gap:10px 14px;
+    font-size:8px;
+  }
+
+  .hero-inner{
+    padding-top:180px;
+  }
+
+  .hero-title{
+    font-size:42px;
+  }
+
+  .section-title{
+    font-size:42px;
+  }
+}
 </style>
 </head>
 
-
 <body>
-
-
-<!-- =======================================================
-     CABECERA
-======================================================= -->
 
 <header class="site-header">
 
@@ -1012,46 +952,30 @@ footer p{
 
     <a href="#inicio" class="logo-box" aria-label="Bodas Con Cati - Inicio">
 
-      <img
-        src="assets/logo-transparente.png"
-        class="logo"
-        alt="Bodas Con Cati Wedding Planner">
+      <span class="logo-wordmark">
+        <span class="logo-name">Bodas Con Cati</span>
+      </span>
 
     </a>
 
     <nav class="main-nav">
 
       <a href="#inicio">Inicio</a>
-
       <a href="#sobre-mi">Sobre mí</a>
-
       <a href="#servicios">Servicios</a>
-
       <a href="#mallorca">Mallorca</a>
-
       <a href="#contacto">Contacto</a>
 
     </nav>
-
-    <a
-      class="whatsapp"
-      href="https://wa.me/34645242153"
-      target="_blank"
-      rel="noopener">
-      WhatsApp · Hablemos
-    </a>
 
   </div>
 
 </header>
 
 
-
-<!-- =======================================================
-     INICIO
-======================================================= -->
-
 <main>
+
+<!-- INICIO -->
 
 <section class="hero" id="inicio">
 
@@ -1088,9 +1012,7 @@ footer p{
 
       <div class="hero-buttons">
 
-        <a
-          class="button primary"
-          href="#sobre-mi">
+        <a class="button primary" href="#sobre-mi">
           Quiero saber más →
         </a>
 
@@ -1112,17 +1034,14 @@ footer p{
 </section>
 
 
-
-<!-- =======================================================
-     ASÍ OS PUEDO AYUDAR
-======================================================= -->
+<!-- ASÍ OS PUEDO AYUDAR -->
 
 <section class="intro-strip">
 
   <div class="intro-strip-inner container">
 
     <div class="strip-title">
-      Así os puedo ayudar <span>♡</span>
+      Así os puedo ayudar ♡
     </div>
 
 
@@ -1135,7 +1054,8 @@ footer p{
       </h3>
 
       <p>
-        Me encargo de la planificación y de cada paso para que disfrutéis del proceso.
+        Me encargo de la planificación y de cada paso
+        para que disfrutéis del proceso.
       </p>
 
     </div>
@@ -1165,7 +1085,8 @@ footer p{
       </h3>
 
       <p>
-        Os ayudo a encontrar, elegir y coordinar al equipo perfecto para vuestra boda.
+        Os ayudo a encontrar, elegir y coordinar
+        al equipo perfecto para vuestra boda.
       </p>
 
     </div>
@@ -1180,7 +1101,8 @@ footer p{
       </h3>
 
       <p>
-        Conozco la isla, sus rincones y a los mejores profesionales.
+        Conozco la isla, sus rincones
+        y a los mejores profesionales.
       </p>
 
     </div>
@@ -1190,10 +1112,7 @@ footer p{
 </section>
 
 
-
-<!-- =======================================================
-     SOBRE MÍ
-======================================================= -->
+<!-- SOBRE MÍ -->
 
 <section class="about" id="sobre-mi">
 
@@ -1277,10 +1196,7 @@ footer p{
 </section>
 
 
-
-<!-- =======================================================
-     SERVICIOS
-======================================================= -->
+<!-- SERVICIOS -->
 
 <section class="services" id="servicios">
 
@@ -1291,14 +1207,21 @@ footer p{
     </div>
 
     <h2 class="section-title">
+
       Vosotros elegís cómo
-      <span class="script">vivir vuestra boda.</span>
+
+      <span class="script">
+        vivir vuestra boda.
+      </span>
+
     </h2>
 
     <p class="section-text">
+
       Tres formas diferentes de acompañaros,
       según el momento en el que os encontréis y lo que necesitéis.
       Porque no todas las parejas necesitan lo mismo.
+
     </p>
 
   </div>
@@ -1306,8 +1229,6 @@ footer p{
 
   <div class="services-grid container">
 
-
-    <!-- SENTIR -->
 
     <article class="service-card">
 
@@ -1364,9 +1285,6 @@ footer p{
     </article>
 
 
-
-    <!-- SOÑAR -->
-
     <article class="service-card">
 
       <div class="service-photo">
@@ -1421,9 +1339,6 @@ footer p{
 
     </article>
 
-
-
-    <!-- SIN FIN -->
 
     <article class="service-card">
 
@@ -1484,10 +1399,7 @@ footer p{
 </section>
 
 
-
-<!-- =======================================================
-     MALLORCA
-======================================================= -->
+<!-- MALLORCA -->
 
 <section class="mallorca" id="mallorca">
 
@@ -1509,8 +1421,13 @@ footer p{
       </div>
 
       <h2>
+
         Mallorca tiene
-        <span class="script">algo especial.</span>
+
+        <span class="script">
+          algo especial.
+        </span>
+
       </h2>
 
       <p>
@@ -1539,10 +1456,7 @@ footer p{
 </section>
 
 
-
-<!-- =======================================================
-     REELS
-======================================================= -->
+<!-- REELS -->
 
 <section class="reels">
 
@@ -1553,8 +1467,13 @@ footer p{
     </div>
 
     <h2 class="section-title">
+
       Un poquito de lo que
-      <span class="script">pasa detrás.</span>
+
+      <span class="script">
+        pasa detrás.
+      </span>
+
     </h2>
 
     <p>
@@ -1579,11 +1498,7 @@ footer p{
       </video>
 
       <div class="reel-overlay">
-
-        <h3>
-          Los preparativos
-        </h3>
-
+        <h3>Los preparativos</h3>
       </div>
 
     </div>
@@ -1600,11 +1515,7 @@ footer p{
       </video>
 
       <div class="reel-overlay">
-
-        <h3>
-          Momentos que quedan
-        </h3>
-
+        <h3>Momentos que quedan</h3>
       </div>
 
     </div>
@@ -1621,11 +1532,7 @@ footer p{
       </video>
 
       <div class="reel-overlay">
-
-        <h3>
-          El día B
-        </h3>
-
+        <h3>El día B</h3>
       </div>
 
     </div>
@@ -1635,22 +1542,20 @@ footer p{
 </section>
 
 
-
-<!-- =======================================================
-     CONTACTO
-======================================================= -->
+<!-- CONTACTO -->
 
 <section class="contact" id="contacto">
 
   <div class="contact-inner container">
 
-    <div class="eyebrow">
-      ¿Hablamos?
-    </div>
-
     <h2>
+
       Vuestra boda empieza
-      <span class="script">con una conversación.</span>
+
+      <span class="script">
+        con una conversación.
+      </span>
+
     </h2>
 
     <p>
@@ -1677,24 +1582,19 @@ footer p{
 
 </section>
 
-
 </main>
 
 
-
-<!-- =======================================================
-     FOOTER
-======================================================= -->
+<!-- FOOTER -->
 
 <footer>
 
-  <img
-    class="footer-logo"
-    src="assets/logo-transparente.png"
-    alt="Bodas Con Cati">
+  <div class="logo-wordmark footer-wordmark">
 
-  <div class="footer-name">
-    Bodas Con Cati
+    <span class="logo-name">
+      Bodas Con Cati
+    </span>
+
   </div>
 
   <p>
