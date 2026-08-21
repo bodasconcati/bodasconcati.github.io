@@ -16,15 +16,15 @@
 ========================================================= */
 
 :root{
-  --fondo:#f7f2eb;
-  --fondo-2:#f2e9de;
-  --blanco:#fffdf9;
-  --marron:#3d2920;
-  --marron-suave:#654b3c;
-  --dorado:#b77a19;
-  --dorado-claro:#d5a35c;
-  --rosa:#c98f78;
-  --linea:#dfd1c1;
+  --fondo:#F5F0EA;
+  --fondo-2:#E9DED2;
+  --blanco:#FFFCF8;
+  --marron:#3A2921;
+  --marron-suave:#654B3C;
+  --dorado:#9B6F47;
+  --dorado-claro:#B99570;
+  --rosa:#B99A87;
+  --linea:#D7C8BA;
   --negro:#241914;
 }
 
@@ -118,11 +118,6 @@ button{
   gap:35px;
 }
 
-/*
-   El logo está dentro de una caja pequeña.
-   Así el fondo blanco del JPG no puede tapar la portada.
-*/
-
 .logo-box{
   width:190px;
   height:92px;
@@ -137,7 +132,7 @@ button{
   height:92px;
   object-fit:contain;
   object-position:center;
-  mix-blend-mode:multiply;
+  background:transparent;
 }
 
 .main-nav{
@@ -195,7 +190,7 @@ button{
 }
 
 .whatsapp:hover{
-  background:#9c6513;
+  background:#7E5739;
   transform:translateY(-2px);
 }
 
@@ -240,7 +235,7 @@ button{
 
 .hero-title .accent{
   display:block;
-  color:#ca9278;
+  color:#B99A87;
   font-style:italic;
   font-weight:normal;
 }
@@ -257,7 +252,7 @@ button{
 }
 
 .hero-description{
-  max-width:520px;
+  max-width:560px;
   margin:0;
   font-size:17px;
   line-height:1.65;
@@ -301,8 +296,8 @@ button{
 }
 
 .button.primary:hover{
-  background:#95600f;
-  border-color:#95600f;
+  background:#7E5739;
+  border-color:#7E5739;
 }
 
 .button.secondary{
@@ -332,8 +327,8 @@ button{
   background:linear-gradient(
     90deg,
     var(--fondo) 0%,
-    rgba(247,242,235,.92) 20%,
-    rgba(247,242,235,.45) 65%,
+    rgba(245,240,234,.92) 20%,
+    rgba(245,240,234,.45) 65%,
     transparent 100%
   );
   pointer-events:none;
@@ -348,7 +343,7 @@ button{
 
 
 /* =========================================================
-   FRASE / SERVICIOS DESTACADOS
+   SERVICIOS DESTACADOS
 ========================================================= */
 
 .intro-strip{
@@ -360,12 +355,15 @@ button{
 
 .intro-strip-inner{
   display:grid;
-  grid-template-columns:260px repeat(4,1fr);
-  align-items:center;
+  grid-template-columns:repeat(4,1fr);
+  align-items:start;
+  gap:0;
 }
 
 .strip-title{
-  padding-right:35px;
+  grid-column:1 / -1;
+  padding:0 0 30px;
+  text-align:center;
   font-size:30px;
   font-style:italic;
   line-height:1.15;
@@ -577,87 +575,6 @@ button{
 
 
 /* =========================================================
-   BODAS REALES
-========================================================= */
-
-.real-weddings{
-  padding:120px 0;
-  background:var(--blanco);
-}
-
-.real-heading{
-  display:grid;
-  grid-template-columns:1fr .8fr;
-  gap:80px;
-  align-items:end;
-  margin-bottom:55px;
-}
-
-.real-heading h2{
-  margin:15px 0 0;
-  font-size:clamp(42px,4.8vw,68px);
-  font-weight:normal;
-  line-height:1.02;
-}
-
-.real-heading p{
-  margin:0;
-  font-size:16px;
-}
-
-.gallery-slider{
-  position:relative;
-  overflow:hidden;
-}
-
-.gallery-track{
-  display:flex;
-  gap:18px;
-  transition:transform .65s ease;
-}
-
-.gallery-slide{
-  flex:0 0 calc((100% - 36px)/3);
-  height:390px;
-  overflow:hidden;
-}
-
-.gallery-slide img{
-  width:100%;
-  height:100%;
-  object-fit:cover;
-  transition:.5s ease;
-}
-
-.gallery-slide:hover img{
-  transform:scale(1.04);
-}
-
-.gallery-controls{
-  display:flex;
-  justify-content:center;
-  gap:10px;
-  margin-top:30px;
-}
-
-.gallery-arrow{
-  width:48px;
-  height:48px;
-  border:1px solid var(--linea);
-  background:transparent;
-  color:var(--marron);
-  cursor:pointer;
-  transition:.25s ease;
-}
-
-.gallery-arrow:hover{
-  background:var(--dorado);
-  color:white;
-  border-color:var(--dorado);
-}
-
-
-/* =========================================================
    MALLORCA
 ========================================================= */
 
@@ -828,7 +745,7 @@ footer{
   height:75px;
   margin:0 auto 20px;
   object-fit:contain;
-  mix-blend-mode:multiply;
+  background:transparent;
 }
 
 .footer-name{
@@ -876,7 +793,8 @@ footer p{
   }
 
   .strip-title{
-    padding:20px;
+    grid-column:1 / -1;
+    padding:20px 20px 30px;
   }
 
   .strip-item{
@@ -960,6 +878,7 @@ footer p{
   }
 
   .strip-title{
+    grid-column:1 / -1;
     text-align:center;
     padding:0 0 25px;
   }
@@ -973,7 +892,6 @@ footer p{
 
   .about,
   .services,
-  .real-weddings,
   .mallorca,
   .reels,
   .contact{
@@ -996,16 +914,6 @@ footer p{
 
   .services-grid{
     grid-template-columns:1fr;
-  }
-
-  .real-heading{
-    grid-template-columns:1fr;
-    gap:25px;
-  }
-
-  .gallery-slide{
-    flex:0 0 calc((100% - 18px)/2);
-    height:350px;
   }
 
   .reels-grid{
@@ -1067,16 +975,11 @@ footer p{
     grid-template-columns:1fr;
   }
 
-  .gallery-slide{
-    flex:0 0 100%;
-    height:430px;
-  }
-
 }
 
 
 /* =========================================================
-   LOGO: CORRECCIÓN PARA EVITAR EL CUADRADO GIGANTE
+   LOGO
 ========================================================= */
 
 @media(min-width:801px){
@@ -1108,10 +1011,12 @@ footer p{
   <div class="header-inner">
 
     <a href="#inicio" class="logo-box" aria-label="Bodas Con Cati - Inicio">
+
       <img
-        src="assets/logo.jpg"
+        src="assets/logo-transparente.png"
         class="logo"
         alt="Bodas Con Cati Wedding Planner">
+
     </a>
 
     <nav class="main-nav">
@@ -1121,8 +1026,6 @@ footer p{
       <a href="#sobre-mi">Sobre mí</a>
 
       <a href="#servicios">Servicios</a>
-
-      <a href="#bodas-reales">Bodas reales</a>
 
       <a href="#mallorca">Mallorca</a>
 
@@ -1162,14 +1065,14 @@ footer p{
 
       <h1 class="hero-title">
 
-        Bodas que
+        Que organizar vuestra boda
 
         <span class="accent">
-          se sienten
+          también sea parte
         </span>
 
         <span class="last">
-          como vosotros.
+          de la magia.
         </span>
 
       </h1>
@@ -1177,24 +1080,18 @@ footer p{
       <div class="hero-line"></div>
 
       <p class="hero-description">
-        Organización y coordinación de bodas en Mallorca
-        para parejas que quieren
-        <strong>disfrutar de su día sin preocuparse por nada.</strong>
-      </p>
-
-      <p class="hero-signature">
-        Detrás de cada boda hay una historia,
-        y me encantará acompañaros a vivir la vuestra. ♡
+        Una boda se disfruta mucho más cuando sabes que todo está en buenas manos.
+        Os acompaño en la organización y coordinación de vuestra boda en Mallorca
+        para que podáis vivir cada momento con calma, ilusión y la tranquilidad
+        de estar exactamente donde queréis estar.
       </p>
 
       <div class="hero-buttons">
 
-        <a class="button primary" href="#sobre-mi">
+        <a
+          class="button primary"
+          href="#sobre-mi">
           Quiero saber más →
-        </a>
-
-        <a class="button secondary" href="#bodas-reales">
-          Ver bodas reales
         </a>
 
       </div>
@@ -1217,7 +1114,7 @@ footer p{
 
 
 <!-- =======================================================
-     DESTACADOS
+     ASÍ OS PUEDO AYUDAR
 ======================================================= -->
 
 <section class="intro-strip">
@@ -1225,9 +1122,7 @@ footer p{
   <div class="intro-strip-inner container">
 
     <div class="strip-title">
-      Así os puedo
-      <br>
-      <span>ayudar ♡</span>
+      Así os puedo ayudar <span>♡</span>
     </div>
 
 
@@ -1235,10 +1130,12 @@ footer p{
 
       <div class="strip-icon">♡</div>
 
-      <h3>Organización completa</h3>
+      <h3>
+        Organización completa
+      </h3>
 
       <p>
-        Me encargo de todo para que disfrutéis del proceso.
+        Me encargo de la planificación y de cada paso para que disfrutéis del proceso.
       </p>
 
     </div>
@@ -1246,9 +1143,11 @@ footer p{
 
     <div class="strip-item">
 
-      <div class="strip-icon">♧</div>
+      <div class="strip-icon">♡</div>
 
-      <h3>Coordinación del día B</h3>
+      <h3>
+        Coordinación del día
+      </h3>
 
       <p>
         Para que viváis cada momento sin preocuparos de nada.
@@ -1259,12 +1158,14 @@ footer p{
 
     <div class="strip-item">
 
-      <div class="strip-icon">❧</div>
+      <div class="strip-icon">♡</div>
 
-      <h3>Diseño y decoración</h3>
+      <h3>
+        Gestión de proveedores
+      </h3>
 
       <p>
-        Creamos juntos una boda bonita, auténtica y con alma.
+        Os ayudo a encontrar, elegir y coordinar al equipo perfecto para vuestra boda.
       </p>
 
     </div>
@@ -1272,9 +1173,11 @@ footer p{
 
     <div class="strip-item">
 
-      <div class="strip-icon">⌖</div>
+      <div class="strip-icon">♡</div>
 
-      <h3>Mallorca</h3>
+      <h3>
+        Mallorca
+      </h3>
 
       <p>
         Conozco la isla, sus rincones y a los mejores profesionales.
@@ -1340,7 +1243,9 @@ footer p{
 
         <div class="detail">
 
-          <h3>Una boda vuestra</h3>
+          <h3>
+            Una boda vuestra
+          </h3>
 
           <p>
             Sin plantillas ni bodas copiadas.
@@ -1352,7 +1257,9 @@ footer p{
 
         <div class="detail">
 
-          <h3>Con tranquilidad</h3>
+          <h3>
+            Con tranquilidad
+          </h3>
 
           <p>
             Organización, proveedores y tiempos bajo control
@@ -1579,118 +1486,6 @@ footer p{
 
 
 <!-- =======================================================
-     BODAS REALES
-======================================================= -->
-
-<section class="real-weddings" id="bodas-reales">
-
-  <div class="real-heading container">
-
-    <div>
-
-      <div class="eyebrow">
-        Bodas reales
-      </div>
-
-      <h2>
-        Historias que
-        <span class="script">ya he tenido la suerte de vivir.</span>
-      </h2>
-
-    </div>
-
-    <p>
-      Cada boda es diferente.
-      Cada pareja tiene su forma de quererse,
-      sus pequeños detalles y sus momentos favoritos.
-      Aquí podéis ver algunos de ellos.
-    </p>
-
-  </div>
-
-
-  <div class="gallery-slider container">
-
-    <div class="gallery-track" id="galleryTrack">
-
-
-      <div class="gallery-slide">
-        <img src="galeria/01-zapatos-novia.jpg" alt="Zapatos de novia">
-      </div>
-
-      <div class="gallery-slide">
-        <img src="galeria/02-novia-ventana.jpg" alt="Novia junto a una ventana">
-      </div>
-
-      <div class="gallery-slide">
-        <img src="galeria/03-pareja-patio.jpg" alt="Pareja de novios">
-      </div>
-
-      <div class="gallery-slide">
-        <img src="galeria/04-novio-escaleras.jpg" alt="Novio">
-      </div>
-
-      <div class="gallery-slide">
-        <img src="galeria/05-luces-y-velas.jpg" alt="Luces y velas de boda">
-      </div>
-
-      <div class="gallery-slide">
-        <img src="galeria/06-momento-novio.jpg" alt="Momento de los novios">
-      </div>
-
-      <div class="gallery-slide">
-        <img src="galeria/07-novia-vestido.jpg" alt="Novia con su vestido">
-      </div>
-
-      <div class="gallery-slide">
-        <img src="galeria/08-familia-y-flores.jpg" alt="Familia y flores">
-      </div>
-
-      <div class="gallery-slide">
-        <img src="galeria/09-celebracion.jpg" alt="Celebración de boda">
-      </div>
-
-      <div class="gallery-slide">
-        <img src="galeria/10-detalle-novia-y-cati.jpg" alt="Detalle de la novia">
-      </div>
-
-      <div class="gallery-slide">
-        <img src="galeria/11-brindis-con-cati.jpg" alt="Brindis">
-      </div>
-
-      <div class="gallery-slide">
-        <img src="galeria/13-cati-ayudando-novia.jpg" alt="Cati ayudando a una novia">
-      </div>
-
-
-    </div>
-
-
-    <div class="gallery-controls">
-
-      <button
-        class="gallery-arrow"
-        id="galleryPrev"
-        aria-label="Fotografías anteriores">
-        ←
-      </button>
-
-      <button
-        class="gallery-arrow"
-        id="galleryNext"
-        aria-label="Siguientes fotografías">
-        →
-      </button>
-
-    </div>
-
-  </div>
-
-</section>
-
-
-
-<!-- =======================================================
      MALLORCA
 ======================================================= -->
 
@@ -1773,19 +1568,22 @@ footer p{
   <div class="reels-grid container">
 
 
-    <!--
-      Si los vídeos tienen otros nombres,
-      cambia únicamente el nombre del archivo dentro de src.
-    -->
-
     <div class="reel-card">
 
       <video controls playsinline preload="metadata">
-        <source src="reels/reel-01.mp4" type="video/mp4">
+
+        <source
+          src="reels/reel-01.mp4"
+          type="video/mp4">
+
       </video>
 
       <div class="reel-overlay">
-        <h3>Los preparativos</h3>
+
+        <h3>
+          Los preparativos
+        </h3>
+
       </div>
 
     </div>
@@ -1794,11 +1592,19 @@ footer p{
     <div class="reel-card">
 
       <video controls playsinline preload="metadata">
-        <source src="reels/reel-02.mp4" type="video/mp4">
+
+        <source
+          src="reels/reel-02.mp4"
+          type="video/mp4">
+
       </video>
 
       <div class="reel-overlay">
-        <h3>Momentos que quedan</h3>
+
+        <h3>
+          Momentos que quedan
+        </h3>
+
       </div>
 
     </div>
@@ -1807,11 +1613,19 @@ footer p{
     <div class="reel-card">
 
       <video controls playsinline preload="metadata">
-        <source src="reels/reel-03.mp4" type="video/mp4">
+
+        <source
+          src="reels/reel-03.mp4"
+          type="video/mp4">
+
       </video>
 
       <div class="reel-overlay">
-        <h3>El día B</h3>
+
+        <h3>
+          El día B
+        </h3>
+
       </div>
 
     </div>
@@ -1876,7 +1690,7 @@ footer p{
 
   <img
     class="footer-logo"
-    src="assets/logo.jpg"
+    src="assets/logo-transparente.png"
     alt="Bodas Con Cati">
 
   <div class="footer-name">
@@ -1892,112 +1706,6 @@ footer p{
   </p>
 
 </footer>
-
-
-
-<script>
-
-/* =========================================================
-   GALERÍA — AVANZA DE TRES EN TRES
-========================================================= */
-
-const track = document.getElementById("galleryTrack");
-const next = document.getElementById("galleryNext");
-const prev = document.getElementById("galleryPrev");
-
-let galleryPosition = 0;
-
-function visibleSlides(){
-
-  if(window.innerWidth <= 520){
-    return 1;
-  }
-
-  if(window.innerWidth <= 800){
-    return 2;
-  }
-
-  return 3;
-}
-
-
-function moveGallery(direction){
-
-  const slides = track.children.length;
-  const visible = visibleSlides();
-
-  const maxPosition = Math.max(0, slides - visible);
-
-  galleryPosition += direction * 3;
-
-  if(galleryPosition > maxPosition){
-    galleryPosition = 0;
-  }
-
-  if(galleryPosition < 0){
-    galleryPosition = maxPosition;
-  }
-
-  const slideWidth = track.children[0].getBoundingClientRect().width;
-  const gap = 18;
-
-  track.style.transform =
-    "translateX(-" +
-    ((slideWidth + gap) * galleryPosition) +
-    "px)";
-}
-
-
-next.addEventListener("click",function(){
-  moveGallery(1);
-});
-
-prev.addEventListener("click",function(){
-  moveGallery(-1);
-});
-
-
-window.addEventListener("resize",function(){
-
-  galleryPosition = 0;
-
-  track.style.transform = "translateX(0)";
-
-});
-
-
-/* =========================================================
-   GALERÍA AUTOMÁTICA
-   Cada varios segundos avanza de tres en tres.
-========================================================= */
-
-let autoGallery = setInterval(function(){
-
-  moveGallery(1);
-
-},6000);
-
-
-track.addEventListener("mouseenter",function(){
-
-  clearInterval(autoGallery);
-
-});
-
-
-track.addEventListener("mouseleave",function(){
-
-  autoGallery = setInterval(function(){
-
-    moveGallery(1);
-
-  },6000);
-
-});
-
-
-</script>
-
 
 </body>
 </html>
