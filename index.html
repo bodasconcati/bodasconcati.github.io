@@ -1,1440 +1,1379 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1.0"
-  >
+<title>Bodas Con Cati | Wedding Planner Mallorca</title>
 
-  <title>Bodas Con Cati | Wedding Planner Mallorca</title>
+<meta name="description" content="Bodas Con Cati · Wedding Planner en Mallorca. Organización y coordinación de bodas para disfrutar de cada momento sin preocupaciones.">
 
-  <meta
-    name="description"
-    content="Bodas Con Cati · Wedding Planner en Mallorca. Organización y coordinación de bodas para disfrutar de cada momento con calma, ilusión y tranquilidad."
-  >
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-  <!-- =====================================================
-       TIPOGRAFÍAS
-  ====================================================== -->
+<link href="https://fonts.googleapis.com/css2?family=Allura&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<style>
 
-  <link
-    href="https://fonts.googleapis.com/css2?family=Allura&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Montserrat:wght@400;500;600&display=swap"
-    rel="stylesheet"
-  >
+/* =========================================================
+   BODAS CON CATI
+   DISEÑO PRINCIPAL
+========================================================= */
 
+:root{
+    --crema:#F7F2EC;
+    --crema-2:#EDE3D8;
+    --marron:#3B2921;
+    --marron-suave:#654B3C;
+    --dorado:#B77A19;
+    --terracota:#C98F72;
+    --blanco:#FFFFFF;
+    --linea:rgba(59,41,33,.18);
+}
 
-  <style>
+*{
+    box-sizing:border-box;
+}
 
-    /* =====================================================
-       COLORES
-    ====================================================== */
+html{
+    scroll-behavior:smooth;
+}
 
-    :root {
+body{
+    margin:0;
+    background:var(--crema);
+    color:var(--marron);
+    font-family:"Cormorant Garamond", Georgia, serif;
+}
 
-      --crema: #f4eee7;
-      --nude: #eee3d8;
-      --marron: #3b2922;
-      --marron-suave: #665149;
+img{
+    display:block;
+    max-width:100%;
+}
 
-      --bronce: #a8754b;
-      --bronce-claro: #c39b7d;
-
-      --blanco: #fffdf9;
-
-      --linea: rgba(59, 41, 34, 0.20);
-
-    }
-
-
-    /* =====================================================
-       RESET
-    ====================================================== */
-
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
-    body {
-
-      margin: 0;
-
-      background: var(--crema);
-
-      color: var(--marron);
-
-      font-family:
-        "Cormorant Garamond",
-        Georgia,
-        serif;
-
-      overflow-x: hidden;
-    }
-
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
-
-    img {
-      display: block;
-      max-width: 100%;
-    }
+a{
+    color:inherit;
+    text-decoration:none;
+}
 
 
-    /* =====================================================
-       PORTADA COMPLETA
-    ====================================================== */
+/* =========================================================
+   CONTENEDOR
+========================================================= */
 
-    .hero {
-
-      position: relative;
-
-      width: 100%;
-
-      min-height: 840px;
-
-      background-image:
-        url("assets/hero.jpg");
-
-      background-size: cover;
-
-      background-position: center center;
-
-      background-repeat: no-repeat;
-
-      overflow: hidden;
-    }
+.container{
+    width:min(1240px, calc(100% - 80px));
+    margin:0 auto;
+}
 
 
-    /* =====================================================
-       CAPA OSCURA / MARRÓN SOBRE LA FOTO
-    ====================================================== */
+/* =========================================================
+   HEADER
+========================================================= */
 
-    .hero::before {
+.site-header{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    z-index:20;
+    padding-top:24px;
+}
 
-      content: "";
+.header-inner{
+    width:min(1240px, calc(100% - 80px));
+    margin:0 auto;
 
-      position: absolute;
+    display:grid;
+    grid-template-columns:210px 1fr auto;
+    align-items:start;
 
-      inset: 0;
+    column-gap:35px;
+}
 
-      background:
+
+/* LOGO OFICIAL */
+
+.logo-link{
+    width:190px;
+    height:92px;
+
+    display:flex;
+    align-items:center;
+    justify-content:flex-start;
+
+    overflow:hidden;
+}
+
+.logo{
+    width:190px;
+    height:92px;
+
+    object-fit:contain;
+    object-position:center;
+
+    /*
+       Tu logo es JPG.
+       Este efecto hace que el fondo oscuro del JPG
+       se funda con la fotografía.
+    */
+    mix-blend-mode:screen;
+}
+
+
+/* NAVEGACIÓN */
+
+.main-nav{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    gap:30px;
+
+    padding-top:17px;
+
+    font-family:"Montserrat",Arial,sans-serif;
+    font-size:11px;
+    font-weight:500;
+    letter-spacing:2px;
+    text-transform:uppercase;
+
+    color:#fff;
+}
+
+.main-nav a{
+    position:relative;
+    white-space:nowrap;
+    padding-bottom:9px;
+
+    transition:opacity .25s ease;
+}
+
+.main-nav a:hover{
+    opacity:.75;
+}
+
+.main-nav a.active::after{
+    content:"";
+
+    position:absolute;
+    left:0;
+    right:0;
+    bottom:0;
+
+    height:1px;
+
+    background:#fff;
+}
+
+
+/* BOTÓN HEADER */
+
+.header-button{
+    margin-top:5px;
+
+    padding:13px 21px;
+
+    border:1px solid rgba(255,255,255,.65);
+
+    color:#fff;
+
+    font-family:"Montserrat",Arial,sans-serif;
+    font-size:10px;
+    font-weight:500;
+    letter-spacing:1.8px;
+    text-transform:uppercase;
+
+    white-space:nowrap;
+
+    transition:
+        background .25s ease,
+        color .25s ease;
+}
+
+.header-button:hover{
+    background:#fff;
+    color:var(--marron);
+}
+
+
+/* =========================================================
+   MENÚ MÓVIL
+========================================================= */
+
+.mobile-menu-button{
+    display:none;
+
+    width:45px;
+    height:45px;
+
+    border:1px solid rgba(255,255,255,.65);
+    background:transparent;
+
+    cursor:pointer;
+}
+
+.mobile-menu-button span{
+    display:block;
+
+    width:19px;
+    height:1px;
+
+    margin:5px auto;
+
+    background:#fff;
+}
+
+
+/* =========================================================
+   HERO DESKTOP
+========================================================= */
+
+.hero{
+    position:relative;
+
+    min-height:720px;
+    height:min(720px, 100vh);
+
+    overflow:hidden;
+
+    background-image:url("assets/hero%201.jpg");
+    background-size:cover;
+    background-position:center center;
+    background-repeat:no-repeat;
+}
+
+
+/*
+   Oscurecemos ligeramente la parte izquierda.
+   Así el logo y el menú blanco se leen bien,
+   pero la fotografía sigue siendo protagonista.
+*/
+
+.hero::before{
+    content:"";
+
+    position:absolute;
+    inset:0;
+
+    background:
         linear-gradient(
-          90deg,
-          rgba(34, 24, 19, 0.78) 0%,
-          rgba(45, 31, 25, 0.62) 27%,
-          rgba(45, 31, 25, 0.20) 58%,
-          rgba(45, 31, 25, 0.05) 100%
+            90deg,
+            rgba(35,25,19,.72) 0%,
+            rgba(45,31,23,.50) 27%,
+            rgba(40,28,21,.12) 52%,
+            rgba(20,15,11,.03) 100%
         );
 
-      z-index: 1;
+    pointer-events:none;
+}
+
+
+/* Contenido del hero */
+
+.hero-inner{
+    position:relative;
+    z-index:2;
+
+    width:min(1240px, calc(100% - 80px));
+    min-height:720px;
+
+    margin:0 auto;
+
+    display:flex;
+    align-items:flex-end;
+
+    padding-bottom:70px;
+}
+
+
+/* TEXTO HERO */
+
+.hero-copy{
+    width:510px;
+    max-width:48%;
+
+    color:#fff;
+}
+
+
+.eyebrow{
+    margin-bottom:17px;
+
+    font-family:"Montserrat",Arial,sans-serif;
+    font-size:10px;
+    font-weight:600;
+    letter-spacing:3px;
+    text-transform:uppercase;
+
+    color:#fff;
+}
+
+
+.hero-title{
+    margin:0;
+
+    font-size:clamp(54px, 5vw, 75px);
+    font-weight:500;
+    line-height:.91;
+    letter-spacing:-2px;
+}
+
+
+.hero-title .normal{
+    display:block;
+}
+
+
+.hero-title .script{
+    display:block;
+
+    margin-left:0;
+    margin-top:4px;
+
+    font-family:"Allura",cursive;
+    font-size:1.04em;
+    font-weight:400;
+
+    line-height:.85;
+
+    color:#E0B39D;
+
+    letter-spacing:0;
+}
+
+
+.hero-title .last{
+    display:block;
+
+    margin-top:4px;
+}
+
+
+.hero-line{
+    width:46px;
+    height:1px;
+
+    margin:26px 0 18px;
+
+    background:rgba(255,255,255,.7);
+}
+
+
+.hero-description{
+    width:490px;
+    max-width:100%;
+
+    margin:0;
+
+    font-size:17px;
+    line-height:1.45;
+
+    color:rgba(255,255,255,.94);
+}
+
+
+.hero-description strong{
+    color:#fff;
+    font-weight:600;
+}
+
+
+.hero-signature{
+    margin:16px 0 0;
+
+    max-width:470px;
+
+    font-family:"Allura",cursive;
+    font-size:25px;
+    line-height:1.1;
+
+    color:#E2B9A5;
+}
+
+
+.hero-heart{
+    display:inline-block;
+
+    margin-left:5px;
+
+    font-family:"Cormorant Garamond",serif;
+    font-size:22px;
+}
+
+
+/* BOTONES HERO */
+
+.hero-buttons{
+    display:flex;
+    align-items:center;
+
+    gap:14px;
+
+    margin-top:25px;
+}
+
+
+.button{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+
+    min-height:47px;
+
+    padding:0 23px;
+
+    font-family:"Montserrat",Arial,sans-serif;
+    font-size:10px;
+    font-weight:600;
+    letter-spacing:1.7px;
+    text-transform:uppercase;
+
+    transition:
+        transform .25s ease,
+        background .25s ease,
+        color .25s ease;
+}
+
+
+.button:hover{
+    transform:translateY(-2px);
+}
+
+
+.button.primary{
+    background:var(--dorado);
+    color:#fff;
+}
+
+
+.button.primary:hover{
+    background:#9d6612;
+}
+
+
+.button.secondary{
+    border:1px solid rgba(255,255,255,.75);
+    color:#fff;
+}
+
+
+.button.secondary:hover{
+    background:#fff;
+    color:var(--marron);
+}
+
+
+/* =========================================================
+   SERVICIOS
+========================================================= */
+
+.services{
+    background:#F1E8DE;
+
+    padding:47px 0 49px;
+}
+
+
+.services-inner{
+    width:min(1180px, calc(100% - 80px));
+    margin:0 auto;
+}
+
+
+.services-intro{
+    text-align:center;
+
+    margin-bottom:31px;
+}
+
+
+.services-intro p{
+    margin:0;
+
+    font-family:"Allura",cursive;
+    font-size:31px;
+    line-height:1;
+
+    color:var(--terracota);
+}
+
+
+.services-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+}
+
+
+.service{
+    min-height:135px;
+
+    padding:0 34px;
+
+    text-align:center;
+
+    border-right:1px solid var(--linea);
+}
+
+
+.service:last-child{
+    border-right:0;
+}
+
+
+.service-icon{
+    margin-bottom:10px;
+
+    font-family:"Cormorant Garamond",serif;
+    font-size:31px;
+    line-height:1;
+
+    color:var(--dorado);
+}
+
+
+.service h2{
+    margin:0 0 8px;
+
+    font-size:18px;
+    font-weight:600;
+    line-height:1.1;
+}
+
+
+.service p{
+    margin:0;
+
+    font-family:"Montserrat",Arial,sans-serif;
+    font-size:11px;
+    line-height:1.6;
+
+    color:var(--marron-suave);
+}
+
+
+/* =========================================================
+   PEQUEÑA FRANJA FINAL
+========================================================= */
+
+.brand-strip{
+    padding:24px 20px;
+
+    background:var(--crema);
+
+    text-align:center;
+}
+
+
+.brand-strip p{
+    margin:0;
+
+    font-family:"Montserrat",Arial,sans-serif;
+    font-size:9px;
+    font-weight:500;
+    letter-spacing:2.5px;
+    line-height:1.7;
+    text-transform:uppercase;
+
+    color:var(--marron-suave);
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width:1050px){
+
+    .container,
+    .header-inner,
+    .hero-inner{
+        width:calc(100% - 50px);
+    }
+
+    .header-inner{
+        grid-template-columns:180px 1fr auto;
+        column-gap:20px;
+    }
+
+    .logo-link{
+        width:165px;
+        height:80px;
+    }
+
+    .logo{
+        width:165px;
+        height:80px;
+    }
+
+    .main-nav{
+        gap:18px;
+        font-size:9px;
+        letter-spacing:1.5px;
+    }
+
+    .header-button{
+        padding:11px 15px;
+        font-size:8px;
+    }
+
+    .hero-copy{
+        width:480px;
+        max-width:55%;
+    }
+
+    .hero-title{
+        font-size:58px;
+    }
+
+    .hero-description{
+        font-size:15px;
+    }
+
+    .service{
+        padding:0 18px;
+    }
+
+}
+
+
+/* =========================================================
+   MÓVIL
+========================================================= */
+
+@media (max-width:760px){
+
+    body{
+        background:var(--crema);
     }
 
 
-    /* =====================================================
-       HEADER ENCIMA DE LA FOTO
-    ====================================================== */
+    /* HEADER */
 
-    header {
+    .site-header{
+        position:absolute;
 
-      position: absolute;
+        padding-top:16px;
+    }
 
-      top: 0;
-      left: 0;
+    .header-inner{
+        width:calc(100% - 34px);
 
-      width: 100%;
+        display:flex;
+        align-items:flex-start;
+        justify-content:space-between;
 
-      z-index: 10;
-
-      color: var(--blanco);
+        margin:0 auto;
     }
 
 
-    .header-inner {
+    .logo-link{
+        width:145px;
+        height:70px;
+    }
 
-      width: min(
-        1380px,
-        calc(100% - 110px)
-      );
-
-      min-height: 125px;
-
-      margin: 0 auto;
-
-      display: flex;
-
-      align-items: flex-start;
-
-      justify-content: space-between;
-
-      gap: 40px;
-
-      padding-top: 30px;
+    .logo{
+        width:145px;
+        height:70px;
     }
 
 
-    /* =====================================================
-       LOGO
-    ====================================================== */
-
-    .logo {
-
-      display: flex;
-
-      flex-direction: column;
-
-      align-items: flex-start;
-
-      flex-shrink: 0;
-
-      color: var(--blanco);
+    .main-nav{
+        display:none;
     }
 
 
-    .logo-heart {
-
-      font-family:
-        "Cormorant Garamond",
-        Georgia,
-        serif;
-
-      font-size: 42px;
-
-      line-height: 0.65;
-
-      margin-left: 68px;
-
-      margin-bottom: 8px;
-
-      color: var(--blanco);
-
-      transform: rotate(-7deg);
+    .header-button{
+        display:none;
     }
 
 
-    .logo-name {
+    .mobile-menu-button{
+        display:block;
 
-      font-family:
-        "Allura",
-        cursive;
-
-      font-size: 57px;
-
-      line-height: 0.9;
-
-      font-weight: 400;
-
-      white-space: nowrap;
-
-      letter-spacing: -1px;
-
-      color: var(--blanco);
+        margin-top:7px;
     }
 
 
-    .logo-subtitle {
+    /* HERO MÓVIL */
 
-      font-family:
-        "Montserrat",
-        sans-serif;
+    .hero{
+        height:auto;
+        min-height:0;
 
-      font-size: 11px;
+        padding-top:0;
 
-      letter-spacing: 4px;
+        background-image:none;
 
-      text-transform: uppercase;
-
-      margin-top: 10px;
-
-      margin-left: 45px;
-
-      color: var(--blanco);
+        background:var(--crema);
     }
 
 
-    /* =====================================================
-       MENÚ
-    ====================================================== */
-
-    nav {
-
-      display: flex;
-
-      align-items: center;
-
-      justify-content: flex-end;
-
-      gap: 36px;
-
-      padding-top: 15px;
-
-      flex-wrap: nowrap;
+    .hero::before{
+        display:none;
     }
 
 
-    nav a {
+    /*
+       En móvil la foto pasa a ser una imagen propia,
+       no un fondo estirado.
+    */
 
-      position: relative;
+    .hero::after{
+        content:"";
 
-      font-family:
-        "Montserrat",
-        sans-serif;
+        display:block;
 
-      font-size: 13px;
+        width:100%;
 
-      font-weight: 500;
+        height:58vh;
+        min-height:390px;
+        max-height:540px;
 
-      letter-spacing: 3px;
+        background-image:url("assets/hero%201.jpg");
+        background-size:cover;
 
-      text-transform: uppercase;
+        /*
+           Este punto mantiene las manos y el encaje
+           como protagonistas.
+        */
+        background-position:center center;
 
-      white-space: nowrap;
-
-      color: var(--blanco);
-
-      transition:
-        opacity 0.25s ease,
-        color 0.25s ease;
+        background-repeat:no-repeat;
     }
 
 
-    nav a:hover {
-      opacity: 0.75;
+    .hero-inner{
+        width:100%;
+        min-height:0;
+
+        margin:0;
+
+        padding:0;
+
+        display:block;
     }
 
 
-    /* Línea debajo de INICIO */
-
-    nav a.active::after {
-
-      content: "";
-
-      position: absolute;
-
-      left: 0;
-      right: 0;
-
-      bottom: -14px;
-
-      height: 1px;
-
-      background: var(--blanco);
-    }
-
-
-    /* =====================================================
-       BOTÓN QUIERO HABLAR
-    ====================================================== */
-
-    .header-contact {
-
-      display: inline-flex;
-
-      align-items: center;
-
-      justify-content: center;
-
-      min-width: 205px;
-
-      padding:
-        14px
-        23px;
-
-      border:
-        1px solid
-        rgba(255,255,255,0.65);
-
-      font-family:
-        "Montserrat",
-        sans-serif;
-
-      font-size: 12px;
-
-      font-weight: 500;
-
-      letter-spacing: 2.5px;
-
-      text-transform: uppercase;
-
-      color: var(--blanco);
-
-      transition:
-        background 0.25s ease,
-        color 0.25s ease;
-    }
-
-
-    .header-contact span {
-
-      margin-left: 9px;
-
-      font-size: 18px;
-
-      line-height: 1;
-    }
-
-
-    .header-contact:hover {
-
-      background: rgba(255,255,255,0.12);
-    }
-
-
-    /* =====================================================
-       CONTENIDO DEL HERO
-    ====================================================== */
-
-    .hero-content {
-
-      position: relative;
-
-      z-index: 3;
-
-      width: min(
-        1380px,
-        calc(100% - 110px)
-      );
-
-      min-height: 840px;
-
-      margin: 0 auto;
-
-      display: flex;
-
-      align-items: flex-end;
-
-      padding-bottom: 72px;
-    }
-
-
-    .hero-copy {
-
-      width: 560px;
-
-      color: var(--blanco);
-    }
-
-
-    /* =====================================================
-       PEQUEÑO TÍTULO
-    ====================================================== */
-
-    .eyebrow {
-
-      font-family:
-        "Montserrat",
-        sans-serif;
-
-      font-size: 13px;
-
-      font-weight: 500;
-
-      letter-spacing: 5px;
-
-      text-transform: uppercase;
-
-      margin-bottom: 30px;
-
-      color: rgba(255,255,255,0.88);
-    }
-
-
-    /* =====================================================
-       TÍTULO PRINCIPAL
-    ====================================================== */
-
-    h1 {
-
-      font-family:
-        "Cormorant Garamond",
-        Georgia,
-        serif;
-
-      font-size:
-        clamp(
-          58px,
-          5.1vw,
-          86px
-        );
-
-      line-height: 0.91;
-
-      font-weight: 500;
-
-      letter-spacing: -2px;
-
-      color: var(--blanco);
-
-      max-width: 610px;
-
-      margin-bottom: 32px;
-    }
-
-
-    h1 .italic {
-
-      display: block;
-
-      font-style: italic;
-
-      color: #d4b5a1;
-
-      font-weight: 500;
-    }
-
-
-    /* =====================================================
-       LÍNEA
-    ====================================================== */
-
-    .hero-line {
-
-      width: 68px;
-
-      height: 1px;
-
-      background: var(--blanco);
-
-      margin-bottom: 26px;
-    }
-
-
-    /* =====================================================
-       TEXTO PRINCIPAL
-    ====================================================== */
-
-    .hero-text {
-
-      max-width: 560px;
-
-      font-size: 20px;
-
-      line-height: 1.45;
-
-      color: rgba(255,255,255,0.94);
-
-      margin-bottom: 32px;
-    }
-
-
-    /* =====================================================
-       BOTÓN SABER MÁS
-    ====================================================== */
-
-    .hero-button {
-
-      display: inline-flex;
-
-      align-items: center;
-
-      justify-content: center;
-
-      padding:
-        17px
-        34px;
-
-      background:
-        rgba(174, 125, 86, 0.86);
-
-      color: var(--blanco);
-
-      font-family:
-        "Montserrat",
-        sans-serif;
-
-      font-size: 12px;
-
-      font-weight: 600;
-
-      letter-spacing: 3px;
-
-      text-transform: uppercase;
-
-      transition:
-        background 0.25s ease,
-        transform 0.25s ease;
-    }
-
-
-    .hero-button span {
-
-      margin-left: 9px;
-
-      font-size: 17px;
-    }
-
-
-    .hero-button:hover {
-
-      background: var(--bronce);
-
-      transform: translateY(-2px);
-    }
-
-
-    /* =====================================================
-       SERVICIOS
-    ====================================================== */
-
-    .services {
-
-      position: relative;
-
-      background: var(--crema);
-
-      border-top:
-        1px solid
-        var(--linea);
-
-      padding:
-        30px
-        0
-        34px;
-    }
-
-
-    .services-inner {
-
-      width: min(
-        1380px,
-        calc(100% - 110px)
-      );
-
-      margin: 0 auto;
-    }
-
-
-    .services-grid {
-
-      display: grid;
-
-      grid-template-columns:
-        repeat(4, 1fr);
-    }
-
-
-    .service {
-
-      min-height: 145px;
-
-      padding:
-        4px
-        38px;
-
-      text-align: center;
-
-      border-right:
-        1px solid
-        var(--linea);
-    }
-
-
-    .service:first-child {
-      padding-left: 15px;
-    }
-
-
-    .service:last-child {
-
-      border-right: none;
-
-      padding-right: 15px;
-    }
-
-
-    /* =====================================================
-       CORAZÓN
-    ====================================================== */
-
-    .heart {
-
-      font-family:
-        "Cormorant Garamond",
-        Georgia,
-        serif;
-
-      font-size: 37px;
-
-      line-height: 1;
-
-      color: var(--bronce);
-
-      margin-bottom: 15px;
-    }
-
-
-    /* =====================================================
-       TÍTULO SERVICIO
-    ====================================================== */
-
-    .service h2 {
-
-      font-family:
-        "Cormorant Garamond",
-        Georgia,
-        serif;
-
-      font-size: 23px;
-
-      line-height: 1.1;
-
-      font-weight: 500;
-
-      color: var(--marron);
-
-      margin-bottom: 8px;
-    }
-
-
-    /* =====================================================
-       TEXTO SERVICIO
-    ====================================================== */
-
-    .service p {
-
-      max-width: 280px;
-
-      margin: 0 auto;
-
-      font-family:
-        "Montserrat",
-        sans-serif;
-
-      font-size: 14px;
-
-      line-height: 1.5;
-
-      font-weight: 400;
-
-      color: var(--marron-suave);
-    }
-
-
-    /* =====================================================
-       ZONAS DE PÁGINAS FUTURAS
-       
-       Las dejamos preparadas para que después podamos
-       crear Sobre mí, Servicios, Mallorca y Contacto.
-    ====================================================== */
-
-    .future-section {
-
-      min-height: 1px;
-
-      padding: 0;
-
-      margin: 0;
-
-      background: var(--crema);
-    }
-
-
-    /* =====================================================
-       TABLET
-    ====================================================== */
-
-    @media (max-width: 1150px) {
-
-      .header-inner {
-
-        width:
-          calc(100% - 60px);
-
-        gap: 25px;
-      }
-
-
-      .logo-name {
-        font-size: 49px;
-      }
-
-
-      .logo-heart {
-        font-size: 36px;
-        margin-left: 58px;
-      }
-
-
-      .logo-subtitle {
-        margin-left: 36px;
-      }
-
-
-      nav {
-        gap: 22px;
-      }
-
-
-      nav a {
-        font-size: 11px;
-        letter-spacing: 2px;
-      }
-
-
-      .header-contact {
-        min-width: 175px;
-        padding: 12px 15px;
-        font-size: 10px;
-      }
-
-
-      .hero-content {
-
-        width:
-          calc(100% - 60px);
-      }
-
-
-      .hero-copy {
-        width: 520px;
-      }
-
-
-      .services-inner {
-
-        width:
-          calc(100% - 60px);
-      }
-
-
-      .service {
-        padding-left: 22px;
-        padding-right: 22px;
-      }
-
-    }
-
-
-    /* =====================================================
-       MÓVIL
-    ====================================================== */
-
-    @media (max-width: 850px) {
-
-      .hero {
-
-        min-height: 850px;
-
-        background-position:
-          62% center;
-      }
-
-
-      .hero::before {
-
-        background:
-          linear-gradient(
-            180deg,
-            rgba(32,23,19,0.72) 0%,
-            rgba(39,27,22,0.38) 42%,
-            rgba(39,27,22,0.82) 100%
-          );
-      }
-
-
-      .header-inner {
-
-        width:
-          calc(100% - 36px);
-
-        min-height: auto;
-
-        padding-top: 22px;
-
-        display: block;
-      }
-
-
-      .logo {
-
-        position: relative;
-
-        z-index: 2;
-      }
-
-
-      .logo-name {
-        font-size: 47px;
-      }
-
-
-      .logo-heart {
-
-        font-size: 32px;
-
-        margin-left: 54px;
-
-        margin-bottom: 6px;
-      }
-
-
-      .logo-subtitle {
-
-        font-size: 8px;
-
-        letter-spacing: 3px;
-
-        margin-left: 31px;
-      }
-
-
-      nav {
-
-        margin-top: 28px;
-
-        padding-top: 0;
-
-        width: 100%;
-
-        justify-content: flex-start;
-
-        gap: 17px;
-
-        overflow-x: auto;
-
-        scrollbar-width: none;
-      }
-
-
-      nav::-webkit-scrollbar {
-        display: none;
-      }
-
-
-      nav a {
-
-        font-size: 9px;
-
-        letter-spacing: 1.8px;
-
-        flex-shrink: 0;
-      }
-
-
-      nav a.active::after {
-        bottom: -8px;
-      }
-
-
-      .header-contact {
-
-        display: none;
-      }
-
-
-      .hero-content {
-
-        width:
-          calc(100% - 36px);
-
-        min-height: 850px;
-
-        padding-bottom: 48px;
-
-        align-items: flex-end;
-      }
-
-
-      .hero-copy {
-
-        width: 100%;
-      }
-
-
-      .eyebrow {
-
-        font-size: 10px;
-
-        letter-spacing: 3px;
-
-        margin-bottom: 20px;
-      }
-
-
-      h1 {
-
-        font-size:
-          clamp(
-            48px,
-            13vw,
-            70px
-          );
-
-        line-height: 0.91;
-
-        letter-spacing: -1px;
-
-        margin-bottom: 25px;
-      }
-
-
-      .hero-line {
-
-        margin-bottom: 20px;
-      }
-
-
-      .hero-text {
-
-        font-size: 17px;
-
-        line-height: 1.42;
-
-        max-width: 480px;
-
-        margin-bottom: 24px;
-      }
-
-
-      .hero-button {
+    .hero-copy{
+        width:100%;
+        max-width:none;
 
         padding:
-          15px
-          24px;
+            48px
+            28px
+            52px;
 
-        font-size: 10px;
+        color:var(--marron);
 
-        letter-spacing: 2px;
-      }
-
-
-      .services {
-
-        padding:
-          30px
-          0;
-      }
-
-
-      .services-inner {
-
-        width:
-          calc(100% - 36px);
-      }
-
-
-      .services-grid {
-
-        grid-template-columns:
-          1fr
-          1fr;
-      }
-
-
-      .service {
-
-        min-height: 170px;
-
-        padding:
-          20px
-          18px;
-
-        border-right:
-          1px solid
-          var(--linea);
-
-        border-bottom:
-          1px solid
-          var(--linea);
-      }
-
-
-      .service:nth-child(2) {
-        border-right: none;
-      }
-
-
-      .service:nth-child(3) {
-        border-bottom: none;
-      }
-
-
-      .service:nth-child(4) {
-
-        border-right: none;
-
-        border-bottom: none;
-      }
-
-
-      .service:first-child,
-      .service:last-child {
-
-        padding-left: 18px;
-        padding-right: 18px;
-      }
-
-
-      .heart {
-        font-size: 31px;
-      }
-
-
-      .service h2 {
-        font-size: 20px;
-      }
-
-
-      .service p {
-        font-size: 13px;
-      }
-
+        background:var(--crema);
     }
 
 
-    /* =====================================================
-       MÓVIL PEQUEÑO
-    ====================================================== */
+    /*
+       En móvil colocamos el texto DESPUÉS de la fotografía.
+    */
 
-    @media (max-width: 520px) {
+    .eyebrow{
+        margin-bottom:15px;
 
-      .hero {
+        font-size:9px;
+        letter-spacing:2.4px;
 
-        min-height: 820px;
-
-        background-position:
-          61% center;
-      }
-
-
-      .hero-content {
-
-        min-height: 820px;
-      }
-
-
-      .logo-name {
-        font-size: 43px;
-      }
-
-
-      nav {
-        gap: 13px;
-      }
-
-
-      nav a {
-        font-size: 8px;
-        letter-spacing: 1.5px;
-      }
-
-
-      h1 {
-
-        font-size: 49px;
-
-        max-width: 330px;
-      }
-
-
-      .hero-text {
-
-        font-size: 16px;
-
-        max-width: 330px;
-      }
-
-
-      .services-grid {
-
-        grid-template-columns: 1fr;
-      }
-
-
-      .service,
-      .service:nth-child(2),
-      .service:nth-child(3),
-      .service:nth-child(4) {
-
-        border-right: none;
-
-        border-bottom:
-          1px solid
-          var(--linea);
-      }
-
-
-      .service:last-child {
-
-        border-bottom: none;
-      }
-
+        color:var(--dorado);
     }
 
-  </style>
+
+    .hero-title{
+        font-size:53px;
+        line-height:.88;
+
+        letter-spacing:-1.5px;
+
+        color:var(--marron);
+    }
+
+
+    .hero-title .script{
+        color:var(--terracota);
+    }
+
+
+    .hero-line{
+        margin:22px 0 17px;
+
+        background:var(--dorado);
+    }
+
+
+    .hero-description{
+        width:auto;
+
+        font-size:17px;
+        line-height:1.45;
+
+        color:var(--marron);
+    }
+
+
+    .hero-description strong{
+        color:var(--terracota);
+    }
+
+
+    .hero-signature{
+        max-width:none;
+
+        margin-top:18px;
+
+        font-size:25px;
+
+        color:var(--terracota);
+    }
+
+
+    .hero-buttons{
+        display:flex;
+        flex-direction:column;
+        align-items:stretch;
+
+        gap:11px;
+
+        margin-top:27px;
+    }
+
+
+    .button{
+        width:100%;
+        min-height:50px;
+    }
+
+
+    .button.secondary{
+        border-color:var(--dorado);
+        color:var(--dorado);
+    }
+
+
+    .button.secondary:hover{
+        background:var(--dorado);
+        color:#fff;
+    }
+
+
+    /* SERVICIOS MÓVIL */
+
+    .services{
+        padding:46px 0 45px;
+    }
+
+
+    .services-inner{
+        width:calc(100% - 40px);
+    }
+
+
+    .services-intro{
+        margin-bottom:31px;
+    }
+
+
+    .services-intro p{
+        font-size:32px;
+    }
+
+
+    .services-grid{
+        display:grid;
+        grid-template-columns:1fr;
+    }
+
+
+    .service{
+        min-height:0;
+
+        padding:25px 18px;
+
+        border-right:0;
+        border-bottom:1px solid var(--linea);
+    }
+
+
+    .service:first-child{
+        padding-top:0;
+    }
+
+
+    .service:last-child{
+        border-bottom:0;
+        padding-bottom:0;
+    }
+
+
+    .service-icon{
+        margin-bottom:9px;
+
+        font-size:30px;
+    }
+
+
+    .service h2{
+        font-size:20px;
+    }
+
+
+    .service p{
+        max-width:300px;
+
+        margin:0 auto;
+
+        font-size:11px;
+        line-height:1.6;
+    }
+
+
+    /* FRANJA FINAL */
+
+    .brand-strip{
+        padding:22px 25px;
+    }
+
+
+    .brand-strip p{
+        font-size:8px;
+        letter-spacing:1.7px;
+    }
+
+}
+
+
+/* =========================================================
+   MÓVILES PEQUEÑOS
+========================================================= */
+
+@media (max-width:390px){
+
+    .logo-link{
+        width:130px;
+        height:63px;
+    }
+
+    .logo{
+        width:130px;
+        height:63px;
+    }
+
+    .mobile-menu-button{
+        width:42px;
+        height:42px;
+    }
+
+    .hero::after{
+        height:53vh;
+        min-height:350px;
+    }
+
+    .hero-copy{
+        padding:
+            42px
+            23px
+            48px;
+    }
+
+    .hero-title{
+        font-size:47px;
+    }
+
+    .hero-description{
+        font-size:16px;
+    }
+
+}
+
+
+/* =========================================================
+   ANIMACIONES SUTILES
+========================================================= */
+
+@keyframes aparecer{
+    from{
+        opacity:0;
+        transform:translateY(15px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+
+.hero-copy{
+    animation:aparecer .9s ease both;
+}
+
+
+.hero::after{
+    animation:aparecer 1.1s ease both;
+}
+
+
+@media (prefers-reduced-motion:reduce){
+
+    *,
+    *::before,
+    *::after{
+        animation:none !important;
+        transition:none !important;
+        scroll-behavior:auto !important;
+    }
+
+}
+
+</style>
 </head>
 
 
 <body>
 
 
-  <!-- =====================================================
-       INICIO / PORTADA
-  ====================================================== -->
+<!-- =======================================================
+     CABECERA
+======================================================= -->
 
-  <section
-    class="hero"
-    id="inicio"
-  >
+<header class="site-header">
 
-
-    <!-- ===================================================
-         CABECERA
-    ==================================================== -->
-
-    <header>
-
-      <div class="header-inner">
+    <div class="header-inner">
 
 
-        <!-- LOGO -->
+        <!-- LOGO OFICIAL -->
 
         <a
-          href="#inicio"
-          class="logo"
-          aria-label="Bodas Con Cati"
-        >
+            href="#inicio"
+            class="logo-link"
+            aria-label="Bodas Con Cati - Inicio">
 
-          <div class="logo-heart">
-            ♡
-          </div>
-
-          <div class="logo-name">
-            Bodas Con Cati
-          </div>
-
-          <div class="logo-subtitle">
-            Wedding Planner
-          </div>
+            <img
+                src="assets/logo%201.jpg"
+                class="logo"
+                alt="Bodas Con Cati Wedding Planner">
 
         </a>
 
 
-        <!-- MENÚ -->
+        <!-- MENÚ ORDENADOR -->
 
-        <nav aria-label="Navegación principal">
+        <nav class="main-nav">
 
-          <a
-            href="#inicio"
-            class="active"
-          >
-            Inicio
-          </a>
+            <a
+                href="#inicio"
+                class="active">
+                Inicio
+            </a>
 
-          <a href="sobre-mi.html">
-            Sobre mí
-          </a>
+            <a href="#sobre-mi">
+                Sobre mí
+            </a>
 
-          <a href="servicios.html">
-            Servicios
-          </a>
+            <a href="#servicios">
+                Servicios
+            </a>
 
-          <a href="mallorca.html">
-            Mallorca
-          </a>
+            <a href="#mallorca">
+                Mallorca
+            </a>
 
-          <a href="contacto.html">
-            Contacto
-          </a>
-
-          <a
-            href="contacto.html"
-            class="header-contact"
-          >
-            Quiero hablar
-            <span>♡</span>
-          </a>
+            <a href="#contacto">
+                Contacto
+            </a>
 
         </nav>
 
-      </div>
 
-    </header>
-
-
-    <!-- ===================================================
-         TEXTO PRINCIPAL
-    ==================================================== -->
-
-    <div class="hero-content">
-
-      <div class="hero-copy">
-
-
-        <div class="eyebrow">
-          Wedding Planner · Mallorca
-        </div>
-
-
-        <h1>
-
-          Que organizar
-
-          <span class="italic">
-            vuestra boda
-          </span>
-
-          también sea parte de la magia.
-
-        </h1>
-
-
-        <div class="hero-line"></div>
-
-
-        <p class="hero-text">
-
-          Una boda se disfruta mucho más cuando sabes que todo
-          está en buenas manos. Os acompaño en la organización
-          y coordinación de vuestra boda en Mallorca para que
-          podáis vivir cada momento con calma, ilusión y la
-          tranquilidad de estar exactamente donde queréis estar.
-
-        </p>
-
+        <!-- BOTÓN -->
 
         <a
-          href="sobre-mi.html"
-          class="hero-button"
-        >
-
-          Quiero saber más
-
-          <span>→</span>
-
+            href="#contacto"
+            class="header-button">
+            Quiero hablar ♡
         </a>
 
 
-      </div>
+        <!-- HAMBURGUESA MÓVIL -->
+
+        <button
+            class="mobile-menu-button"
+            type="button"
+            aria-label="Abrir menú">
+
+            <span></span>
+            <span></span>
+            <span></span>
+
+        </button>
+
 
     </div>
 
-  </section>
+</header>
 
 
 
-  <!-- =====================================================
-       ASÍ OS PUEDO AYUDAR
-  ====================================================== -->
+<!-- =======================================================
+     INICIO
+======================================================= -->
 
-  <section
+<main>
+
+<section
+    class="hero"
+    id="inicio">
+
+
+    <div class="hero-inner">
+
+
+        <div class="hero-copy">
+
+
+            <div class="eyebrow">
+                Wedding Planner · Mallorca
+            </div>
+
+
+            <h1 class="hero-title">
+
+                <span class="normal">
+                    Bodas que
+                </span>
+
+                <span class="script">
+                    se sienten
+                </span>
+
+                <span class="last">
+                    como vosotros.
+                </span>
+
+            </h1>
+
+
+            <div class="hero-line"></div>
+
+
+            <p class="hero-description">
+
+                Organización y coordinación de bodas en Mallorca
+                para parejas que quieren
+                <strong>
+                    disfrutar de su día sin preocuparse por nada.
+                </strong>
+
+            </p>
+
+
+            <p class="hero-signature">
+
+                Detrás de cada boda hay una historia,
+                y me encantará acompañaros a vivir la vuestra.
+
+                <span class="hero-heart">♡</span>
+
+            </p>
+
+
+            <div class="hero-buttons">
+
+                <a
+                    href="#sobre-mi"
+                    class="button primary">
+
+                    Quiero saber más →
+
+                </a>
+
+
+                <a
+                    href="#servicios"
+                    class="button secondary">
+
+                    Ver servicios
+
+                </a>
+
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =======================================================
+     SERVICIOS
+======================================================= -->
+
+<section
     class="services"
-    id="servicios"
-  >
+    id="servicios">
+
 
     <div class="services-inner">
 
 
-      <div class="services-grid">
+        <div class="services-intro">
+
+            <p>
+                Así os puedo ayudar ♡
+            </p>
+
+        </div>
 
 
-        <!-- ORGANIZACIÓN -->
-
-        <article class="service">
-
-          <div class="heart">
-            ♡
-          </div>
-
-          <h2>
-            Organización completa
-          </h2>
-
-          <p>
-            Me encargo de la planificación y de cada paso
-            para que disfrutéis del proceso.
-          </p>
-
-        </article>
+        <div class="services-grid">
 
 
-        <!-- COORDINACIÓN -->
+            <!-- SERVICIO 1 -->
 
-        <article class="service">
+            <article class="service">
 
-          <div class="heart">
-            ♡
-          </div>
+                <div class="service-icon">
+                    ♡
+                </div>
 
-          <h2>
-            Coordinación del día
-          </h2>
+                <h2>
+                    Organización completa
+                </h2>
 
-          <p>
-            Para que viváis cada momento sin preocuparos
-            de nada.
-          </p>
+                <p>
+                    Me encargo de la planificación y de cada paso
+                    para que disfrutéis del proceso.
+                </p>
 
-        </article>
-
-
-        <!-- PROVEEDORES -->
-
-        <article class="service">
-
-          <div class="heart">
-            ♡
-          </div>
-
-          <h2>
-            Gestión de proveedores
-          </h2>
-
-          <p>
-            Os ayudo a encontrar, elegir y coordinar al
-            equipo perfecto para vuestra boda.
-          </p>
-
-        </article>
+            </article>
 
 
-        <!-- MALLORCA -->
+            <!-- SERVICIO 2 -->
 
-        <article class="service">
+            <article class="service">
 
-          <div class="heart">
-            ♡
-          </div>
+                <div class="service-icon">
+                    ♡
+                </div>
 
-          <h2>
-            Mallorca
-          </h2>
+                <h2>
+                    Coordinación del día
+                </h2>
 
-          <p>
-            Conozco la isla, sus rincones y a los mejores
-            profesionales.
-          </p>
+                <p>
+                    Para que viváis cada momento sin preocuparos
+                    de nada.
+                </p>
 
-        </article>
+            </article>
 
 
-      </div>
+            <!-- SERVICIO 3 -->
+
+            <article class="service">
+
+                <div class="service-icon">
+                    ♡
+                </div>
+
+                <h2>
+                    Gestión de proveedores
+                </h2>
+
+                <p>
+                    Os ayudo a encontrar, elegir y coordinar
+                    al equipo perfecto para vuestra boda.
+                </p>
+
+            </article>
+
+
+            <!-- SERVICIO 4 -->
+
+            <article class="service">
+
+                <div class="service-icon">
+                    ♡
+                </div>
+
+                <h2>
+                    Mallorca
+                </h2>
+
+                <p>
+                    Conozco la isla, sus rincones y a los mejores
+                    profesionales.
+                </p>
+
+            </article>
+
+
+        </div>
 
     </div>
 
-  </section>
+</section>
 
 
-  <!-- =====================================================
-       FIN DE LA PÁGINA DE INICIO
 
-       Las siguientes páginas las haremos después:
-       - Sobre mí
-       - Servicios
-       - Mallorca
-       - Contacto
-  ====================================================== -->
+<!-- =======================================================
+     ZONAS PREPARADAS PARA LAS PRÓXIMAS PÁGINAS
+======================================================= -->
+
+<section id="sobre-mi" style="display:none;"></section>
+
+<section id="mallorca" style="display:none;"></section>
+
+<section id="contacto" style="display:none;"></section>
+
+
+
+<!-- =======================================================
+     FRANJA FINAL
+======================================================= -->
+
+<div class="brand-strip">
+
+    <p>
+        Bodas Con Cati · Wedding Planner en Mallorca ·
+        Experiencias que se recuerdan toda la vida
+    </p>
+
+</div>
+
+
+</main>
+
+
+<script>
+
+/* =========================================================
+   MENÚ MÓVIL
+========================================================= */
+
+const mobileButton =
+    document.querySelector(".mobile-menu-button");
+
+
+mobileButton.addEventListener("click", function(){
+
+    alert(
+        "El menú móvil se activará cuando construyamos las páginas Sobre mí, Servicios, Mallorca y Contacto."
+    );
+
+});
+
+
+</script>
 
 
 </body>
