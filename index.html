@@ -2,16 +2,23 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
 
   <title>Bodas Con Cati | Wedding Planner Mallorca</title>
 
   <meta
     name="description"
-    content="Organización y coordinación de bodas en Mallorca para parejas que quieren disfrutar de cada momento con calma, ilusión y tranquilidad."
+    content="Bodas Con Cati · Wedding Planner en Mallorca. Organización y coordinación de bodas para disfrutar de cada momento con calma, ilusión y tranquilidad."
   >
 
-  <!-- TIPOGRAFÍAS -->
+  <!-- =====================================================
+       TIPOGRAFÍAS
+  ====================================================== -->
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
@@ -20,34 +27,33 @@
     rel="stylesheet"
   >
 
+
   <style>
 
-    /* =========================================================
-       VARIABLES
-    ========================================================= */
+    /* =====================================================
+       COLORES
+    ====================================================== */
 
     :root {
 
-      --crema: #f6f0e8;
-      --nude: #e9ddd0;
-      --nude-claro: #f1e8df;
+      --crema: #f4eee7;
+      --nude: #eee3d8;
+      --marron: #3b2922;
+      --marron-suave: #665149;
 
-      --marron: #38251f;
-      --marron-suave: #5a4035;
-
-      --bronce: #a87546;
-      --bronce-claro: #bd916c;
-
-      --linea: #d9c5b2;
+      --bronce: #a8754b;
+      --bronce-claro: #c39b7d;
 
       --blanco: #fffdf9;
+
+      --linea: rgba(59, 41, 34, 0.20);
 
     }
 
 
-    /* =========================================================
+    /* =====================================================
        RESET
-    ========================================================= */
+    ====================================================== */
 
     * {
       box-sizing: border-box;
@@ -60,9 +66,18 @@
     }
 
     body {
+
+      margin: 0;
+
       background: var(--crema);
+
       color: var(--marron);
-      font-family: "Cormorant Garamond", Georgia, serif;
+
+      font-family:
+        "Cormorant Garamond",
+        Georgia,
+        serif;
+
       overflow-x: hidden;
     }
 
@@ -77,80 +92,182 @@
     }
 
 
-    /* =========================================================
-       CABECERA
-    ========================================================= */
+    /* =====================================================
+       PORTADA COMPLETA
+    ====================================================== */
+
+    .hero {
+
+      position: relative;
+
+      width: 100%;
+
+      min-height: 840px;
+
+      background-image:
+        url("assets/hero.jpg");
+
+      background-size: cover;
+
+      background-position: center center;
+
+      background-repeat: no-repeat;
+
+      overflow: hidden;
+    }
+
+
+    /* =====================================================
+       CAPA OSCURA / MARRÓN SOBRE LA FOTO
+    ====================================================== */
+
+    .hero::before {
+
+      content: "";
+
+      position: absolute;
+
+      inset: 0;
+
+      background:
+        linear-gradient(
+          90deg,
+          rgba(34, 24, 19, 0.78) 0%,
+          rgba(45, 31, 25, 0.62) 27%,
+          rgba(45, 31, 25, 0.20) 58%,
+          rgba(45, 31, 25, 0.05) 100%
+        );
+
+      z-index: 1;
+    }
+
+
+    /* =====================================================
+       HEADER ENCIMA DE LA FOTO
+    ====================================================== */
 
     header {
+
+      position: absolute;
+
+      top: 0;
+      left: 0;
+
       width: 100%;
-      background: var(--crema);
-      position: relative;
-      z-index: 20;
+
+      z-index: 10;
+
+      color: var(--blanco);
     }
+
 
     .header-inner {
 
       width: min(
-        1240px,
-        calc(100% - 80px)
+        1380px,
+        calc(100% - 110px)
       );
+
+      min-height: 125px;
 
       margin: 0 auto;
 
-      min-height: 105px;
+      display: flex;
 
-      display: grid;
+      align-items: flex-start;
 
-      grid-template-columns:
-        300px
-        minmax(0, 1fr);
+      justify-content: space-between;
 
-      align-items: center;
+      gap: 40px;
 
-      column-gap: 45px;
+      padding-top: 30px;
     }
 
 
-    /* =========================================================
-       LOGO — TEXTO, NO IMAGEN
-    ========================================================= */
+    /* =====================================================
+       LOGO
+    ====================================================== */
 
-    .logo-box {
+    .logo {
 
       display: flex;
 
-      align-items: center;
+      flex-direction: column;
 
-      justify-content: flex-start;
+      align-items: flex-start;
 
-      width: max-content;
+      flex-shrink: 0;
 
-      padding: 8px 0 0 0;
+      color: var(--blanco);
     }
+
+
+    .logo-heart {
+
+      font-family:
+        "Cormorant Garamond",
+        Georgia,
+        serif;
+
+      font-size: 42px;
+
+      line-height: 0.65;
+
+      margin-left: 68px;
+
+      margin-bottom: 8px;
+
+      color: var(--blanco);
+
+      transform: rotate(-7deg);
+    }
+
 
     .logo-name {
 
-      font-family: "Allura", cursive;
+      font-family:
+        "Allura",
+        cursive;
 
-      font-size: 46px;
+      font-size: 57px;
 
-      line-height: 1;
+      line-height: 0.9;
 
       font-weight: 400;
-
-      color: var(--bronce);
 
       white-space: nowrap;
 
       letter-spacing: -1px;
+
+      color: var(--blanco);
     }
 
 
-    /* =========================================================
-       MENÚ
-    ========================================================= */
+    .logo-subtitle {
 
-    .main-nav {
+      font-family:
+        "Montserrat",
+        sans-serif;
+
+      font-size: 11px;
+
+      letter-spacing: 4px;
+
+      text-transform: uppercase;
+
+      margin-top: 10px;
+
+      margin-left: 45px;
+
+      color: var(--blanco);
+    }
+
+
+    /* =====================================================
+       MENÚ
+    ====================================================== */
+
+    nav {
 
       display: flex;
 
@@ -159,105 +276,185 @@
       justify-content: flex-end;
 
       gap: 36px;
+
+      padding-top: 15px;
+
+      flex-wrap: nowrap;
     }
 
-    .main-nav a {
 
-      font-family: "Montserrat", sans-serif;
+    nav a {
 
-      font-size: 15px;
+      position: relative;
+
+      font-family:
+        "Montserrat",
+        sans-serif;
+
+      font-size: 13px;
 
       font-weight: 500;
-
-      letter-spacing: 2px;
-
-      text-transform: uppercase;
-
-      color: var(--marron);
-
-      transition:
-        color 0.25s ease,
-        opacity 0.25s ease;
-    }
-
-    .main-nav a:hover {
-      color: var(--bronce);
-    }
-
-
-    /* =========================================================
-       HERO
-    ========================================================= */
-
-    .hero {
-
-      width: min(
-        1240px,
-        calc(100% - 80px)
-      );
-
-      margin: 0 auto;
-
-      min-height: 620px;
-
-      display: grid;
-
-      grid-template-columns:
-        48%
-        52%;
-
-      align-items: stretch;
-
-      position: relative;
-    }
-
-
-    /* =========================================================
-       TEXTO HERO
-    ========================================================= */
-
-    .hero-copy {
-
-      display: flex;
-
-      flex-direction: column;
-
-      justify-content: center;
-
-      padding:
-        30px
-        55px
-        55px
-        0;
-
-      position: relative;
-
-      z-index: 2;
-    }
-
-    .eyebrow {
-
-      font-family: "Montserrat", sans-serif;
-
-      font-size: 15px;
-
-      font-weight: 600;
 
       letter-spacing: 3px;
 
       text-transform: uppercase;
 
-      color: var(--bronce);
+      white-space: nowrap;
 
-      margin-bottom: 28px;
+      color: var(--blanco);
+
+      transition:
+        opacity 0.25s ease,
+        color 0.25s ease;
     }
 
 
-    /* =========================================================
-       TÍTULO
-    ========================================================= */
+    nav a:hover {
+      opacity: 0.75;
+    }
 
-    .hero-title {
+
+    /* Línea debajo de INICIO */
+
+    nav a.active::after {
+
+      content: "";
+
+      position: absolute;
+
+      left: 0;
+      right: 0;
+
+      bottom: -14px;
+
+      height: 1px;
+
+      background: var(--blanco);
+    }
+
+
+    /* =====================================================
+       BOTÓN QUIERO HABLAR
+    ====================================================== */
+
+    .header-contact {
+
+      display: inline-flex;
+
+      align-items: center;
+
+      justify-content: center;
+
+      min-width: 205px;
+
+      padding:
+        14px
+        23px;
+
+      border:
+        1px solid
+        rgba(255,255,255,0.65);
+
+      font-family:
+        "Montserrat",
+        sans-serif;
+
+      font-size: 12px;
+
+      font-weight: 500;
+
+      letter-spacing: 2.5px;
+
+      text-transform: uppercase;
+
+      color: var(--blanco);
+
+      transition:
+        background 0.25s ease,
+        color 0.25s ease;
+    }
+
+
+    .header-contact span {
+
+      margin-left: 9px;
+
+      font-size: 18px;
+
+      line-height: 1;
+    }
+
+
+    .header-contact:hover {
+
+      background: rgba(255,255,255,0.12);
+    }
+
+
+    /* =====================================================
+       CONTENIDO DEL HERO
+    ====================================================== */
+
+    .hero-content {
+
+      position: relative;
+
+      z-index: 3;
+
+      width: min(
+        1380px,
+        calc(100% - 110px)
+      );
+
+      min-height: 840px;
+
+      margin: 0 auto;
+
+      display: flex;
+
+      align-items: flex-end;
+
+      padding-bottom: 72px;
+    }
+
+
+    .hero-copy {
+
+      width: 560px;
+
+      color: var(--blanco);
+    }
+
+
+    /* =====================================================
+       PEQUEÑO TÍTULO
+    ====================================================== */
+
+    .eyebrow {
+
+      font-family:
+        "Montserrat",
+        sans-serif;
+
+      font-size: 13px;
+
+      font-weight: 500;
+
+      letter-spacing: 5px;
+
+      text-transform: uppercase;
+
+      margin-bottom: 30px;
+
+      color: rgba(255,255,255,0.88);
+    }
+
+
+    /* =====================================================
+       TÍTULO PRINCIPAL
+    ====================================================== */
+
+    h1 {
 
       font-family:
         "Cormorant Garamond",
@@ -266,71 +463,74 @@
 
       font-size:
         clamp(
-          62px,
-          5.2vw,
+          58px,
+          5.1vw,
           86px
         );
 
-      line-height: 0.92;
+      line-height: 0.91;
 
       font-weight: 500;
 
       letter-spacing: -2px;
 
-      color: var(--marron);
+      color: var(--blanco);
 
-      max-width: 620px;
+      max-width: 610px;
 
-      margin-bottom: 34px;
+      margin-bottom: 32px;
     }
 
-    .hero-title .soft {
 
-      color: var(--bronce-claro);
+    h1 .italic {
+
+      display: block;
 
       font-style: italic;
+
+      color: #d4b5a1;
 
       font-weight: 500;
     }
 
 
-    /* =========================================================
-       LÍNEA DECORATIVA
-    ========================================================= */
+    /* =====================================================
+       LÍNEA
+    ====================================================== */
 
     .hero-line {
 
-      width: 52px;
+      width: 68px;
 
-      height: 2px;
+      height: 1px;
 
-      background: var(--bronce);
+      background: var(--blanco);
 
-      margin-bottom: 23px;
+      margin-bottom: 26px;
     }
 
 
-    /* =========================================================
-       TEXTO DESCRIPTIVO
-    ========================================================= */
+    /* =====================================================
+       TEXTO PRINCIPAL
+    ====================================================== */
 
     .hero-text {
 
-      max-width: 540px;
+      max-width: 560px;
 
-      font-size: 19px;
+      font-size: 20px;
 
-      line-height: 1.38;
+      line-height: 1.45;
 
-      color: var(--marron);
+      color: rgba(255,255,255,0.94);
 
-      margin-bottom: 28px;
+      margin-bottom: 32px;
     }
 
 
-    /* =========================================================
-       BOTÓN
-    ========================================================= */
+    /* =====================================================
+       BOTÓN SABER MÁS
+    ====================================================== */
 
     .hero-button {
 
@@ -340,23 +540,24 @@
 
       justify-content: center;
 
-      width: fit-content;
-
       padding:
         17px
-        28px;
+        34px;
 
-      background: var(--bronce);
+      background:
+        rgba(174, 125, 86, 0.86);
 
       color: var(--blanco);
 
-      font-family: "Montserrat", sans-serif;
+      font-family:
+        "Montserrat",
+        sans-serif;
 
-      font-size: 14px;
+      font-size: 12px;
 
       font-weight: 600;
 
-      letter-spacing: 1.5px;
+      letter-spacing: 3px;
 
       text-transform: uppercase;
 
@@ -365,137 +566,54 @@
         transform 0.25s ease;
     }
 
+
+    .hero-button span {
+
+      margin-left: 9px;
+
+      font-size: 17px;
+    }
+
+
     .hero-button:hover {
 
-      background: var(--marron);
+      background: var(--bronce);
 
       transform: translateY(-2px);
     }
 
 
-    /* =========================================================
-       FOTO HERO
-       
-       IMPORTANTE:
-       Cambia "hero.jpg" por el nombre de tu foto si tu archivo
-       tiene otro nombre.
-    ========================================================= */
-
-    .hero-image {
-
-      min-height: 620px;
-
-      position: relative;
-
-      overflow: hidden;
-
-      background:
-        url("hero.jpg")
-        center center /
-        cover
-        no-repeat;
-    }
-
-
-    /* Difuminado elegante entre foto y fondo */
-
-    .hero-image::before {
-
-      content: "";
-
-      position: absolute;
-
-      left: -80px;
-
-      top: 0;
-
-      bottom: 0;
-
-      width: 180px;
-
-      z-index: 2;
-
-      background:
-        linear-gradient(
-          to right,
-          var(--crema),
-          rgba(246, 240, 232, 0)
-        );
-
-      pointer-events: none;
-    }
-
-
-    /* =========================================================
-       SECCIÓN SERVICIOS
-    ========================================================= */
+    /* =====================================================
+       SERVICIOS
+    ====================================================== */
 
     .services {
 
-      background: var(--nude);
+      position: relative;
+
+      background: var(--crema);
 
       border-top:
         1px solid
         var(--linea);
 
       padding:
-        32px
+        30px
         0
-        38px;
+        34px;
     }
+
 
     .services-inner {
 
       width: min(
-        1240px,
-        calc(100% - 80px)
+        1380px,
+        calc(100% - 110px)
       );
 
       margin: 0 auto;
     }
 
-
-    /* =========================================================
-       TÍTULO SERVICIOS
-    ========================================================= */
-
-    .services-title {
-
-      text-align: center;
-
-      font-family:
-        "Cormorant Garamond",
-        Georgia,
-        serif;
-
-      font-size: 34px;
-
-      line-height: 1;
-
-      font-style: italic;
-
-      font-weight: 500;
-
-      color: var(--marron);
-
-      margin-bottom: 30px;
-    }
-
-    .services-title span {
-
-      font-style: normal;
-
-      font-size: 38px;
-
-      margin-left: 7px;
-
-      color: var(--marron);
-    }
-
-
-    /* =========================================================
-       GRID SERVICIOS
-    ========================================================= */
 
     .services-grid {
 
@@ -505,34 +623,39 @@
         repeat(4, 1fr);
     }
 
+
     .service {
 
-      padding:
-        0
-        30px;
-
       min-height: 145px;
+
+      padding:
+        4px
+        38px;
+
+      text-align: center;
 
       border-right:
         1px solid
         var(--linea);
     }
 
+
     .service:first-child {
-      padding-left: 10px;
+      padding-left: 15px;
     }
+
 
     .service:last-child {
 
       border-right: none;
 
-      padding-right: 10px;
+      padding-right: 15px;
     }
 
 
-    /* =========================================================
+    /* =====================================================
        CORAZÓN
-    ========================================================= */
+    ====================================================== */
 
     .heart {
 
@@ -541,32 +664,32 @@
         Georgia,
         serif;
 
-      font-size: 33px;
+      font-size: 37px;
 
       line-height: 1;
 
       color: var(--bronce);
 
-      margin-bottom: 18px;
+      margin-bottom: 15px;
     }
 
 
-    /* =========================================================
+    /* =====================================================
        TÍTULO SERVICIO
-    ========================================================= */
+    ====================================================== */
 
-    .service h3 {
+    .service h2 {
 
       font-family:
         "Cormorant Garamond",
         Georgia,
         serif;
 
-      font-size: 21px;
-
-      font-weight: 600;
+      font-size: 23px;
 
       line-height: 1.1;
+
+      font-weight: 500;
 
       color: var(--marron);
 
@@ -574,502 +697,332 @@
     }
 
 
-    /* =========================================================
+    /* =====================================================
        TEXTO SERVICIO
-    ========================================================= */
+    ====================================================== */
 
     .service p {
+
+      max-width: 280px;
+
+      margin: 0 auto;
 
       font-family:
         "Montserrat",
         sans-serif;
 
-      font-size: 15px;
-
-      line-height: 1.45;
-
-      color: var(--marron-suave);
-
-      max-width: 245px;
-    }
-
-
-    /* =========================================================
-       SECCIÓN SOBRE MÍ
-    ========================================================= */
-
-    .about {
-
-      padding:
-        100px 0;
-
-      background: var(--crema);
-    }
-
-    .about-inner {
-
-      width: min(
-        1050px,
-        calc(100% - 80px)
-      );
-
-      margin: 0 auto;
-
-      display: grid;
-
-      grid-template-columns:
-        1fr
-        1fr;
-
-      gap: 70px;
-
-      align-items: center;
-    }
-
-    .about-title {
-
-      font-size: 62px;
-
-      line-height: 0.95;
-
-      font-weight: 500;
-
-      color: var(--marron);
-    }
-
-    .about-title em {
-
-      color: var(--bronce-claro);
-
-      font-style: italic;
-    }
-
-    .about-text {
-
-      font-size: 19px;
-
-      line-height: 1.5;
-
-      color: var(--marron-suave);
-    }
-
-
-    /* =========================================================
-       MALLORCA
-    ========================================================= */
-
-    .mallorca {
-
-      padding:
-        100px 0;
-
-      background: var(--nude-claro);
-    }
-
-    .mallorca-inner {
-
-      width: min(
-        1050px,
-        calc(100% - 80px)
-      );
-
-      margin: 0 auto;
-
-      text-align: center;
-    }
-
-    .mallorca-title {
-
-      font-size: 62px;
-
-      line-height: 1;
-
-      font-weight: 500;
-
-      margin-bottom: 25px;
-    }
-
-    .mallorca-title em {
-
-      color: var(--bronce-claro);
-
-      font-style: italic;
-    }
-
-    .mallorca-text {
-
-      max-width: 650px;
-
-      margin: 0 auto;
-
-      font-size: 20px;
-
-      line-height: 1.5;
-
-      color: var(--marron-suave);
-    }
-
-
-    /* =========================================================
-       CONTACTO
-       
-       NO HAY "HABLEMOS".
-       Ya existe CONTACTO en el menú.
-    ========================================================= */
-
-    .contact {
-
-      padding:
-        100px 0;
-
-      background: var(--crema);
-
-      text-align: center;
-    }
-
-    .contact-inner {
-
-      width: min(
-        900px,
-        calc(100% - 80px)
-      );
-
-      margin: 0 auto;
-    }
-
-    .contact-title {
-
-      font-size: 64px;
-
-      line-height: 1;
-
-      font-weight: 500;
-
-      margin-bottom: 25px;
-    }
-
-    .contact-title em {
-
-      color: var(--bronce-claro);
-
-      font-style: italic;
-    }
-
-    .contact-text {
-
-      font-size: 20px;
-
-      line-height: 1.5;
-
-      margin: 0 auto 30px;
-
-      max-width: 650px;
-
-      color: var(--marron-suave);
-    }
-
-    .contact-button {
-
-      display: inline-flex;
-
-      padding:
-        17px
-        30px;
-
-      background: var(--bronce);
-
-      color: var(--blanco);
-
-      font-family: "Montserrat", sans-serif;
-
       font-size: 14px;
 
-      font-weight: 600;
+      line-height: 1.5;
 
-      letter-spacing: 1.5px;
+      font-weight: 400;
 
-      text-transform: uppercase;
+      color: var(--marron-suave);
     }
 
 
-    /* =========================================================
-       FOOTER
-    ========================================================= */
+    /* =====================================================
+       ZONAS DE PÁGINAS FUTURAS
+       
+       Las dejamos preparadas para que después podamos
+       crear Sobre mí, Servicios, Mallorca y Contacto.
+    ====================================================== */
 
-    footer {
+    .future-section {
 
-      background: var(--marron);
+      min-height: 1px;
 
-      color: var(--crema);
+      padding: 0;
 
-      padding:
-        45px 0;
-    }
+      margin: 0;
 
-    .footer-inner {
-
-      width: min(
-        1240px,
-        calc(100% - 80px)
-      );
-
-      margin: 0 auto;
-
-      display: flex;
-
-      justify-content: space-between;
-
-      align-items: center;
-    }
-
-    .footer-logo {
-
-      font-family: "Allura", cursive;
-
-      font-size: 42px;
-
-      color: var(--bronce-claro);
-    }
-
-    .footer-copy {
-
-      font-family: "Montserrat", sans-serif;
-
-      font-size: 12px;
-
-      letter-spacing: 1px;
-
-      opacity: 0.75;
+      background: var(--crema);
     }
 
 
-    /* =========================================================
+    /* =====================================================
        TABLET
-    ========================================================= */
+    ====================================================== */
 
-    @media (max-width: 1199px) {
+    @media (max-width: 1150px) {
 
       .header-inner {
 
         width:
           calc(100% - 60px);
 
-        grid-template-columns:
-          260px
-          minmax(0, 1fr);
-
-        column-gap: 30px;
+        gap: 25px;
       }
+
 
       .logo-name {
-        font-size: 42px;
+        font-size: 49px;
       }
 
-      .main-nav {
-        gap: 24px;
+
+      .logo-heart {
+        font-size: 36px;
+        margin-left: 58px;
       }
 
-      .main-nav a {
-        font-size: 13px;
+
+      .logo-subtitle {
+        margin-left: 36px;
       }
+
+
+      nav {
+        gap: 22px;
+      }
+
+
+      nav a {
+        font-size: 11px;
+        letter-spacing: 2px;
+      }
+
+
+      .header-contact {
+        min-width: 175px;
+        padding: 12px 15px;
+        font-size: 10px;
+      }
+
+
+      .hero-content {
+
+        width:
+          calc(100% - 60px);
+      }
+
+
+      .hero-copy {
+        width: 520px;
+      }
+
+
+      .services-inner {
+
+        width:
+          calc(100% - 60px);
+      }
+
+
+      .service {
+        padding-left: 22px;
+        padding-right: 22px;
+      }
+
+    }
+
+
+    /* =====================================================
+       MÓVIL
+    ====================================================== */
+
+    @media (max-width: 850px) {
 
       .hero {
 
-        width:
-          calc(100% - 60px);
+        min-height: 850px;
 
-        grid-template-columns:
-          48%
-          52%;
+        background-position:
+          62% center;
       }
 
-      .hero-copy {
-        padding-right: 35px;
+
+      .hero::before {
+
+        background:
+          linear-gradient(
+            180deg,
+            rgba(32,23,19,0.72) 0%,
+            rgba(39,27,22,0.38) 42%,
+            rgba(39,27,22,0.82) 100%
+          );
       }
 
-      .hero-title {
-        font-size: 68px;
-      }
-
-      .services-inner {
-        width:
-          calc(100% - 60px);
-      }
-
-      .service {
-        padding: 0 20px;
-      }
-    }
-
-
-    /* =========================================================
-       MÓVIL
-    ========================================================= */
-
-    @media (max-width: 800px) {
 
       .header-inner {
 
         width:
-          calc(100% - 40px);
+          calc(100% - 36px);
 
         min-height: auto;
 
-        display: flex;
+        padding-top: 22px;
 
-        flex-direction: column;
-
-        align-items: flex-start;
-
-        padding:
-          22px
-          0
-          24px;
-
-        gap: 20px;
+        display: block;
       }
 
-      .logo-box {
 
-        padding: 0;
+      .logo {
 
-        width: 100%;
+        position: relative;
+
+        z-index: 2;
       }
+
 
       .logo-name {
-        font-size: 42px;
+        font-size: 47px;
       }
 
-      .main-nav {
+
+      .logo-heart {
+
+        font-size: 32px;
+
+        margin-left: 54px;
+
+        margin-bottom: 6px;
+      }
+
+
+      .logo-subtitle {
+
+        font-size: 8px;
+
+        letter-spacing: 3px;
+
+        margin-left: 31px;
+      }
+
+
+      nav {
+
+        margin-top: 28px;
+
+        padding-top: 0;
 
         width: 100%;
-
-        display: flex;
-
-        flex-wrap: wrap;
 
         justify-content: flex-start;
 
-        gap:
-          14px
-          20px;
-      }
+        gap: 17px;
 
-      .main-nav a {
+        overflow-x: auto;
 
-        font-size: 11px;
-
-        letter-spacing: 1.4px;
+        scrollbar-width: none;
       }
 
 
-      /* HERO MÓVIL */
-
-      .hero {
-
-        width: 100%;
-
-        display: flex;
-
-        flex-direction: column;
-
-        min-height: auto;
+      nav::-webkit-scrollbar {
+        display: none;
       }
+
+
+      nav a {
+
+        font-size: 9px;
+
+        letter-spacing: 1.8px;
+
+        flex-shrink: 0;
+      }
+
+
+      nav a.active::after {
+        bottom: -8px;
+      }
+
+
+      .header-contact {
+
+        display: none;
+      }
+
+
+      .hero-content {
+
+        width:
+          calc(100% - 36px);
+
+        min-height: 850px;
+
+        padding-bottom: 48px;
+
+        align-items: flex-end;
+      }
+
 
       .hero-copy {
 
-        padding:
-          55px
-          30px
-          45px;
-
-        order: 1;
+        width: 100%;
       }
+
 
       .eyebrow {
 
-        font-size: 12px;
+        font-size: 10px;
 
-        letter-spacing: 2px;
+        letter-spacing: 3px;
 
         margin-bottom: 20px;
       }
 
-      .hero-title {
+
+      h1 {
 
         font-size:
           clamp(
-            52px,
-            14vw,
-            72px
+            48px,
+            13vw,
+            70px
           );
 
-        line-height: 0.92;
+        line-height: 0.91;
 
-        letter-spacing: -1.5px;
+        letter-spacing: -1px;
 
-        margin-bottom: 28px;
+        margin-bottom: 25px;
       }
+
+
+      .hero-line {
+
+        margin-bottom: 20px;
+      }
+
 
       .hero-text {
 
-        font-size: 18px;
+        font-size: 17px;
 
-        line-height: 1.4;
-      }
+        line-height: 1.42;
 
-      .hero-image {
+        max-width: 480px;
 
-        order: 2;
-
-        min-height: 500px;
-
-        width: 100%;
-      }
-
-      .hero-image::before {
-
-        left: 0;
-
-        top: -50px;
-
-        width: 100%;
-
-        height: 120px;
-
-        bottom: auto;
-
-        background:
-          linear-gradient(
-            to bottom,
-            var(--crema),
-            rgba(246,240,232,0)
-          );
+        margin-bottom: 24px;
       }
 
 
-      /* SERVICIOS */
+      .hero-button {
+
+        padding:
+          15px
+          24px;
+
+        font-size: 10px;
+
+        letter-spacing: 2px;
+      }
+
 
       .services {
 
         padding:
-          45px
-          0
-          50px;
+          30px
+          0;
       }
+
 
       .services-inner {
 
         width:
-          calc(100% - 40px);
+          calc(100% - 36px);
       }
 
-      .services-title {
-
-        font-size: 32px;
-
-        margin-bottom: 35px;
-      }
 
       .services-grid {
 
@@ -1078,191 +1031,145 @@
           1fr;
       }
 
+
       .service {
 
-        min-height: 180px;
+        min-height: 170px;
 
         padding:
-          0
           20px
-          25px;
-
-        margin-bottom: 25px;
+          18px;
 
         border-right:
           1px solid
           var(--linea);
+
+        border-bottom:
+          1px solid
+          var(--linea);
       }
+
 
       .service:nth-child(2) {
         border-right: none;
       }
 
+
       .service:nth-child(3) {
-        border-right: 1px solid var(--linea);
+        border-bottom: none;
       }
 
-      .service:first-child {
-        padding-left: 0;
+
+      .service:nth-child(4) {
+
+        border-right: none;
+
+        border-bottom: none;
       }
 
+
+      .service:first-child,
       .service:last-child {
-        padding-right: 0;
+
+        padding-left: 18px;
+        padding-right: 18px;
       }
 
 
-      /* ABOUT */
-
-      .about {
-
-        padding:
-          75px
-          0;
-      }
-
-      .about-inner {
-
-        width:
-          calc(100% - 40px);
-
-        grid-template-columns:
-          1fr;
-
-        gap: 35px;
-      }
-
-      .about-title {
-
-        font-size: 54px;
+      .heart {
+        font-size: 31px;
       }
 
 
-      /* MALLORCA */
-
-      .mallorca {
-
-        padding:
-          75px
-          0;
-      }
-
-      .mallorca-inner {
-
-        width:
-          calc(100% - 40px);
-      }
-
-      .mallorca-title {
-
-        font-size: 54px;
+      .service h2 {
+        font-size: 20px;
       }
 
 
-      /* CONTACTO */
-
-      .contact {
-
-        padding:
-          75px
-          0;
+      .service p {
+        font-size: 13px;
       }
 
-      .contact-inner {
-
-        width:
-          calc(100% - 40px);
-      }
-
-      .contact-title {
-
-        font-size: 54px;
-      }
-
-
-      /* FOOTER */
-
-      .footer-inner {
-
-        width:
-          calc(100% - 40px);
-
-        flex-direction: column;
-
-        gap: 20px;
-
-        text-align: center;
-      }
     }
 
 
-    /* =========================================================
+    /* =====================================================
        MÓVIL PEQUEÑO
-    ========================================================= */
+    ====================================================== */
 
-    @media (max-width: 480px) {
+    @media (max-width: 520px) {
+
+      .hero {
+
+        min-height: 820px;
+
+        background-position:
+          61% center;
+      }
+
+
+      .hero-content {
+
+        min-height: 820px;
+      }
+
 
       .logo-name {
-        font-size: 38px;
+        font-size: 43px;
       }
 
-      .main-nav {
-        gap:
-          12px
-          15px;
+
+      nav {
+        gap: 13px;
       }
 
-      .hero-copy {
-        padding:
-          45px
-          22px
-          40px;
+
+      nav a {
+        font-size: 8px;
+        letter-spacing: 1.5px;
       }
 
-      .hero-title {
-        font-size: 50px;
+
+      h1 {
+
+        font-size: 49px;
+
+        max-width: 330px;
       }
+
 
       .hero-text {
-        font-size: 17px;
+
+        font-size: 16px;
+
+        max-width: 330px;
       }
 
-      .hero-button {
-        width: 100%;
-      }
 
       .services-grid {
+
         grid-template-columns: 1fr;
       }
 
+
       .service,
-      .service:nth-child(3) {
+      .service:nth-child(2),
+      .service:nth-child(3),
+      .service:nth-child(4) {
 
         border-right: none;
 
         border-bottom:
           1px solid
           var(--linea);
-
-        padding:
-          0
-          0
-          25px;
-
-        margin-bottom: 25px;
       }
+
 
       .service:last-child {
 
         border-bottom: none;
-
-        margin-bottom: 0;
       }
 
-      .about-title,
-      .mallorca-title,
-      .contact-title {
-        font-size: 48px;
-      }
     }
 
   </style>
@@ -1272,89 +1179,111 @@
 <body>
 
 
-  <!-- =======================================================
-       CABECERA
-  ======================================================== -->
+  <!-- =====================================================
+       INICIO / PORTADA
+  ====================================================== -->
 
-  <header>
+  <section
+    class="hero"
+    id="inicio"
+  >
 
-    <div class="header-inner">
 
-      <!-- LOGO ESCRITO EN HTML, NO IMAGEN -->
-      <div class="logo-box">
+    <!-- ===================================================
+         CABECERA
+    ==================================================== -->
+
+    <header>
+
+      <div class="header-inner">
+
+
+        <!-- LOGO -->
 
         <a
           href="#inicio"
-          class="logo-name"
+          class="logo"
           aria-label="Bodas Con Cati"
         >
-          Bodas Con Cati
+
+          <div class="logo-heart">
+            ♡
+          </div>
+
+          <div class="logo-name">
+            Bodas Con Cati
+          </div>
+
+          <div class="logo-subtitle">
+            Wedding Planner
+          </div>
+
         </a>
+
+
+        <!-- MENÚ -->
+
+        <nav aria-label="Navegación principal">
+
+          <a
+            href="#inicio"
+            class="active"
+          >
+            Inicio
+          </a>
+
+          <a href="sobre-mi.html">
+            Sobre mí
+          </a>
+
+          <a href="servicios.html">
+            Servicios
+          </a>
+
+          <a href="mallorca.html">
+            Mallorca
+          </a>
+
+          <a href="contacto.html">
+            Contacto
+          </a>
+
+          <a
+            href="contacto.html"
+            class="header-contact"
+          >
+            Quiero hablar
+            <span>♡</span>
+          </a>
+
+        </nav>
 
       </div>
 
-
-      <!-- MENÚ -->
-      <nav class="main-nav">
-
-        <a href="#inicio">
-          Inicio
-        </a>
-
-        <a href="#sobre-mi">
-          Sobre mí
-        </a>
-
-        <a href="#servicios">
-          Servicios
-        </a>
-
-        <a href="#mallorca">
-          Mallorca
-        </a>
-
-        <a href="#contacto">
-          Contacto
-        </a>
-
-      </nav>
-
-    </div>
-
-  </header>
+    </header>
 
 
+    <!-- ===================================================
+         TEXTO PRINCIPAL
+    ==================================================== -->
 
-  <!-- =======================================================
-       INICIO / HERO
-  ======================================================== -->
-
-  <main>
-
-    <section
-      class="hero"
-      id="inicio"
-    >
-
-      <!-- TEXTO -->
+    <div class="hero-content">
 
       <div class="hero-copy">
+
 
         <div class="eyebrow">
           Wedding Planner · Mallorca
         </div>
 
 
-        <h1 class="hero-title">
+        <h1>
 
           Que organizar
-          <br>
 
-          <span class="soft">
+          <span class="italic">
             vuestra boda
           </span>
-
-          <br>
 
           también sea parte de la magia.
 
@@ -1366,280 +1295,146 @@
 
         <p class="hero-text">
 
-          Una boda se disfruta mucho más cuando sabes que todo está en buenas manos.
-          Os acompaño en la organización y coordinación de vuestra boda en Mallorca
-          para que podáis vivir cada momento con calma, ilusión y la tranquilidad de
-          estar exactamente donde queréis estar.
+          Una boda se disfruta mucho más cuando sabes que todo
+          está en buenas manos. Os acompaño en la organización
+          y coordinación de vuestra boda en Mallorca para que
+          podáis vivir cada momento con calma, ilusión y la
+          tranquilidad de estar exactamente donde queréis estar.
 
         </p>
 
 
         <a
-          href="#contacto"
+          href="sobre-mi.html"
           class="hero-button"
         >
-          Quiero saber más →
+
+          Quiero saber más
+
+          <span>→</span>
+
         </a>
 
-      </div>
 
-
-      <!-- FOTO -->
-
-      <div
-        class="hero-image"
-        role="img"
-        aria-label="Pareja disfrutando de su boda en Mallorca"
-      ></div>
-
-    </section>
-
-
-
-    <!-- =====================================================
-         ASÍ OS PUEDO AYUDAR
-    ====================================================== -->
-
-    <section
-      class="services"
-      id="servicios"
-    >
-
-      <div class="services-inner">
-
-        <h2 class="services-title">
-
-          Así os puedo ayudar
-
-          <span>♡</span>
-
-        </h2>
-
-
-        <div class="services-grid">
-
-
-          <!-- 1 -->
-
-          <article class="service">
-
-            <div class="heart">
-              ♡
-            </div>
-
-            <h3>
-              Organización completa
-            </h3>
-
-            <p>
-              Me encargo de la planificación y de cada paso para que disfrutéis del proceso.
-            </p>
-
-          </article>
-
-
-          <!-- 2 -->
-
-          <article class="service">
-
-            <div class="heart">
-              ♡
-            </div>
-
-            <h3>
-              Coordinación del día
-            </h3>
-
-            <p>
-              Para que viváis cada momento sin preocuparos de nada.
-            </p>
-
-          </article>
-
-
-          <!-- 3 -->
-
-          <article class="service">
-
-            <div class="heart">
-              ♡
-            </div>
-
-            <h3>
-              Gestión de proveedores
-            </h3>
-
-            <p>
-              Os ayudo a encontrar, elegir y coordinar al equipo perfecto para vuestra boda.
-            </p>
-
-          </article>
-
-
-          <!-- 4 -->
-
-          <article class="service">
-
-            <div class="heart">
-              ♡
-            </div>
-
-            <h3>
-              Mallorca
-            </h3>
-
-            <p>
-              Conozco la isla, sus rincones y a los mejores profesionales.
-            </p>
-
-          </article>
-
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-
-    <!-- =====================================================
-         SOBRE MÍ
-    ====================================================== -->
-
-    <section
-      class="about"
-      id="sobre-mi"
-    >
-
-      <div class="about-inner">
-
-        <h2 class="about-title">
-
-          Una boda
-          <br>
-
-          que se sienta
-          <br>
-
-          <em>muy vuestra.</em>
-
-        </h2>
-
-
-        <div class="about-text">
-
-          <p>
-            Cada pareja tiene una historia diferente y vuestra boda también debería
-            sentirse así. Mi trabajo es acompañaros, escucharos y cuidar cada detalle
-            para que el proceso de organizar vuestra boda sea tan bonito como el día
-            que estáis preparando.
-          </p>
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-
-    <!-- =====================================================
-         MALLORCA
-    ====================================================== -->
-
-    <section
-      class="mallorca"
-      id="mallorca"
-    >
-
-      <div class="mallorca-inner">
-
-        <h2 class="mallorca-title">
-
-          Mallorca,
-          <em>mi lugar.</em>
-
-        </h2>
-
-        <p class="mallorca-text">
-
-          Una isla llena de rincones especiales, espacios con encanto y profesionales
-          que hacen posible crear bodas que hablan de vosotros.
-
-        </p>
-
-      </div>
-
-    </section>
-
-
-
-    <!-- =====================================================
-         CONTACTO
-         
-         NO HAY "HABLEMOS"
-    ====================================================== -->
-
-    <section
-      class="contact"
-      id="contacto"
-    >
-
-      <div class="contact-inner">
-
-        <h2 class="contact-title">
-
-          Vuestra historia
-          <br>
-
-          <em>empieza aquí.</em>
-
-        </h2>
-
-
-        <p class="contact-text">
-
-          Cuéntame cómo imagináis vuestra boda y hablamos de cómo puedo acompañaros
-          en el camino.
-
-        </p>
-
-
-        <a
-          href="mailto:hola@bodasconcati.com"
-          class="contact-button"
-        >
-          Contacta conmigo
-        </a>
-
-      </div>
-
-    </section>
-
-  </main>
-
-
-
-  <!-- =======================================================
-       FOOTER
-  ======================================================== -->
-
-  <footer>
-
-    <div class="footer-inner">
-
-      <div class="footer-logo">
-        Bodas Con Cati
-      </div>
-
-      <div class="footer-copy">
-        © 2026 Bodas Con Cati · Mallorca
       </div>
 
     </div>
 
-  </footer>
+  </section>
+
+
+
+  <!-- =====================================================
+       ASÍ OS PUEDO AYUDAR
+  ====================================================== -->
+
+  <section
+    class="services"
+    id="servicios"
+  >
+
+    <div class="services-inner">
+
+
+      <div class="services-grid">
+
+
+        <!-- ORGANIZACIÓN -->
+
+        <article class="service">
+
+          <div class="heart">
+            ♡
+          </div>
+
+          <h2>
+            Organización completa
+          </h2>
+
+          <p>
+            Me encargo de la planificación y de cada paso
+            para que disfrutéis del proceso.
+          </p>
+
+        </article>
+
+
+        <!-- COORDINACIÓN -->
+
+        <article class="service">
+
+          <div class="heart">
+            ♡
+          </div>
+
+          <h2>
+            Coordinación del día
+          </h2>
+
+          <p>
+            Para que viváis cada momento sin preocuparos
+            de nada.
+          </p>
+
+        </article>
+
+
+        <!-- PROVEEDORES -->
+
+        <article class="service">
+
+          <div class="heart">
+            ♡
+          </div>
+
+          <h2>
+            Gestión de proveedores
+          </h2>
+
+          <p>
+            Os ayudo a encontrar, elegir y coordinar al
+            equipo perfecto para vuestra boda.
+          </p>
+
+        </article>
+
+
+        <!-- MALLORCA -->
+
+        <article class="service">
+
+          <div class="heart">
+            ♡
+          </div>
+
+          <h2>
+            Mallorca
+          </h2>
+
+          <p>
+            Conozco la isla, sus rincones y a los mejores
+            profesionales.
+          </p>
+
+        </article>
+
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =====================================================
+       FIN DE LA PÁGINA DE INICIO
+
+       Las siguientes páginas las haremos después:
+       - Sobre mí
+       - Servicios
+       - Mallorca
+       - Contacto
+  ====================================================== -->
 
 
 </body>
