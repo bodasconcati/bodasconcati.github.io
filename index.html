@@ -1,69 +1,105 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
+
 <meta charset="UTF-8">
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Bodas Con Cati | Wedding Planner Mallorca</title>
 
-<meta name="description" content="Bodas Con Cati · Wedding Planner en Mallorca. Organización y coordinación de bodas para disfrutar de cada momento sin preocupaciones.">
+<meta
+name="description"
+content="Bodas Con Cati · Wedding Planner en Mallorca. Organización y coordinación de bodas para parejas que quieren disfrutar de su día sin preocupaciones."
+>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-<link href="https://fonts.googleapis.com/css2?family=Allura&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+<link
+rel="preconnect"
+href="https://fonts.gstatic.com"
+crossorigin
+>
+
+<link
+href="https://fonts.googleapis.com/css2?family=Allura&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Montserrat:wght@400;500;600&display=swap"
+rel="stylesheet"
+>
+
 
 <style>
 
 /* =========================================================
    BODAS CON CATI
-   DISEÑO PRINCIPAL
+   ÍNDICE / PÁGINA DE INICIO
 ========================================================= */
 
 :root{
+
     --crema:#F7F2EC;
-    --crema-2:#EDE3D8;
+
+    --beige:#F1E8DE;
+
     --marron:#3B2921;
+
     --marron-suave:#654B3C;
+
     --dorado:#B77A19;
+
     --terracota:#C98F72;
+
     --blanco:#FFFFFF;
+
     --linea:rgba(59,41,33,.18);
+
 }
+
+
+/* =========================================================
+   GENERAL
+========================================================= */
 
 *{
     box-sizing:border-box;
 }
 
+
 html{
     scroll-behavior:smooth;
 }
 
+
 body{
     margin:0;
+
     background:var(--crema);
+
     color:var(--marron);
-    font-family:"Cormorant Garamond", Georgia, serif;
+
+    font-family:
+        "Cormorant Garamond",
+        Georgia,
+        serif;
 }
+
 
 img{
     display:block;
+
     max-width:100%;
 }
 
+
 a{
     color:inherit;
+
     text-decoration:none;
 }
 
 
-/* =========================================================
-   CONTENEDOR
-========================================================= */
-
-.container{
-    width:min(1240px, calc(100% - 80px));
-    margin:0 auto;
+button{
+    font:inherit;
 }
 
 
@@ -72,116 +108,171 @@ a{
 ========================================================= */
 
 .site-header{
+
     position:absolute;
+
     top:0;
     left:0;
+
     width:100%;
-    z-index:20;
+
+    z-index:50;
+
     padding-top:24px;
+
 }
 
+
 .header-inner{
-    width:min(1240px, calc(100% - 80px));
+
+    width:calc(100% - 100px);
+
+    max-width:1500px;
+
     margin:0 auto;
 
     display:grid;
-    grid-template-columns:210px 1fr auto;
+
+    grid-template-columns:220px 1fr auto;
+
     align-items:start;
 
-    column-gap:35px;
+    column-gap:28px;
+
 }
 
 
-/* LOGO OFICIAL */
+/* =========================================================
+   LOGO
+========================================================= */
 
 .logo-link{
+
     width:190px;
+
     height:92px;
 
     display:flex;
-    align-items:center;
+
+    align-items:flex-start;
+
     justify-content:flex-start;
 
-    overflow:hidden;
 }
 
+
 .logo{
+
     width:190px;
+
     height:92px;
 
     object-fit:contain;
+
     object-position:center;
 
-    /*
-       Tu logo es JPG.
-       Este efecto hace que el fondo oscuro del JPG
-       se funda con la fotografía.
-    */
-    mix-blend-mode:screen;
+    display:block;
+
 }
 
 
-/* NAVEGACIÓN */
+/* =========================================================
+   NAVEGACIÓN
+========================================================= */
 
 .main-nav{
+
     display:flex;
-    justify-content:center;
+
+    justify-content:flex-start;
+
     align-items:center;
 
-    gap:30px;
+    gap:32px;
 
-    padding-top:17px;
+    padding-top:15px;
 
-    font-family:"Montserrat",Arial,sans-serif;
+    font-family:
+        "Montserrat",
+        Arial,
+        sans-serif;
+
     font-size:11px;
+
     font-weight:500;
-    letter-spacing:2px;
+
+    letter-spacing:1.7px;
+
     text-transform:uppercase;
 
     color:#fff;
+
 }
+
 
 .main-nav a{
+
     position:relative;
-    white-space:nowrap;
+
     padding-bottom:9px;
 
+    white-space:nowrap;
+
     transition:opacity .25s ease;
+
 }
+
 
 .main-nav a:hover{
-    opacity:.75;
+
+    opacity:.72;
+
 }
 
+
 .main-nav a.active::after{
+
     content:"";
 
     position:absolute;
+
     left:0;
     right:0;
+
     bottom:0;
 
     height:1px;
 
     background:#fff;
+
 }
 
 
-/* BOTÓN HEADER */
+/* =========================================================
+   QUIERO HABLAR
+========================================================= */
 
 .header-button{
-    margin-top:5px;
 
-    padding:13px 21px;
+    margin-top:4px;
 
-    border:1px solid rgba(255,255,255,.65);
+    padding:13px 22px;
+
+    border:1px solid rgba(255,255,255,.78);
 
     color:#fff;
 
-    font-family:"Montserrat",Arial,sans-serif;
+    font-family:
+        "Montserrat",
+        Arial,
+        sans-serif;
+
     font-size:10px;
+
     font-weight:500;
-    letter-spacing:1.8px;
+
+    letter-spacing:1.6px;
+
     text-transform:uppercase;
 
     white-space:nowrap;
@@ -189,11 +280,16 @@ a{
     transition:
         background .25s ease,
         color .25s ease;
+
 }
 
+
 .header-button:hover{
+
     background:#fff;
+
     color:var(--marron);
+
 }
 
 
@@ -202,26 +298,36 @@ a{
 ========================================================= */
 
 .mobile-menu-button{
+
     display:none;
 
-    width:45px;
-    height:45px;
+    width:44px;
 
-    border:1px solid rgba(255,255,255,.65);
+    height:44px;
+
+    padding:0;
+
+    border:1px solid rgba(255,255,255,.75);
+
     background:transparent;
 
     cursor:pointer;
+
 }
 
+
 .mobile-menu-button span{
+
     display:block;
 
     width:19px;
+
     height:1px;
 
     margin:5px auto;
 
     background:#fff;
+
 }
 
 
@@ -230,237 +336,304 @@ a{
 ========================================================= */
 
 .hero{
+
     position:relative;
 
-    min-height:720px;
-    height:min(720px, 100vh);
+    width:100%;
+
+    height:720px;
+
+    min-height:650px;
 
     overflow:hidden;
 
-    background-image:url("assets/hero%201.jpg");
+    background-image:
+        url("assets/hero%201.jpg");
+
     background-size:cover;
+
     background-position:center center;
+
     background-repeat:no-repeat;
+
 }
 
 
-/*
-   Oscurecemos ligeramente la parte izquierda.
-   Así el logo y el menú blanco se leen bien,
-   pero la fotografía sigue siendo protagonista.
-*/
+/* =========================================================
+   CAPA SOBRE LA FOTO
+========================================================= */
 
-.hero::before{
-    content:"";
+.hero-overlay{
 
     position:absolute;
+
     inset:0;
 
+    z-index:1;
+
     background:
+
         linear-gradient(
             90deg,
-            rgba(35,25,19,.72) 0%,
-            rgba(45,31,23,.50) 27%,
-            rgba(40,28,21,.12) 52%,
-            rgba(20,15,11,.03) 100%
+            rgba(43,31,23,.80) 0%,
+            rgba(43,31,23,.64) 19%,
+            rgba(43,31,23,.40) 35%,
+            rgba(43,31,23,.14) 55%,
+            rgba(43,31,23,.03) 100%
         );
 
     pointer-events:none;
+
 }
 
 
-/* Contenido del hero */
+/* =========================================================
+   CONTENIDO HERO
+========================================================= */
 
-.hero-inner{
+.hero-content{
+
     position:relative;
+
     z-index:2;
 
-    width:min(1240px, calc(100% - 80px));
-    min-height:720px;
+    width:calc(100% - 100px);
+
+    max-width:1500px;
+
+    height:100%;
 
     margin:0 auto;
 
     display:flex;
+
     align-items:flex-end;
 
-    padding-bottom:70px;
+    padding-bottom:65px;
+
 }
 
 
-/* TEXTO HERO */
-
 .hero-copy{
-    width:510px;
+
+    width:540px;
+
     max-width:48%;
 
     color:#fff;
+
+    animation:
+        heroAppear
+        .9s
+        ease
+        both;
+
 }
 
 
+/* =========================================================
+   PEQUEÑO TEXTO
+========================================================= */
+
 .eyebrow{
+
     margin-bottom:17px;
 
-    font-family:"Montserrat",Arial,sans-serif;
+    font-family:
+        "Montserrat",
+        Arial,
+        sans-serif;
+
     font-size:10px;
+
     font-weight:600;
+
     letter-spacing:3px;
+
     text-transform:uppercase;
 
     color:#fff;
+
 }
 
+
+/* =========================================================
+   TITULAR
+========================================================= */
 
 .hero-title{
+
     margin:0;
 
-    font-size:clamp(54px, 5vw, 75px);
+    font-size:76px;
+
     font-weight:500;
-    line-height:.91;
-    letter-spacing:-2px;
+
+    line-height:.87;
+
+    letter-spacing:-2.2px;
+
 }
 
 
-.hero-title .normal{
+.hero-title .line{
+
     display:block;
+
 }
 
 
 .hero-title .script{
+
     display:block;
 
-    margin-left:0;
-    margin-top:4px;
+    margin-top:6px;
 
-    font-family:"Allura",cursive;
-    font-size:1.04em;
+    font-family:
+        "Allura",
+        cursive;
+
+    font-size:1.03em;
+
     font-weight:400;
 
-    line-height:.85;
-
-    color:#E0B39D;
+    line-height:.82;
 
     letter-spacing:0;
+
+    color:#DFAF98;
+
 }
 
 
-.hero-title .last{
-    display:block;
-
-    margin-top:4px;
-}
-
+/* =========================================================
+   LÍNEA
+========================================================= */
 
 .hero-line{
-    width:46px;
+
+    width:48px;
+
     height:1px;
 
-    margin:26px 0 18px;
+    margin:
+        27px
+        0
+        18px;
 
-    background:rgba(255,255,255,.7);
+    background:rgba(255,255,255,.82);
+
 }
 
 
+/* =========================================================
+   DESCRIPCIÓN
+========================================================= */
+
 .hero-description{
-    width:490px;
+
+    width:500px;
+
     max-width:100%;
 
     margin:0;
 
     font-size:17px;
-    line-height:1.45;
 
-    color:rgba(255,255,255,.94);
+    line-height:1.43;
+
+    color:rgba(255,255,255,.96);
+
 }
 
 
 .hero-description strong{
+
     color:#fff;
+
     font-weight:600;
+
 }
 
+
+/* =========================================================
+   FRASE PERSONAL
+========================================================= */
 
 .hero-signature{
-    margin:16px 0 0;
 
-    max-width:470px;
+    width:500px;
 
-    font-family:"Allura",cursive;
+    max-width:100%;
+
+    margin:
+        16px
+        0
+        0;
+
+    font-family:
+        "Allura",
+        cursive;
+
     font-size:25px;
-    line-height:1.1;
 
-    color:#E2B9A5;
+    line-height:1.08;
+
+    color:#E0B19B;
+
 }
 
 
-.hero-heart{
-    display:inline-block;
+/* =========================================================
+   BOTÓN
+========================================================= */
 
-    margin-left:5px;
+.hero-button{
 
-    font-family:"Cormorant Garamond",serif;
-    font-size:22px;
-}
-
-
-/* BOTONES HERO */
-
-.hero-buttons{
-    display:flex;
-    align-items:center;
-
-    gap:14px;
-
-    margin-top:25px;
-}
-
-
-.button{
     display:inline-flex;
+
     align-items:center;
+
     justify-content:center;
 
-    min-height:47px;
+    min-height:48px;
 
-    padding:0 23px;
+    margin-top:27px;
 
-    font-family:"Montserrat",Arial,sans-serif;
+    padding:
+        0
+        27px;
+
+    background:var(--dorado);
+
+    color:#fff;
+
+    font-family:
+        "Montserrat",
+        Arial,
+        sans-serif;
+
     font-size:10px;
+
     font-weight:600;
+
     letter-spacing:1.7px;
+
     text-transform:uppercase;
 
     transition:
-        transform .25s ease,
         background .25s ease,
-        color .25s ease;
+        transform .25s ease;
+
 }
 
 
-.button:hover{
+.hero-button:hover{
+
+    background:#986313;
+
     transform:translateY(-2px);
-}
 
-
-.button.primary{
-    background:var(--dorado);
-    color:#fff;
-}
-
-
-.button.primary:hover{
-    background:#9d6612;
-}
-
-
-.button.secondary{
-    border:1px solid rgba(255,255,255,.75);
-    color:#fff;
-}
-
-
-.button.secondary:hover{
-    background:#fff;
-    color:var(--marron);
 }
 
 
@@ -469,113 +642,220 @@ a{
 ========================================================= */
 
 .services{
-    background:#F1E8DE;
 
-    padding:47px 0 49px;
+    background:var(--beige);
+
+    padding:
+        47px
+        0
+        51px;
+
 }
 
 
 .services-inner{
-    width:min(1180px, calc(100% - 80px));
+
+    width:calc(100% - 140px);
+
+    max-width:1280px;
+
     margin:0 auto;
-}
 
-
-.services-intro{
-    text-align:center;
-
-    margin-bottom:31px;
-}
-
-
-.services-intro p{
-    margin:0;
-
-    font-family:"Allura",cursive;
-    font-size:31px;
-    line-height:1;
-
-    color:var(--terracota);
-}
-
-
-.services-grid{
-    display:grid;
-    grid-template-columns:repeat(4,1fr);
-}
-
-
-.service{
-    min-height:135px;
-
-    padding:0 34px;
-
-    text-align:center;
-
-    border-right:1px solid var(--linea);
-}
-
-
-.service:last-child{
-    border-right:0;
-}
-
-
-.service-icon{
-    margin-bottom:10px;
-
-    font-family:"Cormorant Garamond",serif;
-    font-size:31px;
-    line-height:1;
-
-    color:var(--dorado);
-}
-
-
-.service h2{
-    margin:0 0 8px;
-
-    font-size:18px;
-    font-weight:600;
-    line-height:1.1;
-}
-
-
-.service p{
-    margin:0;
-
-    font-family:"Montserrat",Arial,sans-serif;
-    font-size:11px;
-    line-height:1.6;
-
-    color:var(--marron-suave);
 }
 
 
 /* =========================================================
-   PEQUEÑA FRANJA FINAL
+   TÍTULO SERVICIOS
+========================================================= */
+
+.services-title{
+
+    text-align:center;
+
+    margin-bottom:30px;
+
+}
+
+
+.services-title span{
+
+    font-family:
+        "Allura",
+        cursive;
+
+    font-size:31px;
+
+    line-height:1;
+
+    color:var(--terracota);
+
+}
+
+
+/* =========================================================
+   GRID SERVICIOS
+========================================================= */
+
+.services-grid{
+
+    display:grid;
+
+    grid-template-columns:
+        repeat(4,1fr);
+
+}
+
+
+.service{
+
+    min-height:130px;
+
+    padding:
+        0
+        30px;
+
+    text-align:center;
+
+    border-right:
+        1px solid
+        var(--linea);
+
+}
+
+
+.service:last-child{
+
+    border-right:0;
+
+}
+
+
+/* =========================================================
+   ICONO
+========================================================= */
+
+.service-icon{
+
+    margin-bottom:10px;
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size:31px;
+
+    line-height:1;
+
+    color:var(--dorado);
+
+}
+
+
+/* =========================================================
+   TÍTULO SERVICIO
+========================================================= */
+
+.service h2{
+
+    margin:
+        0
+        0
+        8px;
+
+    font-size:18px;
+
+    font-weight:600;
+
+    line-height:1.1;
+
+}
+
+
+/* =========================================================
+   TEXTO SERVICIO
+========================================================= */
+
+.service p{
+
+    margin:0;
+
+    font-family:
+        "Montserrat",
+        Arial,
+        sans-serif;
+
+    font-size:11px;
+
+    line-height:1.58;
+
+    color:var(--marron-suave);
+
+}
+
+
+/* =========================================================
+   FRANJA FINAL
 ========================================================= */
 
 .brand-strip{
-    padding:24px 20px;
+
+    padding:
+        24px
+        25px;
 
     background:var(--crema);
 
     text-align:center;
+
 }
 
 
 .brand-strip p{
+
     margin:0;
 
-    font-family:"Montserrat",Arial,sans-serif;
+    font-family:
+        "Montserrat",
+        Arial,
+        sans-serif;
+
     font-size:9px;
+
     font-weight:500;
-    letter-spacing:2.5px;
+
+    letter-spacing:2.3px;
+
     line-height:1.7;
+
     text-transform:uppercase;
 
     color:var(--marron-suave);
+
+}
+
+
+/* =========================================================
+   ANIMACIÓN
+========================================================= */
+
+@keyframes heroAppear{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(18px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
 }
 
 
@@ -583,55 +863,96 @@ a{
    TABLET
 ========================================================= */
 
-@media (max-width:1050px){
+@media(max-width:1100px){
 
-    .container,
     .header-inner,
-    .hero-inner{
-        width:calc(100% - 50px);
+    .hero-content{
+
+        width:calc(100% - 60px);
+
     }
+
 
     .header-inner{
-        grid-template-columns:180px 1fr auto;
-        column-gap:20px;
+
+        grid-template-columns:
+            165px
+            1fr
+            auto;
+
+        column-gap:18px;
+
     }
 
-    .logo-link{
-        width:165px;
-        height:80px;
-    }
 
+    .logo-link,
     .logo{
+
         width:165px;
+
         height:80px;
+
     }
+
 
     .main-nav{
-        gap:18px;
+
+        gap:19px;
+
         font-size:9px;
-        letter-spacing:1.5px;
+
+        letter-spacing:1.2px;
+
     }
+
 
     .header-button{
-        padding:11px 15px;
+
+        padding:
+            11px
+            15px;
+
         font-size:8px;
+
     }
+
 
     .hero-copy{
-        width:480px;
+
+        width:500px;
+
         max-width:55%;
+
     }
+
 
     .hero-title{
-        font-size:58px;
+
+        font-size:62px;
+
     }
+
 
     .hero-description{
+
         font-size:15px;
+
     }
 
+
+    .services-inner{
+
+        width:calc(100% - 60px);
+
+    }
+
+
     .service{
-        padding:0 18px;
+
+        padding:
+            0
+            18px;
+
     }
 
 }
@@ -641,396 +962,423 @@ a{
    MÓVIL
 ========================================================= */
 
-@media (max-width:760px){
-
-    body{
-        background:var(--crema);
-    }
-
+@media(max-width:760px){
 
     /* HEADER */
 
     .site-header{
-        position:absolute;
 
-        padding-top:16px;
+        padding-top:15px;
+
     }
 
+
     .header-inner{
+
         width:calc(100% - 34px);
 
         display:flex;
+
         align-items:flex-start;
+
         justify-content:space-between;
 
-        margin:0 auto;
     }
 
 
     .logo-link{
+
         width:145px;
+
         height:70px;
+
     }
 
+
     .logo{
+
         width:145px;
+
         height:70px;
+
     }
 
 
     .main-nav{
+
         display:none;
+
     }
 
 
     .header-button{
+
         display:none;
+
     }
 
 
     .mobile-menu-button{
+
         display:block;
 
         margin-top:7px;
+
     }
 
 
-    /* HERO MÓVIL */
+    /* HERO */
 
     .hero{
+
         height:auto;
+
         min-height:0;
 
-        padding-top:0;
+        background:none;
 
-        background-image:none;
+        display:flex;
 
-        background:var(--crema);
+        flex-direction:column;
+
     }
 
 
-    .hero::before{
+    .hero-overlay{
+
         display:none;
+
     }
 
 
     /*
-       En móvil la foto pasa a ser una imagen propia,
-       no un fondo estirado.
+       FOTO PROPIA PARA MÓVIL
     */
 
-    .hero::after{
-        content:"";
+    .mobile-photo{
 
-        display:block;
+        order:1;
 
         width:100%;
 
-        height:58vh;
-        min-height:390px;
-        max-height:540px;
+        height:470px;
 
-        background-image:url("assets/hero%201.jpg");
+        background-image:
+            url("assets/hero%201.jpg");
+
         background-size:cover;
 
-        /*
-           Este punto mantiene las manos y el encaje
-           como protagonistas.
-        */
         background-position:center center;
 
         background-repeat:no-repeat;
+
     }
 
 
-    .hero-inner{
+    /*
+       CONTENIDO DEBAJO
+    */
+
+    .hero-content{
+
+        order:2;
+
         width:100%;
-        min-height:0;
+
+        height:auto;
 
         margin:0;
 
         padding:0;
 
         display:block;
+
     }
 
 
     .hero-copy{
+
         width:100%;
+
         max-width:none;
 
         padding:
-            48px
-            28px
-            52px;
+            47px
+            27px
+            53px;
+
+        background:var(--crema);
 
         color:var(--marron);
 
-        background:var(--crema);
     }
 
 
-    /*
-       En móvil colocamos el texto DESPUÉS de la fotografía.
-    */
-
     .eyebrow{
+
         margin-bottom:15px;
 
         font-size:9px;
+
         letter-spacing:2.4px;
 
         color:var(--dorado);
+
     }
 
 
     .hero-title{
+
         font-size:53px;
+
         line-height:.88;
 
         letter-spacing:-1.5px;
 
         color:var(--marron);
+
     }
 
 
     .hero-title .script{
+
         color:var(--terracota);
+
     }
 
 
     .hero-line{
-        margin:22px 0 17px;
+
+        margin:
+            23px
+            0
+            18px;
 
         background:var(--dorado);
+
     }
 
 
     .hero-description{
+
         width:auto;
 
         font-size:17px;
-        line-height:1.45;
+
+        line-height:1.48;
 
         color:var(--marron);
+
     }
 
 
     .hero-description strong{
+
         color:var(--terracota);
+
     }
 
 
     .hero-signature{
-        max-width:none;
 
-        margin-top:18px;
+        width:auto;
+
+        margin-top:19px;
 
         font-size:25px;
 
         color:var(--terracota);
+
     }
 
 
-    .hero-buttons{
+    .hero-button{
+
         display:flex;
-        flex-direction:column;
-        align-items:stretch;
 
-        gap:11px;
-
-        margin-top:27px;
-    }
-
-
-    .button{
         width:100%;
-        min-height:50px;
+
+        min-height:51px;
+
+        margin-top:28px;
+
     }
 
 
-    .button.secondary{
-        border-color:var(--dorado);
-        color:var(--dorado);
-    }
-
-
-    .button.secondary:hover{
-        background:var(--dorado);
-        color:#fff;
-    }
-
-
-    /* SERVICIOS MÓVIL */
+    /* SERVICIOS */
 
     .services{
-        padding:46px 0 45px;
+
+        padding:
+            48px
+            0
+            50px;
+
     }
 
 
     .services-inner{
-        width:calc(100% - 40px);
+
+        width:calc(100% - 42px);
+
     }
 
 
-    .services-intro{
-        margin-bottom:31px;
+    .services-title{
+
+        margin-bottom:30px;
+
     }
 
 
-    .services-intro p{
+    .services-title span{
+
         font-size:32px;
+
     }
 
 
     .services-grid{
+
         display:grid;
+
         grid-template-columns:1fr;
+
     }
 
 
     .service{
+
         min-height:0;
 
-        padding:25px 18px;
+        padding:
+            26px
+            15px;
 
         border-right:0;
-        border-bottom:1px solid var(--linea);
+
+        border-bottom:
+            1px solid
+            var(--linea);
+
     }
 
 
     .service:first-child{
+
         padding-top:0;
+
     }
 
 
     .service:last-child{
-        border-bottom:0;
+
         padding-bottom:0;
+
+        border-bottom:0;
+
     }
 
 
     .service-icon{
-        margin-bottom:9px;
 
         font-size:30px;
+
     }
 
 
     .service h2{
+
         font-size:20px;
+
     }
 
 
     .service p{
-        max-width:300px;
+
+        max-width:310px;
 
         margin:0 auto;
 
         font-size:11px;
+
         line-height:1.6;
+
     }
 
 
-    /* FRANJA FINAL */
+    /* FRANJA */
 
     .brand-strip{
-        padding:22px 25px;
+
+        padding:
+            22px
+            24px;
+
     }
 
 
     .brand-strip p{
+
         font-size:8px;
-        letter-spacing:1.7px;
+
+        letter-spacing:1.5px;
+
     }
 
 }
 
 
 /* =========================================================
-   MÓVILES PEQUEÑOS
+   MÓVIL PEQUEÑO
 ========================================================= */
 
-@media (max-width:390px){
+@media(max-width:390px){
 
-    .logo-link{
-        width:130px;
-        height:63px;
-    }
-
+    .logo-link,
     .logo{
+
         width:130px;
+
         height:63px;
+
     }
 
-    .mobile-menu-button{
-        width:42px;
-        height:42px;
+
+    .mobile-photo{
+
+        height:400px;
+
     }
 
-    .hero::after{
-        height:53vh;
-        min-height:350px;
-    }
 
     .hero-copy{
+
         padding:
             42px
-            23px
+            22px
             48px;
+
     }
+
 
     .hero-title{
+
         font-size:47px;
+
     }
+
 
     .hero-description{
+
         font-size:16px;
-    }
 
-}
-
-
-/* =========================================================
-   ANIMACIONES SUTILES
-========================================================= */
-
-@keyframes aparecer{
-    from{
-        opacity:0;
-        transform:translateY(15px);
-    }
-
-    to{
-        opacity:1;
-        transform:translateY(0);
-    }
-}
-
-
-.hero-copy{
-    animation:aparecer .9s ease both;
-}
-
-
-.hero::after{
-    animation:aparecer 1.1s ease both;
-}
-
-
-@media (prefers-reduced-motion:reduce){
-
-    *,
-    *::before,
-    *::after{
-        animation:none !important;
-        transition:none !important;
-        scroll-behavior:auto !important;
     }
 
 }
 
 </style>
+
 </head>
 
 
@@ -1051,10 +1399,10 @@ a{
         <a
             href="#inicio"
             class="logo-link"
-            aria-label="Bodas Con Cati - Inicio">
+            aria-label="Bodas Con Cati">
 
             <img
-                src="assets/logo%201.jpg"
+                src="assets/logo%203.jpg"
                 class="logo"
                 alt="Bodas Con Cati Wedding Planner">
 
@@ -1095,14 +1443,17 @@ a{
         <a
             href="#contacto"
             class="header-button">
-            Quiero hablar ♡
+
+            Quiero hablar
+
         </a>
 
 
-        <!-- HAMBURGUESA MÓVIL -->
+        <!-- HAMBURGUESA -->
 
         <button
             class="mobile-menu-button"
+            id="openMenu"
             type="button"
             aria-label="Abrir menú">
 
@@ -1120,40 +1471,108 @@ a{
 
 
 <!-- =======================================================
+     MENÚ MÓVIL
+======================================================= -->
+
+<div
+    class="mobile-menu-panel"
+    id="mobileMenuPanel">
+
+
+    <button
+        class="mobile-close"
+        id="closeMenu"
+        type="button"
+        aria-label="Cerrar menú">
+
+        ×
+
+    </button>
+
+
+    <a href="#inicio">
+        Inicio
+    </a>
+
+    <a href="#sobre-mi">
+        Sobre mí
+    </a>
+
+    <a href="#servicios">
+        Servicios
+    </a>
+
+    <a href="#mallorca">
+        Mallorca
+    </a>
+
+    <a href="#contacto">
+        Contacto
+    </a>
+
+
+</div>
+
+
+
+<!-- =======================================================
      INICIO
 ======================================================= -->
 
-<main>
-
-<section
-    class="hero"
-    id="inicio">
+<main id="inicio">
 
 
-    <div class="hero-inner">
+<section class="hero">
+
+
+    <!-- CAPA OSCURA -->
+
+    <div class="hero-overlay"></div>
+
+
+    <!-- FOTO MÓVIL -->
+
+    <div class="mobile-photo"></div>
+
+
+    <!-- CONTENIDO -->
+
+    <div class="hero-content">
 
 
         <div class="hero-copy">
 
 
             <div class="eyebrow">
+
                 Wedding Planner · Mallorca
+
             </div>
 
 
             <h1 class="hero-title">
 
-                <span class="normal">
+
+                <span class="line">
+
                     Bodas que
+
                 </span>
+
 
                 <span class="script">
+
                     se sienten
+
                 </span>
 
-                <span class="last">
+
+                <span class="line">
+
                     como vosotros.
+
                 </span>
+
 
             </h1>
 
@@ -1177,37 +1596,25 @@ a{
                 Detrás de cada boda hay una historia,
                 y me encantará acompañaros a vivir la vuestra.
 
-                <span class="hero-heart">♡</span>
-
             </p>
 
 
-            <div class="hero-buttons">
+            <!-- ÚNICO BOTÓN -->
 
-                <a
-                    href="#sobre-mi"
-                    class="button primary">
+            <a
+                href="#sobre-mi"
+                class="hero-button">
 
-                    Quiero saber más →
+                Quiero saber más →
 
-                </a>
-
-
-                <a
-                    href="#servicios"
-                    class="button secondary">
-
-                    Ver servicios
-
-                </a>
-
-            </div>
+            </a>
 
 
         </div>
 
 
     </div>
+
 
 </section>
 
@@ -1225,11 +1632,13 @@ a{
     <div class="services-inner">
 
 
-        <div class="services-intro">
+        <div class="services-title">
 
-            <p>
+            <span>
+
                 Así os puedo ayudar ♡
-            </p>
+
+            </span>
 
         </div>
 
@@ -1237,82 +1646,125 @@ a{
         <div class="services-grid">
 
 
-            <!-- SERVICIO 1 -->
+            <!-- 1 -->
 
             <article class="service">
 
+
                 <div class="service-icon">
+
                     ♡
+
                 </div>
 
+
                 <h2>
+
                     Organización completa
+
                 </h2>
 
+
                 <p>
+
                     Me encargo de la planificación y de cada paso
                     para que disfrutéis del proceso.
+
                 </p>
+
 
             </article>
 
 
-            <!-- SERVICIO 2 -->
+
+            <!-- 2 -->
 
             <article class="service">
 
+
                 <div class="service-icon">
+
                     ♡
+
                 </div>
 
+
                 <h2>
+
                     Coordinación del día
+
                 </h2>
 
+
                 <p>
+
                     Para que viváis cada momento sin preocuparos
                     de nada.
+
                 </p>
+
 
             </article>
 
 
-            <!-- SERVICIO 3 -->
+
+            <!-- 3 -->
 
             <article class="service">
 
+
                 <div class="service-icon">
+
                     ♡
+
                 </div>
 
+
                 <h2>
+
                     Gestión de proveedores
+
                 </h2>
 
+
                 <p>
+
                     Os ayudo a encontrar, elegir y coordinar
                     al equipo perfecto para vuestra boda.
+
                 </p>
+
 
             </article>
 
 
-            <!-- SERVICIO 4 -->
+
+            <!-- 4 -->
 
             <article class="service">
 
+
                 <div class="service-icon">
+
                     ♡
+
                 </div>
 
+
                 <h2>
+
                     Mallorca
+
                 </h2>
 
+
                 <p>
+
                     Conozco la isla, sus rincones y a los mejores
                     profesionales.
+
                 </p>
+
 
             </article>
 
@@ -1326,14 +1778,25 @@ a{
 
 
 <!-- =======================================================
-     ZONAS PREPARADAS PARA LAS PRÓXIMAS PÁGINAS
+     DESTINOS PARA LAS PÁGINAS QUE HAREMOS DESPUÉS
 ======================================================= -->
 
-<section id="sobre-mi" style="display:none;"></section>
+<div
+    id="sobre-mi"
+    style="height:1px;">
+</div>
 
-<section id="mallorca" style="display:none;"></section>
 
-<section id="contacto" style="display:none;"></section>
+<div
+    id="mallorca"
+    style="height:1px;">
+</div>
+
+
+<div
+    id="contacto"
+    style="height:1px;">
+</div>
 
 
 
@@ -1341,17 +1804,20 @@ a{
      FRANJA FINAL
 ======================================================= -->
 
-<div class="brand-strip">
+<section class="brand-strip">
 
     <p>
+
         Bodas Con Cati · Wedding Planner en Mallorca ·
         Experiencias que se recuerdan toda la vida
+
     </p>
 
-</div>
+</section>
 
 
 </main>
+
 
 
 <script>
@@ -1360,21 +1826,146 @@ a{
    MENÚ MÓVIL
 ========================================================= */
 
-const mobileButton =
-    document.querySelector(".mobile-menu-button");
+const openMenu =
+    document.getElementById("openMenu");
+
+const closeMenu =
+    document.getElementById("closeMenu");
+
+const mobileMenuPanel =
+    document.getElementById("mobileMenuPanel");
 
 
-mobileButton.addEventListener("click", function(){
+openMenu.addEventListener(
+    "click",
+    function(){
 
-    alert(
-        "El menú móvil se activará cuando construyamos las páginas Sobre mí, Servicios, Mallorca y Contacto."
-    );
+        mobileMenuPanel.classList.add("open");
 
-});
+    }
+);
+
+
+closeMenu.addEventListener(
+    "click",
+    function(){
+
+        mobileMenuPanel.classList.remove("open");
+
+    }
+);
+
+
+mobileMenuPanel
+    .querySelectorAll("a")
+    .forEach(function(link){
+
+        link.addEventListener(
+            "click",
+            function(){
+
+                mobileMenuPanel.classList.remove("open");
+
+            }
+        );
+
+    });
 
 
 </script>
 
 
+<style>
+
+/* =========================================================
+   PANEL DEL MENÚ MÓVIL
+========================================================= */
+
+.mobile-menu-panel{
+
+    position:fixed;
+
+    inset:0;
+
+    z-index:200;
+
+    display:none;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:26px;
+
+    background:
+        rgba(59,41,33,.98);
+
+    color:#fff;
+
+}
+
+
+.mobile-menu-panel.open{
+
+    display:flex;
+
+}
+
+
+.mobile-menu-panel a{
+
+    font-family:
+        "Montserrat",
+        Arial,
+        sans-serif;
+
+    font-size:12px;
+
+    letter-spacing:2px;
+
+    text-transform:uppercase;
+
+}
+
+
+.mobile-close{
+
+    position:absolute;
+
+    top:18px;
+
+    right:22px;
+
+    border:0;
+
+    background:none;
+
+    color:#fff;
+
+    font-size:34px;
+
+    line-height:1;
+
+    cursor:pointer;
+
+}
+
+
+@media(min-width:761px){
+
+    .mobile-menu-panel{
+
+        display:none !important;
+
+    }
+
+}
+
+</style>
+
+
 </body>
+
 </html>
