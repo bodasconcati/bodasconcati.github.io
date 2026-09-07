@@ -37,15 +37,12 @@
 :root{
 
     --crema:#F7F2EC;
-
     --beige:#F0E6DB;
 
     --marron:#403027;
-
     --marron-suave:#68564B;
 
     --terracota:#C78D73;
-
     --dorado:#A87A3F;
 
     --blanco:#FFFFFF;
@@ -87,14 +84,12 @@ body{
 
 a{
     color:inherit;
-
     text-decoration:none;
 }
 
 
 img{
     display:block;
-
     max-width:100%;
 }
 
@@ -202,9 +197,7 @@ img{
 
 
 .nav a:hover{
-
     opacity:.65;
-
 }
 
 
@@ -258,10 +251,10 @@ img{
     position:relative;
 
     padding:
+        50px
+        6vw
         55px
-        7vw
-        55px
-        6vw;
+        5.5vw;
 
     display:flex;
 
@@ -275,7 +268,7 @@ img{
 
 
 /* =========================================================
-   SOBRE MÍ
+   PEQUEÑO TÍTULO
 ========================================================= */
 
 .about-eyebrow{
@@ -283,14 +276,14 @@ img{
     margin:
         0
         0
-        16px;
+        18px;
 
     font-family:
         "Montserrat",
         Arial,
         sans-serif;
 
-    font-size:10px;
+    font-size:12px;
 
     font-weight:600;
 
@@ -304,23 +297,23 @@ img{
 
 
 /* =========================================================
-   TITULAR
+   TÍTULO GRANDE
 ========================================================= */
 
 .about-title{
 
     margin:0;
 
-    max-width:520px;
+    max-width:650px;
 
     font-size:
-        clamp(48px,4.5vw,72px);
+        clamp(60px,5.2vw,84px);
 
     font-weight:500;
 
-    line-height:.91;
+    line-height:.92;
 
-    letter-spacing:-1.8px;
+    letter-spacing:-2px;
 
 }
 
@@ -328,6 +321,8 @@ img{
 .about-title .italic{
 
     display:block;
+
+    margin-top:5px;
 
     color:var(--terracota);
 
@@ -342,14 +337,14 @@ img{
 
 .about-line{
 
-    width:48px;
+    width:58px;
 
     height:1px;
 
     margin:
-        25px
+        28px
         0
-        20px;
+        23px;
 
     background:var(--dorado);
 
@@ -357,12 +352,12 @@ img{
 
 
 /* =========================================================
-   TEXTO
+   TEXTO GRANDE
 ========================================================= */
 
 .about-text{
 
-    max-width:520px;
+    max-width:610px;
 
 }
 
@@ -372,11 +367,13 @@ img{
     margin:
         0
         0
-        17px;
+        20px;
 
-    font-size:16px;
+    font-size:20px;
 
-    line-height:1.38;
+    line-height:1.45;
+
+    color:var(--marron);
 
 }
 
@@ -403,13 +400,15 @@ img{
 
 .signature{
 
-    margin-top:18px;
+    margin-top:23px;
 
     font-family:
         "Allura",
         cursive;
 
-    font-size:37px;
+    font-size:48px;
+
+    line-height:1;
 
     color:var(--terracota);
 
@@ -474,14 +473,14 @@ img{
 
     bottom:7%;
 
-    width:310px;
+    width:340px;
 
     padding:
-        25px
-        28px;
+        28px
+        32px;
 
     background:
-        rgba(247,242,236,.91);
+        rgba(247,242,236,.93);
 
     z-index:4;
 
@@ -492,11 +491,11 @@ img{
 
     margin:0;
 
-    font-size:20px;
+    font-size:23px;
 
     font-style:italic;
 
-    line-height:1.25;
+    line-height:1.28;
 
     color:var(--terracota);
 
@@ -505,11 +504,11 @@ img{
 
 .photo-quote-line{
 
-    width:42px;
+    width:45px;
 
     height:1px;
 
-    margin-top:13px;
+    margin-top:15px;
 
     background:var(--terracota);
 
@@ -522,7 +521,7 @@ img{
 
 .about-bottom{
 
-    min-height:180px;
+    min-height:200px;
 
     background:var(--beige);
 
@@ -533,7 +532,7 @@ img{
     justify-content:center;
 
     padding:
-        40px
+        45px
         25px;
 
     text-align:center;
@@ -543,7 +542,7 @@ img{
 
 .about-bottom p{
 
-    max-width:760px;
+    max-width:850px;
 
     margin:0;
 
@@ -551,7 +550,7 @@ img{
         "Allura",
         cursive;
 
-    font-size:34px;
+    font-size:42px;
 
     line-height:1.15;
 
@@ -567,6 +566,7 @@ img{
 .footer{
 
     padding:
+        28px
         25px;
 
     text-align:center;
@@ -585,7 +585,7 @@ img{
         Arial,
         sans-serif;
 
-    font-size:9px;
+    font-size:10px;
 
     letter-spacing:2.3px;
 
@@ -597,11 +597,66 @@ img{
 
 
 /* =========================================================
+   TABLET
+========================================================= */
+
+@media(max-width:1100px){
+
+    .header-inner{
+
+        width:calc(100% - 70px);
+
+    }
+
+
+    .logo{
+
+        width:165px;
+
+    }
+
+
+    .nav{
+
+        gap:22px;
+
+        font-size:9px;
+
+        letter-spacing:1.4px;
+
+    }
+
+
+    .about-left{
+
+        padding:
+            45px
+            5vw;
+
+    }
+
+
+    .about-title{
+
+        font-size:60px;
+
+    }
+
+
+    .about-text p{
+
+        font-size:18px;
+
+    }
+
+}
+
+
+/* =========================================================
    MÓVIL
 ========================================================= */
 
 @media(max-width:760px){
-
 
     /* HEADER */
 
@@ -618,8 +673,7 @@ img{
 
     .header-inner{
 
-        width:
-            calc(100% - 34px);
+        width:calc(100% - 34px);
 
     }
 
@@ -639,7 +693,7 @@ img{
 
 
     /* =====================================================
-       COMPOSICIÓN MÓVIL
+       COMPOSICIÓN
     ===================================================== */
 
     .about-hero{
@@ -654,7 +708,7 @@ img{
 
 
     /* =====================================================
-       FOTO ARRIBA
+       FOTO
     ===================================================== */
 
     .about-right{
@@ -702,24 +756,26 @@ img{
 
         bottom:5%;
 
-        width:270px;
+        width:285px;
 
         padding:
-            21px
-            23px;
+            22px
+            25px;
 
     }
 
 
     .photo-quote p{
 
-        font-size:18px;
+        font-size:20px;
+
+        line-height:1.3;
 
     }
 
 
     /* =====================================================
-       TEXTO DEBAJO
+       TEXTO
     ===================================================== */
 
     .about-left{
@@ -729,9 +785,9 @@ img{
         width:100%;
 
         padding:
-            52px
-            27px
-            58px;
+            55px
+            28px
+            65px;
 
         display:block;
 
@@ -740,7 +796,9 @@ img{
 
     .about-eyebrow{
 
-        font-size:9px;
+        margin-bottom:19px;
+
+        font-size:10px;
 
         letter-spacing:2.5px;
 
@@ -751,19 +809,23 @@ img{
 
         max-width:none;
 
-        font-size:51px;
+        font-size:57px;
 
-        line-height:.92;
+        line-height:.94;
+
+        letter-spacing:-1.2px;
 
     }
 
 
     .about-line{
 
+        width:50px;
+
         margin:
-            23px
+            25px
             0
-            19px;
+            22px;
 
     }
 
@@ -777,20 +839,20 @@ img{
 
     .about-text p{
 
-        font-size:17px;
+        margin-bottom:21px;
 
-        line-height:1.48;
+        font-size:19px;
 
-        margin-bottom:19px;
+        line-height:1.5;
 
     }
 
 
     .signature{
 
-        font-size:36px;
+        margin-top:25px;
 
-        margin-top:20px;
+        font-size:45px;
 
     }
 
@@ -801,10 +863,10 @@ img{
 
     .about-bottom{
 
-        min-height:150px;
+        min-height:170px;
 
         padding:
-            45px
+            50px
             25px;
 
     }
@@ -812,7 +874,7 @@ img{
 
     .about-bottom p{
 
-        font-size:31px;
+        font-size:36px;
 
     }
 
@@ -824,7 +886,7 @@ img{
     .footer{
 
         padding:
-            23px
+            25px
             18px;
 
     }
@@ -849,7 +911,6 @@ img{
 
 @media(max-width:390px){
 
-
     .logo{
 
         width:135px;
@@ -868,18 +929,18 @@ img{
 
     .photo-quote{
 
-        width:245px;
+        width:255px;
 
         padding:
-            18px
-            20px;
+            20px
+            22px;
 
     }
 
 
     .photo-quote p{
 
-        font-size:17px;
+        font-size:18px;
 
     }
 
@@ -887,23 +948,30 @@ img{
     .about-left{
 
         padding:
-            43px
+            45px
             22px
-            50px;
+            55px;
 
     }
 
 
     .about-title{
 
-        font-size:45px;
+        font-size:50px;
 
     }
 
 
     .about-text p{
 
-        font-size:16px;
+        font-size:18px;
+
+    }
+
+
+    .about-bottom p{
+
+        font-size:32px;
 
     }
 
@@ -976,7 +1044,7 @@ img{
 
 
 <!-- =======================================================
-     CONTENIDO SOBRE MÍ
+     SOBRE MÍ
 ======================================================= -->
 
 <main>
@@ -986,7 +1054,7 @@ img{
 
 
     <!-- ===================================================
-         COLUMNA IZQUIERDA
+         IZQUIERDA · TEXTO
     ==================================================== -->
 
     <div class="about-left">
@@ -1102,7 +1170,7 @@ img{
 
 
     <!-- ===================================================
-         COLUMNA DERECHA · FOTO
+         DERECHA · FOTO
     ==================================================== -->
 
     <div class="about-right">
@@ -1117,12 +1185,7 @@ img{
         </div>
 
 
-        <!--
-            AQUÍ YA NO HAY:
-            "Bodas personas historias reales"
-            NI CORAZÓN
-        -->
-
+        <!-- RECUADRO SOBRE LA FOTO -->
 
         <div class="photo-quote">
 
