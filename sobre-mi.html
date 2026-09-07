@@ -31,27 +31,26 @@
 <style>
 
 /* =========================================================
-   BODAS CON CATI
-   SOBRE MÍ
+   BODAS CON CATI · SOBRE MÍ
 ========================================================= */
 
 :root{
 
     --crema:#F7F2EC;
 
-    --beige:#F1E8DE;
+    --beige:#F0E6DB;
 
-    --marron:#3B2921;
+    --marron:#403027;
 
-    --marron-suave:#654B3C;
+    --marron-suave:#68564B;
 
-    --dorado:#B77A19;
+    --terracota:#C78D73;
 
-    --rosa:#C98F72;
+    --dorado:#A87A3F;
 
     --blanco:#FFFFFF;
 
-    --linea:rgba(59,41,33,.18);
+    --linea:rgba(64,48,39,.20);
 
 }
 
@@ -83,51 +82,45 @@ body{
 
 
 a{
-
     color:inherit;
-
     text-decoration:none;
-
 }
 
 
 img{
-
     display:block;
-
     max-width:100%;
-
 }
 
 
 /* =========================================================
-   HEADER
+   CABECERA
 ========================================================= */
 
 .header{
 
-    position:relative;
+    height:100px;
 
     width:100%;
 
     background:var(--crema);
 
+    border-bottom:1px solid rgba(64,48,39,.10);
+
+    display:flex;
+
+    align-items:center;
+
+    position:relative;
+
     z-index:20;
-
-    padding:
-        25px
-        0;
-
-    border-bottom:
-        1px solid
-        rgba(59,41,33,.08);
 
 }
 
 
 .header-inner{
 
-    width:calc(100% - 100px);
+    width:calc(100% - 120px);
 
     max-width:1500px;
 
@@ -139,29 +132,21 @@ img{
 
     justify-content:space-between;
 
-    gap:35px;
-
 }
 
 
-/* =========================================================
-   LOGO
-========================================================= */
+/* LOGO */
 
 .logo{
 
-    width:190px;
+    width:185px;
 
     height:auto;
-
-    display:block;
 
 }
 
 
-/* =========================================================
-   MENÚ
-========================================================= */
+/* MENÚ */
 
 .nav{
 
@@ -169,11 +154,7 @@ img{
 
     align-items:center;
 
-    justify-content:flex-end;
-
     gap:34px;
-
-    margin-left:auto;
 
     font-family:
         "Montserrat",
@@ -203,9 +184,7 @@ img{
 
 
 .nav a:hover{
-
     opacity:.65;
-
 }
 
 
@@ -223,147 +202,58 @@ img{
 
     height:1px;
 
-    background:var(--dorado);
+    background:var(--terracota);
 
 }
 
 
 /* =========================================================
-   HERO SOBRE MÍ
+   SOBRE MÍ · COMPOSICIÓN PRINCIPAL
 ========================================================= */
 
 .about-hero{
 
-    background:var(--beige);
+    width:100%;
 
-    padding:
-        34px
-        0
-        30px;
-
-    text-align:center;
-
-}
-
-
-.about-hero p{
-
-    margin:0;
-
-    font-family:
-        "Allura",
-        cursive;
-
-    font-size:34px;
-
-    color:var(--rosa);
-
-}
-
-
-/* =========================================================
-   CONTENIDO PRINCIPAL
-========================================================= */
-
-.about{
-
-    padding:
-        95px
-        0
-        105px;
-
-}
-
-
-.about-inner{
-
-    width:calc(100% - 150px);
-
-    max-width:1250px;
-
-    margin:0 auto;
+    min-height:calc(100vh - 100px);
 
     display:grid;
 
-    grid-template-columns:
-        minmax(380px, 0.92fr)
-        minmax(440px, 1.08fr);
+    grid-template-columns:42% 58%;
 
-    gap:95px;
-
-    align-items:center;
+    background:var(--crema);
 
 }
 
 
 /* =========================================================
-   FOTO CATI
+   COLUMNA IZQUIERDA
 ========================================================= */
 
-.about-photo{
+.about-left{
 
     position:relative;
 
-    width:100%;
+    padding:
+        58px
+        7vw
+        60px
+        6vw;
 
-    max-width:520px;
+    display:flex;
 
-    justify-self:center;
+    flex-direction:column;
 
-}
+    justify-content:center;
 
-
-.about-photo::before{
-
-    content:"";
-
-    position:absolute;
-
-    left:-17px;
-
-    top:17px;
-
-    width:100%;
-
-    height:100%;
-
-    border:
-        1px solid
-        rgba(183,122,25,.42);
-
-    z-index:0;
+    background:var(--crema);
 
 }
 
 
-.about-photo img{
+/* PEQUEÑO TEXTO */
 
-    position:relative;
-
-    z-index:1;
-
-    width:100%;
-
-    aspect-ratio:
-        4 / 5;
-
-    object-fit:cover;
-
-}
-
-
-/* =========================================================
-   TEXTO
-========================================================= */
-
-.about-copy{
-
-    max-width:610px;
-
-}
-
-
-.eyebrow{
+.about-eyebrow{
 
     margin:0 0 17px;
 
@@ -385,76 +275,182 @@ img{
 }
 
 
+/* TITULAR */
+
 .about-title{
 
-    margin:0 0 28px;
+    margin:0;
 
-    font-size:62px;
+    max-width:520px;
+
+    font-size:
+        clamp(48px,4.5vw,72px);
 
     font-weight:500;
 
-    line-height:.94;
+    line-height:.91;
 
-    letter-spacing:-1.4px;
+    letter-spacing:-1.8px;
 
 }
 
 
-.about-title .script{
+.about-title .italic{
 
     display:block;
+
+    color:var(--terracota);
+
+    font-style:italic;
+
+}
+
+
+/* LÍNEA */
+
+.about-line{
+
+    width:48px;
+
+    height:1px;
+
+    margin:
+        25px
+        0
+        20px;
+
+    background:var(--dorado);
+
+}
+
+
+/* TEXTO */
+
+.about-text{
+
+    max-width:520px;
+
+}
+
+
+.about-text p{
+
+    margin:
+        0
+        0
+        17px;
+
+    font-size:16px;
+
+    line-height:1.38;
+
+}
+
+
+.about-text p:last-child{
+
+    margin-bottom:0;
+
+}
+
+
+/* TEXTO EN NEGRITA */
+
+.about-text .bold{
+
+    font-weight:600;
+
+    font-style:italic;
+
+}
+
+
+/* FIRMA */
+
+.signature{
+
+    margin-top:18px;
 
     font-family:
         "Allura",
         cursive;
 
-    font-size:1.02em;
+    font-size:37px;
 
-    font-weight:400;
-
-    color:var(--rosa);
-
-    letter-spacing:0;
-
-}
-
-
-.about-copy > p{
-
-    margin:
-        0
-        0
-        21px;
-
-    font-size:19px;
-
-    line-height:1.55;
-
-    color:var(--marron);
+    color:var(--terracota);
 
 }
 
 
 /* =========================================================
-   FRASE DESTACADA
+   COLUMNA DERECHA · FOTO GRANDE
 ========================================================= */
 
-.about-quote{
+.about-right{
 
-    margin:
-        34px
-        0
-        38px;
+    position:relative;
 
-    padding:
-        23px
-        0
-        23px
-        28px;
+    min-height:calc(100vh - 100px);
 
-    border-left:
-        2px solid
-        var(--dorado);
+    overflow:hidden;
+
+}
+
+
+/* FOTO */
+
+.about-photo{
+
+    position:absolute;
+
+    inset:0;
+
+    width:100%;
+
+    height:100%;
+
+}
+
+
+.about-photo img{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+    object-position:center center;
+
+}
+
+
+/* =========================================================
+   TEXTO SOBRE LA FOTO
+========================================================= */
+
+.photo-message{
+
+    position:absolute;
+
+    right:5%;
+
+    top:11%;
+
+    width:180px;
+
+    color:#fff;
+
+    text-align:center;
+
+    z-index:3;
+
+}
+
+
+.photo-message p{
+
+    margin:0;
 
     font-family:
         "Allura",
@@ -462,127 +458,142 @@ img{
 
     font-size:31px;
 
-    line-height:1.15;
+    line-height:1.08;
 
-    color:var(--rosa);
+    text-shadow:
+        0 1px 8px rgba(0,0,0,.18);
+
+}
+
+
+.photo-message span{
+
+    display:block;
+
+    margin-top:8px;
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size:28px;
 
 }
 
 
 /* =========================================================
-   DOS IDEAS
+   RECUADRO SOBRE LA FOTO
 ========================================================= */
 
-.about-details{
+.photo-quote{
 
-    display:grid;
+    position:absolute;
 
-    grid-template-columns:
-        1fr
-        1fr;
+    right:0;
 
-    gap:32px;
+    bottom:7%;
 
-}
+    width:310px;
 
+    padding:
+        25px
+        28px;
 
-.detail{
+    background:
+        rgba(247,242,236,.91);
 
-    padding-top:17px;
-
-    border-top:
-        1px solid
-        var(--linea);
+    z-index:4;
 
 }
 
 
-.detail h3{
-
-    margin:
-        0
-        0
-        8px;
-
-    font-size:23px;
-
-    font-weight:500;
-
-}
-
-
-.detail p{
+.photo-quote p{
 
     margin:0;
 
-    font-family:
-        "Montserrat",
-        Arial,
-        sans-serif;
+    font-size:20px;
 
-    font-size:12px;
+    font-style:italic;
 
-    line-height:1.65;
+    line-height:1.25;
 
-    color:var(--marron-suave);
+    color:var(--terracota);
+
+}
+
+
+.photo-quote-line{
+
+    width:42px;
+
+    height:1px;
+
+    margin-top:13px;
+
+    background:var(--terracota);
 
 }
 
 
 /* =========================================================
-   PEQUEÑA SECCIÓN FINAL
+   SECCIÓN FINAL
 ========================================================= */
 
-.about-ending{
+.about-bottom{
+
+    min-height:180px;
 
     background:var(--beige);
 
-    padding:
-        70px
-        30px;
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    padding:40px 25px;
 
     text-align:center;
 
 }
 
 
-.about-ending p{
+.about-bottom p{
 
-    max-width:700px;
+    max-width:760px;
 
-    margin:0 auto;
+    margin:0;
 
     font-family:
         "Allura",
         cursive;
 
-    font-size:36px;
+    font-size:34px;
 
     line-height:1.15;
 
-    color:var(--rosa);
+    color:var(--terracota);
 
 }
 
 
 /* =========================================================
-   FRANJA FINAL
+   FOOTER
 ========================================================= */
 
-.brand-strip{
+.footer{
 
     padding:
-        27px
         25px;
 
-    background:var(--crema);
-
     text-align:center;
+
+    background:var(--crema);
 
 }
 
 
-.brand-strip p{
+.footer p{
 
     margin:0;
 
@@ -593,233 +604,11 @@ img{
 
     font-size:9px;
 
-    font-weight:500;
-
-    letter-spacing:2.4px;
-
-    line-height:1.7;
+    letter-spacing:2.3px;
 
     text-transform:uppercase;
 
     color:var(--marron-suave);
-
-}
-
-
-/* =========================================================
-   MENÚ MÓVIL
-========================================================= */
-
-.mobile-button{
-
-    display:none;
-
-    width:44px;
-
-    height:44px;
-
-    padding:0;
-
-    border:
-        1px solid
-        var(--marron);
-
-    background:transparent;
-
-    cursor:pointer;
-
-}
-
-
-.mobile-button span{
-
-    display:block;
-
-    width:19px;
-
-    height:1px;
-
-    margin:5px auto;
-
-    background:var(--marron);
-
-}
-
-
-.mobile-panel{
-
-    position:fixed;
-
-    inset:0;
-
-    z-index:100;
-
-    display:none;
-
-    flex-direction:column;
-
-    align-items:center;
-
-    justify-content:center;
-
-    gap:27px;
-
-    background:
-        rgba(59,41,33,.98);
-
-    color:#fff;
-
-}
-
-
-.mobile-panel.open{
-
-    display:flex;
-
-}
-
-
-.mobile-panel a{
-
-    font-family:
-        "Montserrat",
-        Arial,
-        sans-serif;
-
-    font-size:12px;
-
-    letter-spacing:2px;
-
-    text-transform:uppercase;
-
-}
-
-
-.mobile-close{
-
-    position:absolute;
-
-    top:18px;
-
-    right:22px;
-
-    border:0;
-
-    background:none;
-
-    color:#fff;
-
-    font-size:34px;
-
-    line-height:1;
-
-    cursor:pointer;
-
-}
-
-
-/* =========================================================
-   ANIMACIÓN SUAVE
-========================================================= */
-
-@keyframes aparecer{
-
-    from{
-
-        opacity:0;
-
-        transform:
-            translateY(15px);
-
-    }
-
-    to{
-
-        opacity:1;
-
-        transform:
-            translateY(0);
-
-    }
-
-}
-
-
-.about-photo{
-
-    animation:
-        aparecer
-        .8s
-        ease
-        both;
-
-}
-
-
-.about-copy{
-
-    animation:
-        aparecer
-        .9s
-        ease
-        .1s
-        both;
-
-}
-
-
-/* =========================================================
-   TABLET
-========================================================= */
-
-@media(max-width:1050px){
-
-    .header-inner{
-
-        width:calc(100% - 60px);
-
-    }
-
-
-    .logo{
-
-        width:165px;
-
-    }
-
-
-    .nav{
-
-        gap:20px;
-
-        font-size:9px;
-
-        letter-spacing:1.3px;
-
-    }
-
-
-    .about-inner{
-
-        width:calc(100% - 70px);
-
-        gap:55px;
-
-    }
-
-
-    .about-title{
-
-        font-size:54px;
-
-    }
-
-
-    .about-copy > p{
-
-        font-size:17px;
-
-    }
 
 }
 
@@ -833,6 +622,8 @@ img{
     /* HEADER */
 
     .header{
+
+        height:auto;
 
         padding:
             16px
@@ -850,7 +641,7 @@ img{
 
     .logo{
 
-        width:150px;
+        width:145px;
 
     }
 
@@ -862,191 +653,197 @@ img{
     }
 
 
-    .mobile-button{
+    /* COMPOSICIÓN */
+
+    .about-hero{
+
+        min-height:0;
+
+        display:flex;
+
+        flex-direction:column;
+
+    }
+
+
+    /* FOTO ARRIBA */
+
+    .about-right{
+
+        order:1;
+
+        min-height:0;
+
+        width:100%;
+
+        height:520px;
+
+    }
+
+
+    .about-photo{
+
+        position:absolute;
+
+    }
+
+
+    .about-photo img{
+
+        object-position:center center;
+
+    }
+
+
+    /* MENSAJE FOTO */
+
+    .photo-message{
+
+        top:8%;
+
+        right:7%;
+
+        width:150px;
+
+    }
+
+
+    .photo-message p{
+
+        font-size:27px;
+
+    }
+
+
+    .photo-message span{
+
+        font-size:24px;
+
+    }
+
+
+    /* QUOTE */
+
+    .photo-quote{
+
+        width:270px;
+
+        bottom:5%;
+
+        padding:
+            21px
+            23px;
+
+    }
+
+
+    .photo-quote p{
+
+        font-size:18px;
+
+    }
+
+
+    /* TEXTO DEBAJO */
+
+    .about-left{
+
+        order:2;
+
+        padding:
+            52px
+            27px
+            58px;
 
         display:block;
 
     }
 
 
-    /* HERO */
-
-    .about-hero{
-
-        padding:
-            28px
-            20px;
-
-    }
-
-
-    .about-hero p{
-
-        font-size:30px;
-
-    }
-
-
-    /* CONTENIDO */
-
-    .about{
-
-        padding:
-            65px
-            0
-            70px;
-
-    }
-
-
-    .about-inner{
-
-        width:calc(100% - 42px);
-
-        display:flex;
-
-        flex-direction:column;
-
-        gap:55px;
-
-        align-items:stretch;
-
-    }
-
-
-    /* FOTO */
-
-    .about-photo{
-
-        width:calc(100% - 17px);
-
-        max-width:none;
-
-        margin-left:17px;
-
-    }
-
-
-    .about-photo::before{
-
-        left:-12px;
-
-        top:12px;
-
-    }
-
-
-    /* TEXTO */
-
-    .about-copy{
-
-        max-width:none;
-
-    }
-
-
-    .eyebrow{
+    .about-eyebrow{
 
         font-size:9px;
 
-        letter-spacing:2.4px;
+        letter-spacing:2.5px;
 
     }
 
 
     .about-title{
 
-        font-size:48px;
+        max-width:none;
 
-        line-height:.94;
+        font-size:51px;
 
-        margin-bottom:27px;
+        line-height:.92;
 
     }
 
 
-    .about-copy > p{
+    .about-line{
+
+        margin:
+            23px
+            0
+            19px;
+
+    }
+
+
+    .about-text p{
 
         font-size:17px;
 
-        line-height:1.55;
+        line-height:1.48;
+
+        margin-bottom:19px;
 
     }
 
 
-    .about-quote{
+    .signature{
 
-        margin:
-            31px
-            0
-            34px;
-
-        padding:
-            20px
-            0
-            20px
-            22px;
-
-        font-size:29px;
-
-    }
-
-
-    .about-details{
-
-        grid-template-columns:1fr;
-
-        gap:28px;
-
-    }
-
-
-    .detail h3{
-
-        font-size:22px;
-
-    }
-
-
-    .detail p{
-
-        font-size:11px;
+        font-size:36px;
 
     }
 
 
     /* FINAL */
 
-    .about-ending{
+    .about-bottom{
+
+        min-height:150px;
 
         padding:
-            55px
+            45px
             25px;
 
     }
 
 
-    .about-ending p{
+    .about-bottom p{
 
-        font-size:32px;
+        font-size:31px;
 
     }
 
 
-    .brand-strip{
+    .footer{
 
         padding:
             23px
-            22px;
+            18px;
 
     }
 
 
-    .brand-strip p{
+    .footer p{
 
         font-size:8px;
 
         letter-spacing:1.5px;
+
+        line-height:1.7;
 
     }
 
@@ -1061,26 +858,75 @@ img{
 
     .logo{
 
-        width:135px;
+        width:132px;
 
     }
 
 
-    .about-inner{
+    .about-right{
 
-        width:calc(100% - 34px);
+        height:440px;
+
+    }
+
+
+    .photo-message{
+
+        width:125px;
+
+    }
+
+
+    .photo-message p{
+
+        font-size:24px;
+
+    }
+
+
+    .photo-message span{
+
+        font-size:21px;
+
+    }
+
+
+    .photo-quote{
+
+        width:245px;
+
+        padding:
+            18px
+            20px;
+
+    }
+
+
+    .photo-quote p{
+
+        font-size:17px;
+
+    }
+
+
+    .about-left{
+
+        padding:
+            43px
+            22px
+            50px;
 
     }
 
 
     .about-title{
 
-        font-size:44px;
+        font-size:45px;
 
     }
 
 
-    .about-copy > p{
+    .about-text p{
 
         font-size:16px;
 
@@ -1097,7 +943,7 @@ img{
 
 
 <!-- =======================================================
-     HEADER
+     CABECERA
 ======================================================= -->
 
 <header class="header">
@@ -1105,7 +951,7 @@ img{
     <div class="header-inner">
 
 
-        <!-- LOGO OFICIAL -->
+        <!-- TU LOGO -->
 
         <a
             href="index.html"
@@ -1119,7 +965,7 @@ img{
         </a>
 
 
-        <!-- MENÚ ORDENADOR -->
+        <!-- MENÚ -->
 
         <nav class="nav">
 
@@ -1148,83 +994,9 @@ img{
         </nav>
 
 
-        <!-- MENÚ MÓVIL -->
-
-        <button
-            class="mobile-button"
-            id="openMenu"
-            type="button"
-            aria-label="Abrir menú">
-
-            <span></span>
-            <span></span>
-            <span></span>
-
-        </button>
-
-
     </div>
 
 </header>
-
-
-
-<!-- =======================================================
-     MENÚ MÓVIL
-======================================================= -->
-
-<div
-    class="mobile-panel"
-    id="mobilePanel">
-
-
-    <button
-        class="mobile-close"
-        id="closeMenu"
-        type="button"
-        aria-label="Cerrar menú">
-
-        ×
-
-    </button>
-
-
-    <a href="index.html">
-        Inicio
-    </a>
-
-    <a href="sobre-mi.html">
-        Sobre mí
-    </a>
-
-    <a href="servicios.html">
-        Servicios
-    </a>
-
-    <a href="mallorca.html">
-        Mallorca
-    </a>
-
-    <a href="contacto.html">
-        Contacto
-    </a>
-
-
-</div>
-
-
-
-<!-- =======================================================
-     CABECERA DE LA PÁGINA
-======================================================= -->
-
-<section class="about-hero">
-
-    <p>
-        Un poquito sobre mí ♡
-    </p>
-
-</section>
 
 
 
@@ -1235,115 +1007,178 @@ img{
 <main>
 
 
-<section class="about">
+<section class="about-hero">
 
 
-    <div class="about-inner">
+    <!-- =================================================
+         IZQUIERDA
+    ================================================== -->
+
+    <div class="about-left">
 
 
-        <!-- FOTO CATI -->
+        <p class="about-eyebrow">
+
+            Sobre mí
+
+        </p>
+
+
+        <h1 class="about-title">
+
+            Más de diez años
+            creando momentos.
+
+            <span class="italic">
+
+                Y una pasión que
+                empezó con las bodas.
+
+            </span>
+
+        </h1>
+
+
+        <div class="about-line"></div>
+
+
+        <div class="about-text">
+
+
+            <p>
+
+                Hace más de diez años comencé mi camino
+                en el mundo de los eventos. Pero fue al
+                descubrir el mundo de las bodas cuando
+                entendí que había encontrado aquello que
+                realmente me apasionaba.
+
+            </p>
+
+
+            <p>
+
+                Desde entonces, cada pareja, cada historia
+                y cada boda son diferentes para mí.
+                No creo en las bodas hechas siguiendo
+                un mismo patrón.
+
+            </p>
+
+
+            <p>
+
+                Me adapto a vosotros, a vuestra personalidad,
+                a vuestras ideas y, por supuesto, al tipo de
+                boda que soñáis.
+
+            </p>
+
+
+            <p>
+
+                Ya sea una celebración íntima o una gran boda,
+                estaré a vuestro lado para ayudaros en todo
+                aquello que necesitéis.
+
+            </p>
+
+
+            <p>
+
+                Mi forma de trabajar es muy personal y cercana.
+                Me gusta conoceros, escucharos y entender
+                qué queréis vivir ese día.
+
+            </p>
+
+
+            <p>
+
+                Por eso, durante todo el proceso, nos reunimos,
+                hablamos, organizamos y vamos dando forma juntos
+                a cada detalle.
+
+            </p>
+
+
+            <p class="bold">
+
+                Porque para mí, organizar una boda no consiste
+                solo en que todo salga perfecto. Consiste en que
+                vosotros disfrutéis del camino tanto como del
+                gran día.
+
+            </p>
+
+
+        </div>
+
+
+        <div class="signature">
+
+            Cati
+
+        </div>
+
+
+    </div>
+
+
+
+    <!-- =================================================
+         DERECHA · FOTO
+    ================================================== -->
+
+    <div class="about-right">
+
 
         <div class="about-photo">
 
             <img
                 src="assets/cati.jpg"
-                alt="Cati de Bodas Con Cati">
+                alt="Cati · Bodas Con Cati">
 
         </div>
 
 
-        <!-- TEXTO -->
+        <!-- TEXTO SOBRE FOTO -->
 
-        <div class="about-copy">
-
-
-            <div class="eyebrow">
-
-                Sobre mí
-
-            </div>
-
-
-            <h1 class="about-title">
-
-                Detrás de
-
-                <span class="script">
-                    Bodas Con Cati
-                </span>
-
-                estoy yo.
-
-            </h1>
-
+        <div class="photo-message">
 
             <p>
 
-                Me gustan las bodas que tienen sentido.
-                Las que hablan de vosotros, de vuestra forma
-                de quereros, de las cosas que os hacen felices
-                y de esos pequeños detalles que quizá nadie más ve,
-                pero que para vosotros lo son todo.
+                Bodas
+
+                personas
+
+                historias
+
+                reales
 
             </p>
 
+            <span>
+                ♡
+            </span>
+
+        </div>
+
+
+        <!-- RECUADRO -->
+
+        <div class="photo-quote">
 
             <p>
 
-                Soy Cati, Wedding Planner en Mallorca,
-                y mi trabajo empieza mucho antes de que llegue
-                el día de la boda. Estoy para ordenar ideas,
-                buscar soluciones, cuidar los detalles y conseguir
-                que todo lo que imagináis vaya tomando forma.
+                Detrás de cada boda
+                hay una gran historia.
+                Y me encanta formar
+                parte de ella.
 
             </p>
 
-
-            <!-- FRASE -->
-
-            <div class="about-quote">
-
-                “Vosotros vivid vuestra historia.
-                De los detalles, ya me ocupo yo.”
-
-            </div>
-
-
-            <!-- DOS IDEAS -->
-
-            <div class="about-details">
-
-
-                <div class="detail">
-
-                    <h3>
-                        Una boda vuestra
-                    </h3>
-
-                    <p>
-                        Sin plantillas ni bodas copiadas.
-                        Cada pareja tiene su propia esencia.
-                    </p>
-
-                </div>
-
-
-                <div class="detail">
-
-                    <h3>
-                        Con tranquilidad
-                    </h3>
-
-                    <p>
-                        Organización, proveedores y tiempos
-                        bajo control para que podáis disfrutar.
-                    </p>
-
-                </div>
-
-
-            </div>
-
+            <div class="photo-quote-line"></div>
 
         </div>
 
@@ -1356,10 +1191,10 @@ img{
 
 
 <!-- =======================================================
-     CIERRE
+     FRASE FINAL
 ======================================================= -->
 
-<section class="about-ending">
+<section class="about-bottom">
 
     <p>
 
@@ -1373,10 +1208,10 @@ img{
 
 
 <!-- =======================================================
-     FRANJA FINAL
+     FOOTER
 ======================================================= -->
 
-<footer class="brand-strip">
+<footer class="footer">
 
     <p>
 
@@ -1389,61 +1224,6 @@ img{
 
 
 </main>
-
-
-
-<script>
-
-/* =========================================================
-   MENÚ MÓVIL
-========================================================= */
-
-const openMenu =
-    document.getElementById("openMenu");
-
-const closeMenu =
-    document.getElementById("closeMenu");
-
-const mobilePanel =
-    document.getElementById("mobilePanel");
-
-
-openMenu.addEventListener(
-    "click",
-    function(){
-
-        mobilePanel.classList.add("open");
-
-    }
-);
-
-
-closeMenu.addEventListener(
-    "click",
-    function(){
-
-        mobilePanel.classList.remove("open");
-
-    }
-);
-
-
-mobilePanel
-    .querySelectorAll("a")
-    .forEach(function(link){
-
-        link.addEventListener(
-            "click",
-            function(){
-
-                mobilePanel.classList.remove("open");
-
-            }
-        );
-
-    });
-
-</script>
 
 
 </body>
