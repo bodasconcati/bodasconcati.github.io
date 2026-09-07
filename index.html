@@ -5,7 +5,10 @@
 
 <meta charset="UTF-8">
 
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+>
 
 <title>Bodas Con Cati | Wedding Planner Mallorca</title>
 
@@ -32,18 +35,21 @@
 
 /* =========================================================
    BODAS CON CATI
-   PÁGINA DE INICIO
+   INICIO
 ========================================================= */
 
 :root {
 
     --crema: #F7F1EA;
+
     --crema-servicios: #F1E7DC;
 
     --marron: #4A372D;
+
     --marron-suave: #725E52;
 
     --dorado: #A97935;
+
     --rosa: #D6A693;
 
     --blanco: #FFFFFF;
@@ -68,6 +74,7 @@ html {
 
 
 body {
+
     margin: 0;
 
     background: var(--crema);
@@ -82,13 +89,17 @@ body {
 
 
 a {
+
     color: inherit;
+
     text-decoration: none;
 }
 
 
 img {
+
     display: block;
+
     max-width: 100%;
 }
 
@@ -103,7 +114,11 @@ img {
 
     width: 100%;
 
-    height: 840px;
+    min-height: 900px;
+
+    height: 100vh;
+
+    max-height: 1000px;
 
     overflow: hidden;
 
@@ -119,7 +134,7 @@ img {
 
 
 /* =========================================================
-   CAPA SOBRE LA FOTO
+   CAPA SOBRE LA FOTOGRAFÍA
 ========================================================= */
 
 .hero-overlay {
@@ -133,12 +148,12 @@ img {
     background:
         linear-gradient(
             90deg,
-            rgba(47,34,26,0.78) 0%,
-            rgba(47,34,26,0.60) 18%,
-            rgba(47,34,26,0.36) 34%,
-            rgba(47,34,26,0.12) 53%,
-            rgba(47,34,26,0.02) 72%,
-            rgba(47,34,26,0) 100%
+            rgba(43,30,23,0.82) 0%,
+            rgba(43,30,23,0.70) 22%,
+            rgba(43,30,23,0.52) 42%,
+            rgba(43,30,23,0.28) 61%,
+            rgba(43,30,23,0.08) 82%,
+            rgba(43,30,23,0) 100%
         );
 }
 
@@ -156,19 +171,17 @@ img {
 
     width: 100%;
 
-    z-index: 20;
+    z-index: 10;
 
-    padding-top: 28px;
+    padding:
+        28px
+        55px;
 }
 
 
 .header-inner {
 
-    width: calc(100% - 150px);
-
-    max-width: 1800px;
-
-    margin: 0 auto;
+    width: 100%;
 
     display: flex;
 
@@ -184,19 +197,17 @@ img {
 
 .logo-link {
 
-    width: 245px;
+    width: 230px;
 
-    flex: 0 0 245px;
+    flex: 0 0 auto;
 }
 
 
 .logo {
 
-    width: 245px;
+    width: 230px;
 
     height: auto;
-
-    display: block;
 
     object-fit: contain;
 }
@@ -212,15 +223,9 @@ img {
 
     align-items: center;
 
-    justify-content: center;
+    gap: 38px;
 
-    gap: 36px;
-
-    padding-top: 17px;
-
-    margin-left: auto;
-
-    margin-right: 30px;
+    padding-top: 15px;
 
     color: #FFFFFF;
 
@@ -243,9 +248,9 @@ img {
 
     position: relative;
 
-    padding-bottom: 9px;
-
     white-space: nowrap;
+
+    padding-bottom: 8px;
 
     transition:
         opacity 0.25s ease;
@@ -254,7 +259,7 @@ img {
 
 .nav a:hover {
 
-    opacity: 0.70;
+    opacity: 0.7;
 }
 
 
@@ -265,6 +270,7 @@ img {
     position: absolute;
 
     left: 0;
+
     right: 0;
 
     bottom: 0;
@@ -276,7 +282,7 @@ img {
 
 
 /* =========================================================
-   HERO CONTENT
+   CONTENIDO HERO
 ========================================================= */
 
 .hero-content {
@@ -285,31 +291,31 @@ img {
 
     z-index: 3;
 
-    width: calc(100% - 150px);
-
-    max-width: 1800px;
+    width: 100%;
 
     height: 100%;
 
-    margin: 0 auto;
-
     display: flex;
 
-    align-items: flex-end;
+    align-items: center;
 
-    padding-bottom: 70px;
+    padding:
+        120px
+        0
+        70px
+        8vw;
 }
 
 
 /* =========================================================
-   TEXTO HERO
+   BLOQUE DE TEXTO
 ========================================================= */
 
 .hero-copy {
 
-    width: 620px;
+    width: 700px;
 
-    max-width: 620px;
+    max-width: 700px;
 
     color: #FFFFFF;
 
@@ -327,18 +333,21 @@ img {
 
 .eyebrow {
 
-    margin: 0 0 23px;
+    margin:
+        0
+        0
+        24px;
 
     font-family:
         "Montserrat",
         Arial,
         sans-serif;
 
-    font-size: 13px;
+    font-size: 14px;
 
     font-weight: 500;
 
-    letter-spacing: 3px;
+    letter-spacing: 3.5px;
 
     text-transform: uppercase;
 
@@ -354,13 +363,15 @@ img {
 
     margin: 0;
 
-    font-size: 78px;
+    font-size: clamp(72px, 5.8vw, 92px);
 
     font-weight: 500;
 
     line-height: 0.91;
 
-    letter-spacing: -2px;
+    letter-spacing: -2.5px;
+
+    color: #FFFFFF;
 }
 
 
@@ -384,41 +395,43 @@ img {
 
 .hero-line {
 
-    width: 68px;
+    width: 70px;
 
     height: 1px;
 
     margin:
-        29px
+        32px
         0
-        24px;
+        25px;
 
-    background: rgba(255,255,255,0.85);
+    background: rgba(255,255,255,0.9);
 }
 
 
 /* =========================================================
-   DESCRIPCIÓN
+   TEXTO PRINCIPAL
 ========================================================= */
 
 .hero-description {
 
-    width: 610px;
+    width: 690px;
 
     max-width: 100%;
 
     margin: 0;
 
-    font-size: 22px;
+    font-size: 24px;
 
-    line-height: 1.58;
+    line-height: 1.52;
+
+    font-weight: 400;
 
     color: #FFFFFF;
 }
 
 
 /* =========================================================
-   BOTÓN ÚNICO
+   BOTÓN
 ========================================================= */
 
 .hero-button {
@@ -429,13 +442,13 @@ img {
 
     justify-content: center;
 
-    min-height: 54px;
+    min-height: 56px;
 
-    margin-top: 30px;
+    margin-top: 32px;
 
     padding:
         0
-        34px;
+        36px;
 
     background: #C18C6E;
 
@@ -446,11 +459,11 @@ img {
         Arial,
         sans-serif;
 
-    font-size: 11px;
+    font-size: 12px;
 
     font-weight: 600;
 
-    letter-spacing: 2px;
+    letter-spacing: 2.2px;
 
     text-transform: uppercase;
 
@@ -477,9 +490,9 @@ img {
     background: var(--crema-servicios);
 
     padding:
-        62px
+        70px
         0
-        68px;
+        75px;
 }
 
 
@@ -510,7 +523,7 @@ img {
         0
         45px;
 
-    min-height: 145px;
+    min-height: 155px;
 
     border-right:
         1px solid
@@ -616,7 +629,7 @@ img {
         opacity: 0;
 
         transform:
-            translateY(18px);
+            translateY(20px);
     }
 
     to {
@@ -636,10 +649,11 @@ img {
 
 @media (max-width: 1150px) {
 
-    .header-inner,
-    .hero-content {
+    .header {
 
-        width: calc(100% - 70px);
+        padding:
+            25px
+            35px;
     }
 
 
@@ -652,9 +666,7 @@ img {
 
     .nav {
 
-        gap: 21px;
-
-        margin-right: 0;
+        gap: 22px;
 
         font-size: 10px;
 
@@ -662,31 +674,31 @@ img {
     }
 
 
-    .hero {
+    .hero-content {
 
-        height: 760px;
-    }
-
-
-    .hero-title {
-
-        font-size: 65px;
+        padding-left: 6vw;
     }
 
 
     .hero-copy {
 
-        width: 570px;
+        width: 600px;
 
-        max-width: 570px;
+        max-width: 600px;
+    }
+
+
+    .hero-title {
+
+        font-size: 70px;
     }
 
 
     .hero-description {
 
-        width: 550px;
+        width: 600px;
 
-        font-size: 20px;
+        font-size: 21px;
     }
 
 
@@ -731,26 +743,69 @@ img {
 
 
     /* -----------------------------------------
+       HERO
+    ----------------------------------------- */
+
+    .hero {
+
+        height: auto;
+
+        min-height: 0;
+
+        max-height: none;
+
+        background:
+
+            linear-gradient(
+                rgba(55,39,30,0.15),
+                rgba(55,39,30,0.15)
+            ),
+
+            url("assets/hero%201.jpg");
+
+        background-size: cover;
+
+        background-position:
+            center top;
+
+        background-attachment: scroll;
+    }
+
+
+    .hero-overlay {
+
+        display: block;
+
+        background:
+            linear-gradient(
+                180deg,
+                rgba(43,30,23,0.20) 0%,
+                rgba(43,30,23,0.38) 42%,
+                rgba(43,30,23,0.82) 100%
+            );
+    }
+
+
+    /* -----------------------------------------
        HEADER
     ----------------------------------------- */
 
     .header {
 
-        position: absolute;
+        position: relative;
 
-        padding-top: 18px;
+        padding:
+            22px
+            22px
+            0;
     }
 
 
     .header-inner {
 
-        width: calc(100% - 36px);
-
         display: flex;
 
         justify-content: center;
-
-        align-items: flex-start;
     }
 
 
@@ -766,8 +821,6 @@ img {
     }
 
 
-    /* MENÚ OCULTO EN MÓVIL */
-
     .nav {
 
         display: none;
@@ -775,67 +828,23 @@ img {
 
 
     /* -----------------------------------------
-       HERO
+       CONTENIDO
     ----------------------------------------- */
-
-    .hero {
-
-        height: auto;
-
-        min-height: 0;
-
-        display: flex;
-
-        flex-direction: column;
-
-        background: var(--crema);
-    }
-
-
-    .hero-overlay {
-
-        display: none;
-    }
-
-
-    /* FOTO */
-
-    .mobile-photo {
-
-        display: block;
-
-        order: 1;
-
-        width: 100%;
-
-        height: 480px;
-
-        background-image:
-            url("assets/hero%201.jpg");
-
-        background-size: cover;
-
-        background-position: center center;
-
-        background-repeat: no-repeat;
-    }
-
-
-    /* CONTENIDO */
 
     .hero-content {
 
-        order: 2;
-
-        width: 100%;
+        min-height: 850px;
 
         height: auto;
 
-        margin: 0;
+        padding:
+            260px
+            25px
+            55px;
 
-        padding: 0;
+        display: flex;
 
-        display: block;
+        align-items: flex-end;
     }
 
 
@@ -844,33 +853,26 @@ img {
         width: 100%;
 
         max-width: none;
-
-        padding:
-            52px
-            28px
-            60px;
-
-        background: var(--crema);
-
-        color: var(--marron);
     }
 
 
     /* -----------------------------------------
-       TEXTO
+       EYEBROW
     ----------------------------------------- */
 
     .eyebrow {
-
-        margin-bottom: 20px;
 
         font-size: 10px;
 
         letter-spacing: 2.5px;
 
-        color: var(--dorado);
+        margin-bottom: 20px;
     }
 
+
+    /* -----------------------------------------
+       TITULAR
+    ----------------------------------------- */
 
     .hero-title {
 
@@ -879,16 +881,12 @@ img {
         line-height: 0.92;
 
         letter-spacing: -1.2px;
-
-        color: var(--marron);
     }
 
 
-    .hero-title .italic {
-
-        color: var(--rosa);
-    }
-
+    /* -----------------------------------------
+       LÍNEA
+    ----------------------------------------- */
 
     .hero-line {
 
@@ -896,32 +894,36 @@ img {
             26px
             0
             22px;
-
-        background: var(--dorado);
     }
 
 
+    /* -----------------------------------------
+       DESCRIPCIÓN
+    ----------------------------------------- */
+
     .hero-description {
 
-        width: auto;
+        width: 100%;
 
         font-size: 20px;
 
         line-height: 1.55;
-
-        color: var(--marron);
     }
 
 
-    .hero-button {
+    /* -----------------------------------------
+       BOTÓN
+    ----------------------------------------- */
 
-        display: flex;
+    .hero-button {
 
         width: 100%;
 
         min-height: 54px;
 
-        margin-top: 31px;
+        margin-top: 30px;
+
+        font-size: 10px;
     }
 
 
@@ -932,9 +934,9 @@ img {
     .services {
 
         padding:
-            58px
+            60px
             0
-            60px;
+            65px;
     }
 
 
@@ -957,9 +959,9 @@ img {
         padding:
             0
             10px
-            38px;
+            40px;
 
-        margin-bottom: 38px;
+        margin-bottom: 40px;
 
         border-right: none;
 
@@ -1027,18 +1029,21 @@ img {
 
 @media (max-width: 480px) {
 
-    .mobile-photo {
+    .logo-link,
+    .logo {
 
-        height: 430px;
+        width: 155px;
     }
 
 
-    .hero-copy {
+    .hero-content {
+
+        min-height: 820px;
 
         padding:
-            48px
-            23px
-            55px;
+            220px
+            22px
+            48px;
     }
 
 
@@ -1060,9 +1065,7 @@ img {
 
     .hero-button {
 
-        font-size: 10px;
-
-        letter-spacing: 1.7px;
+        min-height: 52px;
     }
 
 
@@ -1159,13 +1162,6 @@ img {
 
 
     <!-- =================================================
-         FOTO MÓVIL
-    ================================================== -->
-
-    <div class="mobile-photo"></div>
-
-
-    <!-- =================================================
          CONTENIDO
     ================================================== -->
 
@@ -1174,14 +1170,10 @@ img {
         <div class="hero-copy">
 
 
-            <!-- EYEBROW -->
-
             <p class="eyebrow">
                 WEDDING PLANNER · MALLORCA
             </p>
 
-
-            <!-- TITULAR -->
 
             <h1 class="hero-title">
 
@@ -1204,12 +1196,8 @@ img {
             </h1>
 
 
-            <!-- LÍNEA -->
-
             <div class="hero-line"></div>
 
-
-            <!-- DESCRIPCIÓN -->
 
             <p class="hero-description">
 
@@ -1221,8 +1209,6 @@ img {
 
             </p>
 
-
-            <!-- BOTÓN ÚNICO -->
 
             <a
                 href="contacto.html"
@@ -1250,8 +1236,6 @@ img {
         <div class="services-grid">
 
 
-            <!-- SERVICIO 1 -->
-
             <article class="service">
 
                 <h2>
@@ -1266,8 +1250,6 @@ img {
             </article>
 
 
-            <!-- SERVICIO 2 -->
-
             <article class="service">
 
                 <h2>
@@ -1280,8 +1262,6 @@ img {
 
             </article>
 
-
-            <!-- SERVICIO 3 -->
 
             <article class="service">
 
@@ -1296,8 +1276,6 @@ img {
 
             </article>
 
-
-            <!-- SERVICIO 4 -->
 
             <article class="service">
 
