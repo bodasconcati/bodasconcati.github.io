@@ -1,1426 +1,640 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
-
-<meta charset="UTF-8">
-
-<meta
-    name="viewport"
-    content="width=device-width, initial-scale=1.0"
->
-
-<title>Servicios · Bodas Con Cati</title>
-
-<meta
-    name="description"
-    content="Servicios de Bodas Con Cati · Wedding Planner en Mallorca."
->
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-
-<link
-    rel="preconnect"
-    href="https://fonts.gstatic.com"
-    crossorigin
->
-
-<link
-    href="https://fonts.googleapis.com/css2?family=Allura&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Montserrat:wght@400;500;600&display=swap"
-    rel="stylesheet"
->
-
-
-<style>
-
-/* =========================================================
-   BODAS CON CATI
-   SERVICIOS
-========================================================= */
-
-:root {
-
-    --crema: #F7F1EA;
-
-    --crema-card: #F1E5D8;
-
-    --marron: #4A372D;
-
-    --marron-suave: #725E52;
-
-    --rosa: #C98B70;
-
-    --dorado: #A97935;
-
-    --blanco: #FFFFFF;
-
-}
-
-
-/* =========================================================
-   RESET
-========================================================= */
-
-* {
-    box-sizing: border-box;
-}
-
-
-html {
-    scroll-behavior: smooth;
-}
-
-
-body {
-
-    margin: 0;
-
-    background: var(--crema);
-
-    color: var(--marron);
-
-    font-family:
-        "Cormorant Garamond",
-        Georgia,
-        serif;
-}
-
-
-a {
-
-    color: inherit;
-
-    text-decoration: none;
-}
-
-
-img {
-
-    display: block;
-
-    max-width: 100%;
-}
-
-
-/* =========================================================
-   HEADER
-========================================================= */
-
-.header {
-
-    width: 100%;
-
-    padding:
-        28px
-        7vw
-        20px;
-
-    background: var(--crema);
-}
-
-
-.header-inner {
-
-    width: 100%;
-
-    display: flex;
-
-    align-items: flex-start;
-
-    justify-content: space-between;
-}
-
-
-/* =========================================================
-   LOGO
-========================================================= */
-
-.logo-link {
-
-    width: 230px;
-
-    flex-shrink: 0;
-}
-
-
-.logo {
-
-    width: 230px;
-
-    height: auto;
-
-    display: block;
-
-    object-fit: contain;
-}
-
-
-/* =========================================================
-   NAVEGACIÓN
-========================================================= */
-
-.nav {
-
-    display: flex;
-
-    align-items: center;
-
-    gap: 40px;
-
-    padding-top: 15px;
-
-    font-family:
-        "Montserrat",
-        Arial,
-        sans-serif;
-
-    font-size: 13px;
-
-    font-weight: 500;
-
-    letter-spacing: 2px;
-
-    text-transform: uppercase;
-
-    color: var(--marron);
-}
-
-
-.nav a {
-
-    position: relative;
-
-    padding-bottom: 9px;
-
-    white-space: nowrap;
-
-    transition:
-        opacity 0.25s ease;
-}
-
-
-.nav a:hover {
-
-    opacity: 0.6;
-}
-
-
-.nav a.active {
-
-    color: var(--marron);
-
-}
-
-
-.nav a.active::after {
-
-    content: "";
-
-    position: absolute;
-
-    left: 0;
-
-    right: 0;
-
-    bottom: 0;
-
-    height: 1px;
-
-    background: var(--rosa);
-}
-
-
-/* =========================================================
-   INTRODUCCIÓN
-========================================================= */
-
-.services-intro {
-
-    text-align: center;
-
-    padding:
-        45px
-        5vw
-        45px;
-}
-
-
-.services-eyebrow {
-
-    margin:
-        0
-        0
-        22px;
-
-    font-family:
-        "Montserrat",
-        Arial,
-        sans-serif;
-
-    font-size: 13px;
-
-    font-weight: 600;
-
-    letter-spacing: 3.5px;
-
-    text-transform: uppercase;
-
-    color: var(--dorado);
-}
-
-
-.services-title {
-
-    max-width: 1250px;
-
-    margin:
-        0
-        auto
-        18px;
-
-    font-size:
-        clamp(
-            58px,
-            5.6vw,
-            88px
-        );
-
-    line-height: 0.95;
-
-    font-weight: 500;
-
-    letter-spacing: -2px;
-}
-
-
-.services-title em {
-
-    color: var(--rosa);
-
-    font-style: italic;
-}
-
-
-.services-subtitle {
-
-    max-width: 900px;
-
-    margin:
-        0
-        auto;
-
-    font-size: 23px;
-
-    line-height: 1.4;
-
-    color: var(--marron);
-}
-
-
-/* =========================================================
-   PAQUETES
-========================================================= */
-
-.packages {
-
-    width: calc(100% - 11vw);
-
-    max-width: 1500px;
-
-    margin:
-        10px
-        auto
-        85px;
-}
-
-
-.packages-grid {
-
-    display: grid;
-
-    grid-template-columns:
-        repeat(3, 1fr);
-
-    gap: 32px;
-
-    align-items: stretch;
-}
-
-
-/* =========================================================
-   TARJETA
-========================================================= */
-
-.package {
-
-    background: var(--crema-card);
-
-    display: flex;
-
-    flex-direction: column;
-
-    min-width: 0;
-}
-
-
-/* =========================================================
-   IMAGEN
-========================================================= */
-
-.package-image {
-
-    width: 100%;
-
-    height: 300px;
-
-    overflow: hidden;
-}
-
-
-.package-image img {
-
-    width: 100%;
-
-    height: 100%;
-
-    object-fit: cover;
-
-    transition:
-        transform 0.5s ease;
-}
-
-
-.package:hover .package-image img {
-
-    transform: scale(1.03);
-}
-
-
-/* =========================================================
-   CONTENIDO TARJETA
-========================================================= */
-
-.package-content {
-
-    padding:
-        34px
-        38px
-        38px;
-
-    text-align: center;
-
-    display: flex;
-
-    flex-direction: column;
-
-    flex: 1;
-}
-
-
-/* =========================================================
-   NOMBRE
-========================================================= */
-
-.package-name {
-
-    margin:
-        0
-        14px;
-
-    font-family:
-        "Allura",
-        cursive;
-
-    font-size: 55px;
-
-    font-weight: 400;
-
-    line-height: 1;
-
-    color: var(--marron);
-}
-
-
-/* =========================================================
-   LÍNEA DECORATIVA
-========================================================= */
-
-.package-line {
-
-    width: 52px;
-
-    height: 1px;
-
-    margin:
-        0
-        auto
-        19px;
-
-    background: #B58B72;
-}
-
-
-/* =========================================================
-   SUBTÍTULO
-========================================================= */
-
-.package-subtitle {
-
-    margin:
-        0
-        0
-        22px;
-
-    font-size: 21px;
-
-    line-height: 1.25;
-
-    font-weight: 500;
-
-    color: var(--marron);
-}
-
-
-/* =========================================================
-   DESCRIPCIÓN
-========================================================= */
-
-.package-description {
-
-    margin: 0;
-
-    font-size: 19px;
-
-    line-height: 1.48;
-
-    color: var(--marron);
-
-    flex: 1;
-}
-
-
-.package-description p {
-
-    margin:
-        0
-        0
-        15px;
-}
-
-
-.package-description p:last-child {
-
-    margin-bottom: 0;
-}
-
-
-/* =========================================================
-   DESTACADOS
-========================================================= */
-
-.package-highlight {
-
-    margin:
-        0
-        0
-        18px;
-
-    font-size: 19px;
-
-    line-height: 1.45;
-
-    font-weight: 600;
-}
-
-
-/* =========================================================
-   BOTÓN
-========================================================= */
-
-.package-button {
-
-    display: inline-flex;
-
-    align-items: center;
-
-    justify-content: center;
-
-    align-self: center;
-
-    width: 230px;
-
-    min-height: 52px;
-
-    margin-top: 30px;
-
-    background: var(--rosa);
-
-    color: #FFFFFF;
-
-    font-family:
-        "Montserrat",
-        Arial,
-        sans-serif;
-
-    font-size: 11px;
-
-    font-weight: 600;
-
-    letter-spacing: 2px;
-
-    text-transform: uppercase;
-
-    transition:
-        background 0.25s ease,
-        transform 0.25s ease;
-}
-
-
-.package-button:hover {
-
-    background: #B8785E;
-
-    transform: translateY(-2px);
-}
-
-
-/* =========================================================
-   FRASE FINAL
-========================================================= */
-
-.services-closing {
-
-    position: relative;
-
-    padding:
-        95px
-        25px;
-
-    text-align: center;
-
-    overflow: hidden;
-
-    background:
-        linear-gradient(
-            rgba(247,241,234,0.80),
-            rgba(247,241,234,0.80)
-        ),
-        url("assets/hero%201.jpg");
-
-    background-size: cover;
-
-    background-position: center;
-}
-
-
-.services-closing p {
-
-    position: relative;
-
-    z-index: 2;
-
-    max-width: 950px;
-
-    margin: 0 auto;
-
-    font-size:
-        clamp(
-            35px,
-            4vw,
-            58px
-        );
-
-    line-height: 1.1;
-
-    font-style: italic;
-
-    color: var(--marron);
-}
-
-
-/* =========================================================
-   LÍNEA FINAL
-========================================================= */
-
-.closing-line {
-
-    width: 70px;
-
-    height: 1px;
-
-    margin:
-        28px
-        auto
-        0;
-
-    background: #B58B72;
-}
-
-
-/* =========================================================
-   FOOTER
-========================================================= */
-
-footer {
-
-    padding:
-        28px
-        20px;
-
-    background: var(--marron);
-
-    color: var(--crema);
-
-    text-align: center;
-
-    font-family:
-        "Montserrat",
-        Arial,
-        sans-serif;
-
-    font-size: 11px;
-
-    letter-spacing: 1.5px;
-
-    line-height: 1.6;
-}
-
-
-/* =========================================================
-   TABLET
-========================================================= */
-
-@media (max-width: 1100px) {
-
-    .header {
-
-        padding:
-            25px
-            4vw
-            20px;
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Servicios · Bodas Con Cati</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
     }
 
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f7f2ec;
+      color: #3f3935;
+    }
 
-    .logo-link,
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* =========================
+       HEADER
+    ========================= */
+
+    header {
+      height: 100px;
+      padding: 0 5vw;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: #f7f2ec;
+    }
+
     .logo {
-
-        width: 190px;
+      width: 145px;
+      height: auto;
+      display: block;
     }
 
-
-    .nav {
-
-        gap: 22px;
-
-        font-size: 10px;
-
-        letter-spacing: 1.5px;
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 38px;
     }
 
-
-    .services-intro {
-
-        padding:
-            40px
-            4vw;
+    nav a {
+      font-size: 13px;
+      letter-spacing: 1.8px;
+      color: #514a45;
+      transition: opacity 0.3s ease;
     }
 
-
-    .services-title {
-
-        font-size: 62px;
+    nav a:hover {
+      opacity: 0.55;
     }
 
-
-    .services-subtitle {
-
-        font-size: 20px;
+    nav a.active {
+      color: #9b6f63;
     }
 
+    /* =========================
+       INTRO
+    ========================= */
 
-    .packages {
-
-        width: calc(100% - 7vw);
+    .intro {
+      text-align: center;
+      padding: 85px 30px 70px;
     }
 
-
-    .packages-grid {
-
-        gap: 20px;
+    .eyebrow {
+      font-size: 13px;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      color: #9b6f63;
+      margin-bottom: 25px;
     }
 
-
-    .package-image {
-
-        height: 245px;
+    .intro h1 {
+      font-family: Georgia, "Times New Roman", serif;
+      font-weight: normal;
+      font-size: clamp(58px, 7vw, 105px);
+      line-height: 0.95;
+      letter-spacing: -3px;
+      color: #403936;
+      max-width: 1100px;
+      margin: 0 auto;
     }
 
-
-    .package-content {
-
-        padding:
-            28px
-            24px
-            30px;
+    .intro h1 em {
+      color: #a4776b;
+      font-style: italic;
     }
 
-
-    .package-name {
-
-        font-size: 49px;
+    .intro p {
+      max-width: 760px;
+      margin: 35px auto 0;
+      font-size: 23px;
+      line-height: 1.65;
+      color: #625b56;
     }
 
+    /* =========================
+       SERVICIOS
+    ========================= */
 
-    .package-subtitle {
-
-        font-size: 19px;
+    .services {
+      width: 90%;
+      max-width: 1550px;
+      margin: 0 auto;
+      padding: 20px 0 110px;
     }
 
-
-    .package-description {
-
-        font-size: 17px;
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 35px;
     }
 
-}
-
-
-/* =========================================================
-   MÓVIL
-========================================================= */
-
-@media (max-width: 760px) {
-
-    /* HEADER */
-
-    .header {
-
-        padding:
-            23px
-            22px
-            10px;
+    .card {
+      background: #eee5dd;
+      padding-bottom: 48px;
     }
 
-
-    .header-inner {
-
-        display: flex;
-
-        justify-content: center;
+    .card-image {
+      width: 100%;
+      height: 520px;
+      overflow: hidden;
+      background: #ddd;
     }
 
-
-    .logo-link,
-    .logo {
-
-        width: 165px;
+    .card-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.6s ease;
     }
 
-
-    .nav {
-
-        display: none;
+    .card:hover .card-image img {
+      transform: scale(1.03);
     }
 
-
-    /* INTRO */
-
-    .services-intro {
-
-        padding:
-            42px
-            22px
-            35px;
+    .card-content {
+      padding: 38px 40px 0;
     }
 
-
-    .services-eyebrow {
-
-        font-size: 10px;
-
-        letter-spacing: 2.5px;
-
-        margin-bottom: 18px;
+    .card-number {
+      font-size: 12px;
+      letter-spacing: 3px;
+      color: #9b6f63;
+      margin-bottom: 13px;
     }
 
-
-    .services-title {
-
-        font-size: 50px;
-
-        line-height: 0.98;
-
-        letter-spacing: -1px;
+    .card h2 {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(48px, 4vw, 68px);
+      line-height: 1;
+      font-weight: normal;
+      font-style: italic;
+      color: #9b6f63;
+      margin-bottom: 27px;
     }
 
-
-    .services-subtitle {
-
-        font-size: 19px;
-
-        line-height: 1.45;
-
-        margin-top: 18px;
+    .card-intro {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 23px;
+      line-height: 1.4;
+      color: #403936;
+      margin-bottom: 25px;
     }
 
-
-    /* PAQUETES */
-
-    .packages {
-
-        width: calc(100% - 34px);
-
-        margin:
-            5px
-            auto
-            60px;
+    .card ul {
+      list-style: none;
+      margin-bottom: 34px;
     }
 
-
-    .packages-grid {
-
-        display: block;
+    .card li {
+      font-size: 20px;
+      line-height: 1.55;
+      color: #5d5651;
+      padding: 9px 0;
+      border-bottom: 1px solid rgba(120, 100, 90, 0.18);
     }
 
-
-    .package {
-
-        margin-bottom: 35px;
+    .card li:last-child {
+      border-bottom: none;
     }
 
-
-    .package:last-child {
-
-        margin-bottom: 0;
+    .more {
+      display: inline-block;
+      font-size: 13px;
+      letter-spacing: 2px;
+      color: #9b6f63;
+      padding-bottom: 7px;
+      border-bottom: 1px solid #9b6f63;
+      transition: opacity 0.3s ease;
     }
 
-
-    .package-image {
-
-        height: 270px;
+    .more:hover {
+      opacity: 0.55;
     }
 
+    /* =========================
+       CIERRE
+    ========================= */
 
-    .package-content {
-
-        padding:
-            30px
-            25px
-            32px;
+    .closing {
+      padding: 50px 30px 120px;
+      text-align: center;
     }
 
-
-    .package-name {
-
-        font-size: 50px;
-
-        margin:
-            10px
-            0
-            13px;
+    .closing p {
+      font-family: Georgia, "Times New Roman", serif;
+      font-style: italic;
+      font-size: clamp(34px, 4vw, 58px);
+      line-height: 1.2;
+      color: #8f675d;
+      max-width: 1000px;
+      margin: 0 auto;
     }
 
-
-    .package-subtitle {
-
-        font-size: 20px;
-
-        margin-bottom: 21px;
-    }
-
-
-    .package-description {
-
-        font-size: 19px;
-
-        line-height: 1.52;
-    }
-
-
-    .package-highlight {
-
-        font-size: 19px;
-    }
-
-
-    .package-button {
-
-        width: 220px;
-
-        min-height: 52px;
-
-        margin-top: 28px;
-    }
-
-
-    /* FRASE FINAL */
-
-    .services-closing {
-
-        padding:
-            70px
-            22px;
-    }
-
-
-    .services-closing p {
-
-        font-size: 37px;
-    }
-
-
-    /* FOOTER */
+    /* =========================
+       FOOTER
+    ========================= */
 
     footer {
+      padding: 35px 20px;
+      text-align: center;
+      border-top: 1px solid rgba(100, 80, 70, 0.15);
+      color: #766e68;
+      font-size: 12px;
+      letter-spacing: 1.5px;
+    }
 
+    /* =========================
+       TABLET
+    ========================= */
+
+    @media (max-width: 1000px) {
+
+      header {
+        padding: 0 30px;
+      }
+
+      nav {
+        gap: 20px;
+      }
+
+      nav a {
+        font-size: 11px;
+      }
+
+      .cards {
+        gap: 22px;
+      }
+
+      .card-image {
+        height: 430px;
+      }
+
+      .card-content {
+        padding: 30px 28px 0;
+      }
+
+      .card li {
+        font-size: 18px;
+      }
+
+      .card-intro {
+        font-size: 21px;
+      }
+    }
+
+    /* =========================
+       MÓVIL
+    ========================= */
+
+    @media (max-width: 760px) {
+
+      header {
+        height: auto;
+        padding: 25px 22px;
+        flex-direction: column;
+        gap: 22px;
+      }
+
+      .logo {
+        width: 130px;
+      }
+
+      nav {
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 14px 19px;
+      }
+
+      nav a {
         font-size: 10px;
+        letter-spacing: 1.2px;
+      }
 
-        padding:
-            25px
-            18px;
+      .intro {
+        padding: 65px 22px 55px;
+      }
+
+      .eyebrow {
+        font-size: 11px;
+        letter-spacing: 3px;
+        margin-bottom: 20px;
+      }
+
+      .intro h1 {
+        font-size: clamp(52px, 15vw, 76px);
+        line-height: 0.95;
+        letter-spacing: -2px;
+      }
+
+      .intro p {
+        font-size: 20px;
+        line-height: 1.55;
+        margin-top: 28px;
+      }
+
+      .services {
+        width: 92%;
+        padding-bottom: 70px;
+      }
+
+      .cards {
+        grid-template-columns: 1fr;
+        gap: 45px;
+      }
+
+      .card-image {
+        height: 430px;
+      }
+
+      .card-content {
+        padding: 32px 27px 0;
+      }
+
+      .card h2 {
+        font-size: 58px;
+        margin-bottom: 24px;
+      }
+
+      .card-intro {
+        font-size: 22px;
+        line-height: 1.45;
+      }
+
+      .card li {
+        font-size: 19px;
+        line-height: 1.5;
+        padding: 10px 0;
+      }
+
+      .more {
+        font-size: 12px;
+        margin-top: 5px;
+      }
+
+      .closing {
+        padding: 25px 25px 80px;
+      }
+
+      .closing p {
+        font-size: 36px;
+      }
+
+      footer {
+        font-size: 10px;
+        line-height: 1.6;
+      }
     }
-
-}
-
-
-/* =========================================================
-   MÓVIL PEQUEÑO
-========================================================= */
-
-@media (max-width: 480px) {
-
-    .logo-link,
-    .logo {
-
-        width: 150px;
-    }
-
-
-    .services-title {
-
-        font-size: 45px;
-    }
-
-
-    .services-subtitle {
-
-        font-size: 18px;
-    }
-
-
-    .package-image {
-
-        height: 245px;
-    }
-
-
-    .package-content {
-
-        padding:
-            27px
-            20px
-            30px;
-    }
-
-
-    .package-name {
-
-        font-size: 47px;
-    }
-
-
-    .package-description {
-
-        font-size: 18px;
-    }
-
-
-    .package-highlight {
-
-        font-size: 18px;
-    }
-
-
-    .services-closing p {
-
-        font-size: 33px;
-    }
-
-}
-
-</style>
-
+  </style>
 </head>
-
 
 <body>
 
+  <!-- HEADER -->
 
-<!-- =====================================================
-     HEADER
-===================================================== -->
+  <header>
 
-<header class="header">
+    <a href="index.html">
+      <img
+        src="assets/logo%203.jpg"
+        alt="Bodas Con Cati"
+        class="logo"
+      >
+    </a>
 
-    <div class="header-inner">
+    <nav>
+      <a href="index.html">INICIO</a>
+      <a href="sobre-mi.html">SOBRE MÍ</a>
+      <a href="servicios.html" class="active">SERVICIOS</a>
+      <a href="mallorca.html">MALLORCA</a>
+      <a href="contacto.html">CONTACTO</a>
+    </nav>
 
-
-        <!-- LOGO -->
-
-        <a
-            href="index.html"
-            class="logo-link"
-        >
-
-            <img
-                src="assets/logo%203.jpg"
-                alt="Bodas Con Cati"
-                class="logo"
-            >
-
-        </a>
+  </header>
 
 
-        <!-- MENÚ -->
+  <!-- INTRO -->
 
-        <nav class="nav">
+  <section class="intro">
 
-            <a href="index.html">
-                INICIO
-            </a>
-
-            <a href="sobre-mi.html">
-                SOBRE MÍ
-            </a>
-
-            <a
-                href="servicios.html"
-                class="active"
-            >
-                SERVICIOS
-            </a>
-
-            <a href="mallorca.html">
-                MALLORCA
-            </a>
-
-            <a href="contacto.html">
-                CONTACTO
-            </a>
-
-        </nav>
-
+    <div class="eyebrow">
+      SERVICIOS
     </div>
 
-</header>
-
-
-<!-- =====================================================
-     INTRO
-===================================================== -->
-
-<section class="services-intro">
-
-    <p class="services-eyebrow">
-        Servicios
-    </p>
-
-
-    <h1 class="services-title">
-
-        Tres formas de vivir
-        <em>vuestra boda.</em>
-
+    <h1>
+      Tres formas de vivir<br>
+      <em>vuestra boda.</em>
     </h1>
 
-
-    <p class="services-subtitle">
-
-        Cada pareja es única, y por eso cada servicio se adapta
-        a lo que necesitáis.
-
+    <p>
+      Cada pareja es única, y por eso cada servicio se adapta
+      a lo que necesitáis.
     </p>
 
-</section>
+  </section>
 
 
-<!-- =====================================================
-     PAQUETES
-===================================================== -->
+  <!-- SERVICIOS -->
 
-<section class="packages">
+  <main class="services">
 
-    <div class="packages-grid">
+    <div class="cards">
 
 
-        <!-- =================================================
-             SENTIR
-        ================================================== -->
+      <!-- SENTIR -->
 
-        <article class="package">
+      <article class="card">
 
+        <div class="card-image">
+          <img
+            src="assets/sentir.jpg"
+            alt="Servicio Sentir"
+          >
+        </div>
 
-            <div class="package-image">
+        <div class="card-content">
 
-                <img
-                    src="assets/sentir.jpg"
-                    alt="Decoración y detalles de una boda"
-                >
+          <div class="card-number">
+            01
+          </div>
 
-            </div>
+          <h2>
+            Sentir
+          </h2>
 
+          <p class="card-intro">
+            Para parejas que ya lo tienen todo listo.
+          </p>
 
-            <div class="package-content">
+          <ul>
+            <li>
+              Planificación y consulta
+            </li>
 
+            <li>
+              Max 120 personas
+            </li>
 
-                <h2 class="package-name">
-                    Sentir
-                </h2>
+            <li>
+              Os libero de preocupaciones 1 mes antes.
+            </li>
 
+            <li>
+              Cuido con mimo a vuestros invitados y equipo.
+            </li>
 
-                <div class="package-line"></div>
+            <li>
+              Vigilando cada instante para que todo fluya.
+            </li>
 
+            <li>
+              Vosotros vivís el momento, yo cuido los detalles.
+            </li>
+          </ul>
 
-                <p class="package-subtitle">
+          <a href="#" class="more">
+            SABER MÁS →
+          </a>
 
-                    Planificación y consulta<br>
-                    Max 120 personas
+        </div>
 
-                </p>
+      </article>
 
 
-                <div class="package-description">
+      <!-- SOÑAR -->
 
-                    <p>
-                        Para parejas que ya lo tienen
-                        todo listo.
-                    </p>
+      <article class="card">
 
-                    <p>
-                        Os libero de preocupaciones
-                        1 mes antes.
-                    </p>
+        <div class="card-image">
+          <img
+            src="assets/so%C3%B1ar.jpg"
+            alt="Servicio Soñar"
+          >
+        </div>
 
-                    <p>
-                        Cuido con mimo a vuestros
-                        invitados y equipo.
-                    </p>
+        <div class="card-content">
 
-                    <p>
-                        Vigilando cada instante para
-                        que todo fluya.
-                    </p>
+          <div class="card-number">
+            02
+          </div>
 
-                    <p>
-                        Vosotros vivís el momento,
-                        yo cuido los detalles.
-                    </p>
+          <h2>
+            Soñar
+          </h2>
 
-                </div>
+          <p class="card-intro">
+            Diseñamos juntos una boda con vuestra esencia.
+          </p>
 
+          <ul>
+            <li>
+              Planificación y consulta
+            </li>
 
-                <a
-                    href="#"
-                    class="package-button"
-                >
-                    SABER MÁS →
-                </a>
+            <li>
+              Max 120 personas
+            </li>
 
+            <li>
+              Busco al equipo de proveedores perfecto para vosotros.
+            </li>
 
-            </div>
+            <li>
+              Os quito el estrés del presupuesto y papeleo.
+            </li>
 
-        </article>
+            <li>
+              Estoy en cada paso, visita y decisión.
+            </li>
 
+            <li>
+              Hacemos realidad el "Sí, quiero" que imagináis.
+            </li>
+          </ul>
 
-        <!-- =================================================
-             SOÑAR
-        ================================================== -->
+          <a href="#" class="more">
+            SABER MÁS →
+          </a>
 
-        <article class="package">
+        </div>
 
+      </article>
 
-            <div class="package-image">
 
-                <img
-                    src="assets/soñar.jpg"
-                    alt="Novia con ramo de flores"
-                >
+      <!-- SIN FIN -->
 
-            </div>
+      <article class="card">
 
+        <div class="card-image">
+          <img
+            src="assets/sin%20fin.jpg"
+            alt="Servicio Sin Fin"
+          >
+        </div>
 
-            <div class="package-content">
+        <div class="card-content">
 
+          <div class="card-number">
+            03
+          </div>
 
-                <h2 class="package-name">
-                    Soñar
-                </h2>
+          <h2>
+            Sin Fin
+          </h2>
 
+          <p class="card-intro">
+            Un fin de semana inolvidable.
+          </p>
 
-                <div class="package-line"></div>
+          <ul>
+            <li>
+              Incluye toda la magia del Pack Soñar.
+            </li>
 
+            <li>
+              ¿Y al despertar? Sigo a vuestro lado.
+            </li>
 
-                <p class="package-subtitle">
+            <li>
+              Organizo vuestra post boda.
+            </li>
 
-                    Planificación y consulta<br>
-                    Max 120 personas
+            <li>
+              Gestiono el cierre final para que descanséis.
+            </li>
 
-                </p>
+            <li>
+              Vuestro único plan: disfrutar sin prisas.
+            </li>
+          </ul>
 
+          <a href="#" class="more">
+            SABER MÁS →
+          </a>
 
-                <div class="package-description">
+        </div>
 
-                    <p>
-                        Diseñamos juntos una boda
-                        con vuestra esencia.
-                    </p>
-
-                    <p>
-                        Busco al equipo de proveedores
-                        perfecto para vosotros.
-                    </p>
-
-                    <p>
-                        Os quito el estrés del presupuesto
-                        y papeleo.
-                    </p>
-
-                    <p>
-                        Estoy en cada paso, visita
-                        y decisión.
-                    </p>
-
-                    <p>
-                        Hacemos realidad el
-                        "Sí, quiero" que imagináis.
-                    </p>
-
-                </div>
-
-
-                <a
-                    href="#"
-                    class="package-button"
-                >
-                    SABER MÁS →
-                </a>
-
-
-            </div>
-
-        </article>
-
-
-        <!-- =================================================
-             SIN FIN
-        ================================================== -->
-
-        <article class="package">
-
-
-            <div class="package-image">
-
-                <img
-                    src="assets/sin%20fin.jpg"
-                    alt="Mesa de boda frente al mar"
-                >
-
-            </div>
-
-
-            <div class="package-content">
-
-
-                <h2 class="package-name">
-                    Sin Fin
-                </h2>
-
-
-                <div class="package-line"></div>
-
-
-                <p class="package-subtitle">
-
-                    Un fin de semana inolvidable
-
-                </p>
-
-
-                <div class="package-description">
-
-                    <p>
-                        Incluye toda la magia del
-                        Pack Soñar.
-                    </p>
-
-                    <p>
-                        ¿Y al despertar? Sigo a
-                        vuestro lado.
-                    </p>
-
-                    <p>
-                        Organizo vuestra post boda.
-                    </p>
-
-                    <p>
-                        Gestiono el cierre final para
-                        que descanséis.
-                    </p>
-
-                    <p>
-                        Vuestro único plan:
-                        disfrutar sin prisas.
-                    </p>
-
-                </div>
-
-
-                <a
-                    href="#"
-                    class="package-button"
-                >
-                    SABER MÁS →
-                </a>
-
-
-            </div>
-
-        </article>
+      </article>
 
 
     </div>
 
-</section>
+  </main>
 
 
-<!-- =====================================================
-     CIERRE
-===================================================== -->
+  <!-- CIERRE -->
 
-<section class="services-closing">
+  <section class="closing">
 
     <p>
-        Porque cada historia merece ser vivida
-        a su manera.
+      Porque cada historia merece ser vivida a su manera.
     </p>
 
-    <div class="closing-line"></div>
-
-</section>
+  </section>
 
 
-<!-- =====================================================
-     FOOTER
-===================================================== -->
+  <!-- FOOTER -->
 
-<footer>
-
+  <footer>
     Bodas Con Cati · Wedding Planner en Mallorca ·
     Experiencias que se recuerdan toda la vida
-
-</footer>
+  </footer>
 
 
 </body>
-
 </html>
