@@ -1,1 +1,1426 @@
+<!DOCTYPE html>
+<html lang="es">
 
+<head>
+
+<meta charset="UTF-8">
+
+<meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+>
+
+<title>Servicios · Bodas Con Cati</title>
+
+<meta
+    name="description"
+    content="Servicios de Bodas Con Cati · Wedding Planner en Mallorca."
+>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin
+>
+
+<link
+    href="https://fonts.googleapis.com/css2?family=Allura&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Montserrat:wght@400;500;600&display=swap"
+    rel="stylesheet"
+>
+
+
+<style>
+
+/* =========================================================
+   BODAS CON CATI
+   SERVICIOS
+========================================================= */
+
+:root {
+
+    --crema: #F7F1EA;
+
+    --crema-card: #F1E5D8;
+
+    --marron: #4A372D;
+
+    --marron-suave: #725E52;
+
+    --rosa: #C98B70;
+
+    --dorado: #A97935;
+
+    --blanco: #FFFFFF;
+
+}
+
+
+/* =========================================================
+   RESET
+========================================================= */
+
+* {
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+
+    margin: 0;
+
+    background: var(--crema);
+
+    color: var(--marron);
+
+    font-family:
+        "Cormorant Garamond",
+        Georgia,
+        serif;
+}
+
+
+a {
+
+    color: inherit;
+
+    text-decoration: none;
+}
+
+
+img {
+
+    display: block;
+
+    max-width: 100%;
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.header {
+
+    width: 100%;
+
+    padding:
+        28px
+        7vw
+        20px;
+
+    background: var(--crema);
+}
+
+
+.header-inner {
+
+    width: 100%;
+
+    display: flex;
+
+    align-items: flex-start;
+
+    justify-content: space-between;
+}
+
+
+/* =========================================================
+   LOGO
+========================================================= */
+
+.logo-link {
+
+    width: 230px;
+
+    flex-shrink: 0;
+}
+
+
+.logo {
+
+    width: 230px;
+
+    height: auto;
+
+    display: block;
+
+    object-fit: contain;
+}
+
+
+/* =========================================================
+   NAVEGACIÓN
+========================================================= */
+
+.nav {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 40px;
+
+    padding-top: 15px;
+
+    font-family:
+        "Montserrat",
+        Arial,
+        sans-serif;
+
+    font-size: 13px;
+
+    font-weight: 500;
+
+    letter-spacing: 2px;
+
+    text-transform: uppercase;
+
+    color: var(--marron);
+}
+
+
+.nav a {
+
+    position: relative;
+
+    padding-bottom: 9px;
+
+    white-space: nowrap;
+
+    transition:
+        opacity 0.25s ease;
+}
+
+
+.nav a:hover {
+
+    opacity: 0.6;
+}
+
+
+.nav a.active {
+
+    color: var(--marron);
+
+}
+
+
+.nav a.active::after {
+
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+
+    right: 0;
+
+    bottom: 0;
+
+    height: 1px;
+
+    background: var(--rosa);
+}
+
+
+/* =========================================================
+   INTRODUCCIÓN
+========================================================= */
+
+.services-intro {
+
+    text-align: center;
+
+    padding:
+        45px
+        5vw
+        45px;
+}
+
+
+.services-eyebrow {
+
+    margin:
+        0
+        0
+        22px;
+
+    font-family:
+        "Montserrat",
+        Arial,
+        sans-serif;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    letter-spacing: 3.5px;
+
+    text-transform: uppercase;
+
+    color: var(--dorado);
+}
+
+
+.services-title {
+
+    max-width: 1250px;
+
+    margin:
+        0
+        auto
+        18px;
+
+    font-size:
+        clamp(
+            58px,
+            5.6vw,
+            88px
+        );
+
+    line-height: 0.95;
+
+    font-weight: 500;
+
+    letter-spacing: -2px;
+}
+
+
+.services-title em {
+
+    color: var(--rosa);
+
+    font-style: italic;
+}
+
+
+.services-subtitle {
+
+    max-width: 900px;
+
+    margin:
+        0
+        auto;
+
+    font-size: 23px;
+
+    line-height: 1.4;
+
+    color: var(--marron);
+}
+
+
+/* =========================================================
+   PAQUETES
+========================================================= */
+
+.packages {
+
+    width: calc(100% - 11vw);
+
+    max-width: 1500px;
+
+    margin:
+        10px
+        auto
+        85px;
+}
+
+
+.packages-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 32px;
+
+    align-items: stretch;
+}
+
+
+/* =========================================================
+   TARJETA
+========================================================= */
+
+.package {
+
+    background: var(--crema-card);
+
+    display: flex;
+
+    flex-direction: column;
+
+    min-width: 0;
+}
+
+
+/* =========================================================
+   IMAGEN
+========================================================= */
+
+.package-image {
+
+    width: 100%;
+
+    height: 300px;
+
+    overflow: hidden;
+}
+
+
+.package-image img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    transition:
+        transform 0.5s ease;
+}
+
+
+.package:hover .package-image img {
+
+    transform: scale(1.03);
+}
+
+
+/* =========================================================
+   CONTENIDO TARJETA
+========================================================= */
+
+.package-content {
+
+    padding:
+        34px
+        38px
+        38px;
+
+    text-align: center;
+
+    display: flex;
+
+    flex-direction: column;
+
+    flex: 1;
+}
+
+
+/* =========================================================
+   NOMBRE
+========================================================= */
+
+.package-name {
+
+    margin:
+        0
+        14px;
+
+    font-family:
+        "Allura",
+        cursive;
+
+    font-size: 55px;
+
+    font-weight: 400;
+
+    line-height: 1;
+
+    color: var(--marron);
+}
+
+
+/* =========================================================
+   LÍNEA DECORATIVA
+========================================================= */
+
+.package-line {
+
+    width: 52px;
+
+    height: 1px;
+
+    margin:
+        0
+        auto
+        19px;
+
+    background: #B58B72;
+}
+
+
+/* =========================================================
+   SUBTÍTULO
+========================================================= */
+
+.package-subtitle {
+
+    margin:
+        0
+        0
+        22px;
+
+    font-size: 21px;
+
+    line-height: 1.25;
+
+    font-weight: 500;
+
+    color: var(--marron);
+}
+
+
+/* =========================================================
+   DESCRIPCIÓN
+========================================================= */
+
+.package-description {
+
+    margin: 0;
+
+    font-size: 19px;
+
+    line-height: 1.48;
+
+    color: var(--marron);
+
+    flex: 1;
+}
+
+
+.package-description p {
+
+    margin:
+        0
+        0
+        15px;
+}
+
+
+.package-description p:last-child {
+
+    margin-bottom: 0;
+}
+
+
+/* =========================================================
+   DESTACADOS
+========================================================= */
+
+.package-highlight {
+
+    margin:
+        0
+        0
+        18px;
+
+    font-size: 19px;
+
+    line-height: 1.45;
+
+    font-weight: 600;
+}
+
+
+/* =========================================================
+   BOTÓN
+========================================================= */
+
+.package-button {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    align-self: center;
+
+    width: 230px;
+
+    min-height: 52px;
+
+    margin-top: 30px;
+
+    background: var(--rosa);
+
+    color: #FFFFFF;
+
+    font-family:
+        "Montserrat",
+        Arial,
+        sans-serif;
+
+    font-size: 11px;
+
+    font-weight: 600;
+
+    letter-spacing: 2px;
+
+    text-transform: uppercase;
+
+    transition:
+        background 0.25s ease,
+        transform 0.25s ease;
+}
+
+
+.package-button:hover {
+
+    background: #B8785E;
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   FRASE FINAL
+========================================================= */
+
+.services-closing {
+
+    position: relative;
+
+    padding:
+        95px
+        25px;
+
+    text-align: center;
+
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            rgba(247,241,234,0.80),
+            rgba(247,241,234,0.80)
+        ),
+        url("assets/hero%201.jpg");
+
+    background-size: cover;
+
+    background-position: center;
+}
+
+
+.services-closing p {
+
+    position: relative;
+
+    z-index: 2;
+
+    max-width: 950px;
+
+    margin: 0 auto;
+
+    font-size:
+        clamp(
+            35px,
+            4vw,
+            58px
+        );
+
+    line-height: 1.1;
+
+    font-style: italic;
+
+    color: var(--marron);
+}
+
+
+/* =========================================================
+   LÍNEA FINAL
+========================================================= */
+
+.closing-line {
+
+    width: 70px;
+
+    height: 1px;
+
+    margin:
+        28px
+        auto
+        0;
+
+    background: #B58B72;
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+footer {
+
+    padding:
+        28px
+        20px;
+
+    background: var(--marron);
+
+    color: var(--crema);
+
+    text-align: center;
+
+    font-family:
+        "Montserrat",
+        Arial,
+        sans-serif;
+
+    font-size: 11px;
+
+    letter-spacing: 1.5px;
+
+    line-height: 1.6;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1100px) {
+
+    .header {
+
+        padding:
+            25px
+            4vw
+            20px;
+    }
+
+
+    .logo-link,
+    .logo {
+
+        width: 190px;
+    }
+
+
+    .nav {
+
+        gap: 22px;
+
+        font-size: 10px;
+
+        letter-spacing: 1.5px;
+    }
+
+
+    .services-intro {
+
+        padding:
+            40px
+            4vw;
+    }
+
+
+    .services-title {
+
+        font-size: 62px;
+    }
+
+
+    .services-subtitle {
+
+        font-size: 20px;
+    }
+
+
+    .packages {
+
+        width: calc(100% - 7vw);
+    }
+
+
+    .packages-grid {
+
+        gap: 20px;
+    }
+
+
+    .package-image {
+
+        height: 245px;
+    }
+
+
+    .package-content {
+
+        padding:
+            28px
+            24px
+            30px;
+    }
+
+
+    .package-name {
+
+        font-size: 49px;
+    }
+
+
+    .package-subtitle {
+
+        font-size: 19px;
+    }
+
+
+    .package-description {
+
+        font-size: 17px;
+    }
+
+}
+
+
+/* =========================================================
+   MÓVIL
+========================================================= */
+
+@media (max-width: 760px) {
+
+    /* HEADER */
+
+    .header {
+
+        padding:
+            23px
+            22px
+            10px;
+    }
+
+
+    .header-inner {
+
+        display: flex;
+
+        justify-content: center;
+    }
+
+
+    .logo-link,
+    .logo {
+
+        width: 165px;
+    }
+
+
+    .nav {
+
+        display: none;
+    }
+
+
+    /* INTRO */
+
+    .services-intro {
+
+        padding:
+            42px
+            22px
+            35px;
+    }
+
+
+    .services-eyebrow {
+
+        font-size: 10px;
+
+        letter-spacing: 2.5px;
+
+        margin-bottom: 18px;
+    }
+
+
+    .services-title {
+
+        font-size: 50px;
+
+        line-height: 0.98;
+
+        letter-spacing: -1px;
+    }
+
+
+    .services-subtitle {
+
+        font-size: 19px;
+
+        line-height: 1.45;
+
+        margin-top: 18px;
+    }
+
+
+    /* PAQUETES */
+
+    .packages {
+
+        width: calc(100% - 34px);
+
+        margin:
+            5px
+            auto
+            60px;
+    }
+
+
+    .packages-grid {
+
+        display: block;
+    }
+
+
+    .package {
+
+        margin-bottom: 35px;
+    }
+
+
+    .package:last-child {
+
+        margin-bottom: 0;
+    }
+
+
+    .package-image {
+
+        height: 270px;
+    }
+
+
+    .package-content {
+
+        padding:
+            30px
+            25px
+            32px;
+    }
+
+
+    .package-name {
+
+        font-size: 50px;
+
+        margin:
+            10px
+            0
+            13px;
+    }
+
+
+    .package-subtitle {
+
+        font-size: 20px;
+
+        margin-bottom: 21px;
+    }
+
+
+    .package-description {
+
+        font-size: 19px;
+
+        line-height: 1.52;
+    }
+
+
+    .package-highlight {
+
+        font-size: 19px;
+    }
+
+
+    .package-button {
+
+        width: 220px;
+
+        min-height: 52px;
+
+        margin-top: 28px;
+    }
+
+
+    /* FRASE FINAL */
+
+    .services-closing {
+
+        padding:
+            70px
+            22px;
+    }
+
+
+    .services-closing p {
+
+        font-size: 37px;
+    }
+
+
+    /* FOOTER */
+
+    footer {
+
+        font-size: 10px;
+
+        padding:
+            25px
+            18px;
+    }
+
+}
+
+
+/* =========================================================
+   MÓVIL PEQUEÑO
+========================================================= */
+
+@media (max-width: 480px) {
+
+    .logo-link,
+    .logo {
+
+        width: 150px;
+    }
+
+
+    .services-title {
+
+        font-size: 45px;
+    }
+
+
+    .services-subtitle {
+
+        font-size: 18px;
+    }
+
+
+    .package-image {
+
+        height: 245px;
+    }
+
+
+    .package-content {
+
+        padding:
+            27px
+            20px
+            30px;
+    }
+
+
+    .package-name {
+
+        font-size: 47px;
+    }
+
+
+    .package-description {
+
+        font-size: 18px;
+    }
+
+
+    .package-highlight {
+
+        font-size: 18px;
+    }
+
+
+    .services-closing p {
+
+        font-size: 33px;
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     HEADER
+===================================================== -->
+
+<header class="header">
+
+    <div class="header-inner">
+
+
+        <!-- LOGO -->
+
+        <a
+            href="index.html"
+            class="logo-link"
+        >
+
+            <img
+                src="assets/logo%203.jpg"
+                alt="Bodas Con Cati"
+                class="logo"
+            >
+
+        </a>
+
+
+        <!-- MENÚ -->
+
+        <nav class="nav">
+
+            <a href="index.html">
+                INICIO
+            </a>
+
+            <a href="sobre-mi.html">
+                SOBRE MÍ
+            </a>
+
+            <a
+                href="servicios.html"
+                class="active"
+            >
+                SERVICIOS
+            </a>
+
+            <a href="mallorca.html">
+                MALLORCA
+            </a>
+
+            <a href="contacto.html">
+                CONTACTO
+            </a>
+
+        </nav>
+
+    </div>
+
+</header>
+
+
+<!-- =====================================================
+     INTRO
+===================================================== -->
+
+<section class="services-intro">
+
+    <p class="services-eyebrow">
+        Servicios
+    </p>
+
+
+    <h1 class="services-title">
+
+        Tres formas de vivir
+        <em>vuestra boda.</em>
+
+    </h1>
+
+
+    <p class="services-subtitle">
+
+        Cada pareja es única, y por eso cada servicio se adapta
+        a lo que necesitáis.
+
+    </p>
+
+</section>
+
+
+<!-- =====================================================
+     PAQUETES
+===================================================== -->
+
+<section class="packages">
+
+    <div class="packages-grid">
+
+
+        <!-- =================================================
+             SENTIR
+        ================================================== -->
+
+        <article class="package">
+
+
+            <div class="package-image">
+
+                <img
+                    src="assets/sentir.jpg"
+                    alt="Decoración y detalles de una boda"
+                >
+
+            </div>
+
+
+            <div class="package-content">
+
+
+                <h2 class="package-name">
+                    Sentir
+                </h2>
+
+
+                <div class="package-line"></div>
+
+
+                <p class="package-subtitle">
+
+                    Planificación y consulta<br>
+                    Max 120 personas
+
+                </p>
+
+
+                <div class="package-description">
+
+                    <p>
+                        Para parejas que ya lo tienen
+                        todo listo.
+                    </p>
+
+                    <p>
+                        Os libero de preocupaciones
+                        1 mes antes.
+                    </p>
+
+                    <p>
+                        Cuido con mimo a vuestros
+                        invitados y equipo.
+                    </p>
+
+                    <p>
+                        Vigilando cada instante para
+                        que todo fluya.
+                    </p>
+
+                    <p>
+                        Vosotros vivís el momento,
+                        yo cuido los detalles.
+                    </p>
+
+                </div>
+
+
+                <a
+                    href="#"
+                    class="package-button"
+                >
+                    SABER MÁS →
+                </a>
+
+
+            </div>
+
+        </article>
+
+
+        <!-- =================================================
+             SOÑAR
+        ================================================== -->
+
+        <article class="package">
+
+
+            <div class="package-image">
+
+                <img
+                    src="assets/soñar.jpg"
+                    alt="Novia con ramo de flores"
+                >
+
+            </div>
+
+
+            <div class="package-content">
+
+
+                <h2 class="package-name">
+                    Soñar
+                </h2>
+
+
+                <div class="package-line"></div>
+
+
+                <p class="package-subtitle">
+
+                    Planificación y consulta<br>
+                    Max 120 personas
+
+                </p>
+
+
+                <div class="package-description">
+
+                    <p>
+                        Diseñamos juntos una boda
+                        con vuestra esencia.
+                    </p>
+
+                    <p>
+                        Busco al equipo de proveedores
+                        perfecto para vosotros.
+                    </p>
+
+                    <p>
+                        Os quito el estrés del presupuesto
+                        y papeleo.
+                    </p>
+
+                    <p>
+                        Estoy en cada paso, visita
+                        y decisión.
+                    </p>
+
+                    <p>
+                        Hacemos realidad el
+                        "Sí, quiero" que imagináis.
+                    </p>
+
+                </div>
+
+
+                <a
+                    href="#"
+                    class="package-button"
+                >
+                    SABER MÁS →
+                </a>
+
+
+            </div>
+
+        </article>
+
+
+        <!-- =================================================
+             SIN FIN
+        ================================================== -->
+
+        <article class="package">
+
+
+            <div class="package-image">
+
+                <img
+                    src="assets/sin%20fin.jpg"
+                    alt="Mesa de boda frente al mar"
+                >
+
+            </div>
+
+
+            <div class="package-content">
+
+
+                <h2 class="package-name">
+                    Sin Fin
+                </h2>
+
+
+                <div class="package-line"></div>
+
+
+                <p class="package-subtitle">
+
+                    Un fin de semana inolvidable
+
+                </p>
+
+
+                <div class="package-description">
+
+                    <p>
+                        Incluye toda la magia del
+                        Pack Soñar.
+                    </p>
+
+                    <p>
+                        ¿Y al despertar? Sigo a
+                        vuestro lado.
+                    </p>
+
+                    <p>
+                        Organizo vuestra post boda.
+                    </p>
+
+                    <p>
+                        Gestiono el cierre final para
+                        que descanséis.
+                    </p>
+
+                    <p>
+                        Vuestro único plan:
+                        disfrutar sin prisas.
+                    </p>
+
+                </div>
+
+
+                <a
+                    href="#"
+                    class="package-button"
+                >
+                    SABER MÁS →
+                </a>
+
+
+            </div>
+
+        </article>
+
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     CIERRE
+===================================================== -->
+
+<section class="services-closing">
+
+    <p>
+        Porque cada historia merece ser vivida
+        a su manera.
+    </p>
+
+    <div class="closing-line"></div>
+
+</section>
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer>
+
+    Bodas Con Cati · Wedding Planner en Mallorca ·
+    Experiencias que se recuerdan toda la vida
+
+</footer>
+
+
+</body>
+
+</html>
