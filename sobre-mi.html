@@ -9,587 +9,1083 @@
 
 <title>Sobre mí | Bodas Con Cati</title>
 
+<meta
+    name="description"
+    content="Conoce a Cati, Wedding Planner en Mallorca detrás de Bodas Con Cati."
+>
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
 <link
-href="https://fonts.googleapis.com/css2?family=Allura&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Montserrat:wght@400;500;600&display=swap"
-rel="stylesheet"
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin
 >
+
+<link
+    href="https://fonts.googleapis.com/css2?family=Allura&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Montserrat:wght@400;500;600&display=swap"
+    rel="stylesheet"
+>
+
 
 <style>
 
-:root {
-    --crema: #F7F1EA;
-    --crema-2: #EEE2D5;
-    --marron: #4A372D;
-    --marron-suave: #725E52;
-    --dorado: #A97935;
-    --rosa: #C89D88;
-    --blanco: #FFFFFF;
-}
-
-* {
-    box-sizing: border-box;
-}
-
-html {
-    scroll-behavior: smooth;
-}
-
-body {
-    margin: 0;
-    background: var(--crema);
-    color: var(--marron);
-    font-family: "Cormorant Garamond", Georgia, serif;
-}
-
-a {
-    color: inherit;
-    text-decoration: none;
-}
-
-img {
-    display: block;
-    max-width: 100%;
-}
-
-
-/* =========================
-   CABECERA
-========================= */
-
-.header {
-    width: 100%;
-    padding: 28px 0;
-    background: var(--crema);
-}
-
-.header-inner {
-    width: calc(100% - 150px);
-    max-width: 1800px;
-    margin: 0 auto;
-
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
-}
-
-
-/* LOGO */
-
-.logo-link {
-    width: 245px;
-}
-
-.logo {
-    width: 245px;
-}
-
-
-/* MENÚ */
-
-.nav {
-    display: flex;
-    align-items: center;
-    gap: 36px;
-
-    padding-top: 17px;
-
-    font-family: "Montserrat", Arial, sans-serif;
-    font-size: 11px;
-    font-weight: 500;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-}
-
-.nav a {
-    position: relative;
-    padding-bottom: 9px;
-}
-
-.nav a:hover {
-    opacity: .65;
-}
-
-.nav a.active::after {
-    content: "";
-
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
-
-    height: 1px;
-
-    background: var(--marron);
-}
-
-
-/* BOTÓN */
-
-.header-button {
-    margin-top: 5px;
-
-    padding: 13px 21px;
-
-    border: 1px solid #8F765F;
-
-    font-family: "Montserrat", Arial, sans-serif;
-    font-size: 10px;
-    letter-spacing: 1.7px;
-    text-transform: uppercase;
-}
-
-
-/* =========================
+/* =========================================================
+   BODAS CON CATI
    SOBRE MÍ
-========================= */
+========================================================= */
 
-.about {
-    display: grid;
-    grid-template-columns: 43% 57%;
+:root{
 
-    min-height: 760px;
+    --crema:#F7F2EC;
+
+    --beige:#F1E8DE;
+
+    --marron:#3B2921;
+
+    --marron-suave:#654B3C;
+
+    --dorado:#B77A19;
+
+    --rosa:#C98F72;
+
+    --blanco:#FFFFFF;
+
+    --linea:rgba(59,41,33,.18);
+
 }
 
 
-/* TEXTO */
-
-.about-copy {
-    padding: 70px 6vw;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.eyebrow {
-    margin: 0 0 22px;
-
-    font-family: "Montserrat", Arial, sans-serif;
-    font-size: 10px;
-    letter-spacing: 3px;
-    text-transform: uppercase;
-
-    color: var(--dorado);
-}
-
-.about-title {
-    margin: 0;
-
-    font-size: 60px;
-    font-weight: 500;
-    line-height: .95;
-    letter-spacing: -1px;
-}
-
-.about-title em {
-    display: block;
-
-    color: var(--rosa);
-
-    font-style: italic;
-    font-weight: 400;
-}
-
-.line {
-    width: 55px;
-    height: 1px;
-
-    margin: 27px 0 22px;
-
-    background: var(--dorado);
-}
-
-.about-text {
-    max-width: 570px;
-
-    margin: 0 0 16px;
-
-    font-size: 17px;
-    line-height: 1.38;
-}
-
-.about-quote {
-    max-width: 570px;
-
-    margin: 3px 0 0;
-
-    font-size: 17px;
-    line-height: 1.28;
-
-    font-style: italic;
-    font-weight: 600;
-}
-
-.signature {
-    margin-top: 12px;
-
-    font-family: "Allura", cursive;
-    font-size: 40px;
+*{
+    box-sizing:border-box;
 }
 
 
-/* =========================
-   FOTO
-========================= */
-
-.about-photo {
-    position: relative;
-
-    min-height: 760px;
-
-    overflow: hidden;
-}
-
-.about-photo img {
-    width: 100%;
-    height: 100%;
-
-    object-fit: cover;
-
-    object-position: center center;
+html{
+    scroll-behavior:smooth;
 }
 
 
-/* FRASE SOBRE FOTO */
+body{
 
-.photo-message {
-    position: absolute;
+    margin:0;
 
-    right: 0;
-    bottom: 30px;
+    background:var(--crema);
 
-    width: 300px;
+    color:var(--marron);
 
-    padding: 25px 30px;
+    font-family:
+        "Cormorant Garamond",
+        Georgia,
+        serif;
 
-    background: rgba(247,241,234,.94);
-
-    font-size: 23px;
-    line-height: 1.08;
-
-    font-style: italic;
-}
-
-.photo-line {
-    width: 42px;
-    height: 1px;
-
-    margin-top: 17px;
-
-    background: var(--dorado);
 }
 
 
-/* =========================
-   FILOSOFÍA
-========================= */
+a{
 
-.philosophy {
-    padding: 85px 8vw;
+    color:inherit;
 
-    text-align: center;
+    text-decoration:none;
 
-    background: var(--crema-2);
-}
-
-.philosophy-small {
-    margin-bottom: 20px;
-
-    font-family: "Montserrat", Arial, sans-serif;
-    font-size: 9px;
-    letter-spacing: 3px;
-    text-transform: uppercase;
-
-    color: var(--dorado);
-}
-
-.philosophy h2 {
-    max-width: 850px;
-
-    margin: 0 auto 20px;
-
-    font-size: 47px;
-    line-height: 1;
-    font-weight: 500;
-}
-
-.philosophy p {
-    max-width: 650px;
-
-    margin: 0 auto;
-
-    font-size: 18px;
-    line-height: 1.35;
 }
 
 
-/* =========================
-   VALORES
-========================= */
+img{
 
-.values {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    display:block;
 
-    padding: 65px 6vw;
+    max-width:100%;
 
-    background: var(--crema);
-}
-
-.value {
-    text-align: center;
-
-    padding: 0 40px;
-
-    border-right: 1px solid rgba(74,55,45,.20);
-}
-
-.value:last-child {
-    border-right: none;
-}
-
-.value-icon {
-    margin-bottom: 15px;
-
-    font-size: 32px;
-
-    color: var(--dorado);
-}
-
-.value h3 {
-    margin: 0 0 12px;
-
-    font-size: 22px;
-    font-weight: 500;
-}
-
-.value p {
-    max-width: 280px;
-
-    margin: 0 auto;
-
-    font-family: "Montserrat", Arial, sans-serif;
-    font-size: 11px;
-    line-height: 1.6;
-
-    color: var(--marron-suave);
 }
 
 
-/* =========================
-   CONTACTO
-========================= */
+/* =========================================================
+   HEADER
+========================================================= */
 
-.contact {
-    padding: 75px 25px;
+.header{
 
-    text-align: center;
+    position:relative;
 
-    background: var(--marron);
+    width:100%;
 
-    color: white;
-}
+    background:var(--crema);
 
-.contact h2 {
-    margin: 0 0 12px;
+    z-index:20;
 
-    font-size: 46px;
-    font-weight: 400;
-    font-style: italic;
-}
+    padding:
+        25px
+        0;
 
-.contact p {
-    margin: 0 0 25px;
+    border-bottom:
+        1px solid
+        rgba(59,41,33,.08);
 
-    font-size: 17px;
-}
-
-.contact-button {
-    display: inline-flex;
-
-    align-items: center;
-    justify-content: center;
-
-    min-height: 48px;
-
-    padding: 0 28px;
-
-    background: #C18C6E;
-
-    color: white;
-
-    font-family: "Montserrat", Arial, sans-serif;
-    font-size: 10px;
-    font-weight: 600;
-    letter-spacing: 2px;
-    text-transform: uppercase;
 }
 
 
-/* =========================
-   FOOTER
-========================= */
+.header-inner{
 
-.footer {
-    padding: 25px;
+    width:calc(100% - 100px);
 
-    text-align: center;
+    max-width:1500px;
 
-    background: var(--crema);
+    margin:0 auto;
 
-    font-family: "Montserrat", Arial, sans-serif;
-    font-size: 8px;
-    letter-spacing: 2px;
-    text-transform: uppercase;
+    display:flex;
 
-    color: var(--marron-suave);
+    align-items:center;
+
+    justify-content:space-between;
+
+    gap:35px;
+
 }
 
 
-/* =========================
+/* =========================================================
+   LOGO
+========================================================= */
+
+.logo{
+
+    width:190px;
+
+    height:auto;
+
+    display:block;
+
+}
+
+
+/* =========================================================
+   MENÚ
+========================================================= */
+
+.nav{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:flex-end;
+
+    gap:34px;
+
+    margin-left:auto;
+
+    font-family:
+        "Montserrat",
+        Arial,
+        sans-serif;
+
+    font-size:10px;
+
+    font-weight:500;
+
+    letter-spacing:2px;
+
+    text-transform:uppercase;
+
+}
+
+
+.nav a{
+
+    position:relative;
+
+    padding-bottom:8px;
+
+    white-space:nowrap;
+
+}
+
+
+.nav a:hover{
+
+    opacity:.65;
+
+}
+
+
+.nav a.active::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+
+    right:0;
+
+    bottom:0;
+
+    height:1px;
+
+    background:var(--dorado);
+
+}
+
+
+/* =========================================================
+   HERO SOBRE MÍ
+========================================================= */
+
+.about-hero{
+
+    background:var(--beige);
+
+    padding:
+        34px
+        0
+        30px;
+
+    text-align:center;
+
+}
+
+
+.about-hero p{
+
+    margin:0;
+
+    font-family:
+        "Allura",
+        cursive;
+
+    font-size:34px;
+
+    color:var(--rosa);
+
+}
+
+
+/* =========================================================
+   CONTENIDO PRINCIPAL
+========================================================= */
+
+.about{
+
+    padding:
+        95px
+        0
+        105px;
+
+}
+
+
+.about-inner{
+
+    width:calc(100% - 150px);
+
+    max-width:1250px;
+
+    margin:0 auto;
+
+    display:grid;
+
+    grid-template-columns:
+        minmax(380px, 0.92fr)
+        minmax(440px, 1.08fr);
+
+    gap:95px;
+
+    align-items:center;
+
+}
+
+
+/* =========================================================
+   FOTO CATI
+========================================================= */
+
+.about-photo{
+
+    position:relative;
+
+    width:100%;
+
+    max-width:520px;
+
+    justify-self:center;
+
+}
+
+
+.about-photo::before{
+
+    content:"";
+
+    position:absolute;
+
+    left:-17px;
+
+    top:17px;
+
+    width:100%;
+
+    height:100%;
+
+    border:
+        1px solid
+        rgba(183,122,25,.42);
+
+    z-index:0;
+
+}
+
+
+.about-photo img{
+
+    position:relative;
+
+    z-index:1;
+
+    width:100%;
+
+    aspect-ratio:
+        4 / 5;
+
+    object-fit:cover;
+
+}
+
+
+/* =========================================================
+   TEXTO
+========================================================= */
+
+.about-copy{
+
+    max-width:610px;
+
+}
+
+
+.eyebrow{
+
+    margin:0 0 17px;
+
+    font-family:
+        "Montserrat",
+        Arial,
+        sans-serif;
+
+    font-size:10px;
+
+    font-weight:600;
+
+    letter-spacing:3px;
+
+    text-transform:uppercase;
+
+    color:var(--dorado);
+
+}
+
+
+.about-title{
+
+    margin:0 0 28px;
+
+    font-size:62px;
+
+    font-weight:500;
+
+    line-height:.94;
+
+    letter-spacing:-1.4px;
+
+}
+
+
+.about-title .script{
+
+    display:block;
+
+    font-family:
+        "Allura",
+        cursive;
+
+    font-size:1.02em;
+
+    font-weight:400;
+
+    color:var(--rosa);
+
+    letter-spacing:0;
+
+}
+
+
+.about-copy > p{
+
+    margin:
+        0
+        0
+        21px;
+
+    font-size:19px;
+
+    line-height:1.55;
+
+    color:var(--marron);
+
+}
+
+
+/* =========================================================
+   FRASE DESTACADA
+========================================================= */
+
+.about-quote{
+
+    margin:
+        34px
+        0
+        38px;
+
+    padding:
+        23px
+        0
+        23px
+        28px;
+
+    border-left:
+        2px solid
+        var(--dorado);
+
+    font-family:
+        "Allura",
+        cursive;
+
+    font-size:31px;
+
+    line-height:1.15;
+
+    color:var(--rosa);
+
+}
+
+
+/* =========================================================
+   DOS IDEAS
+========================================================= */
+
+.about-details{
+
+    display:grid;
+
+    grid-template-columns:
+        1fr
+        1fr;
+
+    gap:32px;
+
+}
+
+
+.detail{
+
+    padding-top:17px;
+
+    border-top:
+        1px solid
+        var(--linea);
+
+}
+
+
+.detail h3{
+
+    margin:
+        0
+        0
+        8px;
+
+    font-size:23px;
+
+    font-weight:500;
+
+}
+
+
+.detail p{
+
+    margin:0;
+
+    font-family:
+        "Montserrat",
+        Arial,
+        sans-serif;
+
+    font-size:12px;
+
+    line-height:1.65;
+
+    color:var(--marron-suave);
+
+}
+
+
+/* =========================================================
+   PEQUEÑA SECCIÓN FINAL
+========================================================= */
+
+.about-ending{
+
+    background:var(--beige);
+
+    padding:
+        70px
+        30px;
+
+    text-align:center;
+
+}
+
+
+.about-ending p{
+
+    max-width:700px;
+
+    margin:0 auto;
+
+    font-family:
+        "Allura",
+        cursive;
+
+    font-size:36px;
+
+    line-height:1.15;
+
+    color:var(--rosa);
+
+}
+
+
+/* =========================================================
+   FRANJA FINAL
+========================================================= */
+
+.brand-strip{
+
+    padding:
+        27px
+        25px;
+
+    background:var(--crema);
+
+    text-align:center;
+
+}
+
+
+.brand-strip p{
+
+    margin:0;
+
+    font-family:
+        "Montserrat",
+        Arial,
+        sans-serif;
+
+    font-size:9px;
+
+    font-weight:500;
+
+    letter-spacing:2.4px;
+
+    line-height:1.7;
+
+    text-transform:uppercase;
+
+    color:var(--marron-suave);
+
+}
+
+
+/* =========================================================
+   MENÚ MÓVIL
+========================================================= */
+
+.mobile-button{
+
+    display:none;
+
+    width:44px;
+
+    height:44px;
+
+    padding:0;
+
+    border:
+        1px solid
+        var(--marron);
+
+    background:transparent;
+
+    cursor:pointer;
+
+}
+
+
+.mobile-button span{
+
+    display:block;
+
+    width:19px;
+
+    height:1px;
+
+    margin:5px auto;
+
+    background:var(--marron);
+
+}
+
+
+.mobile-panel{
+
+    position:fixed;
+
+    inset:0;
+
+    z-index:100;
+
+    display:none;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:27px;
+
+    background:
+        rgba(59,41,33,.98);
+
+    color:#fff;
+
+}
+
+
+.mobile-panel.open{
+
+    display:flex;
+
+}
+
+
+.mobile-panel a{
+
+    font-family:
+        "Montserrat",
+        Arial,
+        sans-serif;
+
+    font-size:12px;
+
+    letter-spacing:2px;
+
+    text-transform:uppercase;
+
+}
+
+
+.mobile-close{
+
+    position:absolute;
+
+    top:18px;
+
+    right:22px;
+
+    border:0;
+
+    background:none;
+
+    color:#fff;
+
+    font-size:34px;
+
+    line-height:1;
+
+    cursor:pointer;
+
+}
+
+
+/* =========================================================
+   ANIMACIÓN SUAVE
+========================================================= */
+
+@keyframes aparecer{
+
+    from{
+
+        opacity:0;
+
+        transform:
+            translateY(15px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:
+            translateY(0);
+
+    }
+
+}
+
+
+.about-photo{
+
+    animation:
+        aparecer
+        .8s
+        ease
+        both;
+
+}
+
+
+.about-copy{
+
+    animation:
+        aparecer
+        .9s
+        ease
+        .1s
+        both;
+
+}
+
+
+/* =========================================================
    TABLET
-========================= */
+========================================================= */
 
-@media (max-width: 1150px) {
+@media(max-width:1050px){
 
-    .header-inner {
-        width: calc(100% - 70px);
+    .header-inner{
+
+        width:calc(100% - 60px);
+
     }
 
-    .logo-link,
-    .logo {
-        width: 190px;
+
+    .logo{
+
+        width:165px;
+
     }
 
-    .nav {
-        gap: 21px;
-        font-size: 9px;
-        letter-spacing: 1.4px;
+
+    .nav{
+
+        gap:20px;
+
+        font-size:9px;
+
+        letter-spacing:1.3px;
+
     }
 
-    .about-title {
-        font-size: 51px;
+
+    .about-inner{
+
+        width:calc(100% - 70px);
+
+        gap:55px;
+
     }
+
+
+    .about-title{
+
+        font-size:54px;
+
+    }
+
+
+    .about-copy > p{
+
+        font-size:17px;
+
+    }
+
 }
 
 
-/* =========================
+/* =========================================================
    MÓVIL
-========================= */
+========================================================= */
 
-@media (max-width: 760px) {
+@media(max-width:760px){
 
-    .header {
-        padding: 18px 0;
+    /* HEADER */
+
+    .header{
+
+        padding:
+            16px
+            0;
+
     }
 
-    .header-inner {
-        width: calc(100% - 32px);
+
+    .header-inner{
+
+        width:calc(100% - 34px);
+
     }
 
-    .logo-link,
-    .logo {
-        width: 165px;
+
+    .logo{
+
+        width:150px;
+
     }
 
-    .nav,
-    .header-button {
-        display: none;
+
+    .nav{
+
+        display:none;
+
     }
 
-    .about {
-        display: flex;
-        flex-direction: column;
+
+    .mobile-button{
+
+        display:block;
+
     }
 
-    .about-photo {
-        order: 1;
 
-        width: 100%;
-        height: 500px;
-        min-height: 500px;
+    /* HERO */
+
+    .about-hero{
+
+        padding:
+            28px
+            20px;
+
     }
 
-    .about-copy {
-        order: 2;
 
-        padding: 50px 28px 60px;
+    .about-hero p{
+
+        font-size:30px;
+
     }
 
-    .about-title {
-        font-size: 48px;
+
+    /* CONTENIDO */
+
+    .about{
+
+        padding:
+            65px
+            0
+            70px;
+
     }
 
-    .about-text {
-        font-size: 17px;
+
+    .about-inner{
+
+        width:calc(100% - 42px);
+
+        display:flex;
+
+        flex-direction:column;
+
+        gap:55px;
+
+        align-items:stretch;
+
     }
 
-    .photo-message {
-        width: 245px;
 
-        bottom: 20px;
+    /* FOTO */
 
-        padding: 19px 22px;
+    .about-photo{
 
-        font-size: 19px;
+        width:calc(100% - 17px);
+
+        max-width:none;
+
+        margin-left:17px;
+
     }
 
-    .philosophy {
-        padding: 65px 28px;
+
+    .about-photo::before{
+
+        left:-12px;
+
+        top:12px;
+
     }
 
-    .philosophy h2 {
-        font-size: 39px;
+
+    /* TEXTO */
+
+    .about-copy{
+
+        max-width:none;
+
     }
 
-    .values {
-        grid-template-columns: 1fr;
 
-        padding: 45px 25px;
+    .eyebrow{
+
+        font-size:9px;
+
+        letter-spacing:2.4px;
+
     }
 
-    .value {
-        padding: 25px 10px;
 
-        border-right: none;
-        border-bottom: 1px solid rgba(74,55,45,.20);
+    .about-title{
+
+        font-size:48px;
+
+        line-height:.94;
+
+        margin-bottom:27px;
+
     }
 
-    .value:last-child {
-        border-bottom: none;
+
+    .about-copy > p{
+
+        font-size:17px;
+
+        line-height:1.55;
+
     }
 
-    .contact {
-        padding: 60px 25px;
+
+    .about-quote{
+
+        margin:
+            31px
+            0
+            34px;
+
+        padding:
+            20px
+            0
+            20px
+            22px;
+
+        font-size:29px;
+
     }
 
-    .contact h2 {
-        font-size: 39px;
+
+    .about-details{
+
+        grid-template-columns:1fr;
+
+        gap:28px;
+
     }
+
+
+    .detail h3{
+
+        font-size:22px;
+
+    }
+
+
+    .detail p{
+
+        font-size:11px;
+
+    }
+
+
+    /* FINAL */
+
+    .about-ending{
+
+        padding:
+            55px
+            25px;
+
+    }
+
+
+    .about-ending p{
+
+        font-size:32px;
+
+    }
+
+
+    .brand-strip{
+
+        padding:
+            23px
+            22px;
+
+    }
+
+
+    .brand-strip p{
+
+        font-size:8px;
+
+        letter-spacing:1.5px;
+
+    }
+
 }
 
 
-/* =========================
+/* =========================================================
    MÓVIL PEQUEÑO
-========================= */
+========================================================= */
 
-@media (max-width: 390px) {
+@media(max-width:390px){
 
-    .about-photo {
-        height: 440px;
-        min-height: 440px;
+    .logo{
+
+        width:135px;
+
     }
 
-    .about-copy {
-        padding: 42px 22px 50px;
+
+    .about-inner{
+
+        width:calc(100% - 34px);
+
     }
 
-    .about-title {
-        font-size: 43px;
+
+    .about-title{
+
+        font-size:44px;
+
     }
+
+
+    .about-copy > p{
+
+        font-size:16px;
+
+    }
+
 }
 
 </style>
@@ -600,28 +1096,30 @@ img {
 <body>
 
 
-<!-- =========================
-     CABECERA
-========================= -->
+<!-- =======================================================
+     HEADER
+======================================================= -->
 
 <header class="header">
 
     <div class="header-inner">
 
 
+        <!-- LOGO OFICIAL -->
+
         <a
             href="index.html"
-            class="logo-link"
-        >
+            aria-label="Bodas Con Cati">
 
             <img
                 src="assets/logo%203.jpg"
                 class="logo"
-                alt="Bodas Con Cati"
-            >
+                alt="Bodas Con Cati Wedding Planner">
 
         </a>
 
+
+        <!-- MENÚ ORDENADOR -->
 
         <nav class="nav">
 
@@ -631,32 +1129,38 @@ img {
 
             <a
                 href="sobre-mi.html"
-                class="active"
-            >
+                class="active">
                 Sobre mí
             </a>
 
-            <a href="index.html#servicios">
+            <a href="servicios.html">
                 Servicios
             </a>
 
-            <a href="index.html#mallorca">
+            <a href="mallorca.html">
                 Mallorca
             </a>
 
-            <a href="index.html#contacto">
+            <a href="contacto.html">
                 Contacto
             </a>
 
         </nav>
 
 
-        <a
-            href="index.html#contacto"
-            class="header-button"
-        >
-            Quiero hablar ♡
-        </a>
+        <!-- MENÚ MÓVIL -->
+
+        <button
+            class="mobile-button"
+            id="openMenu"
+            type="button"
+            aria-label="Abrir menú">
+
+            <span></span>
+            <span></span>
+            <span></span>
+
+        </button>
 
 
     </div>
@@ -665,9 +1169,68 @@ img {
 
 
 
-<!-- =========================
+<!-- =======================================================
+     MENÚ MÓVIL
+======================================================= -->
+
+<div
+    class="mobile-panel"
+    id="mobilePanel">
+
+
+    <button
+        class="mobile-close"
+        id="closeMenu"
+        type="button"
+        aria-label="Cerrar menú">
+
+        ×
+
+    </button>
+
+
+    <a href="index.html">
+        Inicio
+    </a>
+
+    <a href="sobre-mi.html">
+        Sobre mí
+    </a>
+
+    <a href="servicios.html">
+        Servicios
+    </a>
+
+    <a href="mallorca.html">
+        Mallorca
+    </a>
+
+    <a href="contacto.html">
+        Contacto
+    </a>
+
+
+</div>
+
+
+
+<!-- =======================================================
+     CABECERA DE LA PÁGINA
+======================================================= -->
+
+<section class="about-hero">
+
+    <p>
+        Un poquito sobre mí ♡
+    </p>
+
+</section>
+
+
+
+<!-- =======================================================
      SOBRE MÍ
-========================= -->
+======================================================= -->
 
 <main>
 
@@ -675,122 +1238,115 @@ img {
 <section class="about">
 
 
-    <!-- TEXTO -->
-
-    <div class="about-copy">
+    <div class="about-inner">
 
 
-        <p class="eyebrow">
-            Sobre mí
-        </p>
+        <!-- FOTO CATI -->
 
+        <div class="about-photo">
 
-        <h1 class="about-title">
-
-            Más de diez años
-            <br>
-
-            creando momentos.
-
-            <em>
-                Y una pasión que
-                <br>
-                empezó con las bodas.
-            </em>
-
-        </h1>
-
-
-        <div class="line"></div>
-
-
-        <p class="about-text">
-
-            Hace más de diez años comencé mi camino
-            en el mundo de los eventos. Pero fue al
-            descubrir el mundo de las bodas cuando
-            entendí que había encontrado aquello que
-            realmente me apasionaba.
-
-        </p>
-
-
-        <p class="about-text">
-
-            Desde entonces, cada pareja, cada historia
-            y cada boda son diferentes para mí.
-
-            No creo en las bodas hechas siguiendo un
-            mismo patrón. Me adapto a vosotros, a vuestra
-            personalidad, a vuestras ideas y, por supuesto,
-            al tipo de boda que soñáis.
-
-        </p>
-
-
-        <p class="about-text">
-
-            Ya sea una celebración íntima o una gran boda,
-            estaré a vuestro lado para ayudaros en todo
-            aquello que necesitéis.
-
-        </p>
-
-
-        <p class="about-text">
-
-            Mi forma de trabajar es muy personal y cercana.
-            Me gusta conoceros, escucharos y entender qué
-            queréis vivir ese día.
-
-            Por eso, durante todo el proceso, nos reunimos,
-            hablamos, organizamos y vamos dando forma
-            juntos a cada detalle.
-
-        </p>
-
-
-        <p class="about-quote">
-
-            Porque para mí, organizar una boda no consiste
-            solo en que todo salga perfecto.
-
-            Consiste en que vosotros disfrutéis del camino
-            tanto como del gran día.
-
-        </p>
-
-
-        <div class="signature">
-            Cati
-        </div>
-
-
-    </div>
-
-
-
-    <!-- FOTO -->
-
-    <div class="about-photo">
-
-        <img
-            src="cati.jpg"
-            alt="Cati - Bodas Con Cati"
-        >
-
-
-        <div class="photo-message">
-
-            Detrás de cada boda
-            hay una gran historia.
-
-            Y me encanta formar
-            parte de ella.
-
-            <div class="photo-line"></div>
+            <img
+                src="assets/cati.jpg"
+                alt="Cati de Bodas Con Cati">
 
         </div>
+
+
+        <!-- TEXTO -->
+
+        <div class="about-copy">
+
+
+            <div class="eyebrow">
+
+                Sobre mí
+
+            </div>
+
+
+            <h1 class="about-title">
+
+                Detrás de
+
+                <span class="script">
+                    Bodas Con Cati
+                </span>
+
+                estoy yo.
+
+            </h1>
+
+
+            <p>
+
+                Me gustan las bodas que tienen sentido.
+                Las que hablan de vosotros, de vuestra forma
+                de quereros, de las cosas que os hacen felices
+                y de esos pequeños detalles que quizá nadie más ve,
+                pero que para vosotros lo son todo.
+
+            </p>
+
+
+            <p>
+
+                Soy Cati, Wedding Planner en Mallorca,
+                y mi trabajo empieza mucho antes de que llegue
+                el día de la boda. Estoy para ordenar ideas,
+                buscar soluciones, cuidar los detalles y conseguir
+                que todo lo que imagináis vaya tomando forma.
+
+            </p>
+
+
+            <!-- FRASE -->
+
+            <div class="about-quote">
+
+                “Vosotros vivid vuestra historia.
+                De los detalles, ya me ocupo yo.”
+
+            </div>
+
+
+            <!-- DOS IDEAS -->
+
+            <div class="about-details">
+
+
+                <div class="detail">
+
+                    <h3>
+                        Una boda vuestra
+                    </h3>
+
+                    <p>
+                        Sin plantillas ni bodas copiadas.
+                        Cada pareja tiene su propia esencia.
+                    </p>
+
+                </div>
+
+
+                <div class="detail">
+
+                    <h3>
+                        Con tranquilidad
+                    </h3>
+
+                    <p>
+                        Organización, proveedores y tiempos
+                        bajo control para que podáis disfrutar.
+                    </p>
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
 
     </div>
 
@@ -799,34 +1355,16 @@ img {
 
 
 
-<!-- =========================
-     FILOSOFÍA
-========================= -->
+<!-- =======================================================
+     CIERRE
+======================================================= -->
 
-<section class="philosophy">
-
-    <div class="philosophy-small">
-        Mi forma de entender las bodas
-    </div>
-
-
-    <h2>
-
-        Cada pareja tiene su propia historia.
-        <br>
-        Mi trabajo es ayudaros a contarla.
-
-    </h2>
-
+<section class="about-ending">
 
     <p>
 
-        Creo en las bodas auténticas, en las que se
-        respira vuestra esencia y en las que cada detalle
-        tiene un porqué.
-
-        Me implico en cada proyecto con ilusión,
-        compromiso y muchísima dedicación.
+        Porque vuestra boda no tiene que parecerse
+        a ninguna otra.
 
     </p>
 
@@ -834,111 +1372,78 @@ img {
 
 
 
-<!-- =========================
-     VALORES
-========================= -->
+<!-- =======================================================
+     FRANJA FINAL
+======================================================= -->
 
-<section class="values">
-
-
-    <article class="value">
-
-        <div class="value-icon">
-            ♡
-        </div>
-
-        <h3>
-            Experiencia
-        </h3>
-
-        <p>
-            Más de diez años en el mundo
-            de los eventos y las bodas.
-        </p>
-
-    </article>
-
-
-    <article class="value">
-
-        <div class="value-icon">
-            ♡
-        </div>
-
-        <h3>
-            Trato personalizado
-        </h3>
-
-        <p>
-            Me gusta conoceros, escucharos
-            y trabajar siempre de tú a tú.
-        </p>
-
-    </article>
-
-
-    <article class="value">
-
-        <div class="value-icon">
-            ♡
-        </div>
-
-        <h3>
-            A vuestro lado
-        </h3>
-
-        <p>
-            Os acompaño durante el proceso
-            para que disfrutéis también
-            de cada paso.
-        </p>
-
-    </article>
-
-
-</section>
-
-
-
-<!-- =========================
-     CONTACTO
-========================= -->
-
-<section class="contact">
-
-    <h2>
-        ¿Hablamos de vuestra boda?
-    </h2>
+<footer class="brand-strip">
 
     <p>
-        Me encantará conoceros y empezar a
-        dar forma a vuestra historia.
+
+        Bodas Con Cati · Wedding Planner en Mallorca ·
+        Experiencias que se recuerdan toda la vida
+
     </p>
-
-    <a
-        href="index.html#contacto"
-        class="contact-button"
-    >
-        Quiero hablar ♡
-    </a>
-
-</section>
-
-
-
-<!-- =========================
-     FOOTER
-========================= -->
-
-<footer class="footer">
-
-    Bodas Con Cati · Wedding Planner en Mallorca
-    · Experiencias que se recuerdan toda la vida
 
 </footer>
 
 
 </main>
+
+
+
+<script>
+
+/* =========================================================
+   MENÚ MÓVIL
+========================================================= */
+
+const openMenu =
+    document.getElementById("openMenu");
+
+const closeMenu =
+    document.getElementById("closeMenu");
+
+const mobilePanel =
+    document.getElementById("mobilePanel");
+
+
+openMenu.addEventListener(
+    "click",
+    function(){
+
+        mobilePanel.classList.add("open");
+
+    }
+);
+
+
+closeMenu.addEventListener(
+    "click",
+    function(){
+
+        mobilePanel.classList.remove("open");
+
+    }
+);
+
+
+mobilePanel
+    .querySelectorAll("a")
+    .forEach(function(link){
+
+        link.addEventListener(
+            "click",
+            function(){
+
+                mobilePanel.classList.remove("open");
+
+            }
+        );
+
+    });
+
+</script>
 
 
 </body>
