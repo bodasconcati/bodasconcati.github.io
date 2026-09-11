@@ -38,7 +38,6 @@
 
     header {
       height: 125px;
-
       padding: 0 7.5vw;
 
       display: flex;
@@ -48,13 +47,11 @@
       background: #f7f1e9;
     }
 
-
     .logo {
       width: 260px;
       height: auto;
       display: block;
     }
-
 
     nav {
       display: flex;
@@ -62,12 +59,10 @@
       gap: 43px;
     }
 
-
     nav a {
       position: relative;
 
       font-family: Arial, Helvetica, sans-serif;
-
       font-size: 18px;
       font-weight: 400;
 
@@ -78,16 +73,13 @@
       padding: 8px 0;
     }
 
-
     nav a:hover {
       color: #a66e57;
     }
 
-
     nav a.active {
       font-weight: 600;
     }
-
 
     nav a.active::after {
       content: "";
@@ -109,19 +101,15 @@
     ===================================== */
 
     .intro {
-
       text-align: center;
 
-      padding: 0 5vw 35px;
+      padding: 5px 4vw 28px;
     }
 
-
     .eyebrow {
-
-      margin-bottom: 13px;
+      margin-bottom: 10px;
 
       font-family: Arial, Helvetica, sans-serif;
-
       font-size: 15px;
       font-weight: 600;
 
@@ -130,60 +118,54 @@
       color: #b4785b;
     }
 
-
     .intro h1 {
-
-      font-size: clamp(68px, 7vw, 105px);
+      font-size: clamp(72px, 6.8vw, 108px);
 
       font-weight: 400;
 
-      line-height: 0.98;
+      line-height: 0.95;
 
-      letter-spacing: -3px;
+      letter-spacing: -4px;
 
       color: #49382f;
     }
 
-
     .intro h1 em {
-
       color: #bd785d;
-
       font-style: italic;
     }
 
-
     .intro p {
+      max-width: 900px;
 
-      max-width: 850px;
+      margin: 14px auto 0;
 
-      margin: 18px auto 0;
+      font-size: 24px;
 
-      font-size: 25px;
-
-      line-height: 1.4;
+      line-height: 1.3;
 
       color: #624c40;
     }
 
 
     /* =====================================
-       CONTENIDO CONTACTO
+       CONTENIDO PRINCIPAL
     ===================================== */
 
     .contact-section {
+      width: 90%;
 
-      width: 94%;
+      max-width: 1500px;
 
-      max-width: 1420px;
-
-      margin: 0 auto 30px;
+      margin: 0 auto 25px;
 
       display: grid;
 
       grid-template-columns: 1fr 1fr;
 
-      gap: 28px;
+      gap: 22px;
+
+      align-items: stretch;
     }
 
 
@@ -192,93 +174,76 @@
     ===================================== */
 
     .contact-form {
-
       background: #f1e6db;
 
-      padding: 42px 40px 40px;
+      padding: 34px 38px 32px;
     }
 
-
     .contact-form h2 {
-
-      font-size: clamp(45px, 4vw, 65px);
+      font-size: clamp(48px, 4vw, 66px);
 
       font-weight: 400;
 
-      line-height: 1;
+      line-height: 0.95;
 
       color: #49382f;
 
-      margin-bottom: 13px;
+      margin-bottom: 12px;
     }
 
-
     .contact-form h2 em {
-
       color: #bd785d;
 
       font-style: italic;
     }
 
-
     .form-intro {
+      font-size: 20px;
 
-      font-size: 21px;
-
-      line-height: 1.45;
+      line-height: 1.35;
 
       color: #624c40;
 
-      margin-bottom: 28px;
+      margin-bottom: 22px;
 
       max-width: 650px;
     }
 
-
     form {
-
       display: flex;
 
       flex-direction: column;
 
-      gap: 17px;
+      gap: 13px;
     }
 
-
     .field {
-
       width: 100%;
     }
 
-
     .field label {
-
       display: block;
 
-      margin-bottom: 7px;
-
-      padding-left: 2px;
+      margin-bottom: 5px;
 
       font-family: Arial, Helvetica, sans-serif;
 
-      font-size: 12px;
+      font-size: 11px;
 
       letter-spacing: 2px;
 
       color: #735d51;
     }
 
-
     .field input,
     .field textarea {
-
       width: 100%;
 
       border: none;
 
       outline: none;
 
-      background: rgba(255, 252, 248, 0.75);
+      background: rgba(255, 252, 248, 0.8);
 
       color: #49382f;
 
@@ -286,46 +251,43 @@
 
       font-size: 17px;
 
-      padding: 15px 16px;
+      padding: 12px 15px;
 
       border: 1px solid transparent;
 
       transition: border 0.3s ease;
     }
 
-
     .field input {
-
-      height: 48px;
+      height: 44px;
     }
 
-
     .field textarea {
-
-      min-height: 140px;
+      min-height: 112px;
 
       resize: vertical;
 
-      line-height: 1.5;
+      line-height: 1.4;
     }
-
 
     .field input:focus,
     .field textarea:focus {
-
       border: 1px solid #c98a69;
     }
 
 
-    .send-button {
+    /* =====================================
+       BOTÓN
+    ===================================== */
 
-      width: 310px;
+    .send-button {
+      width: 300px;
 
       max-width: 100%;
 
-      margin: 2px auto 0;
+      margin: 3px auto 0;
 
-      padding: 17px 20px;
+      padding: 16px 20px;
 
       border: none;
 
@@ -335,7 +297,7 @@
 
       font-family: Arial, Helvetica, sans-serif;
 
-      font-size: 14px;
+      font-size: 13px;
 
       font-weight: 600;
 
@@ -348,9 +310,7 @@
         transform 0.3s ease;
     }
 
-
     .send-button:hover {
-
       background: #b87558;
 
       transform: translateY(-2px);
@@ -362,29 +322,27 @@
     ===================================== */
 
     .contact-info {
-
       background: #f1e6db;
 
       display: flex;
 
       flex-direction: column;
+
+      min-width: 0;
     }
 
 
     /* FOTO */
 
     .contact-photo {
-
       width: 100%;
 
-      height: 420px;
+      height: 430px;
 
       overflow: hidden;
     }
 
-
     .contact-photo img {
-
       width: 100%;
 
       height: 100%;
@@ -398,22 +356,19 @@
       transition: transform 0.5s ease;
     }
 
-
     .contact-info:hover .contact-photo img {
-
       transform: scale(1.02);
     }
 
 
     /* =====================================
-       FRASE
+       INFORMACIÓN
     ===================================== */
 
     .contact-details {
-
       flex: 1;
 
-      padding: 27px 30px 28px;
+      padding: 24px 25px 25px;
 
       text-align: center;
 
@@ -426,68 +381,61 @@
       align-items: center;
     }
 
-
     .contact-quote {
+      max-width: 620px;
 
-      max-width: 570px;
+      font-size: 28px;
 
-      font-size: 30px;
-
-      line-height: 1.3;
+      line-height: 1.25;
 
       font-style: italic;
 
       color: #a66e57;
 
-      margin-bottom: 20px;
+      margin-bottom: 17px;
     }
 
-
     .contact-line {
-
       width: 65px;
 
       height: 1px;
 
       background: #b8876f;
 
-      margin-bottom: 25px;
+      margin-bottom: 21px;
     }
 
 
     /* =====================================
-       DATOS
+       DATOS DE CONTACTO
     ===================================== */
 
     .contact-data {
-
       width: 100%;
 
       display: grid;
 
       grid-template-columns: repeat(3, 1fr);
 
-      gap: 20px;
+      gap: 15px;
     }
 
-
     .data-item {
-
       display: flex;
 
       flex-direction: column;
 
       align-items: center;
 
-      gap: 9px;
+      gap: 7px;
+
+      min-width: 0;
     }
 
-
     .data-icon {
+      width: 30px;
 
-      width: 32px;
-
-      height: 32px;
+      height: 30px;
 
       display: flex;
 
@@ -498,12 +446,10 @@
       color: #bd785d;
     }
 
-
     .data-icon svg {
+      width: 25px;
 
-      width: 27px;
-
-      height: 27px;
+      height: 25px;
 
       stroke: currentColor;
 
@@ -516,25 +462,21 @@
       stroke-linejoin: round;
     }
 
-
     .data-label {
-
       font-family: Arial, Helvetica, sans-serif;
 
       font-size: 10px;
 
-      letter-spacing: 2px;
+      letter-spacing: 1.8px;
 
       color: #9a8175;
 
       text-transform: uppercase;
     }
 
-
     .data-item a,
-    .data-item span {
-
-      font-size: 17px;
+    .data-item span:not(.data-label) {
+      font-size: 16px;
 
       line-height: 1.3;
 
@@ -543,22 +485,19 @@
       word-break: break-word;
     }
 
-
     .data-item a:hover {
-
       color: #b87558;
     }
 
 
     /* =====================================
-       FRASE FINAL CON FOTO
+       FRASE FINAL
     ===================================== */
 
     .closing {
+      min-height: 170px;
 
-      min-height: 245px;
-
-      padding: 70px 25px;
+      padding: 45px 25px;
 
       display: flex;
 
@@ -570,24 +509,13 @@
 
       text-align: center;
 
-      background:
-        linear-gradient(
-          rgba(247, 241, 233, 0.65),
-          rgba(247, 241, 233, 0.65)
-        ),
-        url("assets/contacto.jpg");
+      background: #f7f1e9;
 
-      background-size: cover;
-
-      background-position: center;
-
-      margin-top: 5px;
+      margin-top: 0;
     }
 
-
     .closing p {
-
-      font-size: 30px;
+      font-size: 29px;
 
       line-height: 1.3;
 
@@ -597,12 +525,10 @@
 
       max-width: 900px;
 
-      margin-bottom: 24px;
+      margin-bottom: 20px;
     }
 
-
     .closing-line {
-
       width: 70px;
 
       height: 1px;
@@ -616,8 +542,7 @@
     ===================================== */
 
     footer {
-
-      padding: 31px 20px;
+      padding: 27px 20px;
 
       text-align: center;
 
@@ -642,59 +567,42 @@
     @media (max-width: 1100px) {
 
       header {
-
         padding: 0 35px;
       }
 
-
       .logo {
-
         width: 230px;
       }
 
-
       nav {
-
         gap: 25px;
       }
 
-
       nav a {
-
         font-size: 16px;
       }
 
-
       .contact-section {
+        width: 94%;
 
-        width: 92%;
-
-        gap: 22px;
+        gap: 18px;
       }
-
 
       .contact-form {
-
-        padding: 35px 28px;
+        padding: 30px 27px;
       }
-
 
       .contact-photo {
-
-        height: 380px;
+        height: 390px;
       }
-
 
       .contact-quote {
-
-        font-size: 25px;
+        font-size: 24px;
       }
 
-
       .data-item a,
-      .data-item span {
-
-        font-size: 15px;
+      .data-item span:not(.data-label) {
+        font-size: 14px;
       }
 
     }
@@ -707,7 +615,6 @@
     @media (max-width: 760px) {
 
       header {
-
         height: auto;
 
         padding: 22px 20px 24px;
@@ -717,15 +624,11 @@
         gap: 20px;
       }
 
-
       .logo {
-
         width: 190px;
       }
 
-
       nav {
-
         width: 100%;
 
         justify-content: center;
@@ -735,17 +638,13 @@
         gap: 11px 17px;
       }
 
-
       nav a {
-
         font-size: 12px;
 
         letter-spacing: 1.1px;
       }
 
-
       nav a.active::after {
-
         bottom: -5px;
       }
 
@@ -753,23 +652,18 @@
       /* INTRO */
 
       .intro {
-
-        padding: 45px 20px 30px;
+        padding: 38px 20px 28px;
       }
 
-
       .eyebrow {
-
         font-size: 12px;
 
         letter-spacing: 3px;
 
-        margin-bottom: 17px;
+        margin-bottom: 15px;
       }
 
-
       .intro h1 {
-
         font-size: clamp(48px, 13vw, 70px);
 
         line-height: 1;
@@ -777,93 +671,75 @@
         letter-spacing: -2px;
       }
 
-
       .intro p {
-
-        font-size: 21px;
+        font-size: 20px;
 
         line-height: 1.4;
 
-        margin-top: 20px;
+        margin-top: 17px;
       }
 
 
       /* CONTENIDO */
 
       .contact-section {
-
-        width: calc(100% - 30px);
+        width: calc(100% - 24px);
 
         display: flex;
 
         flex-direction: column;
 
-        gap: 25px;
+        gap: 18px;
 
-        margin-bottom: 25px;
+        margin-bottom: 18px;
       }
 
 
       /* FORMULARIO */
 
       .contact-form {
-
-        padding: 30px 22px 32px;
+        padding: 30px 20px 30px;
       }
 
-
       .contact-form h2 {
-
-        font-size: 48px;
+        font-size: 47px;
 
         line-height: 1;
 
-        margin-bottom: 15px;
+        margin-bottom: 14px;
       }
-
 
       .form-intro {
-
         font-size: 19px;
 
-        line-height: 1.45;
+        line-height: 1.4;
 
-        margin-bottom: 25px;
+        margin-bottom: 23px;
       }
-
 
       form {
-
-        gap: 15px;
+        gap: 14px;
       }
-
 
       .field label {
-
         font-size: 10px;
 
-        letter-spacing: 1.7px;
+        letter-spacing: 1.6px;
       }
-
 
       .field input {
-
-        height: 48px;
+        height: 46px;
 
         font-size: 16px;
       }
-
 
       .field textarea {
-
-        min-height: 150px;
+        min-height: 140px;
 
         font-size: 16px;
       }
 
-
       .send-button {
-
         width: 100%;
 
         font-size: 12px;
@@ -875,7 +751,6 @@
       /* FOTO */
 
       .contact-photo {
-
         height: 390px;
       }
 
@@ -883,38 +758,29 @@
       /* INFO */
 
       .contact-details {
-
         padding: 30px 20px 35px;
       }
 
-
       .contact-quote {
-
         font-size: 24px;
 
         line-height: 1.35;
 
-        margin-bottom: 20px;
+        margin-bottom: 18px;
       }
-
 
       .contact-data {
-
         grid-template-columns: 1fr;
 
-        gap: 24px;
+        gap: 23px;
       }
 
-
       .data-item {
-
         gap: 6px;
       }
 
-
       .data-item a,
-      .data-item span {
-
+      .data-item span:not(.data-label) {
         font-size: 16px;
       }
 
@@ -922,23 +788,19 @@
       /* CIERRE */
 
       .closing {
+        min-height: 170px;
 
-        min-height: 210px;
-
-        padding: 55px 25px;
+        padding: 50px 25px;
       }
 
-
       .closing p {
-
-        font-size: 27px;
+        font-size: 26px;
       }
 
 
       /* FOOTER */
 
       footer {
-
         padding: 27px 20px;
 
         font-size: 10px;
@@ -962,7 +824,6 @@
 
   <header>
 
-
     <a href="index.html">
 
       <img
@@ -976,26 +837,21 @@
 
     <nav>
 
-
       <a href="index.html">
         INICIO
       </a>
-
 
       <a href="sobre-mi.html">
         SOBRE MÍ
       </a>
 
-
       <a href="servicios.html">
         SERVICIOS
       </a>
 
-
       <a href="mallorca.html">
         MALLORCA
       </a>
-
 
       <a
         href="contacto.html"
@@ -1003,7 +859,6 @@
       >
         CONTACTO
       </a>
-
 
     </nav>
 
@@ -1017,27 +872,19 @@
 
   <section class="intro">
 
-
     <div class="eyebrow">
       CONTACTO
     </div>
 
-
     <h1>
-
       Hablemos de
       <em>vuestra boda.</em>
-
     </h1>
 
-
     <p>
-
-      Estoy aquí para escucharos, resolver vuestras dudas
-      y acompañaros en cada paso de este viaje tan especial.
-
+      Estoy aquí para escucharos, resolver vuestras dudas y acompañaros
+      en cada paso de este viaje tan especial.
     </p>
-
 
   </section>
 
@@ -1058,30 +905,16 @@
 
 
       <h2>
-
         Cuéntame
         <em>tu historia</em>
-
       </h2>
 
 
       <p class="form-intro">
-
         Rellena el formulario y me pondré en contacto contigo
         lo antes posible.
-
       </p>
 
-
-      <!--
-        FORMULARIO
-
-        Los mensajes se enviarán a:
-        bodasconcati@gmail.com
-
-        FormSubmit necesita una primera activación
-        cuando se utilice por primera vez.
-      -->
 
       <form
         action="https://formsubmit.co/bodasconcati@gmail.com"
@@ -1097,13 +930,11 @@
           value="Nuevo contacto desde Bodas Con Cati"
         >
 
-
         <input
           type="hidden"
           name="_captcha"
           value="false"
         >
-
 
         <input
           type="hidden"
@@ -1218,7 +1049,7 @@
 
 
     <!-- =================================
-         FOTO + DATOS
+         FOTO + INFORMACIÓN
     ================================== -->
 
     <section class="contact-info">
@@ -1236,17 +1067,13 @@
       </div>
 
 
-      <!-- INFORMACIÓN -->
+      <!-- DATOS -->
 
       <div class="contact-details">
 
 
         <p class="contact-quote">
-
-          “Las mejores bodas
-          comienzan con una buena
-          conversación.”
-
+          “Las mejores bodas comienzan con una buena conversación.”
         </p>
 
 
@@ -1259,7 +1086,6 @@
           <!-- TELÉFONO -->
 
           <div class="data-item">
-
 
             <div class="data-icon">
 
@@ -1287,16 +1113,13 @@
 
             </div>
 
-
             <span class="data-label">
               TELÉFONO
             </span>
 
-
             <a href="tel:+34645242153">
               +34 645 24 21 53
             </a>
-
 
           </div>
 
@@ -1305,7 +1128,6 @@
           <!-- EMAIL -->
 
           <div class="data-item">
-
 
             <div class="data-icon">
 
@@ -1330,16 +1152,13 @@
 
             </div>
 
-
             <span class="data-label">
               EMAIL
             </span>
 
-
             <a href="mailto:bodasconcati@gmail.com">
               bodasconcati@gmail.com
             </a>
-
 
           </div>
 
@@ -1348,7 +1167,6 @@
           <!-- UBICACIÓN -->
 
           <div class="data-item">
-
 
             <div class="data-icon">
 
@@ -1372,16 +1190,13 @@
 
             </div>
 
-
             <span class="data-label">
               UBICACIÓN
             </span>
 
-
             <span>
               Mallorca, España
             </span>
-
 
           </div>
 
@@ -1404,17 +1219,12 @@
 
   <section class="closing">
 
-
     <p>
-
       Porque cada historia merece ser vivida
       a su manera.
-
     </p>
 
-
     <div class="closing-line"></div>
-
 
   </section>
 
