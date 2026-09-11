@@ -38,8 +38,7 @@
     ===================================== */
 
     header {
-      height: 120px;
-
+      height: 125px;
       padding: 0 5vw;
 
       display: flex;
@@ -54,7 +53,7 @@
 
 
     .logo {
-      width: 220px;
+      width: 260px;
       height: auto;
       display: block;
     }
@@ -70,7 +69,6 @@
     nav a {
       font-size: 18px;
       font-weight: 500;
-
       letter-spacing: 1.8px;
 
       color: #514a45;
@@ -99,18 +97,18 @@
 
       grid-template-columns: 42% 58%;
 
-      min-height: calc(100vh - 120px);
+      min-height: calc(100vh - 125px);
 
     }
 
 
     /* =====================================
-       COLUMNA IZQUIERDA
+       COLUMNA TEXTO
     ===================================== */
 
     .about-text {
 
-      padding: 70px 7vw 80px 5vw;
+      padding: 70px 6vw 90px 5vw;
 
       display: flex;
 
@@ -123,7 +121,7 @@
 
     .about-eyebrow {
 
-      font-size: 13px;
+      font-size: 15px;
 
       letter-spacing: 4px;
 
@@ -131,7 +129,7 @@
 
       color: #9b6f63;
 
-      margin-bottom: 27px;
+      margin-bottom: 28px;
 
     }
 
@@ -142,15 +140,15 @@
 
       font-weight: normal;
 
-      font-size: clamp(62px, 5.2vw, 84px);
+      font-size: clamp(68px, 5.4vw, 92px);
 
-      line-height: 0.96;
+      line-height: 0.95;
 
-      letter-spacing: -3px;
+      letter-spacing: -3.5px;
 
       color: #403936;
 
-      margin-bottom: 30px;
+      margin-bottom: 32px;
 
     }
 
@@ -166,35 +164,32 @@
 
     .about-line {
 
-      width: 55px;
+      width: 65px;
 
       height: 1px;
 
       background: #9b6f63;
 
-      margin-bottom: 27px;
+      margin-bottom: 32px;
 
     }
 
+
+    /* =====================================
+       TEXTO GRANDE
+    ===================================== */
 
     .about-text p {
 
       font-family: Georgia, "Times New Roman", serif;
 
-      font-size: 20px;
+      font-size: 25px;
 
       line-height: 1.55;
 
       color: #514a45;
 
-      margin-bottom: 21px;
-
-    }
-
-
-    .about-text p:last-of-type {
-
-      margin-bottom: 0;
+      margin-bottom: 26px;
 
     }
 
@@ -220,24 +215,24 @@
 
       font-style: italic;
 
-      font-size: 48px;
+      font-size: 58px;
 
       color: #9b6f63;
 
-      margin-top: 28px;
+      margin-top: 22px;
 
     }
 
 
     /* =====================================
-       COLUMNA FOTO
+       FOTO
     ===================================== */
 
     .about-photo {
 
       position: relative;
 
-      min-height: calc(100vh - 120px);
+      min-height: calc(100vh - 125px);
 
       overflow: hidden;
 
@@ -275,11 +270,11 @@
 
       bottom: 45px;
 
-      padding: 30px 35px;
+      padding: 32px 38px;
 
-      background: rgba(247, 242, 236, 0.93);
+      background: rgba(247, 242, 236, 0.94);
 
-      max-width: 650px;
+      max-width: 700px;
 
     }
 
@@ -290,7 +285,7 @@
 
       font-style: italic;
 
-      font-size: 25px;
+      font-size: 27px;
 
       line-height: 1.35;
 
@@ -300,12 +295,12 @@
 
 
     /* =====================================
-       FRASE FINAL
+       CIERRE
     ===================================== */
 
     .closing {
 
-      padding: 90px 30px 100px;
+      padding: 95px 30px 110px;
 
       text-align: center;
 
@@ -320,13 +315,13 @@
 
       font-style: italic;
 
-      font-size: clamp(38px, 4vw, 60px);
+      font-size: clamp(42px, 4.2vw, 64px);
 
       line-height: 1.2;
 
       color: #8f675d;
 
-      max-width: 1000px;
+      max-width: 1050px;
 
       margin: 0 auto;
 
@@ -339,7 +334,7 @@
 
     footer {
 
-      padding: 32px 20px;
+      padding: 35px 20px;
 
       text-align: center;
 
@@ -349,7 +344,7 @@
 
       color: #766e68;
 
-      font-size: 12px;
+      font-size: 13px;
 
       letter-spacing: 1.5px;
 
@@ -362,78 +357,70 @@
 
     @media (max-width: 1100px) {
 
-
       header {
-
         padding: 0 30px;
-
       }
 
 
       .logo {
-
-        width: 190px;
-
+        width: 230px;
       }
 
 
       nav {
-
         gap: 25px;
-
       }
 
 
       nav a {
-
-        font-size: 14px;
-
+        font-size: 16px;
       }
 
 
       .about-hero {
-
         grid-template-columns: 45% 55%;
-
       }
 
 
       .about-text {
+        padding: 65px 35px 80px 30px;
+      }
 
-        padding: 60px 35px 70px 30px;
 
+      .about-eyebrow {
+        font-size: 14px;
       }
 
 
       .about-title {
-
-        font-size: 60px;
-
+        font-size: 68px;
       }
 
 
+      /* AQUÍ AUMENTAMOS MUCHO EL TEXTO */
+
       .about-text p {
+        font-size: 23px;
+        line-height: 1.55;
+      }
 
-        font-size: 18px;
 
+      .signature {
+        font-size: 54px;
       }
 
 
       .photo-quote {
-
         left: 30px;
-
         right: 30px;
-
         bottom: 30px;
 
+        padding: 28px 30px;
       }
 
 
       .photo-quote p {
-
-        font-size: 22px;
-
+        font-size: 24px;
       }
 
     }
@@ -452,19 +439,17 @@
 
         height: auto;
 
-        padding: 22px 20px;
+        padding: 24px 20px;
 
         flex-direction: column;
 
-        gap: 18px;
+        gap: 20px;
 
       }
 
 
       .logo {
-
         width: 190px;
-
       }
 
 
@@ -476,7 +461,7 @@
 
         flex-wrap: wrap;
 
-        gap: 12px 18px;
+        gap: 13px 18px;
 
       }
 
@@ -507,7 +492,7 @@
 
       .about-text {
 
-        padding: 65px 25px 65px;
+        padding: 65px 25px 70px;
 
         display: block;
 
@@ -516,51 +501,55 @@
 
       .about-eyebrow {
 
-        font-size: 11px;
+        font-size: 12px;
 
         letter-spacing: 3px;
 
-        margin-bottom: 20px;
+        margin-bottom: 21px;
 
       }
 
 
       .about-title {
 
-        font-size: clamp(52px, 14vw, 70px);
+        font-size: clamp(54px, 15vw, 76px);
 
-        line-height: 0.96;
+        line-height: 0.95;
 
-        letter-spacing: -2px;
+        letter-spacing: -2.5px;
 
-        margin-bottom: 28px;
+        margin-bottom: 30px;
 
       }
 
 
       .about-line {
 
-        margin-bottom: 25px;
+        width: 60px;
+
+        margin-bottom: 30px;
 
       }
 
 
+      /* TEXTO MUCHO MÁS GRANDE EN MÓVIL */
+
       .about-text p {
 
-        font-size: 19px;
+        font-size: 21px;
 
-        line-height: 1.55;
+        line-height: 1.58;
 
-        margin-bottom: 20px;
+        margin-bottom: 23px;
 
       }
 
 
       .signature {
 
-        font-size: 43px;
+        font-size: 50px;
 
-        margin-top: 25px;
+        margin-top: 28px;
 
       }
 
@@ -591,14 +580,14 @@
 
         bottom: 20px;
 
-        padding: 23px 24px;
+        padding: 25px 25px;
 
       }
 
 
       .photo-quote p {
 
-        font-size: 19px;
+        font-size: 20px;
 
         line-height: 1.4;
 
@@ -609,14 +598,14 @@
 
       .closing {
 
-        padding: 65px 25px 75px;
+        padding: 70px 25px 80px;
 
       }
 
 
       .closing p {
 
-        font-size: 37px;
+        font-size: 39px;
 
       }
 
@@ -629,7 +618,7 @@
 
         line-height: 1.6;
 
-        padding: 28px 20px;
+        padding: 30px 20px;
 
       }
 
@@ -843,7 +832,7 @@
 
 
     <!-- =================================
-         CIERRE
+         FRASE FINAL
     ================================= -->
 
     <section class="closing">
