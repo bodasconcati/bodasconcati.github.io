@@ -32,13 +32,15 @@
     }
 
 
-    /* =====================================
+    /* =========================================
        HEADER
-    ===================================== */
+    ========================================= */
 
     header {
       height: 125px;
-      padding: 0 7.5vw;
+      width: 100%;
+
+      padding: 0 5vw;
 
       display: flex;
       align-items: center;
@@ -47,39 +49,46 @@
       background: #f7f1e9;
     }
 
+
     .logo {
-      width: 260px;
+      width: 300px;
       height: auto;
       display: block;
     }
 
+
     nav {
       display: flex;
       align-items: center;
-      gap: 43px;
+      gap: 48px;
     }
+
 
     nav a {
       position: relative;
 
       font-family: Arial, Helvetica, sans-serif;
+
       font-size: 18px;
       font-weight: 400;
 
-      letter-spacing: 1.4px;
+      letter-spacing: 1.5px;
 
       color: #493b34;
 
       padding: 8px 0;
     }
 
+
     nav a:hover {
       color: #a66e57;
     }
 
+
     nav a.active {
       font-weight: 600;
     }
+
 
     nav a.active::after {
       content: "";
@@ -88,6 +97,7 @@
 
       left: 0;
       right: 0;
+
       bottom: -9px;
 
       height: 1px;
@@ -96,21 +106,28 @@
     }
 
 
-    /* =====================================
+
+    /* =========================================
        INTRO
-    ===================================== */
+    ========================================= */
 
     .intro {
+
+      width: 100%;
+
       text-align: center;
 
-      padding: 5px 4vw 28px;
+      padding: 0 3vw 32px;
     }
 
+
     .eyebrow {
-      margin-bottom: 10px;
+
+      margin-bottom: 9px;
 
       font-family: Arial, Helvetica, sans-serif;
-      font-size: 15px;
+
+      font-size: 16px;
       font-weight: 600;
 
       letter-spacing: 4px;
@@ -118,29 +135,36 @@
       color: #b4785b;
     }
 
+
     .intro h1 {
-      font-size: clamp(72px, 6.8vw, 108px);
+
+      font-size: clamp(78px, 7vw, 115px);
 
       font-weight: 400;
 
-      line-height: 0.95;
+      line-height: 0.93;
 
-      letter-spacing: -4px;
+      letter-spacing: -5px;
 
       color: #49382f;
     }
 
+
     .intro h1 em {
+
       color: #bd785d;
+
       font-style: italic;
     }
 
+
     .intro p {
-      max-width: 900px;
 
-      margin: 14px auto 0;
+      max-width: 1050px;
 
-      font-size: 24px;
+      margin: 15px auto 0;
+
+      font-size: 26px;
 
       line-height: 1.3;
 
@@ -148,39 +172,45 @@
     }
 
 
-    /* =====================================
-       CONTENIDO PRINCIPAL
-    ===================================== */
+
+    /* =========================================
+       BLOQUE PRINCIPAL
+    ========================================= */
 
     .contact-section {
-      width: 90%;
 
-      max-width: 1500px;
+      width: 96%;
 
-      margin: 0 auto 25px;
+      max-width: 1600px;
+
+      margin: 0 auto 22px;
 
       display: grid;
 
       grid-template-columns: 1fr 1fr;
 
-      gap: 22px;
+      gap: 20px;
 
       align-items: stretch;
     }
 
 
-    /* =====================================
+
+    /* =========================================
        FORMULARIO
-    ===================================== */
+    ========================================= */
 
     .contact-form {
+
       background: #f1e6db;
 
-      padding: 34px 38px 32px;
+      padding: 40px 48px 38px;
     }
 
+
     .contact-form h2 {
-      font-size: clamp(48px, 4vw, 66px);
+
+      font-size: clamp(54px, 4.2vw, 72px);
 
       font-weight: 400;
 
@@ -188,116 +218,140 @@
 
       color: #49382f;
 
-      margin-bottom: 12px;
+      margin-bottom: 13px;
     }
 
+
     .contact-form h2 em {
+
       color: #bd785d;
 
       font-style: italic;
     }
 
+
     .form-intro {
-      font-size: 20px;
+
+      font-size: 21px;
 
       line-height: 1.35;
 
       color: #624c40;
 
-      margin-bottom: 22px;
+      margin-bottom: 25px;
 
-      max-width: 650px;
+      max-width: 750px;
     }
 
+
     form {
+
       display: flex;
 
       flex-direction: column;
 
-      gap: 13px;
+      gap: 15px;
     }
 
+
     .field {
+
       width: 100%;
     }
 
+
     .field label {
+
       display: block;
 
-      margin-bottom: 5px;
+      margin-bottom: 6px;
 
       font-family: Arial, Helvetica, sans-serif;
 
-      font-size: 11px;
+      font-size: 12px;
 
       letter-spacing: 2px;
 
       color: #735d51;
     }
 
+
     .field input,
     .field textarea {
+
       width: 100%;
 
       border: none;
 
       outline: none;
 
-      background: rgba(255, 252, 248, 0.8);
+      background: rgba(255, 252, 248, 0.85);
 
       color: #49382f;
 
       font-family: Georgia, "Times New Roman", serif;
 
-      font-size: 17px;
+      font-size: 18px;
 
-      padding: 12px 15px;
+      padding: 13px 16px;
 
       border: 1px solid transparent;
+
+      border-radius: 0;
 
       transition: border 0.3s ease;
     }
 
+
     .field input {
-      height: 44px;
+
+      height: 48px;
     }
 
+
     .field textarea {
-      min-height: 112px;
+
+      height: 135px;
+
+      min-height: 135px;
 
       resize: vertical;
 
-      line-height: 1.4;
+      line-height: 1.45;
     }
+
 
     .field input:focus,
     .field textarea:focus {
+
       border: 1px solid #c98a69;
     }
 
 
-    /* =====================================
+
+    /* =========================================
        BOTÓN
-    ===================================== */
+    ========================================= */
 
     .send-button {
-      width: 300px;
+
+      width: 320px;
 
       max-width: 100%;
 
-      margin: 3px auto 0;
+      margin: 4px auto 0;
 
-      padding: 16px 20px;
+      padding: 17px 20px;
 
       border: none;
 
       background: #c98a69;
 
-      color: white;
+      color: #fff;
 
       font-family: Arial, Helvetica, sans-serif;
 
-      font-size: 13px;
+      font-size: 14px;
 
       font-weight: 600;
 
@@ -310,18 +364,22 @@
         transform 0.3s ease;
     }
 
+
     .send-button:hover {
+
       background: #b87558;
 
       transform: translateY(-2px);
     }
 
 
-    /* =====================================
+
+    /* =========================================
        COLUMNA DERECHA
-    ===================================== */
+    ========================================= */
 
     .contact-info {
+
       background: #f1e6db;
 
       display: flex;
@@ -332,17 +390,23 @@
     }
 
 
-    /* FOTO */
+
+    /* =========================================
+       FOTO
+    ========================================= */
 
     .contact-photo {
+
       width: 100%;
 
-      height: 430px;
+      height: 500px;
 
       overflow: hidden;
     }
 
+
     .contact-photo img {
+
       width: 100%;
 
       height: 100%;
@@ -356,19 +420,23 @@
       transition: transform 0.5s ease;
     }
 
+
     .contact-info:hover .contact-photo img {
+
       transform: scale(1.02);
     }
 
 
-    /* =====================================
+
+    /* =========================================
        INFORMACIÓN
-    ===================================== */
+    ========================================= */
 
     .contact-details {
+
       flex: 1;
 
-      padding: 24px 25px 25px;
+      padding: 30px 35px 34px;
 
       text-align: center;
 
@@ -381,10 +449,12 @@
       align-items: center;
     }
 
-    .contact-quote {
-      max-width: 620px;
 
-      font-size: 28px;
+    .contact-quote {
+
+      max-width: 750px;
+
+      font-size: 31px;
 
       line-height: 1.25;
 
@@ -392,50 +462,58 @@
 
       color: #a66e57;
 
-      margin-bottom: 17px;
+      margin-bottom: 20px;
     }
 
+
     .contact-line {
-      width: 65px;
+
+      width: 70px;
 
       height: 1px;
 
       background: #b8876f;
 
-      margin-bottom: 21px;
+      margin-bottom: 25px;
     }
 
 
-    /* =====================================
-       DATOS DE CONTACTO
-    ===================================== */
+
+    /* =========================================
+       DATOS
+    ========================================= */
 
     .contact-data {
+
       width: 100%;
 
       display: grid;
 
       grid-template-columns: repeat(3, 1fr);
 
-      gap: 15px;
+      gap: 25px;
     }
 
+
     .data-item {
+
       display: flex;
 
       flex-direction: column;
 
       align-items: center;
 
-      gap: 7px;
+      gap: 8px;
 
       min-width: 0;
     }
 
-    .data-icon {
-      width: 30px;
 
-      height: 30px;
+    .data-icon {
+
+      width: 34px;
+
+      height: 34px;
 
       display: flex;
 
@@ -446,10 +524,12 @@
       color: #bd785d;
     }
 
-    .data-icon svg {
-      width: 25px;
 
-      height: 25px;
+    .data-icon svg {
+
+      width: 28px;
+
+      height: 28px;
 
       stroke: currentColor;
 
@@ -462,42 +542,54 @@
       stroke-linejoin: round;
     }
 
+
     .data-label {
+
       font-family: Arial, Helvetica, sans-serif;
 
-      font-size: 10px;
+      font-size: 11px;
 
-      letter-spacing: 1.8px;
+      letter-spacing: 2px;
 
       color: #9a8175;
 
       text-transform: uppercase;
     }
 
+
     .data-item a,
     .data-item span:not(.data-label) {
-      font-size: 16px;
+
+      font-size: 18px;
 
       line-height: 1.3;
 
       color: #604a3e;
 
       word-break: break-word;
+
+      text-align: center;
     }
 
+
     .data-item a:hover {
+
       color: #b87558;
     }
 
 
-    /* =====================================
+
+    /* =========================================
        FRASE FINAL
-    ===================================== */
+    ========================================= */
 
     .closing {
-      min-height: 170px;
 
-      padding: 45px 25px;
+      width: 100%;
+
+      min-height: 150px;
+
+      padding: 38px 25px 42px;
 
       display: flex;
 
@@ -510,12 +602,12 @@
       text-align: center;
 
       background: #f7f1e9;
-
-      margin-top: 0;
     }
 
+
     .closing p {
-      font-size: 29px;
+
+      font-size: 31px;
 
       line-height: 1.3;
 
@@ -523,12 +615,14 @@
 
       color: #704c3c;
 
-      max-width: 900px;
+      max-width: 1000px;
 
       margin-bottom: 20px;
     }
 
+
     .closing-line {
+
       width: 70px;
 
       height: 1px;
@@ -537,12 +631,14 @@
     }
 
 
-    /* =====================================
+
+    /* =========================================
        FOOTER
-    ===================================== */
+    ========================================= */
 
     footer {
-      padding: 27px 20px;
+
+      padding: 25px 20px;
 
       text-align: center;
 
@@ -560,61 +656,93 @@
     }
 
 
-    /* =====================================
+
+    /* =========================================
        TABLET
-    ===================================== */
+    ========================================= */
 
     @media (max-width: 1100px) {
 
       header {
-        padding: 0 35px;
+
+        padding: 0 30px;
       }
+
 
       .logo {
-        width: 230px;
+
+        width: 245px;
       }
 
+
       nav {
+
         gap: 25px;
       }
 
+
       nav a {
-        font-size: 16px;
+
+        font-size: 15px;
       }
+
+
+      .intro h1 {
+
+        font-size: 76px;
+      }
+
+
+      .intro p {
+
+        font-size: 22px;
+      }
+
 
       .contact-section {
-        width: 94%;
 
-        gap: 18px;
+        width: 95%;
+
+        gap: 16px;
       }
+
 
       .contact-form {
-        padding: 30px 27px;
+
+        padding: 32px 28px;
       }
+
 
       .contact-photo {
-        height: 390px;
+
+        height: 430px;
       }
 
+
       .contact-quote {
-        font-size: 24px;
+
+        font-size: 25px;
       }
+
 
       .data-item a,
       .data-item span:not(.data-label) {
+
         font-size: 14px;
       }
 
     }
 
 
-    /* =====================================
+
+    /* =========================================
        MÓVIL
-    ===================================== */
+    ========================================= */
 
     @media (max-width: 760px) {
 
       header {
+
         height: auto;
 
         padding: 22px 20px 24px;
@@ -624,11 +752,15 @@
         gap: 20px;
       }
 
+
       .logo {
-        width: 190px;
+
+        width: 200px;
       }
 
+
       nav {
+
         width: 100%;
 
         justify-content: center;
@@ -638,24 +770,32 @@
         gap: 11px 17px;
       }
 
+
       nav a {
+
         font-size: 12px;
 
         letter-spacing: 1.1px;
       }
 
+
       nav a.active::after {
+
         bottom: -5px;
       }
+
 
 
       /* INTRO */
 
       .intro {
-        padding: 38px 20px 28px;
+
+        padding: 40px 18px 28px;
       }
 
+
       .eyebrow {
+
         font-size: 12px;
 
         letter-spacing: 3px;
@@ -663,27 +803,33 @@
         margin-bottom: 15px;
       }
 
+
       .intro h1 {
-        font-size: clamp(48px, 13vw, 70px);
+
+        font-size: clamp(50px, 14vw, 72px);
 
         line-height: 1;
 
         letter-spacing: -2px;
       }
 
+
       .intro p {
+
         font-size: 20px;
 
         line-height: 1.4;
 
-        margin-top: 17px;
+        margin-top: 18px;
       }
 
 
-      /* CONTENIDO */
+
+      /* BLOQUE */
 
       .contact-section {
-        width: calc(100% - 24px);
+
+        width: calc(100% - 18px);
 
         display: flex;
 
@@ -695,51 +841,69 @@
       }
 
 
+
       /* FORMULARIO */
 
       .contact-form {
-        padding: 30px 20px 30px;
+
+        padding: 30px 20px 32px;
       }
 
+
       .contact-form h2 {
-        font-size: 47px;
+
+        font-size: 49px;
 
         line-height: 1;
 
         margin-bottom: 14px;
       }
 
+
       .form-intro {
+
         font-size: 19px;
 
         line-height: 1.4;
 
-        margin-bottom: 23px;
+        margin-bottom: 24px;
       }
 
+
       form {
+
         gap: 14px;
       }
 
+
       .field label {
+
         font-size: 10px;
 
         letter-spacing: 1.6px;
       }
 
+
       .field input {
-        height: 46px;
+
+        height: 47px;
 
         font-size: 16px;
       }
+
 
       .field textarea {
-        min-height: 140px;
+
+        height: 145px;
+
+        min-height: 145px;
 
         font-size: 16px;
       }
 
+
       .send-button {
+
         width: 100%;
 
         font-size: 12px;
@@ -748,20 +912,26 @@
       }
 
 
+
       /* FOTO */
 
       .contact-photo {
-        height: 390px;
+
+        height: 400px;
       }
 
 
-      /* INFO */
+
+      /* INFORMACIÓN */
 
       .contact-details {
+
         padding: 30px 20px 35px;
       }
 
+
       .contact-quote {
+
         font-size: 24px;
 
         line-height: 1.35;
@@ -769,38 +939,50 @@
         margin-bottom: 18px;
       }
 
+
       .contact-data {
+
         grid-template-columns: 1fr;
 
-        gap: 23px;
+        gap: 24px;
       }
 
+
       .data-item {
+
         gap: 6px;
       }
 
+
       .data-item a,
       .data-item span:not(.data-label) {
+
         font-size: 16px;
       }
+
 
 
       /* CIERRE */
 
       .closing {
-        min-height: 170px;
 
-        padding: 50px 25px;
+        min-height: 155px;
+
+        padding: 45px 25px;
       }
+
 
       .closing p {
+
         font-size: 26px;
       }
+
 
 
       /* FOOTER */
 
       footer {
+
         padding: 27px 20px;
 
         font-size: 10px;
@@ -818,9 +1000,9 @@
 <body>
 
 
-  <!-- =====================================
+  <!-- =========================================
        HEADER
-  ===================================== -->
+  ========================================= -->
 
   <header>
 
@@ -866,9 +1048,9 @@
 
 
 
-  <!-- =====================================
+  <!-- =========================================
        INTRO
-  ===================================== -->
+  ========================================= -->
 
   <section class="intro">
 
@@ -890,16 +1072,16 @@
 
 
 
-  <!-- =====================================
-       CONTACTO
-  ===================================== -->
+  <!-- =========================================
+       BLOQUE PRINCIPAL
+  ========================================= -->
 
   <main class="contact-section">
 
 
-    <!-- =================================
+    <!-- =====================================
          FORMULARIO
-    ================================== -->
+    ====================================== -->
 
     <section class="contact-form">
 
@@ -922,19 +1104,19 @@
       >
 
 
-        <!-- CONFIGURACIÓN -->
-
         <input
           type="hidden"
           name="_subject"
           value="Nuevo contacto desde Bodas Con Cati"
         >
 
+
         <input
           type="hidden"
           name="_captcha"
           value="false"
         >
+
 
         <input
           type="hidden"
@@ -1048,9 +1230,9 @@
 
 
 
-    <!-- =================================
-         FOTO + INFORMACIÓN
-    ================================== -->
+    <!-- =====================================
+         FOTO + DATOS
+    ====================================== -->
 
     <section class="contact-info">
 
@@ -1067,7 +1249,7 @@
       </div>
 
 
-      <!-- DATOS -->
+      <!-- INFORMACIÓN -->
 
       <div class="contact-details">
 
@@ -1213,9 +1395,9 @@
 
 
 
-  <!-- =====================================
+  <!-- =========================================
        FRASE FINAL
-  ===================================== -->
+  ========================================= -->
 
   <section class="closing">
 
@@ -1230,9 +1412,9 @@
 
 
 
-  <!-- =====================================
+  <!-- =========================================
        FOOTER
-  ===================================== -->
+  ========================================= -->
 
   <footer>
 
