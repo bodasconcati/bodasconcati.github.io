@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
 
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Sentir · Bodas Con Cati</title>
+  <title>Servicios · Bodas Con Cati</title>
 
   <style>
 
@@ -20,35 +21,31 @@
     }
 
     body {
-      font-family: Arial, Helvetica, sans-serif;
-      background: #f7f2ec;
-      color: #403936;
+      background: #f7f1e9;
+      color: #49382f;
+      font-family: Georgia, "Times New Roman", serif;
     }
 
     a {
-      text-decoration: none;
       color: inherit;
+      text-decoration: none;
     }
 
 
-    /* =====================================
+    /* =========================
        HEADER
-    ===================================== */
+    ========================= */
 
     header {
       height: 125px;
-      padding: 0 5vw;
+      padding: 0 7.5vw;
 
       display: flex;
       align-items: center;
       justify-content: space-between;
 
-      background: #f7f2ec;
-
-      position: relative;
-      z-index: 10;
+      background: #f7f1e9;
     }
-
 
     .logo {
       width: 260px;
@@ -56,462 +53,325 @@
       display: block;
     }
 
-
     nav {
       display: flex;
       align-items: center;
       gap: 43px;
     }
 
-
     nav a {
+      position: relative;
+
+      font-family: Arial, Helvetica, sans-serif;
       font-size: 18px;
-      font-weight: 500;
-      letter-spacing: 1.8px;
+      font-weight: 400;
 
-      color: #514a45;
+      letter-spacing: 1.4px;
 
-      transition: opacity 0.3s ease;
+      color: #493b34;
+
+      padding: 8px 0;
     }
-
 
     nav a:hover {
-      opacity: 0.55;
+      color: #a66e57;
     }
-
 
     nav a.active {
-      color: #9b6f63;
+      font-weight: 600;
+    }
+
+    nav a.active::after {
+      content: "";
+
+      position: absolute;
+
+      left: 0;
+      right: 0;
+      bottom: -9px;
+
+      height: 1px;
+
+      background: #a66e57;
     }
 
 
-    /* =====================================
-       HERO SENTIR
-    ===================================== */
+    /* =========================
+       INTRO
+    ========================= */
 
-    .sentir-hero {
+    .intro {
+      text-align: center;
 
-      min-height: calc(100vh - 125px);
-
-      display: grid;
-
-      grid-template-columns: 48% 52%;
-
-      background: #f7f2ec;
+      padding: 0 5vw 25px;
     }
-
-
-    /* =====================================
-       TEXTO IZQUIERDA
-    ===================================== */
-
-    .sentir-content {
-
-      padding: 80px 7vw 90px 5vw;
-
-      display: flex;
-
-      flex-direction: column;
-
-      justify-content: center;
-
-    }
-
 
     .eyebrow {
+      margin-bottom: 13px;
 
+      font-family: Arial, Helvetica, sans-serif;
       font-size: 15px;
+      font-weight: 600;
 
       letter-spacing: 4px;
 
-      text-transform: uppercase;
+      color: #b4785b;
+    }
 
-      color: #9b6f63;
+    .intro h1 {
+      font-size: clamp(68px, 7vw, 105px);
+      font-weight: 400;
 
-      margin-bottom: 25px;
+      line-height: 0.98;
+      letter-spacing: -3px;
 
+      color: #49382f;
+    }
+
+    .intro h1 em {
+      color: #bd785d;
+      font-style: italic;
+    }
+
+    .intro p {
+      margin-top: 18px;
+
+      font-size: 25px;
+      line-height: 1.35;
+
+      color: #624c40;
     }
 
 
-    .sentir-title {
+    /* =========================
+       TARJETAS
+    ========================= */
 
-      font-family: Georgia, "Times New Roman", serif;
+    .services {
+      width: 84%;
+      max-width: 1320px;
 
-      font-size: clamp(80px, 8vw, 125px);
+      margin: 0 auto 22px;
 
-      font-weight: normal;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
 
+      gap: 32px;
+    }
+
+    .service-card {
+      background: #f3e8dd;
+
+      text-align: center;
+
+      overflow: hidden;
+
+      display: flex;
+      flex-direction: column;
+    }
+
+
+    /* FOTO */
+
+    .service-image {
+      width: 100%;
+      height: 540px;
+
+      overflow: hidden;
+    }
+
+    .service-image img {
+      width: 100%;
+      height: 100%;
+
+      object-fit: cover;
+
+      display: block;
+
+      transition: transform 0.5s ease;
+    }
+
+    .service-card:hover .service-image img {
+      transform: scale(1.03);
+    }
+
+
+    /* CONTENIDO */
+
+    .service-content {
+      padding: 18px 30px 17px;
+
+      flex: 1;
+
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .service-number {
+      display: none;
+    }
+
+    .service-content h2 {
+      font-size: clamp(55px, 4.5vw, 75px);
+
+      font-weight: 400;
       font-style: italic;
 
-      line-height: 0.9;
+      line-height: 0.95;
 
-      letter-spacing: -5px;
+      color: #49382f;
 
-      color: #9b6f63;
-
-      margin-bottom: 30px;
-
+      margin-bottom: 12px;
     }
 
+    .service-line {
+      width: 52px;
+      height: 1px;
 
-    .intro-text {
+      background: #b88870;
 
-      font-family: Georgia, "Times New Roman", serif;
-
-      font-size: 29px;
-
-      line-height: 1.4;
-
-      color: #403936;
-
-      max-width: 700px;
-
-      margin-bottom: 38px;
-
+      margin-bottom: 12px;
     }
 
+    .service-intro {
+      font-size: 20px;
+      line-height: 1.35;
 
-    .intro-text strong {
+      margin-bottom: 28px;
 
-      font-weight: normal;
-
-      font-style: italic;
-
-      color: #8f675d;
-
+      color: #574239;
     }
 
-
-    /* =====================================
-       LISTA
-    ===================================== */
-
-    .features {
-
+    .service-list {
       list-style: none;
 
-      max-width: 700px;
+      width: 100%;
 
-      margin-bottom: 38px;
+      font-size: 21px;
+      line-height: 1.45;
 
+      color: #6a5143;
+
+      margin-bottom: 27px;
+    }
+
+    .service-list li {
+      margin-bottom: 3px;
     }
 
 
-    .features li {
+    /* BOTÓN */
 
-      font-size: 22px;
+    .service-button {
+      margin-top: auto;
 
-      line-height: 1.5;
+      width: 230px;
 
-      color: #5d5651;
+      padding: 15px 20px;
 
-      padding: 12px 0;
+      background: #c98a69;
 
-      border-bottom: 1px solid rgba(120,100,90,0.18);
+      color: #fffaf5;
 
-    }
+      font-family: Arial, Helvetica, sans-serif;
 
-
-    .features li:first-child {
-
-      border-top: 1px solid rgba(120,100,90,0.18);
-
-    }
-
-
-    /* =====================================
-       BOTÓN PDF
-    ===================================== */
-
-    .pdf-button {
-
-      display: inline-block;
-
-      width: fit-content;
-
-      padding: 16px 27px;
-
-      border: 1px solid #9b6f63;
-
-      color: #9b6f63;
-
-      font-size: 13px;
+      font-size: 14px;
+      font-weight: 600;
 
       letter-spacing: 2px;
 
       transition:
         background 0.3s ease,
-        color 0.3s ease;
+        transform 0.3s ease;
+    }
 
+    .service-button:hover {
+      background: #b87558;
+
+      transform: translateY(-2px);
     }
 
 
-    .pdf-button:hover {
-
-      background: #9b6f63;
-
-      color: white;
-
-    }
-
-
-    /* =====================================
-       FOTO
-    ===================================== */
-
-    .sentir-photo {
-
-      position: relative;
-
-      min-height: calc(100vh - 125px);
-
-      overflow: hidden;
-
-      background: #ddd;
-
-    }
-
-
-    .sentir-photo img {
-
-      width: 100%;
-
-      height: 100%;
-
-      object-fit: cover;
-
-      object-position: center;
-
-      display: block;
-
-    }
-
-
-    /* =====================================
-       FRASE SOBRE FOTO
-    ===================================== */
-
-    .photo-quote {
-
-      position: absolute;
-
-      left: 40px;
-
-      right: 40px;
-
-      bottom: 40px;
-
-      padding: 30px 35px;
-
-      background: rgba(247,242,236,0.94);
-
-      max-width: 650px;
-
-    }
-
-
-    .photo-quote p {
-
-      font-family: Georgia, "Times New Roman", serif;
-
-      font-size: 25px;
-
-      line-height: 1.4;
-
-      font-style: italic;
-
-      color: #76574f;
-
-    }
-
-
-    /* =====================================
-       SEGUNDA SECCIÓN
-    ===================================== */
-
-    .details {
-
-      background: #eee3da;
-
-      padding: 100px 8vw 110px;
-
-    }
-
-
-    .details-inner {
-
-      max-width: 1250px;
-
-      margin: 0 auto;
-
-    }
-
-
-    .details-title {
-
-      font-family: Georgia, "Times New Roman", serif;
-
-      font-size: clamp(48px, 5vw, 75px);
-
-      font-weight: normal;
-
-      line-height: 1;
-
-      color: #403936;
-
-      margin-bottom: 55px;
-
-    }
-
-
-    .details-title em {
-
-      color: #9b6f63;
-
-      font-style: italic;
-
-    }
-
-
-    .details-grid {
-
-      display: grid;
-
-      grid-template-columns: repeat(2, 1fr);
-
-      gap: 60px 90px;
-
-    }
-
-
-    .detail {
-
-      border-top: 1px solid rgba(100,80,70,0.25);
-
-      padding-top: 22px;
-
-    }
-
-
-    .detail-number {
-
-      font-size: 13px;
-
-      letter-spacing: 3px;
-
-      color: #9b6f63;
-
-      margin-bottom: 15px;
-
-    }
-
-
-    .detail h3 {
-
-      font-family: Georgia, "Times New Roman", serif;
-
-      font-size: 30px;
-
-      font-weight: normal;
-
-      color: #403936;
-
-      margin-bottom: 13px;
-
-    }
-
-
-    .detail p {
-
-      font-size: 20px;
-
-      line-height: 1.55;
-
-      color: #5d5651;
-
-    }
-
-
-    /* =====================================
+    /* =========================
        CIERRE
-    ===================================== */
+    ========================= */
 
     .closing {
+      min-height: 160px;
 
-      background: #f7f2ec;
+      margin-top: 20px;
+
+      padding: 45px 20px 55px;
+
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
 
       text-align: center;
 
-      padding: 100px 30px 110px;
+      background:
+        linear-gradient(
+          rgba(247,241,233,0.72),
+          rgba(247,241,233,0.72)
+        ),
+        url("assets/hero%201.jpg");
 
+      background-size: cover;
+      background-position: center 58%;
     }
 
-
     .closing p {
-
-      font-family: Georgia, "Times New Roman", serif;
-
-      font-size: clamp(40px, 4.5vw, 65px);
-
-      line-height: 1.2;
+      font-size: 29px;
 
       font-style: italic;
 
-      color: #8f675d;
+      line-height: 1.3;
 
-      max-width: 1050px;
+      color: #704c3c;
 
-      margin: 0 auto 40px;
+      margin-bottom: 23px;
+    }
 
+    .closing-line {
+      width: 75px;
+      height: 1px;
+
+      background: #b8876f;
     }
 
 
-    .back-link {
-
-      font-size: 13px;
-
-      letter-spacing: 2px;
-
-      color: #9b6f63;
-
-      border-bottom: 1px solid #9b6f63;
-
-      padding-bottom: 7px;
-
-    }
-
-
-    /* =====================================
+    /* =========================
        FOOTER
-    ===================================== */
+    ========================= */
 
     footer {
-
-      padding: 35px 20px;
+      padding: 30px 20px;
 
       text-align: center;
 
-      background: #f7f2ec;
+      background: #f7f1e9;
 
-      border-top: 1px solid rgba(100,80,70,0.15);
+      border-top: 1px solid rgba(120, 90, 75, 0.15);
 
-      color: #766e68;
+      font-family: Arial, Helvetica, sans-serif;
 
       font-size: 13px;
+      letter-spacing: 1.4px;
 
-      letter-spacing: 1.5px;
-
+      color: #75665e;
     }
 
 
-    /* =====================================
+    /* =========================
        TABLET
-    ===================================== */
+    ========================= */
 
     @media (max-width: 1100px) {
 
       header {
-        padding: 0 30px;
+        padding: 0 35px;
       }
 
       .logo {
@@ -526,259 +386,184 @@
         font-size: 16px;
       }
 
-      .sentir-content {
-        padding: 60px 35px 70px 30px;
+      .services {
+        width: 92%;
+        gap: 22px;
       }
 
-      .sentir-title {
-        font-size: 85px;
+      .service-image {
+        height: 470px;
       }
 
-      .intro-text {
-        font-size: 24px;
+      .service-content {
+        padding-left: 20px;
+        padding-right: 20px;
       }
 
-      .features li {
+      .service-content h2 {
+        font-size: 58px;
+      }
+
+      .service-intro {
         font-size: 19px;
       }
 
-      .photo-quote {
-        left: 30px;
-        right: 30px;
-        bottom: 30px;
-      }
-
-      .photo-quote p {
-        font-size: 22px;
+      .service-list {
+        font-size: 19px;
       }
 
     }
 
 
-    /* =====================================
+    /* =========================
        MÓVIL
-    ===================================== */
+    ========================= */
 
     @media (max-width: 760px) {
 
       header {
-
         height: auto;
 
-        padding: 24px 20px;
+        padding: 22px 20px 24px;
 
         flex-direction: column;
 
         gap: 20px;
-
       }
-
 
       .logo {
         width: 190px;
       }
 
-
       nav {
-
         width: 100%;
 
         justify-content: center;
 
         flex-wrap: wrap;
 
-        gap: 13px 18px;
-
+        gap: 11px 17px;
       }
-
 
       nav a {
-
         font-size: 12px;
 
-        letter-spacing: 1.2px;
+        letter-spacing: 1.1px;
+      }
 
+      nav a.active::after {
+        bottom: -5px;
       }
 
 
-      /* HERO */
+      /* INTRO */
 
-      .sentir-hero {
-
-        display: flex;
-
-        flex-direction: column;
-
-        min-height: auto;
-
+      .intro {
+        padding: 45px 20px 30px;
       }
-
-
-      .sentir-content {
-
-        padding: 65px 25px 70px;
-
-        display: block;
-
-      }
-
 
       .eyebrow {
-
         font-size: 12px;
 
         letter-spacing: 3px;
 
-        margin-bottom: 20px;
+        margin-bottom: 17px;
+      }
 
+      .intro h1 {
+        font-size: clamp(50px, 14vw, 72px);
+
+        line-height: 1;
+
+        letter-spacing: -2px;
+      }
+
+      .intro p {
+        margin-top: 20px;
+
+        font-size: 21px;
+
+        line-height: 1.4;
       }
 
 
-      .sentir-title {
+      /* TARJETAS */
 
-        font-size: 85px;
+      .services {
+        width: calc(100% - 30px);
 
-        line-height: 0.9;
+        margin: 0 auto 25px;
 
-        letter-spacing: -4px;
+        display: flex;
+        flex-direction: column;
 
-        margin-bottom: 28px;
-
+        gap: 25px;
       }
 
-
-      .intro-text {
-
-        font-size: 23px;
-
-        line-height: 1.45;
-
-        margin-bottom: 32px;
-
+      .service-image {
+        height: 460px;
       }
 
-
-      .features {
-
-        margin-bottom: 32px;
-
+      .service-content {
+        padding: 22px 22px 25px;
       }
 
+      .service-content h2 {
+        font-size: 62px;
 
-      .features li {
+        margin-bottom: 14px;
+      }
 
-        font-size: 19px;
+      .service-line {
+        margin-bottom: 15px;
+      }
+
+      .service-intro {
+        font-size: 20px;
+
+        margin-bottom: 25px;
+      }
+
+      .service-list {
+        font-size: 20px;
 
         line-height: 1.5;
 
-        padding: 11px 0;
-
+        margin-bottom: 28px;
       }
 
+      .service-button {
+        width: 220px;
 
-      .pdf-button {
+        padding: 15px 18px;
 
-        font-size: 11px;
-
-        padding: 14px 21px;
-
-      }
-
-
-      /* FOTO */
-
-      .sentir-photo {
-
-        min-height: 650px;
-
-        height: 75vh;
-
-      }
-
-
-      .photo-quote {
-
-        left: 20px;
-
-        right: 20px;
-
-        bottom: 20px;
-
-        padding: 23px 24px;
-
-      }
-
-
-      .photo-quote p {
-
-        font-size: 20px;
-
-      }
-
-
-      /* DETAILS */
-
-      .details {
-
-        padding: 70px 25px 80px;
-
-      }
-
-
-      .details-title {
-
-        font-size: 48px;
-
-        margin-bottom: 45px;
-
-      }
-
-
-      .details-grid {
-
-        grid-template-columns: 1fr;
-
-        gap: 40px;
-
-      }
-
-
-      .detail h3 {
-
-        font-size: 27px;
-
-      }
-
-
-      .detail p {
-
-        font-size: 19px;
-
+        font-size: 12px;
       }
 
 
       /* CIERRE */
 
       .closing {
+        min-height: 180px;
 
-        padding: 70px 25px 80px;
+        margin-top: 0;
 
+        padding: 50px 25px;
       }
-
 
       .closing p {
-
-        font-size: 40px;
-
+        font-size: 27px;
       }
 
 
+      /* FOOTER */
+
       footer {
+        padding: 27px 20px;
 
         font-size: 10px;
 
         line-height: 1.6;
-
       }
 
     }
@@ -791,12 +576,11 @@
 <body>
 
 
-  <!-- =====================================
-       HEADER
-  ===================================== -->
+  <!-- =========================
+       CABECERA
+  ========================= -->
 
   <header>
-
 
     <a href="index.html">
 
@@ -811,16 +595,13 @@
 
     <nav>
 
-
       <a href="index.html">
         INICIO
       </a>
 
-
       <a href="sobre-mi.html">
         SOBRE MÍ
       </a>
-
 
       <a
         href="servicios.html"
@@ -829,16 +610,13 @@
         SERVICIOS
       </a>
 
-
       <a href="mallorca.html">
         MALLORCA
       </a>
 
-
       <a href="contacto.html">
         CONTACTO
       </a>
-
 
     </nav>
 
@@ -846,271 +624,282 @@
 
 
 
-  <!-- =====================================
-       HERO
-  ===================================== -->
+  <!-- =========================
+       INTRODUCCIÓN
+  ========================= -->
 
-  <main>
+  <section class="intro">
+
+    <div class="eyebrow">
+      SERVICIOS
+    </div>
+
+    <h1>
+      Tres formas de vivir
+      <em>vuestra boda.</em>
+    </h1>
+
+    <p>
+      Cada pareja es única, y por eso cada servicio se adapta a lo que necesitáis.
+    </p>
+
+  </section>
 
 
-    <section class="sentir-hero">
+
+  <!-- =========================
+       SERVICIOS
+  ========================= -->
+
+  <main class="services">
 
 
-      <!-- TEXTO -->
+    <!-- =====================
+         SENTIR
+    ====================== -->
 
-      <div class="sentir-content">
-
-
-        <div class="eyebrow">
-          SERVICIOS · 01
-        </div>
+    <article class="service-card">
 
 
-        <h1 class="sentir-title">
+      <div class="service-image">
+
+        <img
+          src="assets/sentir%201.jpg"
+          alt="Sentir · Bodas Con Cati"
+        >
+
+      </div>
+
+
+      <div class="service-content">
+
+
+        <h2>
           Sentir
-        </h1>
+        </h2>
 
 
-        <p class="intro-text">
+        <div class="service-line"></div>
 
-          Para parejas que ya lo tienen todo listo.
 
-          <strong>
-            Vosotros disfrutáis. Yo me ocupo de que todo fluya.
-          </strong>
+        <p class="service-intro">
+
+          Planificación y consulta<br>
+          Max 120 personas
 
         </p>
 
 
-        <ul class="features">
-
-
-          <li>
-            Planificación y consulta
-          </li>
-
+        <ul class="service-list">
 
           <li>
-            Máximo 120 personas
+            Para parejas que ya lo tienen todo listo.
           </li>
-
 
           <li>
             Os libero de preocupaciones 1 mes antes.
           </li>
 
-
           <li>
             Cuido con mimo a vuestros invitados y equipo.
           </li>
 
-
           <li>
-            Vigilo cada instante para que todo fluya.
+            Vigilando cada instante para que todo fluya.
           </li>
-
 
           <li>
             Vosotros vivís el momento, yo cuido los detalles.
           </li>
 
-
         </ul>
 
 
-        <!-- PDF EN EL FUTURO -->
-
         <a
           href="#"
-          class="pdf-button"
+          class="service-button"
         >
-          VER DOSSIER COMPLETO →
+          SABER MÁS →
         </a>
 
 
       </div>
 
+    </article>
 
 
-      <!-- FOTO -->
 
-      <div class="sentir-photo">
+    <!-- =====================
+         SOÑAR
+    ====================== -->
 
+    <article class="service-card">
+
+
+      <div class="service-image">
 
         <img
-          src="assets/sentir%201.jpg"
-          alt="Bodas Con Cati · Sentir"
+          src="assets/so%C3%B1ar%201.jpg"
+          alt="Soñar · Bodas Con Cati"
         >
-
-
-        <div class="photo-quote">
-
-          <p>
-
-            “Porque cuando llega el gran día,
-            lo único que importa es vivirlo.”
-
-          </p>
-
-        </div>
-
 
       </div>
 
 
-    </section>
+      <div class="service-content">
 
 
-
-    <!-- =====================================
-         DETALLES
-    ===================================== -->
-
-    <section class="details">
-
-
-      <div class="details-inner">
-
-
-        <h2 class="details-title">
-
-          Un servicio pensado para
-
-          <em>
-            disfrutar.
-          </em>
-
+        <h2>
+          Soñar
         </h2>
 
 
-        <div class="details-grid">
+        <div class="service-line"></div>
 
 
-          <!-- 01 -->
+        <p class="service-intro">
 
-          <article class="detail">
+          Planificación y consulta<br>
+          Max 120 personas
 
-            <div class="detail-number">
-              01
-            </div>
-
-            <h3>
-              Tranquilidad
-            </h3>
-
-            <p>
-              Un mes antes de vuestra boda me hago cargo de la
-              coordinación para que podáis dejar de preocuparos
-              por los detalles.
-            </p>
-
-          </article>
+        </p>
 
 
-          <!-- 02 -->
+        <ul class="service-list">
 
-          <article class="detail">
+          <li>
+            Diseñamos juntos una boda con vuestra esencia.
+          </li>
 
-            <div class="detail-number">
-              02
-            </div>
+          <li>
+            Busco al equipo de proveedores perfecto para vosotros.
+          </li>
 
-            <h3>
-              Coordinación
-            </h3>
+          <li>
+            Os quito el estrés del presupuesto y papeleo.
+          </li>
 
-            <p>
-              Estoy pendiente de cada momento, proveedor,
-              horario y detalle para que todo suceda como
-              estaba previsto.
-            </p>
+          <li>
+            Estoy en cada paso, visita y decisión.
+          </li>
 
-          </article>
+          <li>
+            Hacemos realidad el “Sí, quiero” que imagináis.
+          </li>
 
-
-          <!-- 03 -->
-
-          <article class="detail">
-
-            <div class="detail-number">
-              03
-            </div>
-
-            <h3>
-              Invitados
-            </h3>
-
-            <p>
-              Cuido de vuestros invitados y del equipo para
-              que vosotros podáis estar presentes y disfrutar
-              de cada instante.
-            </p>
-
-          </article>
+        </ul>
 
 
-          <!-- 04 -->
+        <a
+          href="#"
+          class="service-button"
+        >
+          SABER MÁS →
+        </a>
 
-          <article class="detail">
-
-            <div class="detail-number">
-              04
-            </div>
-
-            <h3>
-              Vosotros
-            </h3>
-
-            <p>
-              Mi objetivo es sencillo: que el día de vuestra
-              boda no estéis pendientes de nada excepto de
-              disfrutar juntos.
-            </p>
-
-          </article>
-
-
-        </div>
 
       </div>
 
-    </section>
+    </article>
 
 
 
-    <!-- =====================================
-         CIERRE
-    ===================================== -->
+    <!-- =====================
+         SIN FIN
+    ====================== -->
 
-    <section class="closing">
-
-
-      <p>
-
-        Vosotros vivís el momento.
-        Yo cuido los detalles.
-
-      </p>
+    <article class="service-card">
 
 
-      <a
-        href="servicios.html"
-        class="back-link"
-      >
-        ← VOLVER A SERVICIOS
-      </a>
+      <div class="service-image">
+
+        <img
+          src="assets/sin%20fin%201.jpg"
+          alt="Sin Fin · Bodas Con Cati"
+        >
+
+      </div>
 
 
-    </section>
+      <div class="service-content">
+
+
+        <h2>
+          Sin Fin
+        </h2>
+
+
+        <div class="service-line"></div>
+
+
+        <p class="service-intro">
+
+          Un fin de semana inolvidable
+
+        </p>
+
+
+        <ul class="service-list">
+
+          <li>
+            Incluye toda la magia del Pack Soñar.
+          </li>
+
+          <li>
+            ¿Y al despertar? Sigo a vuestro lado.
+          </li>
+
+          <li>
+            Organizo vuestra post boda.
+          </li>
+
+          <li>
+            Gestiono el cierre final para que descanséis.
+          </li>
+
+          <li>
+            Vuestro único plan: disfrutar sin prisas.
+          </li>
+
+        </ul>
+
+
+        <a
+          href="#"
+          class="service-button"
+        >
+          SABER MÁS →
+        </a>
+
+
+      </div>
+
+    </article>
 
 
   </main>
 
 
 
-  <!-- =====================================
+  <!-- =========================
+       FRASE FINAL
+  ========================= -->
+
+  <section class="closing">
+
+    <p>
+      Porque cada historia merece ser vivida a su manera.
+    </p>
+
+    <div class="closing-line"></div>
+
+  </section>
+
+
+
+  <!-- =========================
        FOOTER
-  ===================================== -->
+  ========================= -->
 
   <footer>
 
@@ -1121,4 +910,5 @@
 
 
 </body>
+
 </html>
