@@ -3,11 +3,9 @@
 <head>
 
   <meta charset="UTF-8">
-
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>Sobre mí · Bodas Con Cati</title>
-
 
   <style>
 
@@ -52,6 +50,8 @@
     }
 
 
+    /* LOGO CLARO PARA SOBRE MÍ */
+
     .logo {
       width: 260px;
       height: auto;
@@ -59,28 +59,26 @@
     }
 
 
+    /* MENÚ */
+
     nav {
       display: flex;
       align-items: center;
       gap: 43px;
     }
 
-
     nav a {
       font-size: 18px;
       font-weight: 500;
       letter-spacing: 1.8px;
-
       color: #514a45;
 
       transition: opacity 0.3s ease;
     }
 
-
     nav a:hover {
       opacity: 0.55;
     }
-
 
     nav a.active {
       color: #9b6f63;
@@ -92,116 +90,88 @@
     ===================================== */
 
     .about-hero {
-
       display: grid;
-
       grid-template-columns: 42% 58%;
-
       min-height: calc(100vh - 125px);
-
     }
 
 
     /* =====================================
-       COLUMNA TEXTO
+       COLUMNA IZQUIERDA
     ===================================== */
 
     .about-text {
-
       padding: 70px 6vw 90px 5vw;
 
       display: flex;
-
       flex-direction: column;
-
       justify-content: center;
-
     }
 
 
     .about-eyebrow {
-
       font-size: 15px;
-
       letter-spacing: 4px;
-
       text-transform: uppercase;
 
       color: #9b6f63;
 
       margin-bottom: 28px;
-
     }
 
 
     .about-title {
-
       font-family: Georgia, "Times New Roman", serif;
-
       font-weight: normal;
 
       font-size: clamp(68px, 5.4vw, 92px);
 
       line-height: 0.95;
-
       letter-spacing: -3.5px;
 
       color: #403936;
 
       margin-bottom: 32px;
-
     }
 
 
     .about-title em {
-
       color: #a4776b;
-
       font-style: italic;
-
     }
 
 
     .about-line {
-
       width: 65px;
-
       height: 1px;
 
       background: #9b6f63;
 
       margin-bottom: 32px;
-
     }
 
 
     /* =====================================
-       TEXTO GRANDE
+       TEXTO
     ===================================== */
 
     .about-text p {
-
       font-family: Georgia, "Times New Roman", serif;
 
       font-size: 25px;
-
       line-height: 1.55;
 
       color: #514a45;
 
       margin-bottom: 26px;
-
     }
 
 
     .about-text p strong {
-
       font-weight: normal;
-
       font-style: italic;
 
       color: #8f675d;
-
     }
 
 
@@ -210,7 +180,6 @@
     ===================================== */
 
     .signature {
-
       font-family: Georgia, "Times New Roman", serif;
 
       font-style: italic;
@@ -220,7 +189,6 @@
       color: #9b6f63;
 
       margin-top: 22px;
-
     }
 
 
@@ -229,7 +197,6 @@
     ===================================== */
 
     .about-photo {
-
       position: relative;
 
       min-height: calc(100vh - 125px);
@@ -237,14 +204,11 @@
       overflow: hidden;
 
       background: #ddd;
-
     }
 
 
     .about-photo img {
-
       width: 100%;
-
       height: 100%;
 
       object-fit: cover;
@@ -252,7 +216,6 @@
       object-position: center;
 
       display: block;
-
     }
 
 
@@ -261,13 +224,10 @@
     ===================================== */
 
     .photo-quote {
-
       position: absolute;
 
       left: 45px;
-
       right: 45px;
-
       bottom: 45px;
 
       padding: 32px 38px;
@@ -275,12 +235,10 @@
       background: rgba(247, 242, 236, 0.94);
 
       max-width: 700px;
-
     }
 
 
     .photo-quote p {
-
       font-family: Georgia, "Times New Roman", serif;
 
       font-style: italic;
@@ -290,7 +248,6 @@
       line-height: 1.35;
 
       color: #76574f;
-
     }
 
 
@@ -299,18 +256,15 @@
     ===================================== */
 
     .closing {
-
       padding: 95px 30px 110px;
 
       text-align: center;
 
       background: #eee3da;
-
     }
 
 
     .closing p {
-
       font-family: Georgia, "Times New Roman", serif;
 
       font-style: italic;
@@ -324,7 +278,6 @@
       max-width: 1050px;
 
       margin: 0 auto;
-
     }
 
 
@@ -333,7 +286,6 @@
     ===================================== */
 
     footer {
-
       padding: 35px 20px;
 
       text-align: center;
@@ -347,7 +299,6 @@
       font-size: 13px;
 
       letter-spacing: 1.5px;
-
     }
 
 
@@ -361,54 +312,42 @@
         padding: 0 30px;
       }
 
-
       .logo {
         width: 230px;
       }
-
 
       nav {
         gap: 25px;
       }
 
-
       nav a {
         font-size: 16px;
       }
-
 
       .about-hero {
         grid-template-columns: 45% 55%;
       }
 
-
       .about-text {
         padding: 65px 35px 80px 30px;
       }
-
 
       .about-eyebrow {
         font-size: 14px;
       }
 
-
       .about-title {
         font-size: 68px;
       }
-
-
-      /* AQUÍ AUMENTAMOS MUCHO EL TEXTO */
 
       .about-text p {
         font-size: 23px;
         line-height: 1.55;
       }
 
-
       .signature {
         font-size: 54px;
       }
-
 
       .photo-quote {
         left: 30px;
@@ -417,7 +356,6 @@
 
         padding: 28px 30px;
       }
-
 
       .photo-quote p {
         font-size: 24px;
@@ -432,11 +370,7 @@
 
     @media (max-width: 760px) {
 
-
-      /* HEADER */
-
       header {
-
         height: auto;
 
         padding: 24px 20px;
@@ -444,7 +378,6 @@
         flex-direction: column;
 
         gap: 20px;
-
       }
 
 
@@ -454,7 +387,6 @@
 
 
       nav {
-
         width: 100%;
 
         justify-content: center;
@@ -462,56 +394,46 @@
         flex-wrap: wrap;
 
         gap: 13px 18px;
-
       }
 
 
       nav a {
-
         font-size: 12px;
 
         letter-spacing: 1.2px;
-
       }
 
 
       /* CONTENIDO */
 
       .about-hero {
-
         display: flex;
 
         flex-direction: column;
 
         min-height: auto;
-
       }
 
 
       /* TEXTO */
 
       .about-text {
-
         padding: 65px 25px 70px;
 
         display: block;
-
       }
 
 
       .about-eyebrow {
-
         font-size: 12px;
 
         letter-spacing: 3px;
 
         margin-bottom: 21px;
-
       }
 
 
       .about-title {
-
         font-size: clamp(54px, 15vw, 76px);
 
         line-height: 0.95;
@@ -519,107 +441,82 @@
         letter-spacing: -2.5px;
 
         margin-bottom: 30px;
-
       }
 
 
       .about-line {
-
         width: 60px;
 
         margin-bottom: 30px;
-
       }
 
 
-      /* TEXTO MUCHO MÁS GRANDE EN MÓVIL */
-
       .about-text p {
-
         font-size: 21px;
 
         line-height: 1.58;
 
         margin-bottom: 23px;
-
       }
 
 
       .signature {
-
         font-size: 50px;
 
         margin-top: 28px;
-
       }
 
 
       /* FOTO */
 
       .about-photo {
-
         min-height: 650px;
 
         height: 75vh;
-
       }
 
 
       .about-photo img {
-
         object-position: center;
-
       }
 
 
       .photo-quote {
-
         left: 20px;
-
         right: 20px;
-
         bottom: 20px;
 
         padding: 25px 25px;
-
       }
 
 
       .photo-quote p {
-
         font-size: 20px;
 
         line-height: 1.4;
-
       }
 
 
       /* CIERRE */
 
       .closing {
-
         padding: 70px 25px 80px;
-
       }
 
 
       .closing p {
-
         font-size: 39px;
-
       }
 
 
       /* FOOTER */
 
       footer {
-
         font-size: 10px;
 
         line-height: 1.6;
 
         padding: 30px 20px;
-
       }
 
     }
@@ -633,16 +530,15 @@
 
 
   <!-- =====================================
-       HEADER
+       CABECERA
   ===================================== -->
 
   <header>
 
-
     <a href="index.html">
 
       <img
-        src="assets/logo%203.jpg"
+        src="assets/logo%202.jpg"
         alt="Bodas Con Cati"
         class="logo"
       >
@@ -652,11 +548,9 @@
 
     <nav>
 
-
       <a href="index.html">
         INICIO
       </a>
-
 
       <a
         href="sobre-mi.html"
@@ -665,24 +559,19 @@
         SOBRE MÍ
       </a>
 
-
       <a href="servicios.html">
         SERVICIOS
       </a>
-
 
       <a href="mallorca.html">
         MALLORCA
       </a>
 
-
       <a href="contacto.html">
         CONTACTO
       </a>
 
-
     </nav>
-
 
   </header>
 
@@ -694,7 +583,6 @@
 
   <main>
 
-
     <section class="about-hero">
 
 
@@ -703,7 +591,6 @@
       ================================= -->
 
       <div class="about-text">
-
 
         <div class="about-eyebrow">
           SOBRE MÍ
@@ -725,57 +612,45 @@
 
 
         <p>
-
           Hace más de diez años comencé mi camino en el mundo
           de los eventos. Pero fue al descubrir el mundo de las
           bodas cuando entendí que había encontrado aquello que
           realmente me apasionaba.
-
         </p>
 
 
         <p>
-
           Desde entonces, cada pareja, cada historia y cada boda
           son diferentes para mí. No creo en las bodas hechas
           siguiendo un mismo patrón.
-
         </p>
 
 
         <p>
-
           Me adapto a vosotros, a vuestra personalidad, a
           vuestras ideas y, por supuesto, al tipo de boda que
           soñáis.
-
         </p>
 
 
         <p>
-
           Ya sea una celebración íntima o una gran boda, estaré
           a vuestro lado para ayudaros en todo aquello que
           necesitéis.
-
         </p>
 
 
         <p>
-
           Mi forma de trabajar es muy personal y cercana.
           Me gusta conoceros, escucharos y entender qué queréis
           vivir ese día.
-
         </p>
 
 
         <p>
-
           Por eso, durante todo el proceso, nos reunimos,
           hablamos, organizamos y vamos dando forma juntos a
           cada detalle.
-
         </p>
 
 
@@ -794,7 +669,6 @@
           Cati
         </div>
 
-
       </div>
 
 
@@ -805,7 +679,6 @@
 
       <div class="about-photo">
 
-
         <img
           src="assets/cati%201.jpg"
           alt="Cati · Bodas Con Cati"
@@ -815,14 +688,11 @@
         <div class="photo-quote">
 
           <p>
-
             “Detrás de cada boda hay una gran historia.
             Y me encanta formar parte de ella.”
-
           </p>
 
         </div>
-
 
       </div>
 
@@ -838,10 +708,8 @@
     <section class="closing">
 
       <p>
-
         Porque vuestra boda no tiene que parecerse
         a ninguna otra.
-
       </p>
 
     </section>
