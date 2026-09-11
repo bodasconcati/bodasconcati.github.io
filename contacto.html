@@ -1,1 +1,1437 @@
+<!DOCTYPE html>
+<html lang="es">
 
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Contacto · Bodas Con Cati</title>
+
+  <style>
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: #f7f1e9;
+      color: #49382f;
+      font-family: Georgia, "Times New Roman", serif;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+
+    /* =====================================
+       HEADER
+    ===================================== */
+
+    header {
+      height: 125px;
+
+      padding: 0 7.5vw;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      background: #f7f1e9;
+    }
+
+
+    .logo {
+      width: 260px;
+      height: auto;
+      display: block;
+    }
+
+
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 43px;
+    }
+
+
+    nav a {
+      position: relative;
+
+      font-family: Arial, Helvetica, sans-serif;
+
+      font-size: 18px;
+      font-weight: 400;
+
+      letter-spacing: 1.4px;
+
+      color: #493b34;
+
+      padding: 8px 0;
+    }
+
+
+    nav a:hover {
+      color: #a66e57;
+    }
+
+
+    nav a.active {
+      font-weight: 600;
+    }
+
+
+    nav a.active::after {
+      content: "";
+
+      position: absolute;
+
+      left: 0;
+      right: 0;
+      bottom: -9px;
+
+      height: 1px;
+
+      background: #a66e57;
+    }
+
+
+    /* =====================================
+       INTRO
+    ===================================== */
+
+    .intro {
+
+      text-align: center;
+
+      padding: 0 5vw 35px;
+    }
+
+
+    .eyebrow {
+
+      margin-bottom: 13px;
+
+      font-family: Arial, Helvetica, sans-serif;
+
+      font-size: 15px;
+      font-weight: 600;
+
+      letter-spacing: 4px;
+
+      color: #b4785b;
+    }
+
+
+    .intro h1 {
+
+      font-size: clamp(68px, 7vw, 105px);
+
+      font-weight: 400;
+
+      line-height: 0.98;
+
+      letter-spacing: -3px;
+
+      color: #49382f;
+    }
+
+
+    .intro h1 em {
+
+      color: #bd785d;
+
+      font-style: italic;
+    }
+
+
+    .intro p {
+
+      max-width: 850px;
+
+      margin: 18px auto 0;
+
+      font-size: 25px;
+
+      line-height: 1.4;
+
+      color: #624c40;
+    }
+
+
+    /* =====================================
+       CONTENIDO CONTACTO
+    ===================================== */
+
+    .contact-section {
+
+      width: 94%;
+
+      max-width: 1420px;
+
+      margin: 0 auto 30px;
+
+      display: grid;
+
+      grid-template-columns: 1fr 1fr;
+
+      gap: 28px;
+    }
+
+
+    /* =====================================
+       FORMULARIO
+    ===================================== */
+
+    .contact-form {
+
+      background: #f1e6db;
+
+      padding: 42px 40px 40px;
+    }
+
+
+    .contact-form h2 {
+
+      font-size: clamp(45px, 4vw, 65px);
+
+      font-weight: 400;
+
+      line-height: 1;
+
+      color: #49382f;
+
+      margin-bottom: 13px;
+    }
+
+
+    .contact-form h2 em {
+
+      color: #bd785d;
+
+      font-style: italic;
+    }
+
+
+    .form-intro {
+
+      font-size: 21px;
+
+      line-height: 1.45;
+
+      color: #624c40;
+
+      margin-bottom: 28px;
+
+      max-width: 650px;
+    }
+
+
+    form {
+
+      display: flex;
+
+      flex-direction: column;
+
+      gap: 17px;
+    }
+
+
+    .field {
+
+      width: 100%;
+    }
+
+
+    .field label {
+
+      display: block;
+
+      margin-bottom: 7px;
+
+      padding-left: 2px;
+
+      font-family: Arial, Helvetica, sans-serif;
+
+      font-size: 12px;
+
+      letter-spacing: 2px;
+
+      color: #735d51;
+    }
+
+
+    .field input,
+    .field textarea {
+
+      width: 100%;
+
+      border: none;
+
+      outline: none;
+
+      background: rgba(255, 252, 248, 0.75);
+
+      color: #49382f;
+
+      font-family: Georgia, "Times New Roman", serif;
+
+      font-size: 17px;
+
+      padding: 15px 16px;
+
+      border: 1px solid transparent;
+
+      transition: border 0.3s ease;
+    }
+
+
+    .field input {
+
+      height: 48px;
+    }
+
+
+    .field textarea {
+
+      min-height: 140px;
+
+      resize: vertical;
+
+      line-height: 1.5;
+    }
+
+
+    .field input:focus,
+    .field textarea:focus {
+
+      border: 1px solid #c98a69;
+    }
+
+
+    .send-button {
+
+      width: 310px;
+
+      max-width: 100%;
+
+      margin: 2px auto 0;
+
+      padding: 17px 20px;
+
+      border: none;
+
+      background: #c98a69;
+
+      color: white;
+
+      font-family: Arial, Helvetica, sans-serif;
+
+      font-size: 14px;
+
+      font-weight: 600;
+
+      letter-spacing: 2px;
+
+      cursor: pointer;
+
+      transition:
+        background 0.3s ease,
+        transform 0.3s ease;
+    }
+
+
+    .send-button:hover {
+
+      background: #b87558;
+
+      transform: translateY(-2px);
+    }
+
+
+    /* =====================================
+       COLUMNA DERECHA
+    ===================================== */
+
+    .contact-info {
+
+      background: #f1e6db;
+
+      display: flex;
+
+      flex-direction: column;
+    }
+
+
+    /* FOTO */
+
+    .contact-photo {
+
+      width: 100%;
+
+      height: 420px;
+
+      overflow: hidden;
+    }
+
+
+    .contact-photo img {
+
+      width: 100%;
+
+      height: 100%;
+
+      object-fit: cover;
+
+      object-position: center;
+
+      display: block;
+
+      transition: transform 0.5s ease;
+    }
+
+
+    .contact-info:hover .contact-photo img {
+
+      transform: scale(1.02);
+    }
+
+
+    /* =====================================
+       FRASE
+    ===================================== */
+
+    .contact-details {
+
+      flex: 1;
+
+      padding: 27px 30px 28px;
+
+      text-align: center;
+
+      display: flex;
+
+      flex-direction: column;
+
+      justify-content: center;
+
+      align-items: center;
+    }
+
+
+    .contact-quote {
+
+      max-width: 570px;
+
+      font-size: 30px;
+
+      line-height: 1.3;
+
+      font-style: italic;
+
+      color: #a66e57;
+
+      margin-bottom: 20px;
+    }
+
+
+    .contact-line {
+
+      width: 65px;
+
+      height: 1px;
+
+      background: #b8876f;
+
+      margin-bottom: 25px;
+    }
+
+
+    /* =====================================
+       DATOS
+    ===================================== */
+
+    .contact-data {
+
+      width: 100%;
+
+      display: grid;
+
+      grid-template-columns: repeat(3, 1fr);
+
+      gap: 20px;
+    }
+
+
+    .data-item {
+
+      display: flex;
+
+      flex-direction: column;
+
+      align-items: center;
+
+      gap: 9px;
+    }
+
+
+    .data-icon {
+
+      width: 32px;
+
+      height: 32px;
+
+      display: flex;
+
+      align-items: center;
+
+      justify-content: center;
+
+      color: #bd785d;
+    }
+
+
+    .data-icon svg {
+
+      width: 27px;
+
+      height: 27px;
+
+      stroke: currentColor;
+
+      fill: none;
+
+      stroke-width: 1.6;
+
+      stroke-linecap: round;
+
+      stroke-linejoin: round;
+    }
+
+
+    .data-label {
+
+      font-family: Arial, Helvetica, sans-serif;
+
+      font-size: 10px;
+
+      letter-spacing: 2px;
+
+      color: #9a8175;
+
+      text-transform: uppercase;
+    }
+
+
+    .data-item a,
+    .data-item span {
+
+      font-size: 17px;
+
+      line-height: 1.3;
+
+      color: #604a3e;
+
+      word-break: break-word;
+    }
+
+
+    .data-item a:hover {
+
+      color: #b87558;
+    }
+
+
+    /* =====================================
+       FRASE FINAL CON FOTO
+    ===================================== */
+
+    .closing {
+
+      min-height: 245px;
+
+      padding: 70px 25px;
+
+      display: flex;
+
+      flex-direction: column;
+
+      align-items: center;
+
+      justify-content: center;
+
+      text-align: center;
+
+      background:
+        linear-gradient(
+          rgba(247, 241, 233, 0.65),
+          rgba(247, 241, 233, 0.65)
+        ),
+        url("assets/contacto.jpg");
+
+      background-size: cover;
+
+      background-position: center;
+
+      margin-top: 5px;
+    }
+
+
+    .closing p {
+
+      font-size: 30px;
+
+      line-height: 1.3;
+
+      font-style: italic;
+
+      color: #704c3c;
+
+      max-width: 900px;
+
+      margin-bottom: 24px;
+    }
+
+
+    .closing-line {
+
+      width: 70px;
+
+      height: 1px;
+
+      background: #b8876f;
+    }
+
+
+    /* =====================================
+       FOOTER
+    ===================================== */
+
+    footer {
+
+      padding: 31px 20px;
+
+      text-align: center;
+
+      background: #f7f1e9;
+
+      border-top: 1px solid rgba(120, 90, 75, 0.15);
+
+      font-family: Arial, Helvetica, sans-serif;
+
+      font-size: 13px;
+
+      letter-spacing: 1.4px;
+
+      color: #75665e;
+    }
+
+
+    /* =====================================
+       TABLET
+    ===================================== */
+
+    @media (max-width: 1100px) {
+
+      header {
+
+        padding: 0 35px;
+      }
+
+
+      .logo {
+
+        width: 230px;
+      }
+
+
+      nav {
+
+        gap: 25px;
+      }
+
+
+      nav a {
+
+        font-size: 16px;
+      }
+
+
+      .contact-section {
+
+        width: 92%;
+
+        gap: 22px;
+      }
+
+
+      .contact-form {
+
+        padding: 35px 28px;
+      }
+
+
+      .contact-photo {
+
+        height: 380px;
+      }
+
+
+      .contact-quote {
+
+        font-size: 25px;
+      }
+
+
+      .data-item a,
+      .data-item span {
+
+        font-size: 15px;
+      }
+
+    }
+
+
+    /* =====================================
+       MÓVIL
+    ===================================== */
+
+    @media (max-width: 760px) {
+
+      header {
+
+        height: auto;
+
+        padding: 22px 20px 24px;
+
+        flex-direction: column;
+
+        gap: 20px;
+      }
+
+
+      .logo {
+
+        width: 190px;
+      }
+
+
+      nav {
+
+        width: 100%;
+
+        justify-content: center;
+
+        flex-wrap: wrap;
+
+        gap: 11px 17px;
+      }
+
+
+      nav a {
+
+        font-size: 12px;
+
+        letter-spacing: 1.1px;
+      }
+
+
+      nav a.active::after {
+
+        bottom: -5px;
+      }
+
+
+      /* INTRO */
+
+      .intro {
+
+        padding: 45px 20px 30px;
+      }
+
+
+      .eyebrow {
+
+        font-size: 12px;
+
+        letter-spacing: 3px;
+
+        margin-bottom: 17px;
+      }
+
+
+      .intro h1 {
+
+        font-size: clamp(48px, 13vw, 70px);
+
+        line-height: 1;
+
+        letter-spacing: -2px;
+      }
+
+
+      .intro p {
+
+        font-size: 21px;
+
+        line-height: 1.4;
+
+        margin-top: 20px;
+      }
+
+
+      /* CONTENIDO */
+
+      .contact-section {
+
+        width: calc(100% - 30px);
+
+        display: flex;
+
+        flex-direction: column;
+
+        gap: 25px;
+
+        margin-bottom: 25px;
+      }
+
+
+      /* FORMULARIO */
+
+      .contact-form {
+
+        padding: 30px 22px 32px;
+      }
+
+
+      .contact-form h2 {
+
+        font-size: 48px;
+
+        line-height: 1;
+
+        margin-bottom: 15px;
+      }
+
+
+      .form-intro {
+
+        font-size: 19px;
+
+        line-height: 1.45;
+
+        margin-bottom: 25px;
+      }
+
+
+      form {
+
+        gap: 15px;
+      }
+
+
+      .field label {
+
+        font-size: 10px;
+
+        letter-spacing: 1.7px;
+      }
+
+
+      .field input {
+
+        height: 48px;
+
+        font-size: 16px;
+      }
+
+
+      .field textarea {
+
+        min-height: 150px;
+
+        font-size: 16px;
+      }
+
+
+      .send-button {
+
+        width: 100%;
+
+        font-size: 12px;
+
+        padding: 16px;
+      }
+
+
+      /* FOTO */
+
+      .contact-photo {
+
+        height: 390px;
+      }
+
+
+      /* INFO */
+
+      .contact-details {
+
+        padding: 30px 20px 35px;
+      }
+
+
+      .contact-quote {
+
+        font-size: 24px;
+
+        line-height: 1.35;
+
+        margin-bottom: 20px;
+      }
+
+
+      .contact-data {
+
+        grid-template-columns: 1fr;
+
+        gap: 24px;
+      }
+
+
+      .data-item {
+
+        gap: 6px;
+      }
+
+
+      .data-item a,
+      .data-item span {
+
+        font-size: 16px;
+      }
+
+
+      /* CIERRE */
+
+      .closing {
+
+        min-height: 210px;
+
+        padding: 55px 25px;
+      }
+
+
+      .closing p {
+
+        font-size: 27px;
+      }
+
+
+      /* FOOTER */
+
+      footer {
+
+        padding: 27px 20px;
+
+        font-size: 10px;
+
+        line-height: 1.6;
+      }
+
+    }
+
+  </style>
+
+</head>
+
+
+<body>
+
+
+  <!-- =====================================
+       HEADER
+  ===================================== -->
+
+  <header>
+
+
+    <a href="index.html">
+
+      <img
+        src="assets/logo%202.jpg"
+        alt="Bodas Con Cati"
+        class="logo"
+      >
+
+    </a>
+
+
+    <nav>
+
+
+      <a href="index.html">
+        INICIO
+      </a>
+
+
+      <a href="sobre-mi.html">
+        SOBRE MÍ
+      </a>
+
+
+      <a href="servicios.html">
+        SERVICIOS
+      </a>
+
+
+      <a href="mallorca.html">
+        MALLORCA
+      </a>
+
+
+      <a
+        href="contacto.html"
+        class="active"
+      >
+        CONTACTO
+      </a>
+
+
+    </nav>
+
+  </header>
+
+
+
+  <!-- =====================================
+       INTRO
+  ===================================== -->
+
+  <section class="intro">
+
+
+    <div class="eyebrow">
+      CONTACTO
+    </div>
+
+
+    <h1>
+
+      Hablemos de
+      <em>vuestra boda.</em>
+
+    </h1>
+
+
+    <p>
+
+      Estoy aquí para escucharos, resolver vuestras dudas
+      y acompañaros en cada paso de este viaje tan especial.
+
+    </p>
+
+
+  </section>
+
+
+
+  <!-- =====================================
+       CONTACTO
+  ===================================== -->
+
+  <main class="contact-section">
+
+
+    <!-- =================================
+         FORMULARIO
+    ================================== -->
+
+    <section class="contact-form">
+
+
+      <h2>
+
+        Cuéntame
+        <em>tu historia</em>
+
+      </h2>
+
+
+      <p class="form-intro">
+
+        Rellena el formulario y me pondré en contacto contigo
+        lo antes posible.
+
+      </p>
+
+
+      <!--
+        FORMULARIO
+
+        Los mensajes se enviarán a:
+        bodasconcati@gmail.com
+
+        FormSubmit necesita una primera activación
+        cuando se utilice por primera vez.
+      -->
+
+      <form
+        action="https://formsubmit.co/bodasconcati@gmail.com"
+        method="POST"
+      >
+
+
+        <!-- CONFIGURACIÓN -->
+
+        <input
+          type="hidden"
+          name="_subject"
+          value="Nuevo contacto desde Bodas Con Cati"
+        >
+
+
+        <input
+          type="hidden"
+          name="_captcha"
+          value="false"
+        >
+
+
+        <input
+          type="hidden"
+          name="_template"
+          value="table"
+        >
+
+
+        <!-- NOMBRE -->
+
+        <div class="field">
+
+          <label for="nombre">
+            NOMBRE Y APELLIDOS *
+          </label>
+
+          <input
+            type="text"
+            id="nombre"
+            name="Nombre y apellidos"
+            required
+          >
+
+        </div>
+
+
+        <!-- EMAIL -->
+
+        <div class="field">
+
+          <label for="email">
+            EMAIL *
+          </label>
+
+          <input
+            type="email"
+            id="email"
+            name="Email"
+            required
+          >
+
+        </div>
+
+
+        <!-- TELÉFONO -->
+
+        <div class="field">
+
+          <label for="telefono">
+            TELÉFONO
+          </label>
+
+          <input
+            type="tel"
+            id="telefono"
+            name="Teléfono"
+          >
+
+        </div>
+
+
+        <!-- FECHA -->
+
+        <div class="field">
+
+          <label for="fecha">
+            FECHA DE LA BODA (APROXIMADA)
+          </label>
+
+          <input
+            type="text"
+            id="fecha"
+            name="Fecha de la boda"
+            placeholder="Ej. Septiembre 2027"
+          >
+
+        </div>
+
+
+        <!-- MENSAJE -->
+
+        <div class="field">
+
+          <label for="mensaje">
+            CUÉNTAME UN POCO SOBRE VUESTRA BODA *
+          </label>
+
+          <textarea
+            id="mensaje"
+            name="Mensaje"
+            required
+          ></textarea>
+
+        </div>
+
+
+        <!-- BOTÓN -->
+
+        <button
+          type="submit"
+          class="send-button"
+        >
+          ENVIAR MENSAJE →
+        </button>
+
+
+      </form>
+
+
+    </section>
+
+
+
+    <!-- =================================
+         FOTO + DATOS
+    ================================== -->
+
+    <section class="contact-info">
+
+
+      <!-- FOTO -->
+
+      <div class="contact-photo">
+
+        <img
+          src="assets/contacto.jpg"
+          alt="Bodas Con Cati · Contacto"
+        >
+
+      </div>
+
+
+      <!-- INFORMACIÓN -->
+
+      <div class="contact-details">
+
+
+        <p class="contact-quote">
+
+          “Las mejores bodas
+          comienzan con una buena
+          conversación.”
+
+        </p>
+
+
+        <div class="contact-line"></div>
+
+
+        <div class="contact-data">
+
+
+          <!-- TELÉFONO -->
+
+          <div class="data-item">
+
+
+            <div class="data-icon">
+
+              <svg
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+              >
+
+                <path
+                  d="M22 16.92v3a2 2 0 0 1-2.18 2
+                  19.79 19.79 0 0 1-8.63-3.07
+                  19.5 19.5 0 0 1-6-6
+                  19.79 19.79 0 0 1-3.07-8.67
+                  A2 2 0 0 1 4.11 2h3
+                  a2 2 0 0 1 2 1.72
+                  12.84 12.84 0 0 0 .7 2.81
+                  2 2 0 0 1-.45 2.11L8.09 9.91
+                  a16 16 0 0 0 6 6l1.27-1.27
+                  a2 2 0 0 1 2.11-.45
+                  12.84 12.84 0 0 0 2.81.7
+                  A2 2 0 0 1 22 16.92z"
+                ></path>
+
+              </svg>
+
+            </div>
+
+
+            <span class="data-label">
+              TELÉFONO
+            </span>
+
+
+            <a href="tel:+34645242153">
+              +34 645 24 21 53
+            </a>
+
+
+          </div>
+
+
+
+          <!-- EMAIL -->
+
+          <div class="data-item">
+
+
+            <div class="data-icon">
+
+              <svg
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+              >
+
+                <rect
+                  x="3"
+                  y="5"
+                  width="18"
+                  height="14"
+                  rx="2"
+                ></rect>
+
+                <polyline
+                  points="3,7 12,13 21,7"
+                ></polyline>
+
+              </svg>
+
+            </div>
+
+
+            <span class="data-label">
+              EMAIL
+            </span>
+
+
+            <a href="mailto:bodasconcati@gmail.com">
+              bodasconcati@gmail.com
+            </a>
+
+
+          </div>
+
+
+
+          <!-- UBICACIÓN -->
+
+          <div class="data-item">
+
+
+            <div class="data-icon">
+
+              <svg
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+              >
+
+                <path
+                  d="M20 10c0 5-8 12-8 12
+                  S4 15 4 10a8 8 0 1 1 16 0z"
+                ></path>
+
+                <circle
+                  cx="12"
+                  cy="10"
+                  r="2.5"
+                ></circle>
+
+              </svg>
+
+            </div>
+
+
+            <span class="data-label">
+              UBICACIÓN
+            </span>
+
+
+            <span>
+              Mallorca, España
+            </span>
+
+
+          </div>
+
+
+        </div>
+
+      </div>
+
+
+    </section>
+
+
+  </main>
+
+
+
+  <!-- =====================================
+       FRASE FINAL
+  ===================================== -->
+
+  <section class="closing">
+
+
+    <p>
+
+      Porque cada historia merece ser vivida
+      a su manera.
+
+    </p>
+
+
+    <div class="closing-line"></div>
+
+
+  </section>
+
+
+
+  <!-- =====================================
+       FOOTER
+  ===================================== -->
+
+  <footer>
+
+    Bodas Con Cati · Wedding Planner en Mallorca ·
+    Experiencias que se recuerdan toda la vida
+
+  </footer>
+
+
+</body>
+
+</html>
