@@ -30,19 +30,20 @@
     }
 
 
-    /* =========================
+    /* =====================================
        HERO
-    ========================= */
+    ===================================== */
 
     .hero {
-      min-height: 100vh;
+      min-height: 76vh;
       position: relative;
+
       background-image:
         linear-gradient(
           90deg,
-          rgba(30, 24, 21, 0.62) 0%,
-          rgba(30, 24, 21, 0.42) 40%,
-          rgba(30, 24, 21, 0.08) 75%
+          rgba(30, 24, 21, 0.64) 0%,
+          rgba(30, 24, 21, 0.45) 42%,
+          rgba(30, 24, 21, 0.08) 78%
         ),
         url("assets/hero%201.jpg");
 
@@ -52,12 +53,12 @@
     }
 
 
-    /* =========================
+    /* =====================================
        HEADER
-    ========================= */
+    ===================================== */
 
     header {
-      height: 100px;
+      height: 115px;
       padding: 0 5vw;
 
       display: flex;
@@ -69,7 +70,7 @@
     }
 
     .logo {
-      width: 145px;
+      width: 185px;
       height: auto;
       display: block;
     }
@@ -77,13 +78,17 @@
     nav {
       display: flex;
       align-items: center;
-      gap: 38px;
+      gap: 43px;
     }
 
     nav a {
       color: white;
-      font-size: 13px;
+
+      font-size: 16px;
+      font-weight: 500;
+
       letter-spacing: 1.8px;
+
       transition: opacity 0.3s ease;
     }
 
@@ -96,37 +101,46 @@
     }
 
 
-    /* =========================
+    /* =====================================
        HERO CONTENT
-    ========================= */
+    ===================================== */
 
     .hero-content {
-      width: 700px;
-      max-width: 70%;
+      width: 760px;
+      max-width: 68%;
 
       position: absolute;
+
       left: 5vw;
-      top: 50%;
-      transform: translateY(-43%);
+
+      top: 52%;
+
+      transform: translateY(-40%);
     }
 
     .eyebrow {
-      font-size: 13px;
+      font-size: 14px;
       letter-spacing: 4px;
+
       text-transform: uppercase;
-      margin-bottom: 27px;
+
+      margin-bottom: 22px;
+
       color: #f3ddd2;
     }
 
     .hero h1 {
       font-family: Georgia, "Times New Roman", serif;
+
       font-weight: normal;
 
-      font-size: clamp(72px, 7.5vw, 100px);
-      line-height: 0.94;
-      letter-spacing: -4px;
+      font-size: clamp(64px, 6vw, 88px);
 
-      margin-bottom: 35px;
+      line-height: 0.95;
+
+      letter-spacing: -3px;
+
+      margin-bottom: 24px;
     }
 
     .hero h1 em {
@@ -135,29 +149,31 @@
     }
 
     .hero-text {
-      max-width: 680px;
+      max-width: 730px;
 
-      font-size: 24px;
-      line-height: 1.55;
+      font-size: 20px;
 
-      color: rgba(255,255,255,0.94);
+      line-height: 1.45;
 
-      margin-bottom: 38px;
+      color: rgba(255,255,255,0.96);
+
+      margin-bottom: 27px;
     }
 
 
-    /* =========================
+    /* =====================================
        BOTÓN
-    ========================= */
+    ===================================== */
 
     .hero-button {
       display: inline-block;
 
-      padding: 16px 25px;
+      padding: 14px 23px;
 
-      border: 1px solid rgba(255,255,255,0.75);
+      border: 1px solid rgba(255,255,255,0.8);
 
       font-size: 13px;
+
       letter-spacing: 2px;
 
       color: white;
@@ -173,21 +189,22 @@
     }
 
 
-    /* =========================
-       SERVICIOS DESTACADOS
-    ========================= */
+    /* =====================================
+       SERVICIOS
+    ===================================== */
 
     .services-strip {
       background: #eee3da;
 
       display: grid;
+
       grid-template-columns: repeat(4, 1fr);
 
-      padding: 70px 5vw 75px;
+      padding: 42px 5vw 45px;
     }
 
     .service {
-      padding: 0 35px;
+      padding: 0 30px;
 
       border-right: 1px solid rgba(100,80,70,0.18);
     }
@@ -203,35 +220,41 @@
 
     .service-number {
       font-size: 12px;
+
       letter-spacing: 3px;
+
       color: #9b6f63;
 
-      margin-bottom: 17px;
+      margin-bottom: 11px;
     }
 
     .service h2 {
       font-family: Georgia, "Times New Roman", serif;
-      font-size: 28px;
+
+      font-size: 25px;
+
       font-weight: normal;
 
       color: #403936;
 
-      margin-bottom: 17px;
+      margin-bottom: 10px;
     }
 
     .service p {
-      font-size: 18px;
-      line-height: 1.55;
+      font-size: 16px;
+
+      line-height: 1.45;
+
       color: #655d58;
     }
 
 
-    /* =========================
+    /* =====================================
        FOOTER
-    ========================= */
+    ===================================== */
 
     footer {
-      padding: 35px 20px;
+      padding: 28px 20px;
 
       text-align: center;
 
@@ -242,61 +265,73 @@
       color: #766e68;
 
       font-size: 12px;
+
       letter-spacing: 1.5px;
     }
 
 
-    /* =========================
+    /* =====================================
        TABLET
-    ========================= */
+    ===================================== */
 
-    @media (max-width: 1000px) {
+    @media (max-width: 1100px) {
 
       header {
         padding: 0 30px;
       }
 
+      .logo {
+        width: 165px;
+      }
+
       nav {
-        gap: 20px;
+        gap: 25px;
       }
 
       nav a {
-        font-size: 11px;
+        font-size: 13px;
       }
 
       .hero-content {
-        width: 650px;
-        max-width: 75%;
+        max-width: 72%;
       }
 
       .hero h1 {
-        font-size: clamp(62px, 8vw, 82px);
+        font-size: 65px;
       }
 
       .hero-text {
-        font-size: 21px;
+        font-size: 18px;
       }
 
       .services-strip {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 45px 0;
+        padding-left: 30px;
+        padding-right: 30px;
       }
 
-      .service:nth-child(2) {
-        border-right: none;
+      .service {
+        padding: 0 20px;
+      }
+
+      .service h2 {
+        font-size: 22px;
+      }
+
+      .service p {
+        font-size: 15px;
       }
 
     }
 
 
-    /* =========================
+    /* =====================================
        MÓVIL
-    ========================= */
+    ===================================== */
 
     @media (max-width: 760px) {
 
       .hero {
-        min-height: 900px;
+        min-height: 820px;
 
         background-position: 62% center;
 
@@ -305,7 +340,7 @@
             180deg,
             rgba(25,20,18,0.25) 0%,
             rgba(25,20,18,0.48) 45%,
-            rgba(25,20,18,0.72) 100%
+            rgba(25,20,18,0.76) 100%
           ),
           url("assets/hero%201.jpg");
       }
@@ -316,15 +351,15 @@
       header {
         height: auto;
 
-        padding: 24px 22px;
+        padding: 22px 20px;
 
         flex-direction: column;
 
-        gap: 22px;
+        gap: 18px;
       }
 
       .logo {
-        width: 130px;
+        width: 155px;
       }
 
       nav {
@@ -334,59 +369,64 @@
 
         flex-wrap: wrap;
 
-        gap: 14px 18px;
+        gap: 12px 18px;
       }
 
       nav a {
-        font-size: 10px;
+        font-size: 11px;
+
         letter-spacing: 1.2px;
       }
 
 
-      /* CONTENT */
+      /* HERO */
 
       .hero-content {
         width: auto;
+
         max-width: none;
 
         left: 22px;
         right: 22px;
 
         top: auto;
-        bottom: 75px;
+
+        bottom: 55px;
 
         transform: none;
       }
 
       .eyebrow {
         font-size: 10px;
+
         letter-spacing: 3px;
 
-        margin-bottom: 20px;
+        margin-bottom: 18px;
       }
 
       .hero h1 {
-        font-size: clamp(55px, 15vw, 76px);
+        font-size: clamp(52px, 14vw, 72px);
 
         line-height: 0.95;
 
-        letter-spacing: -2.5px;
+        letter-spacing: -2px;
 
-        margin-bottom: 28px;
+        margin-bottom: 23px;
       }
 
       .hero-text {
-        font-size: 20px;
+        font-size: 18px;
 
-        line-height: 1.5;
+        line-height: 1.48;
 
-        margin-bottom: 30px;
+        margin-bottom: 25px;
       }
 
       .hero-button {
-        padding: 15px 20px;
+        padding: 14px 19px;
 
         font-size: 11px;
+
         letter-spacing: 1.7px;
       }
 
@@ -396,12 +436,13 @@
       .services-strip {
         display: block;
 
-        padding: 60px 25px;
+        padding: 55px 25px;
       }
 
       .service {
-        padding: 0 0 38px;
-        margin-bottom: 38px;
+        padding: 0 0 35px;
+
+        margin-bottom: 35px;
 
         border-right: none;
 
@@ -416,23 +457,24 @@
         border-bottom: none;
 
         margin-bottom: 0;
+
         padding-bottom: 0;
       }
 
       .service-number {
-        margin-bottom: 12px;
+        margin-bottom: 11px;
       }
 
       .service h2 {
-        font-size: 30px;
+        font-size: 29px;
 
-        margin-bottom: 13px;
+        margin-bottom: 12px;
       }
 
       .service p {
-        font-size: 19px;
+        font-size: 18px;
 
-        line-height: 1.55;
+        line-height: 1.5;
       }
 
 
@@ -443,7 +485,7 @@
 
         line-height: 1.6;
 
-        padding: 30px 20px;
+        padding: 28px 20px;
       }
 
     }
@@ -455,9 +497,9 @@
 <body>
 
 
-  <!-- =========================
+  <!-- =====================================
        HERO
-  ========================= -->
+  ===================================== -->
 
   <section class="hero">
 
@@ -504,7 +546,7 @@
     </header>
 
 
-    <!-- HERO TEXT -->
+    <!-- HERO CONTENT -->
 
     <div class="hero-content">
 
@@ -537,8 +579,6 @@
       </p>
 
 
-      <!-- AHORA SÍ FUNCIONA -->
-
       <a
         href="sobre-mi.html"
         class="hero-button"
@@ -552,14 +592,12 @@
 
 
 
-  <!-- =========================
-       SERVICIOS
-  ========================= -->
+  <!-- =====================================
+       SERVICIOS DESTACADOS
+  ===================================== -->
 
   <section class="services-strip">
 
-
-    <!-- 01 -->
 
     <article class="service">
 
@@ -579,7 +617,6 @@
     </article>
 
 
-    <!-- 02 -->
 
     <article class="service">
 
@@ -598,7 +635,6 @@
     </article>
 
 
-    <!-- 03 -->
 
     <article class="service">
 
@@ -618,7 +654,6 @@
     </article>
 
 
-    <!-- 04 -->
 
     <article class="service">
 
@@ -642,9 +677,9 @@
 
 
 
-  <!-- =========================
+  <!-- =====================================
        FOOTER
-  ========================= -->
+  ===================================== -->
 
   <footer>
 
