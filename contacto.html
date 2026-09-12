@@ -12,6 +12,10 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   background: #f7f3ed;
@@ -19,33 +23,46 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-/* =========================
-   CABECERA
-========================= */
+
+/* =====================================================
+   CABECERA — IGUAL DE GRANDE QUE LAS OTRAS PÁGINAS
+===================================================== */
 
 header {
-  height: 125px;
-  padding: 18px 4%;
+  width: 100%;
+  min-height: 145px;
+
+  padding: 22px 4%;
+
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+  background: #f7f3ed;
 }
 
 .logo {
-  width: 280px;
+  width: 300px;
+  height: auto;
   display: block;
 }
 
 nav {
   display: flex;
-  gap: 38px;
   align-items: center;
+  gap: 38px;
 }
 
 nav a {
-  text-decoration: none;
   color: #292727;
+  text-decoration: none;
+
   font-size: 18px;
+  font-weight: 400;
+
+  white-space: nowrap;
+
+  transition: opacity .25s ease;
 }
 
 nav a:hover {
@@ -53,189 +70,167 @@ nav a:hover {
 }
 
 
-/* =========================
+/* =====================================================
    INTRO
-========================= */
+===================================================== */
 
 .intro {
   width: 90%;
   max-width: 1750px;
-  margin: auto;
-  padding: 55px 0 45px;
+
+  margin: 0 auto;
+
+  padding: 55px 0 50px;
 }
 
 .eyebrow {
-  margin: 0 0 18px;
-  font-size: 13px;
+  margin: 0 0 20px;
+
+  font-size: 14px;
   letter-spacing: .18em;
+
   text-transform: uppercase;
+  font-weight: 500;
 }
 
 h1 {
   margin: 0;
-  font-size: clamp(65px, 6vw, 100px);
+
+  font-size: clamp(72px, 6vw, 100px);
+
   line-height: .94;
+
   font-weight: 400;
-  letter-spacing: -.05em;
+
+  letter-spacing: -.055em;
 }
 
 h1 em {
   font-family: Georgia, "Times New Roman", serif;
-  color: #ad8870;
+
   font-style: italic;
+
+  color: #ad8870;
 }
+
+
+/* EL TEXTO AHORA OCUPA MUCHO MÁS ANCHO */
 
 .intro-text {
-  max-width: 850px;
+  width: 100%;
+  max-width: 1450px;
+
   margin: 30px 0 0;
-  font-size: 22px;
-  line-height: 1.45;
+
+  font-size: 23px;
+
+  line-height: 1.5;
 }
 
 
-/* =========================
-   FOTO + FORMULARIO
-========================= */
+/* =====================================================
+   ZONA PRINCIPAL
+   IZQUIERDA = FORMULARIO
+   DERECHA = FOTO
+===================================================== */
 
 .contact-layout {
   width: 90%;
   max-width: 1750px;
-  margin: auto;
+
+  margin: 0 auto;
 
   display: grid;
+
   grid-template-columns: 1fr 1fr;
+
   gap: 65px;
 
   align-items: start;
 }
 
 
-/* =========================
-   FOTO
-========================= */
-
-.photo-column {
-  width: 100%;
-}
-
-.photo {
-  width: 100%;
-  height: 535px;
-  overflow: hidden;
-}
-
-.photo img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center top;
-  display: block;
-}
-
-
-/* =========================
-   CONTACTOS DEBAJO FOTO
-========================= */
-
-.contact-details {
-  padding: 28px 0 10px;
-
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 22px 45px;
-
-  border-bottom: 1px solid #cbb9aa;
-}
-
-.detail:last-child {
-  grid-column: 1 / -1;
-}
-
-.detail-title {
-  margin: 0 0 7px;
-
-  color: #a27d64;
-
-  font-size: 12px;
-  letter-spacing: .14em;
-  text-transform: uppercase;
-  font-weight: 600;
-}
-
-.detail a,
-.detail p {
-  margin: 0;
-
-  color: #292727;
-  text-decoration: none;
-
-  font-size: 20px;
-  line-height: 1.35;
-}
-
-.detail a:hover {
-  color: #a27d64;
-}
-
-
-/* =========================
-   CUESTIONARIO
-========================= */
+/* =====================================================
+   FORMULARIO — IZQUIERDA
+===================================================== */
 
 .form-box {
+
   background: #e9ddd2;
-  padding: 42px 48px 45px;
+
+  padding: 42px 48px 44px;
+
+  min-height: 535px;
 }
 
 .form-box h2 {
-  margin: 0 0 13px;
 
-  font-size: 43px;
-  line-height: 1;
+  margin: 0 0 14px;
+
+  font-size: 44px;
+
+  line-height: 1.03;
+
   font-weight: 400;
-  letter-spacing: -.04em;
+
+  letter-spacing: -.045em;
 }
 
 .form-intro {
-  margin: 0 0 30px;
+
+  margin: 0 0 29px;
 
   max-width: 650px;
 
   font-size: 17px;
+
   line-height: 1.45;
 }
 
+
+/* CAMPOS */
+
 .field {
-  margin-bottom: 19px;
+
+  margin-bottom: 18px;
 }
 
 .field label {
+
   display: block;
 
   margin-bottom: 6px;
 
   color: #946e58;
 
-  font-size: 11px;
+  font-size: 12px;
+
   letter-spacing: .13em;
+
   text-transform: uppercase;
+
   font-weight: 600;
 }
 
 .field input,
 .field textarea {
+
   width: 100%;
 
   border: none;
+
   border-bottom: 1.5px solid #a98974;
 
   background: transparent;
+
+  border-radius: 0;
 
   padding: 8px 0 9px;
 
   color: #292727;
 
   font-family: Arial, Helvetica, sans-serif;
+
   font-size: 17px;
 
   outline: none;
@@ -243,59 +238,164 @@ h1 em {
 
 .field input:focus,
 .field textarea:focus {
+
   border-bottom-color: #805b47;
 }
 
 .field input::placeholder,
 .field textarea::placeholder {
+
   color: #927d70;
+
+  opacity: 1;
 }
 
 .field textarea {
-  height: 80px;
+
+  height: 72px;
+
   resize: none;
 }
 
-.submit {
-  margin-top: 8px;
 
-  padding: 15px 27px;
+/* BOTÓN */
+
+.submit {
+
+  margin-top: 7px;
+
+  padding: 15px 28px;
 
   border: none;
 
   background: #a7836a;
-  color: white;
+
+  color: #ffffff;
 
   font-size: 13px;
-  letter-spacing: .12em;
+
+  letter-spacing: .13em;
 
   cursor: pointer;
+
+  transition: all .25s ease;
 }
 
 .submit:hover {
+
   background: #292727;
 }
 
 
-/* =========================
+/* =====================================================
+   COLUMNA FOTO — DERECHA
+===================================================== */
+
+.photo-column {
+
+  width: 100%;
+}
+
+.photo {
+
+  width: 100%;
+
+  height: 535px;
+
+  overflow: hidden;
+}
+
+.photo img {
+
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+
+  object-position: center top;
+}
+
+
+/* =====================================================
+   CONTACTOS DEBAJO DE LA FOTO
+===================================================== */
+
+.contact-details {
+
+  padding: 24px 0 8px;
+
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 20px 45px;
+
+  border-bottom: 1px solid #cbb9aa;
+}
+
+.detail:last-child {
+
+  grid-column: 1 / -1;
+}
+
+.detail-title {
+
+  margin: 0 0 6px;
+
+  color: #a27d64;
+
+  font-size: 12px;
+
+  letter-spacing: .14em;
+
+  text-transform: uppercase;
+
+  font-weight: 600;
+}
+
+.detail a,
+.detail p {
+
+  margin: 0;
+
+  color: #292727;
+
+  text-decoration: none;
+
+  font-size: 20px;
+
+  line-height: 1.35;
+}
+
+.detail a:hover {
+
+  color: #a27d64;
+}
+
+
+/* =====================================================
    FRASE
-========================= */
+===================================================== */
 
 .quote {
-  width: 90%;
-  max-width: 1350px;
 
-  margin: 85px auto;
+  width: 90%;
+  max-width: 1450px;
+
+  margin: 80px auto;
 
   text-align: center;
 }
 
 .quote p {
+
   margin: 0;
 
   font-family: Georgia, "Times New Roman", serif;
 
-  font-size: clamp(38px, 4vw, 62px);
+  font-size: clamp(40px, 4vw, 64px);
 
   line-height: 1.1;
 
@@ -305,27 +405,31 @@ h1 em {
 }
 
 
-/* =========================
+/* =====================================================
    ENLACES
-========================= */
+===================================================== */
 
 .links-section {
+
   width: 90%;
   max-width: 1750px;
 
-  margin: 0 auto 90px;
+  margin: 0 auto 85px;
 }
 
 .links-section h2 {
+
   margin: 0 0 30px;
 
-  font-size: 43px;
+  font-size: 44px;
+
   font-weight: 400;
 
   letter-spacing: -.04em;
 }
 
 .links-grid {
+
   display: grid;
 
   grid-template-columns: repeat(3, 1fr);
@@ -334,6 +438,7 @@ h1 em {
 }
 
 .external-link {
+
   min-height: 130px;
 
   padding: 25px;
@@ -341,17 +446,20 @@ h1 em {
   border: 1px solid #cbb9aa;
 
   display: flex;
+
   flex-direction: column;
+
   justify-content: space-between;
 
   text-decoration: none;
 
   color: #292727;
 
-  transition: .25s;
+  transition: all .25s ease;
 }
 
 .external-link span:first-child {
+
   color: #a27d64;
 
   font-size: 12px;
@@ -364,38 +472,48 @@ h1 em {
 }
 
 .external-link span:last-child {
+
   font-size: 19px;
 }
 
 .external-link:hover {
+
   background: #292727;
+
   color: #f7f3ed;
+
+  border-color: #292727;
 }
 
 .external-link:hover span:first-child {
+
   color: #f7f3ed;
 }
 
 
-/* =========================
+/* =====================================================
    CIERRE
-========================= */
+===================================================== */
 
 .closing {
-  width: 90%;
-  max-width: 1300px;
 
-  margin: 0 auto 90px;
+  width: 90%;
+  max-width: 1400px;
+
+  margin: 0 auto 85px;
 
   text-align: center;
 }
 
 .closing p {
+
   margin: 0;
 
   font-family: Georgia, "Times New Roman", serif;
 
-  font-size: 34px;
+  font-size: 36px;
+
+  line-height: 1.3;
 
   color: #a7836c;
 
@@ -403,12 +521,13 @@ h1 em {
 }
 
 
-/* =========================
+/* =====================================================
    FOOTER
-========================= */
+===================================================== */
 
 footer {
-  padding: 32px 5%;
+
+  padding: 34px 5%;
 
   background: #292727;
 
@@ -419,22 +538,68 @@ footer {
   font-size: 13px;
 
   letter-spacing: .07em;
+
+  line-height: 1.5;
 }
 
 
-/* =========================
+/* =====================================================
+   PANTALLAS GRANDES
+===================================================== */
+
+@media (min-width: 1600px) {
+
+  header {
+    padding-left: 4%;
+    padding-right: 4%;
+  }
+
+  .logo {
+    width: 320px;
+  }
+
+  nav {
+    gap: 42px;
+  }
+
+  nav a {
+    font-size: 18px;
+  }
+
+  .intro,
+  .contact-layout,
+  .links-section {
+
+    width: 90%;
+    max-width: 1900px;
+  }
+
+  .form-box {
+    padding: 48px 58px 48px;
+  }
+
+  .photo {
+    height: 570px;
+  }
+
+}
+
+
+/* =====================================================
    TABLET
-========================= */
+===================================================== */
 
 @media (max-width: 1000px) {
 
   header {
-    height: auto;
+
+    min-height: 130px;
+
     padding: 22px 5%;
   }
 
   .logo {
-    width: 240px;
+    width: 250px;
   }
 
   nav {
@@ -442,19 +607,39 @@ footer {
   }
 
   nav a {
-    font-size: 15px;
+    font-size: 16px;
+  }
+
+  .intro {
+
+    padding-top: 55px;
+  }
+
+  h1 {
+    font-size: 72px;
+  }
+
+  .intro-text {
+    font-size: 21px;
   }
 
   .contact-layout {
+
     grid-template-columns: 1fr;
+
+    gap: 50px;
+  }
+
+  .form-box {
+    order: 1;
+  }
+
+  .photo-column {
+    order: 2;
   }
 
   .photo {
     height: 600px;
-  }
-
-  .form-box {
-    padding: 40px;
   }
 
   .links-grid {
@@ -463,121 +648,170 @@ footer {
 }
 
 
-/* =========================
+/* =====================================================
    MÓVIL
-========================= */
+===================================================== */
 
 @media (max-width: 650px) {
 
   header {
-    flex-direction: column;
-    gap: 17px;
+
+    min-height: auto;
 
     padding: 20px 6%;
+
+    flex-direction: column;
+
+    gap: 17px;
   }
 
   .logo {
+
     width: 195px;
   }
 
   nav {
-    gap: 18px;
+
+    width: 100%;
+
+    justify-content: center;
+
+    gap: 12px 19px;
   }
 
   nav a {
-    font-size: 12px;
+
+    font-size: 13px;
   }
 
   .intro {
+
     width: 88%;
 
     padding: 50px 0 40px;
   }
 
   .eyebrow {
-    font-size: 10px;
+
+    font-size: 11px;
+
+    letter-spacing: .15em;
   }
 
   h1 {
-    font-size: clamp(52px, 15vw, 75px);
+
+    font-size: clamp(55px, 15vw, 77px);
+
+    line-height: .97;
   }
 
   .intro-text {
+
     margin-top: 25px;
 
-    font-size: 19px;
+    font-size: 20px;
+
+    line-height: 1.5;
   }
 
   .contact-layout {
+
     width: 88%;
 
     gap: 40px;
   }
 
-  .photo {
-    height: 430px;
-  }
-
-  .contact-details {
-    padding-top: 25px;
-
-    grid-template-columns: 1fr;
-
-    gap: 20px;
-  }
-
-  .detail:last-child {
-    grid-column: auto;
-  }
-
-  .detail a,
-  .detail p {
-    font-size: 18px;
-  }
-
   .form-box {
-    padding: 32px 23px 35px;
+
+    padding: 32px 24px 36px;
+
+    min-height: auto;
   }
 
   .form-box h2 {
-    font-size: 35px;
+
+    font-size: 36px;
   }
 
   .form-intro {
+
     font-size: 16px;
   }
 
   .field input,
   .field textarea {
+
     font-size: 16px;
   }
 
+  .photo {
+
+    height: 430px;
+  }
+
+  .contact-details {
+
+    grid-template-columns: 1fr;
+
+    gap: 20px;
+
+    padding-top: 25px;
+  }
+
+  .detail:last-child {
+
+    grid-column: auto;
+  }
+
+  .detail a,
+  .detail p {
+
+    font-size: 18px;
+  }
+
   .quote {
+
     width: 88%;
+
     margin: 70px auto;
   }
 
   .quote p {
+
     font-size: 32px;
   }
 
   .links-section {
+
     width: 88%;
   }
 
   .links-section h2 {
-    font-size: 34px;
+
+    font-size: 35px;
+  }
+
+  .external-link {
+
+    min-height: 125px;
   }
 
   .closing {
+
     width: 88%;
+
+    margin-bottom: 70px;
   }
 
   .closing p {
+
     font-size: 27px;
   }
 
   footer {
+
+    padding: 30px 6%;
+
     font-size: 11px;
   }
 
@@ -590,7 +824,9 @@ footer {
 <body>
 
 
-<!-- CABECERA -->
+<!-- =====================================================
+     CABECERA
+===================================================== -->
 
 <header>
 
@@ -607,13 +843,21 @@ footer {
 
   <nav>
 
-    <a href="index.html">Inicio</a>
+    <a href="index.html">
+      Inicio
+    </a>
 
-    <a href="sobre-mi.html">Sobre mí</a>
+    <a href="sobre-mi.html">
+      Sobre mí
+    </a>
 
-    <a href="servicios.html">Servicios</a>
+    <a href="servicios.html">
+      Servicios
+    </a>
 
-    <a href="contacto.html">Contacto</a>
+    <a href="contacto.html">
+      Contacto
+    </a>
 
   </nav>
 
@@ -621,7 +865,9 @@ footer {
 
 
 
-<!-- INTRO -->
+<!-- =====================================================
+     INTRO
+===================================================== -->
 
 <section class="intro">
 
@@ -629,29 +875,225 @@ footer {
     CONTACTO · MALLORCA
   </p>
 
+
   <h1>
+
     Hablemos de<br>
-    <em>vuestra boda.</em>
+
+    <em>
+      vuestra boda.
+    </em>
+
   </h1>
 
+
   <p class="intro-text">
+
     Cada boda comienza con una conversación. Me encantará conoceros,
     escuchar vuestra historia y descubrir cómo puedo ayudaros a crear
     una celebración que tenga realmente vuestra esencia.
+
   </p>
 
 </section>
 
 
 
-<!-- FOTO + CONTACTOS + FORMULARIO -->
+<!-- =====================================================
+     CUESTIONARIO IZQUIERDA + FOTO DERECHA
+===================================================== -->
 
 <section class="contact-layout">
 
 
-  <!-- IZQUIERDA -->
+  <!-- ===================================================
+       CUESTIONARIO
+  ==================================================== -->
+
+  <div class="form-box">
+
+    <h2>
+      Cuéntame vuestra historia.
+    </h2>
+
+
+    <p class="form-intro">
+
+      Rellenad el formulario y me pondré en contacto con vosotros
+      para conocernos y hablar tranquilamente sobre vuestra boda.
+
+    </p>
+
+
+    <form
+      action="https://formsubmit.co/bodasconcati@gmail.com"
+      method="POST"
+    >
+
+
+      <input
+        type="hidden"
+        name="_subject"
+        value="Nuevo mensaje desde Bodas Con Cati"
+      >
+
+
+      <input
+        type="hidden"
+        name="_captcha"
+        value="false"
+      >
+
+
+      <input
+        type="hidden"
+        name="_template"
+        value="table"
+      >
+
+
+      <input
+        type="hidden"
+        name="_next"
+        value="https://bodasconcati.com/contacto.html"
+      >
+
+
+
+      <!-- NOMBRE -->
+
+      <div class="field">
+
+        <label for="nombre">
+
+          Nombre y apellidos *
+
+        </label>
+
+
+        <input
+          type="text"
+          id="nombre"
+          name="Nombre y apellidos"
+          required
+        >
+
+      </div>
+
+
+
+      <!-- EMAIL -->
+
+      <div class="field">
+
+        <label for="email">
+
+          Email *
+
+        </label>
+
+
+        <input
+          type="email"
+          id="email"
+          name="Email"
+          required
+        >
+
+      </div>
+
+
+
+      <!-- TELÉFONO -->
+
+      <div class="field">
+
+        <label for="telefono">
+
+          Teléfono
+
+        </label>
+
+
+        <input
+          type="tel"
+          id="telefono"
+          name="Teléfono"
+        >
+
+      </div>
+
+
+
+      <!-- FECHA -->
+
+      <div class="field">
+
+        <label for="fecha">
+
+          Fecha de la boda (aproximada)
+
+        </label>
+
+
+        <input
+          type="text"
+          id="fecha"
+          name="Fecha de la boda"
+          placeholder="Ej. Septiembre 2027"
+        >
+
+      </div>
+
+
+
+      <!-- MENSAJE -->
+
+      <div class="field">
+
+        <label for="mensaje">
+
+          Cuéntame un poco sobre vuestra boda *
+
+        </label>
+
+
+        <textarea
+          id="mensaje"
+          name="Mensaje"
+          required
+        ></textarea>
+
+      </div>
+
+
+
+      <!-- BOTÓN -->
+
+      <button
+        type="submit"
+        class="submit"
+      >
+
+        ENVIAR MENSAJE →
+
+      </button>
+
+
+    </form>
+
+  </div>
+
+
+
+  <!-- ===================================================
+       FOTO + CONTACTOS
+  ==================================================== -->
 
   <div class="photo-column">
+
+
+    <!-- FOTO -->
 
     <div class="photo">
 
@@ -661,6 +1103,7 @@ footer {
       >
 
     </div>
+
 
 
     <!-- CONTACTOS DEBAJO DE LA FOTO -->
@@ -675,10 +1118,13 @@ footer {
         </p>
 
         <a href="tel:+34645242153">
+
           +34 645 24 21 53
+
         </a>
 
       </div>
+
 
 
       <div class="detail">
@@ -688,10 +1134,13 @@ footer {
         </p>
 
         <a href="mailto:bodasconcati@gmail.com">
+
           bodasconcati@gmail.com
+
         </a>
 
       </div>
+
 
 
       <div class="detail">
@@ -711,168 +1160,43 @@ footer {
 
   </div>
 
-
-
-  <!-- DERECHA: CUESTIONARIO -->
-
-  <div class="form-box">
-
-    <h2>
-      Cuéntame vuestra historia.
-    </h2>
-
-    <p class="form-intro">
-      Rellenad el formulario y me pondré en contacto con vosotros
-      para conocernos y hablar tranquilamente sobre vuestra boda.
-    </p>
-
-
-    <form
-      action="https://formsubmit.co/bodasconcati@gmail.com"
-      method="POST"
-    >
-
-      <input
-        type="hidden"
-        name="_subject"
-        value="Nuevo mensaje desde Bodas Con Cati"
-      >
-
-      <input
-        type="hidden"
-        name="_captcha"
-        value="false"
-      >
-
-      <input
-        type="hidden"
-        name="_template"
-        value="table"
-      >
-
-      <input
-        type="hidden"
-        name="_next"
-        value="https://bodasconcati.com/contacto.html"
-      >
-
-
-      <div class="field">
-
-        <label for="nombre">
-          Nombre y apellidos *
-        </label>
-
-        <input
-          type="text"
-          id="nombre"
-          name="Nombre y apellidos"
-          required
-        >
-
-      </div>
-
-
-      <div class="field">
-
-        <label for="email">
-          Email *
-        </label>
-
-        <input
-          type="email"
-          id="email"
-          name="Email"
-          required
-        >
-
-      </div>
-
-
-      <div class="field">
-
-        <label for="telefono">
-          Teléfono
-        </label>
-
-        <input
-          type="tel"
-          id="telefono"
-          name="Teléfono"
-        >
-
-      </div>
-
-
-      <div class="field">
-
-        <label for="fecha">
-          Fecha de la boda (aproximada)
-        </label>
-
-        <input
-          type="text"
-          id="fecha"
-          name="Fecha de la boda"
-          placeholder="Ej. Septiembre 2027"
-        >
-
-      </div>
-
-
-      <div class="field">
-
-        <label for="mensaje">
-          Cuéntame un poco sobre vuestra boda *
-        </label>
-
-        <textarea
-          id="mensaje"
-          name="Mensaje"
-          required
-        ></textarea>
-
-      </div>
-
-
-      <button
-        type="submit"
-        class="submit"
-      >
-        ENVIAR MENSAJE →
-      </button>
-
-    </form>
-
-  </div>
-
 </section>
 
 
 
-<!-- FRASE -->
+<!-- =====================================================
+     FRASE
+===================================================== -->
 
 <section class="quote">
 
   <p>
+
     “Las mejores bodas comienzan con una buena conversación.”
+
   </p>
 
 </section>
 
 
 
-<!-- ENLACES -->
+<!-- =====================================================
+     ENLACES
+===================================================== -->
 
 <section class="links-section">
 
   <h2>
+
     También puedes encontrarme aquí.
+
   </h2>
 
 
   <div class="links-grid">
 
+
+    <!-- BODAS.NET -->
 
     <a
       class="external-link"
@@ -892,6 +1216,9 @@ footer {
     </a>
 
 
+
+    <!-- INSTAGRAM -->
+
     <a
       class="external-link"
       href="https://www.instagram.com/bodasconcati/"
@@ -909,6 +1236,9 @@ footer {
 
     </a>
 
+
+
+    <!-- GOOGLE -->
 
     <a
       class="external-link"
@@ -934,19 +1264,25 @@ footer {
 
 
 
-<!-- CIERRE -->
+<!-- =====================================================
+     CIERRE
+===================================================== -->
 
 <section class="closing">
 
   <p>
+
     Porque cada historia merece ser vivida a su manera.
+
   </p>
 
 </section>
 
 
 
-<!-- FOOTER -->
+<!-- =====================================================
+     FOOTER
+===================================================== -->
 
 <footer>
 
