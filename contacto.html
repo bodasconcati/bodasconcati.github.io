@@ -1,832 +1,964 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Contacto · Bodas Con Cati</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<style>
+  <title>Contacto · Bodas Con Cati</title>
 
-* {
-  box-sizing: border-box;
-}
+  <style>
 
-html {
-  scroll-behavior: smooth;
-}
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-body {
-  margin: 0;
-  background: #f7f3ed;
-  color: #292727;
-  font-family: Arial, Helvetica, sans-serif;
-}
+    html {
+      scroll-behavior: smooth;
+    }
 
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f7f2ec;
+      color: #403936;
+    }
 
-/* =====================================================
-   CABECERA — IGUAL DE GRANDE QUE LAS OTRAS PÁGINAS
-===================================================== */
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
 
-header {
-  width: 100%;
-  min-height: 145px;
 
-  padding: 22px 4%;
+    /* =====================================
+       HEADER
+    ===================================== */
 
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+    header {
+      height: 125px;
+      padding: 0 5vw;
 
-  background: #f7f3ed;
-}
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
 
-.logo {
-  width: 300px;
-  height: auto;
-  display: block;
-}
+      background: #f7f2ec;
 
-nav {
-  display: flex;
-  align-items: center;
-  gap: 38px;
-}
+      position: relative;
+      z-index: 10;
+    }
 
-nav a {
-  color: #292727;
-  text-decoration: none;
 
-  font-size: 18px;
-  font-weight: 400;
+    .logo {
+      width: 260px;
+      height: auto;
+      display: block;
+    }
 
-  white-space: nowrap;
 
-  transition: opacity .25s ease;
-}
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 43px;
+    }
 
-nav a:hover {
-  opacity: .55;
-}
 
+    nav a {
+      font-size: 18px;
+      font-weight: 500;
+      letter-spacing: 1.8px;
 
-/* =====================================================
-   INTRO
-===================================================== */
+      color: #514a45;
 
-.intro {
-  width: 90%;
-  max-width: 1750px;
+      transition: opacity 0.3s ease;
+    }
 
-  margin: 0 auto;
 
-  padding: 55px 0 50px;
-}
+    nav a:hover {
+      opacity: 0.55;
+    }
 
-.eyebrow {
-  margin: 0 0 20px;
 
-  font-size: 14px;
-  letter-spacing: .18em;
+    nav a.active {
+      color: #9b6f63;
+    }
 
-  text-transform: uppercase;
-  font-weight: 500;
-}
 
-h1 {
-  margin: 0;
 
-  font-size: clamp(72px, 6vw, 100px);
+    /* =====================================
+       INTRO
+    ===================================== */
 
-  line-height: .94;
+    .intro {
+      width: 90%;
+      max-width: 1750px;
 
-  font-weight: 400;
+      margin: 0 auto;
 
-  letter-spacing: -.055em;
-}
+      padding: 60px 0 48px;
+    }
 
-h1 em {
-  font-family: Georgia, "Times New Roman", serif;
 
-  font-style: italic;
+    .eyebrow {
+      margin-bottom: 20px;
 
-  color: #ad8870;
-}
+      font-size: 14px;
+      letter-spacing: 4px;
 
+      text-transform: uppercase;
 
-/* EL TEXTO AHORA OCUPA MUCHO MÁS ANCHO */
+      color: #9b6f63;
+    }
 
-.intro-text {
-  width: 100%;
-  max-width: 1450px;
 
-  margin: 30px 0 0;
+    .intro h1 {
+      width: 100%;
 
-  font-size: 23px;
+      font-family: Georgia, "Times New Roman", serif;
 
-  line-height: 1.5;
-}
+      font-size: clamp(65px, 6vw, 105px);
 
+      line-height: 0.98;
 
-/* =====================================================
-   ZONA PRINCIPAL
-   IZQUIERDA = FORMULARIO
-   DERECHA = FOTO
-===================================================== */
+      font-weight: normal;
 
-.contact-layout {
-  width: 90%;
-  max-width: 1750px;
+      letter-spacing: -4px;
 
-  margin: 0 auto;
+      color: #403936;
 
-  display: grid;
+      white-space: nowrap;
+    }
 
-  grid-template-columns: 1fr 1fr;
 
-  gap: 65px;
+    .intro h1 em {
+      color: #a4776b;
+      font-style: italic;
+    }
 
-  align-items: start;
-}
 
+    .intro-text {
+      width: 100%;
+      max-width: 1450px;
 
-/* =====================================================
-   FORMULARIO — IZQUIERDA
-===================================================== */
+      margin-top: 30px;
 
-.form-box {
+      font-family: Georgia, "Times New Roman", serif;
 
-  background: #e9ddd2;
+      font-size: 23px;
 
-  padding: 42px 48px 44px;
+      line-height: 1.5;
 
-  min-height: 535px;
-}
+      color: #514a45;
+    }
 
-.form-box h2 {
 
-  margin: 0 0 14px;
 
-  font-size: 44px;
+    /* =====================================
+       BLOQUE PRINCIPAL
+    ===================================== */
 
-  line-height: 1.03;
+    .contact-layout {
 
-  font-weight: 400;
+      width: 90%;
+      max-width: 1750px;
 
-  letter-spacing: -.045em;
-}
+      margin: 0 auto;
 
-.form-intro {
+      display: grid;
 
-  margin: 0 0 29px;
+      grid-template-columns: 1fr 1fr;
 
-  max-width: 650px;
+      gap: 65px;
 
-  font-size: 17px;
+      align-items: start;
+    }
 
-  line-height: 1.45;
-}
 
 
-/* CAMPOS */
+    /* =====================================
+       FORMULARIO — IZQUIERDA
+    ===================================== */
 
-.field {
+    .form-box {
 
-  margin-bottom: 18px;
-}
+      background: #eee3da;
 
-.field label {
+      padding: 45px 52px 48px;
 
-  display: block;
+      min-height: 535px;
+    }
 
-  margin-bottom: 6px;
 
-  color: #946e58;
+    .form-box h2 {
 
-  font-size: 12px;
+      font-family: Georgia, "Times New Roman", serif;
 
-  letter-spacing: .13em;
+      font-size: 45px;
 
-  text-transform: uppercase;
+      line-height: 1.05;
 
-  font-weight: 600;
-}
+      font-weight: normal;
 
-.field input,
-.field textarea {
+      letter-spacing: -2px;
 
-  width: 100%;
+      color: #403936;
 
-  border: none;
+      margin-bottom: 17px;
+    }
 
-  border-bottom: 1.5px solid #a98974;
 
-  background: transparent;
+    .form-intro {
 
-  border-radius: 0;
+      max-width: 650px;
 
-  padding: 8px 0 9px;
+      font-family: Georgia, "Times New Roman", serif;
 
-  color: #292727;
+      font-size: 18px;
 
-  font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.5;
 
-  font-size: 17px;
+      color: #514a45;
 
-  outline: none;
-}
+      margin-bottom: 30px;
+    }
 
-.field input:focus,
-.field textarea:focus {
 
-  border-bottom-color: #805b47;
-}
 
-.field input::placeholder,
-.field textarea::placeholder {
+    /* =====================================
+       CAMPOS
+    ===================================== */
 
-  color: #927d70;
+    .field {
 
-  opacity: 1;
-}
+      margin-bottom: 19px;
+    }
 
-.field textarea {
 
-  height: 72px;
+    .field label {
 
-  resize: none;
-}
+      display: block;
 
+      margin-bottom: 6px;
 
-/* BOTÓN */
+      font-size: 12px;
 
-.submit {
+      letter-spacing: 1.8px;
 
-  margin-top: 7px;
+      text-transform: uppercase;
 
-  padding: 15px 28px;
+      color: #9b6f63;
 
-  border: none;
+      font-weight: 600;
+    }
 
-  background: #a7836a;
 
-  color: #ffffff;
+    .field input,
+    .field textarea {
 
-  font-size: 13px;
+      width: 100%;
 
-  letter-spacing: .13em;
+      border: none;
 
-  cursor: pointer;
+      border-bottom: 1px solid #a98974;
 
-  transition: all .25s ease;
-}
+      background: transparent;
 
-.submit:hover {
+      padding: 8px 0 10px;
 
-  background: #292727;
-}
+      color: #403936;
 
+      font-family: Arial, Helvetica, sans-serif;
 
-/* =====================================================
-   COLUMNA FOTO — DERECHA
-===================================================== */
+      font-size: 17px;
 
-.photo-column {
+      outline: none;
+    }
 
-  width: 100%;
-}
 
-.photo {
+    .field input:focus,
+    .field textarea:focus {
 
-  width: 100%;
+      border-bottom-color: #8f675d;
+    }
 
-  height: 535px;
 
-  overflow: hidden;
-}
+    .field input::placeholder,
+    .field textarea::placeholder {
 
-.photo img {
+      color: #9a877d;
 
-  width: 100%;
-  height: 100%;
+      opacity: 1;
+    }
 
-  display: block;
 
-  object-fit: cover;
+    .field textarea {
 
-  object-position: center top;
-}
+      height: 78px;
 
+      resize: none;
+    }
 
-/* =====================================================
-   CONTACTOS DEBAJO DE LA FOTO
-===================================================== */
 
-.contact-details {
 
-  padding: 24px 0 8px;
+    /* =====================================
+       BOTÓN
+    ===================================== */
 
-  display: grid;
+    .submit {
 
-  grid-template-columns: 1fr 1fr;
+      margin-top: 8px;
 
-  gap: 20px 45px;
+      padding: 16px 30px;
 
-  border-bottom: 1px solid #cbb9aa;
-}
+      border: 1px solid #9b6f63;
 
-.detail:last-child {
+      background: #9b6f63;
 
-  grid-column: 1 / -1;
-}
+      color: #ffffff;
 
-.detail-title {
+      font-size: 13px;
 
-  margin: 0 0 6px;
+      letter-spacing: 1.8px;
 
-  color: #a27d64;
+      cursor: pointer;
 
-  font-size: 12px;
+      transition: all 0.3s ease;
+    }
 
-  letter-spacing: .14em;
 
-  text-transform: uppercase;
+    .submit:hover {
 
-  font-weight: 600;
-}
+      background: #403936;
 
-.detail a,
-.detail p {
+      border-color: #403936;
+    }
 
-  margin: 0;
 
-  color: #292727;
 
-  text-decoration: none;
+    /* =====================================
+       FOTO — DERECHA
+    ===================================== */
 
-  font-size: 20px;
+    .photo-column {
 
-  line-height: 1.35;
-}
+      width: 100%;
+    }
 
-.detail a:hover {
 
-  color: #a27d64;
-}
+    .photo {
 
+      width: 100%;
 
-/* =====================================================
-   FRASE
-===================================================== */
+      height: 535px;
 
-.quote {
+      overflow: hidden;
+    }
 
-  width: 90%;
-  max-width: 1450px;
 
-  margin: 80px auto;
+    .photo img {
 
-  text-align: center;
-}
+      width: 100%;
+      height: 100%;
 
-.quote p {
+      display: block;
 
-  margin: 0;
+      object-fit: cover;
 
-  font-family: Georgia, "Times New Roman", serif;
+      object-position: center top;
+    }
 
-  font-size: clamp(40px, 4vw, 64px);
 
-  line-height: 1.1;
 
-  color: #a7836c;
+    /* =====================================
+       CONTACTOS DEBAJO DE LA FOTO
+    ===================================== */
 
-  font-style: italic;
-}
+    .contact-details {
 
+      padding: 25px 0 10px;
 
-/* =====================================================
-   ENLACES
-===================================================== */
+      display: grid;
 
-.links-section {
+      grid-template-columns: 1fr 1fr;
 
-  width: 90%;
-  max-width: 1750px;
+      gap: 20px 50px;
 
-  margin: 0 auto 85px;
-}
+      border-bottom: 1px solid rgba(100, 80, 70, 0.25);
+    }
 
-.links-section h2 {
 
-  margin: 0 0 30px;
+    .detail:last-child {
 
-  font-size: 44px;
+      grid-column: 1 / -1;
+    }
 
-  font-weight: 400;
 
-  letter-spacing: -.04em;
-}
+    .detail-title {
 
-.links-grid {
+      margin-bottom: 6px;
 
-  display: grid;
+      font-size: 12px;
 
-  grid-template-columns: repeat(3, 1fr);
+      letter-spacing: 1.8px;
 
-  gap: 22px;
-}
+      text-transform: uppercase;
 
-.external-link {
+      color: #9b6f63;
 
-  min-height: 130px;
+      font-weight: 600;
+    }
 
-  padding: 25px;
 
-  border: 1px solid #cbb9aa;
+    .detail a,
+    .detail p {
 
-  display: flex;
+      font-size: 20px;
 
-  flex-direction: column;
+      line-height: 1.35;
 
-  justify-content: space-between;
+      color: #403936;
+    }
 
-  text-decoration: none;
 
-  color: #292727;
+    .detail a:hover {
 
-  transition: all .25s ease;
-}
+      color: #9b6f63;
+    }
 
-.external-link span:first-child {
 
-  color: #a27d64;
 
-  font-size: 12px;
+    /* =====================================
+       FRASE
+    ===================================== */
 
-  letter-spacing: .13em;
+    .quote {
 
-  text-transform: uppercase;
+      width: 90%;
+      max-width: 1450px;
 
-  font-weight: 600;
-}
+      margin: 85px auto;
 
-.external-link span:last-child {
+      text-align: center;
+    }
 
-  font-size: 19px;
-}
 
-.external-link:hover {
+    .quote p {
 
-  background: #292727;
+      font-family: Georgia, "Times New Roman", serif;
 
-  color: #f7f3ed;
+      font-size: clamp(40px, 4vw, 64px);
 
-  border-color: #292727;
-}
+      line-height: 1.15;
 
-.external-link:hover span:first-child {
+      font-style: italic;
 
-  color: #f7f3ed;
-}
+      color: #9b6f63;
+    }
 
 
-/* =====================================================
-   CIERRE
-===================================================== */
 
-.closing {
+    /* =====================================
+       ENLACES
+    ===================================== */
 
-  width: 90%;
-  max-width: 1400px;
+    .links-section {
 
-  margin: 0 auto 85px;
+      width: 90%;
+      max-width: 1750px;
 
-  text-align: center;
-}
+      margin: 0 auto 90px;
+    }
 
-.closing p {
 
-  margin: 0;
+    .links-section h2 {
 
-  font-family: Georgia, "Times New Roman", serif;
+      margin-bottom: 32px;
 
-  font-size: 36px;
+      font-family: Georgia, "Times New Roman", serif;
 
-  line-height: 1.3;
+      font-size: 45px;
 
-  color: #a7836c;
+      line-height: 1.1;
 
-  font-style: italic;
-}
+      font-weight: normal;
 
+      letter-spacing: -2px;
+    }
 
-/* =====================================================
-   FOOTER
-===================================================== */
 
-footer {
+    .links-grid {
 
-  padding: 34px 5%;
+      display: grid;
 
-  background: #292727;
+      grid-template-columns: repeat(3, 1fr);
 
-  color: #f7f3ed;
+      gap: 22px;
+    }
 
-  text-align: center;
 
-  font-size: 13px;
+    .external-link {
 
-  letter-spacing: .07em;
+      min-height: 135px;
 
-  line-height: 1.5;
-}
+      padding: 27px;
 
+      border: 1px solid #cbb9aa;
 
-/* =====================================================
-   PANTALLAS GRANDES
-===================================================== */
+      display: flex;
 
-@media (min-width: 1600px) {
+      flex-direction: column;
 
-  header {
-    padding-left: 4%;
-    padding-right: 4%;
-  }
+      justify-content: space-between;
 
-  .logo {
-    width: 320px;
-  }
+      color: #403936;
 
-  nav {
-    gap: 42px;
-  }
+      transition: all 0.3s ease;
+    }
 
-  nav a {
-    font-size: 18px;
-  }
 
-  .intro,
-  .contact-layout,
-  .links-section {
+    .external-link span:first-child {
 
-    width: 90%;
-    max-width: 1900px;
-  }
+      color: #9b6f63;
 
-  .form-box {
-    padding: 48px 58px 48px;
-  }
+      font-size: 12px;
 
-  .photo {
-    height: 570px;
-  }
+      letter-spacing: 1.8px;
 
-}
+      text-transform: uppercase;
 
+      font-weight: 600;
+    }
 
-/* =====================================================
-   TABLET
-===================================================== */
 
-@media (max-width: 1000px) {
+    .external-link span:last-child {
 
-  header {
+      font-size: 19px;
+    }
 
-    min-height: 130px;
 
-    padding: 22px 5%;
-  }
+    .external-link:hover {
 
-  .logo {
-    width: 250px;
-  }
+      background: #403936;
 
-  nav {
-    gap: 22px;
-  }
+      color: #f7f2ec;
 
-  nav a {
-    font-size: 16px;
-  }
+      border-color: #403936;
+    }
 
-  .intro {
 
-    padding-top: 55px;
-  }
+    .external-link:hover span:first-child {
 
-  h1 {
-    font-size: 72px;
-  }
+      color: #f7f2ec;
+    }
 
-  .intro-text {
-    font-size: 21px;
-  }
 
-  .contact-layout {
 
-    grid-template-columns: 1fr;
+    /* =====================================
+       CIERRE
+    ===================================== */
 
-    gap: 50px;
-  }
+    .closing {
 
-  .form-box {
-    order: 1;
-  }
+      width: 90%;
+      max-width: 1400px;
 
-  .photo-column {
-    order: 2;
-  }
+      margin: 0 auto 90px;
 
-  .photo {
-    height: 600px;
-  }
+      text-align: center;
+    }
 
-  .links-grid {
-    grid-template-columns: 1fr;
-  }
-}
 
+    .closing p {
 
-/* =====================================================
-   MÓVIL
-===================================================== */
+      font-family: Georgia, "Times New Roman", serif;
 
-@media (max-width: 650px) {
+      font-size: 36px;
 
-  header {
+      line-height: 1.3;
 
-    min-height: auto;
+      font-style: italic;
 
-    padding: 20px 6%;
+      color: #9b6f63;
+    }
 
-    flex-direction: column;
 
-    gap: 17px;
-  }
 
-  .logo {
+    /* =====================================
+       FOOTER
+    ===================================== */
 
-    width: 195px;
-  }
+    footer {
 
-  nav {
+      padding: 35px 20px;
 
-    width: 100%;
+      text-align: center;
 
-    justify-content: center;
+      background: #f7f2ec;
 
-    gap: 12px 19px;
-  }
+      border-top: 1px solid rgba(100, 80, 70, 0.15);
 
-  nav a {
+      color: #766e68;
 
-    font-size: 13px;
-  }
+      font-size: 13px;
 
-  .intro {
+      letter-spacing: 1.5px;
+    }
 
-    width: 88%;
 
-    padding: 50px 0 40px;
-  }
 
-  .eyebrow {
+    /* =====================================
+       PANTALLAS GRANDES
+    ===================================== */
 
-    font-size: 11px;
+    @media (min-width: 1600px) {
 
-    letter-spacing: .15em;
-  }
+      .logo {
+        width: 300px;
+      }
 
-  h1 {
+      nav {
+        gap: 45px;
+      }
 
-    font-size: clamp(55px, 15vw, 77px);
+      nav a {
+        font-size: 18px;
+      }
 
-    line-height: .97;
-  }
+      .intro,
+      .contact-layout,
+      .links-section {
 
-  .intro-text {
+        width: 90%;
 
-    margin-top: 25px;
+        max-width: 1900px;
+      }
 
-    font-size: 20px;
+      .intro h1 {
 
-    line-height: 1.5;
-  }
+        font-size: 105px;
+      }
 
-  .contact-layout {
+      .photo {
 
-    width: 88%;
+        height: 560px;
+      }
 
-    gap: 40px;
-  }
+      .form-box {
 
-  .form-box {
+        padding: 48px 58px 50px;
+      }
 
-    padding: 32px 24px 36px;
+    }
 
-    min-height: auto;
-  }
 
-  .form-box h2 {
 
-    font-size: 36px;
-  }
+    /* =====================================
+       TABLET
+    ===================================== */
 
-  .form-intro {
+    @media (max-width: 1100px) {
 
-    font-size: 16px;
-  }
+      header {
 
-  .field input,
-  .field textarea {
+        padding: 0 30px;
+      }
 
-    font-size: 16px;
-  }
 
-  .photo {
+      .logo {
 
-    height: 430px;
-  }
+        width: 230px;
+      }
 
-  .contact-details {
 
-    grid-template-columns: 1fr;
+      nav {
 
-    gap: 20px;
+        gap: 25px;
+      }
 
-    padding-top: 25px;
-  }
 
-  .detail:last-child {
+      nav a {
 
-    grid-column: auto;
-  }
+        font-size: 16px;
 
-  .detail a,
-  .detail p {
+        letter-spacing: 1px;
+      }
 
-    font-size: 18px;
-  }
 
-  .quote {
+      .intro h1 {
 
-    width: 88%;
+        font-size: 72px;
 
-    margin: 70px auto;
-  }
+        white-space: normal;
+      }
 
-  .quote p {
 
-    font-size: 32px;
-  }
+      .intro-text {
 
-  .links-section {
+        font-size: 21px;
+      }
 
-    width: 88%;
-  }
 
-  .links-section h2 {
+      .contact-layout {
 
-    font-size: 35px;
-  }
+        grid-template-columns: 1fr;
 
-  .external-link {
+        gap: 50px;
+      }
 
-    min-height: 125px;
-  }
 
-  .closing {
+      .form-box {
 
-    width: 88%;
+        order: 1;
+      }
 
-    margin-bottom: 70px;
-  }
 
-  .closing p {
+      .photo-column {
 
-    font-size: 27px;
-  }
+        order: 2;
+      }
 
-  footer {
 
-    padding: 30px 6%;
+      .photo {
 
-    font-size: 11px;
-  }
+        height: 600px;
+      }
 
-}
 
-</style>
+      .links-grid {
+
+        grid-template-columns: 1fr;
+      }
+
+    }
+
+
+
+    /* =====================================
+       MÓVIL
+    ===================================== */
+
+    @media (max-width: 760px) {
+
+      header {
+
+        height: auto;
+
+        padding: 24px 20px;
+
+        flex-direction: column;
+
+        gap: 20px;
+      }
+
+
+      .logo {
+
+        width: 190px;
+      }
+
+
+      nav {
+
+        width: 100%;
+
+        justify-content: center;
+
+        flex-wrap: wrap;
+
+        gap: 13px 18px;
+      }
+
+
+      nav a {
+
+        font-size: 12px;
+
+        letter-spacing: 1px;
+      }
+
+
+      .intro {
+
+        width: 88%;
+
+        padding: 55px 0 40px;
+      }
+
+
+      .eyebrow {
+
+        font-size: 11px;
+
+        letter-spacing: 3px;
+
+        margin-bottom: 20px;
+      }
+
+
+      .intro h1 {
+
+        font-size: clamp(53px, 14vw, 75px);
+
+        line-height: .96;
+
+        letter-spacing: -2.5px;
+
+        white-space: normal;
+      }
+
+
+      .intro-text {
+
+        margin-top: 25px;
+
+        font-size: 20px;
+
+        line-height: 1.55;
+      }
+
+
+      .contact-layout {
+
+        width: 88%;
+
+        gap: 40px;
+      }
+
+
+      .form-box {
+
+        padding: 34px 24px 38px;
+      }
+
+
+      .form-box h2 {
+
+        font-size: 36px;
+
+        letter-spacing: -1.5px;
+      }
+
+
+      .form-intro {
+
+        font-size: 17px;
+      }
+
+
+      .field input,
+      .field textarea {
+
+        font-size: 16px;
+      }
+
+
+      .photo {
+
+        height: 430px;
+      }
+
+
+      .contact-details {
+
+        grid-template-columns: 1fr;
+
+        gap: 20px;
+
+        padding-top: 25px;
+      }
+
+
+      .detail:last-child {
+
+        grid-column: auto;
+      }
+
+
+      .detail a,
+      .detail p {
+
+        font-size: 18px;
+      }
+
+
+      .quote {
+
+        width: 88%;
+
+        margin: 70px auto;
+      }
+
+
+      .quote p {
+
+        font-size: 33px;
+      }
+
+
+      .links-section {
+
+        width: 88%;
+      }
+
+
+      .links-section h2 {
+
+        font-size: 35px;
+      }
+
+
+      .external-link {
+
+        min-height: 125px;
+
+        padding: 24px;
+      }
+
+
+      .external-link span:last-child {
+
+        font-size: 18px;
+      }
+
+
+      .closing {
+
+        width: 88%;
+
+        margin-bottom: 70px;
+      }
+
+
+      .closing p {
+
+        font-size: 27px;
+      }
+
+
+      footer {
+
+        padding: 30px 20px;
+
+        font-size: 10px;
+
+        line-height: 1.6;
+      }
+
+    }
+
+  </style>
+
 </head>
 
 
 <body>
 
 
-<!-- =====================================================
-     CABECERA
-===================================================== -->
+<!-- =====================================
+     HEADER
+===================================== -->
 
 <header>
 
@@ -855,7 +987,10 @@ footer {
       Servicios
     </a>
 
-    <a href="contacto.html">
+    <a
+      href="contacto.html"
+      class="active"
+    >
       Contacto
     </a>
 
@@ -865,9 +1000,9 @@ footer {
 
 
 
-<!-- =====================================================
+<!-- =====================================
      INTRO
-===================================================== -->
+===================================== -->
 
 <section class="intro">
 
@@ -878,11 +1013,7 @@ footer {
 
   <h1>
 
-    Hablemos de<br>
-
-    <em>
-      vuestra boda.
-    </em>
+    Hablemos de <em>vuestra boda.</em>
 
   </h1>
 
@@ -899,16 +1030,16 @@ footer {
 
 
 
-<!-- =====================================================
-     CUESTIONARIO IZQUIERDA + FOTO DERECHA
-===================================================== -->
+<!-- =====================================
+     BLOQUE PRINCIPAL
+===================================== -->
 
 <section class="contact-layout">
 
 
-  <!-- ===================================================
-       CUESTIONARIO
-  ==================================================== -->
+  <!-- ===================================
+       FORMULARIO — IZQUIERDA
+  ==================================== -->
 
   <div class="form-box">
 
@@ -965,11 +1096,8 @@ footer {
       <div class="field">
 
         <label for="nombre">
-
           Nombre y apellidos *
-
         </label>
-
 
         <input
           type="text"
@@ -987,11 +1115,8 @@ footer {
       <div class="field">
 
         <label for="email">
-
           Email *
-
         </label>
-
 
         <input
           type="email"
@@ -1009,11 +1134,8 @@ footer {
       <div class="field">
 
         <label for="telefono">
-
           Teléfono
-
         </label>
-
 
         <input
           type="tel"
@@ -1030,11 +1152,8 @@ footer {
       <div class="field">
 
         <label for="fecha">
-
           Fecha de la boda (aproximada)
-
         </label>
-
 
         <input
           type="text"
@@ -1052,11 +1171,8 @@ footer {
       <div class="field">
 
         <label for="mensaje">
-
           Cuéntame un poco sobre vuestra boda *
-
         </label>
-
 
         <textarea
           id="mensaje"
@@ -1086,9 +1202,9 @@ footer {
 
 
 
-  <!-- ===================================================
-       FOTO + CONTACTOS
-  ==================================================== -->
+  <!-- ===================================
+       FOTO + CONTACTOS — DERECHA
+  ==================================== -->
 
   <div class="photo-column">
 
@@ -1106,7 +1222,7 @@ footer {
 
 
 
-    <!-- CONTACTOS DEBAJO DE LA FOTO -->
+    <!-- CONTACTOS -->
 
     <div class="contact-details">
 
@@ -1160,13 +1276,14 @@ footer {
 
   </div>
 
+
 </section>
 
 
 
-<!-- =====================================================
+<!-- =====================================
      FRASE
-===================================================== -->
+===================================== -->
 
 <section class="quote">
 
@@ -1180,9 +1297,9 @@ footer {
 
 
 
-<!-- =====================================================
+<!-- =====================================
      ENLACES
-===================================================== -->
+===================================== -->
 
 <section class="links-section">
 
@@ -1264,9 +1381,9 @@ footer {
 
 
 
-<!-- =====================================================
+<!-- =====================================
      CIERRE
-===================================================== -->
+===================================== -->
 
 <section class="closing">
 
@@ -1280,9 +1397,9 @@ footer {
 
 
 
-<!-- =====================================================
+<!-- =====================================
      FOOTER
-===================================================== -->
+===================================== -->
 
 <footer>
 
@@ -1293,4 +1410,5 @@ footer {
 
 
 </body>
+
 </html>
