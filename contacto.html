@@ -11,6 +11,10 @@
 
   <style>
 
+    /* ==================================================
+       GENERAL
+    ================================================== */
+
     * {
       box-sizing: border-box;
       margin: 0;
@@ -33,13 +37,14 @@
     }
 
 
+
     /* ==================================================
        HEADER
     ================================================== */
 
     header {
       width: 100%;
-      min-height: 125px;
+      min-height: 135px;
 
       padding: 0 5vw;
 
@@ -50,20 +55,17 @@
       background: #f7f1e9;
     }
 
-
     .logo {
       width: 300px;
       height: auto;
       display: block;
     }
 
-
     nav {
       display: flex;
       align-items: center;
-      gap: 45px;
+      gap: 48px;
     }
-
 
     nav a {
       position: relative;
@@ -73,23 +75,20 @@
       font-size: 18px;
       font-weight: 400;
 
-      letter-spacing: 1.5px;
+      letter-spacing: 1.4px;
 
       color: #493b34;
 
       padding: 8px 0;
     }
 
-
     nav a:hover {
       color: #a66e57;
     }
 
-
     nav a.active {
       font-weight: 600;
     }
-
 
     nav a.active::after {
       content: "";
@@ -99,7 +98,7 @@
       left: 0;
       right: 0;
 
-      bottom: -9px;
+      bottom: -10px;
 
       height: 1px;
 
@@ -113,11 +112,12 @@
     ================================================== */
 
     .intro {
+      width: 100%;
+
       text-align: center;
 
-      padding: 20px 30px 45px;
+      padding: 15px 40px 45px;
     }
-
 
     .eyebrow {
       font-family: Arial, Helvetica, sans-serif;
@@ -132,9 +132,8 @@
       margin-bottom: 12px;
     }
 
-
     .intro h1 {
-      font-size: clamp(70px, 6.2vw, 105px);
+      font-size: clamp(70px, 6.2vw, 108px);
 
       font-weight: 400;
 
@@ -145,15 +144,13 @@
       color: #49382f;
     }
 
-
     .intro h1 em {
       color: #bd785d;
       font-style: italic;
     }
 
-
     .intro p {
-      max-width: 900px;
+      max-width: 1100px;
 
       margin: 20px auto 0;
 
@@ -167,14 +164,14 @@
 
 
     /* ==================================================
-       CONTENIDO PRINCIPAL
+       BLOQUE PRINCIPAL
     ================================================== */
 
     .contact-section {
 
-      width: calc(100% - 90px);
+      width: 92%;
 
-      max-width: 1550px;
+      max-width: 1850px;
 
       margin: 0 auto 70px;
 
@@ -182,7 +179,7 @@
 
       grid-template-columns: 1fr 1fr;
 
-      gap: 30px;
+      gap: 32px;
 
       align-items: stretch;
     }
@@ -197,23 +194,21 @@
 
       background: #efe2d4;
 
-      padding: 48px 50px 45px;
+      padding: 50px 55px 48px;
     }
-
 
     .contact-form h2 {
 
-      font-size: clamp(48px, 4vw, 68px);
+      font-size: clamp(50px, 4vw, 70px);
 
       font-weight: 400;
 
       line-height: 1;
 
-      margin-bottom: 10px;
+      margin-bottom: 12px;
 
       color: #49382f;
     }
-
 
     .contact-form h2 em {
 
@@ -222,34 +217,37 @@
       font-style: italic;
     }
 
-
     .form-intro {
 
-      font-size: 20px;
+      font-size: 21px;
 
       line-height: 1.4;
 
-      margin-bottom: 28px;
+      margin-bottom: 30px;
 
       color: #624c40;
     }
 
 
+
+    /* ==================================================
+       CAMPOS
+    ================================================== */
+
     .field {
 
-      margin-bottom: 18px;
+      margin-bottom: 20px;
     }
-
 
     .field label {
 
       display: block;
 
-      margin-bottom: 7px;
+      margin-bottom: 8px;
 
       font-family: Arial, Helvetica, sans-serif;
 
-      font-size: 13px;
+      font-size: 14px;
 
       font-weight: 600;
 
@@ -257,7 +255,6 @@
 
       color: #776157;
     }
-
 
     .field input,
     .field textarea {
@@ -274,27 +271,24 @@
 
       font-family: Georgia, "Times New Roman", serif;
 
-      font-size: 18px;
+      font-size: 19px;
 
-      padding: 14px 15px;
+      padding: 15px 16px;
 
       border: 1px solid transparent;
     }
 
-
     .field input {
 
-      height: 48px;
+      height: 52px;
     }
-
 
     .field textarea {
 
-      min-height: 145px;
+      min-height: 155px;
 
       resize: vertical;
     }
-
 
     .field input:focus,
     .field textarea:focus {
@@ -302,16 +296,27 @@
       border-color: #c98a69;
     }
 
+    .field input::placeholder,
+    .field textarea::placeholder {
+
+      color: #a99b92;
+    }
+
+
+
+    /* ==================================================
+       BOTÓN
+    ================================================== */
 
     .send-button {
 
       display: block;
 
-      width: 235px;
+      width: 250px;
 
-      margin: 24px auto 0;
+      margin: 25px auto 0;
 
-      padding: 17px 20px;
+      padding: 18px 20px;
 
       border: none;
 
@@ -334,7 +339,6 @@
       transition: 0.3s ease;
     }
 
-
     .send-button:hover {
 
       background: #b87558;
@@ -345,7 +349,7 @@
 
 
     /* ==================================================
-       FOTO + INFORMACIÓN
+       COLUMNA DERECHA
     ================================================== */
 
     .contact-right {
@@ -355,18 +359,26 @@
       display: flex;
 
       flex-direction: column;
+
+      min-width: 0;
     }
 
+
+
+    /* ==================================================
+       FOTO
+    ================================================== */
 
     .contact-photo {
 
       width: 100%;
 
-      height: 530px;
+      height: 570px;
 
       overflow: hidden;
-    }
 
+      background: #e7dbcf;
+    }
 
     .contact-photo img {
 
@@ -376,17 +388,22 @@
 
       object-fit: cover;
 
-      object-position: center top;
+      object-position: center 22%;
 
       display: block;
     }
 
 
+
+    /* ==================================================
+       INFORMACIÓN
+    ================================================== */
+
     .contact-info {
 
       flex: 1;
 
-      padding: 35px 35px 38px;
+      padding: 40px 40px 45px;
 
       text-align: center;
 
@@ -399,12 +416,11 @@
       align-items: center;
     }
 
-
     .contact-quote {
 
-      max-width: 700px;
+      max-width: 850px;
 
-      font-size: 27px;
+      font-size: 30px;
 
       line-height: 1.25;
 
@@ -414,21 +430,25 @@
 
       color: #a96d53;
 
-      margin-bottom: 22px;
+      margin-bottom: 24px;
     }
-
 
     .quote-line {
 
-      width: 65px;
+      width: 70px;
 
       height: 1px;
 
       background: #bd8b73;
 
-      margin-bottom: 28px;
+      margin-bottom: 32px;
     }
 
+
+
+    /* ==================================================
+       DATOS CONTACTO
+    ================================================== */
 
     .info-grid {
 
@@ -438,31 +458,28 @@
 
       grid-template-columns: repeat(3, 1fr);
 
-      gap: 20px;
+      gap: 30px;
     }
-
 
     .info-item {
 
       text-align: center;
     }
 
-
     .info-icon {
 
-      font-size: 23px;
+      font-size: 25px;
 
       color: #c77f60;
 
-      margin-bottom: 9px;
+      margin-bottom: 10px;
     }
-
 
     .info-title {
 
       font-family: Arial, Helvetica, sans-serif;
 
-      font-size: 13px;
+      font-size: 14px;
 
       font-weight: 600;
 
@@ -470,22 +487,20 @@
 
       color: #79645a;
 
-      margin-bottom: 7px;
+      margin-bottom: 8px;
     }
-
 
     .info-item a,
     .info-item span {
 
       display: block;
 
-      font-size: 17px;
+      font-size: 18px;
 
-      line-height: 1.35;
+      line-height: 1.4;
 
       color: #574239;
     }
-
 
     .info-item a:hover {
 
@@ -495,34 +510,34 @@
 
 
     /* ==================================================
-       ENLACES EXTERNOS
+       ENLACES
     ================================================== */
 
     .links-section {
 
-      width: calc(100% - 90px);
+      width: 92%;
 
-      max-width: 1550px;
+      max-width: 1850px;
 
       margin: 0 auto 70px;
 
-      padding: 45px 50px;
+      padding: 48px 55px;
 
       background: #eee1d3;
 
       text-align: center;
     }
 
-
     .links-section h2 {
 
-      font-size: 42px;
+      font-size: clamp(42px, 3.5vw, 58px);
 
       font-weight: 400;
 
-      margin-bottom: 10px;
-    }
+      line-height: 1;
 
+      margin-bottom: 14px;
+    }
 
     .links-section h2 em {
 
@@ -531,16 +546,16 @@
       font-style: italic;
     }
 
-
     .links-section p {
 
-      font-size: 19px;
+      font-size: 20px;
+
+      line-height: 1.4;
 
       color: #624c40;
 
-      margin-bottom: 30px;
+      margin-bottom: 32px;
     }
-
 
     .social-links {
 
@@ -548,19 +563,22 @@
 
       justify-content: center;
 
-      align-items: center;
+      align-items: stretch;
 
-      gap: 20px;
+      gap: 22px;
 
       flex-wrap: wrap;
     }
 
-
     .social-link {
 
-      min-width: 230px;
+      flex: 1;
 
-      padding: 15px 25px;
+      min-width: 250px;
+
+      max-width: 400px;
+
+      padding: 18px 25px;
 
       border: 1px solid #c58a70;
 
@@ -568,7 +586,7 @@
 
       font-family: Arial, Helvetica, sans-serif;
 
-      font-size: 13px;
+      font-size: 14px;
 
       font-weight: 600;
 
@@ -576,7 +594,6 @@
 
       transition: 0.3s ease;
     }
-
 
     .social-link:hover {
 
@@ -595,9 +612,9 @@
 
       width: 100%;
 
-      min-height: 190px;
+      min-height: 210px;
 
-      padding: 45px 30px 50px;
+      padding: 55px 30px;
 
       display: flex;
 
@@ -621,10 +638,9 @@
       background-position: center;
     }
 
-
     .closing p {
 
-      font-size: 30px;
+      font-size: 32px;
 
       line-height: 1.3;
 
@@ -632,13 +648,12 @@
 
       color: #704c3c;
 
-      margin-bottom: 22px;
+      margin-bottom: 24px;
     }
-
 
     .closing-line {
 
-      width: 75px;
+      width: 80px;
 
       height: 1px;
 
@@ -653,7 +668,7 @@
 
     footer {
 
-      padding: 27px 20px;
+      padding: 28px 20px;
 
       text-align: center;
 
@@ -673,65 +688,128 @@
 
 
     /* ==================================================
+       PANTALLAS MUY GRANDES
+    ================================================== */
+
+    @media (min-width: 1600px) {
+
+      .contact-section {
+
+        width: 90%;
+
+        max-width: 1900px;
+      }
+
+      .links-section {
+
+        width: 90%;
+
+        max-width: 1900px;
+      }
+
+      .contact-photo {
+
+        height: 620px;
+      }
+
+      .contact-form {
+
+        padding: 58px 65px 55px;
+      }
+
+      .field {
+
+        margin-bottom: 22px;
+      }
+
+      .field input {
+
+        height: 56px;
+      }
+
+      .field textarea {
+
+        min-height: 170px;
+      }
+
+    }
+
+
+
+    /* ==================================================
        TABLET
     ================================================== */
 
     @media (max-width: 1100px) {
 
       header {
+
         padding: 0 30px;
       }
 
-
       .logo {
+
         width: 250px;
       }
 
-
       nav {
+
         gap: 25px;
       }
 
-
       nav a {
+
         font-size: 15px;
       }
 
-
       .intro h1 {
+
         font-size: 76px;
       }
 
-
       .intro p {
+
         font-size: 22px;
       }
 
-
       .contact-section {
+
         width: calc(100% - 40px);
 
         gap: 20px;
       }
 
-
       .contact-form {
-        padding: 35px 30px;
-      }
 
+        padding: 38px 30px;
+      }
 
       .contact-photo {
-        height: 450px;
-      }
 
+        height: 480px;
+      }
 
       .contact-quote {
-        font-size: 23px;
+
+        font-size: 25px;
       }
 
+      .info-grid {
+
+        gap: 15px;
+      }
+
+      .info-item a,
+      .info-item span {
+
+        font-size: 16px;
+      }
 
       .links-section {
+
         width: calc(100% - 40px);
+
+        padding: 40px 30px;
       }
 
     }
@@ -755,11 +833,10 @@
         gap: 20px;
       }
 
-
       .logo {
+
         width: 200px;
       }
-
 
       nav {
 
@@ -772,7 +849,6 @@
         gap: 11px 17px;
       }
 
-
       nav a {
 
         font-size: 12px;
@@ -780,8 +856,8 @@
         letter-spacing: 1.1px;
       }
 
-
       nav a.active::after {
+
         bottom: -5px;
       }
 
@@ -794,14 +870,14 @@
         padding: 40px 18px 35px;
       }
 
-
       .eyebrow {
 
         font-size: 12px;
 
         letter-spacing: 3px;
-      }
 
+        margin-bottom: 15px;
+      }
 
       .intro h1 {
 
@@ -811,7 +887,6 @@
 
         letter-spacing: -2px;
       }
-
 
       .intro p {
 
@@ -839,36 +914,40 @@
         margin-bottom: 45px;
       }
 
-
       .contact-form {
 
-        padding: 30px 22px 30px;
+        padding: 32px 22px 32px;
       }
-
 
       .contact-form h2 {
 
         font-size: 48px;
       }
 
-
       .form-intro {
 
         font-size: 18px;
       }
 
+      .field {
+
+        margin-bottom: 18px;
+      }
+
+      .field label {
+
+        font-size: 12px;
+      }
 
       .field input {
 
-        height: 50px;
+        height: 52px;
       }
-
 
       .field textarea {
 
-        min-height: 150px;
+        min-height: 155px;
       }
-
 
       .send-button {
 
@@ -876,29 +955,35 @@
       }
 
 
+
+      /* FOTO */
+
       .contact-photo {
 
         height: 500px;
       }
 
-
       .contact-info {
 
-        padding: 30px 20px 35px;
+        padding: 32px 20px 38px;
       }
-
 
       .contact-quote {
 
-        font-size: 23px;
+        font-size: 24px;
       }
-
 
       .info-grid {
 
         grid-template-columns: 1fr;
 
-        gap: 24px;
+        gap: 25px;
+      }
+
+      .info-item a,
+      .info-item span {
+
+        font-size: 17px;
       }
 
 
@@ -909,17 +994,15 @@
 
         width: calc(100% - 20px);
 
-        padding: 35px 20px;
+        padding: 38px 20px;
 
         margin-bottom: 45px;
       }
 
-
       .links-section h2 {
 
-        font-size: 38px;
+        font-size: 40px;
       }
-
 
       .links-section p {
 
@@ -928,7 +1011,6 @@
         line-height: 1.4;
       }
 
-
       .social-links {
 
         flex-direction: column;
@@ -936,10 +1018,11 @@
         width: 100%;
       }
 
-
       .social-link {
 
         width: 100%;
+
+        max-width: none;
 
         min-width: 0;
       }
@@ -950,16 +1033,16 @@
 
       .closing {
 
-        min-height: 175px;
+        min-height: 180px;
 
         padding: 45px 25px;
       }
 
-
       .closing p {
 
-        font-size: 26px;
+        font-size: 27px;
       }
+
 
 
       /* FOOTER */
@@ -1068,7 +1151,9 @@
   <main class="contact-section">
 
 
-    <!-- FORMULARIO -->
+    <!-- ==================================================
+         FORMULARIO
+    ================================================== -->
 
     <section class="contact-form">
 
@@ -1088,16 +1173,6 @@
 
       </p>
 
-
-      <!--
-        FORMULARIO
-
-        Los mensajes se enviarán a:
-        bodasconcati@gmail.com
-
-        La primera vez FormSubmit puede pedirte
-        activar el formulario desde un correo.
-      -->
 
       <form
         action="https://formsubmit.co/bodasconcati@gmail.com"
@@ -1221,7 +1296,9 @@
           type="submit"
           class="send-button"
         >
+
           ENVIAR MENSAJE →
+
         </button>
 
 
@@ -1231,7 +1308,9 @@
 
 
 
-    <!-- FOTO + INFORMACIÓN -->
+    <!-- ==================================================
+         FOTO + INFORMACIÓN
+    ================================================== -->
 
     <section class="contact-right">
 
@@ -1303,7 +1382,7 @@
 
 
 
-          <!-- MALLORCA -->
+          <!-- UBICACIÓN -->
 
           <div class="info-item">
 
@@ -1334,7 +1413,7 @@
 
 
   <!-- ==================================================
-       BODAS.NET / INSTAGRAM / GOOGLE
+       BODAS.NET · INSTAGRAM · GOOGLE
   ================================================== -->
 
   <section class="links-section">
@@ -1360,8 +1439,6 @@
     <div class="social-links">
 
 
-      <!-- BODAS.NET -->
-
       <a
         class="social-link"
         href="https://www.bodas.net/organizacion-bodas/bodas-con-cati--e303209"
@@ -1372,9 +1449,6 @@
       </a>
 
 
-
-      <!-- INSTAGRAM -->
-
       <a
         class="social-link"
         href="https://www.instagram.com/bodasconcati/"
@@ -1384,9 +1458,6 @@
         INSTAGRAM · @BODASCONCATI →
       </a>
 
-
-
-      <!-- GOOGLE -->
 
       <a
         class="social-link"
@@ -1411,8 +1482,11 @@
   <section class="closing">
 
     <p>
+
       Porque cada historia merece ser vivida a su manera.
+
     </p>
+
 
     <div class="closing-line"></div>
 
