@@ -1,1 +1,1135 @@
+<!DOCTYPE html>
+<html lang="es">
 
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>Galería · Bodas Con Cati</title>
+
+
+  <style>
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: #f7f3ed;
+      color: #403936;
+      font-family: Georgia, "Times New Roman", serif;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+
+    /* ==================================================
+       CABECERA
+    ================================================== */
+
+    header {
+      width: 100%;
+      height: 125px;
+
+      padding: 0 5vw;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      background: #f7f3ed;
+    }
+
+
+    .logo {
+      width: 260px;
+      height: auto;
+      display: block;
+    }
+
+
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 38px;
+
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+
+    nav a {
+      color: #514a45;
+
+      font-size: 18px;
+      font-weight: 500;
+
+      letter-spacing: 1.8px;
+
+      text-transform: uppercase;
+
+      white-space: nowrap;
+
+      transition: opacity .25s ease;
+    }
+
+
+    nav a:hover {
+      opacity: .55;
+    }
+
+
+    nav a.active {
+      color: #a4776b;
+    }
+
+
+    /* ==================================================
+       INTRO
+    ================================================== */
+
+    .gallery-intro {
+      width: 90%;
+      max-width: 1850px;
+
+      margin: 0 auto;
+
+      text-align: center;
+
+      padding: 55px 0 20px;
+    }
+
+
+    .eyebrow {
+      margin-bottom: 16px;
+
+      color: #a4776b;
+
+      font-family: Arial, Helvetica, sans-serif;
+
+      font-size: 13px;
+
+      letter-spacing: 4px;
+
+      text-transform: uppercase;
+    }
+
+
+    .gallery-title {
+      color: #403936;
+
+      font-size: clamp(70px, 8vw, 120px);
+
+      line-height: .9;
+
+      font-weight: 400;
+
+      letter-spacing: -5px;
+    }
+
+
+    .gallery-title em {
+      color: #a4776b;
+
+      font-style: italic;
+    }
+
+
+    .gallery-subtitle {
+      margin-top: 25px;
+
+      color: #806e65;
+
+      font-family: Arial, Helvetica, sans-serif;
+
+      font-size: 13px;
+
+      letter-spacing: 5px;
+
+      text-transform: uppercase;
+    }
+
+
+    /* ==================================================
+       SECCIONES
+    ================================================== */
+
+    .gallery-section {
+
+      width: 92%;
+      max-width: 1850px;
+
+      margin: 0 auto 85px;
+    }
+
+
+    .section-heading {
+
+      display: flex;
+
+      align-items: center;
+      justify-content: center;
+
+      gap: 22px;
+
+      margin: 45px 0 32px;
+    }
+
+
+    .section-heading::before,
+    .section-heading::after {
+
+      content: "";
+
+      width: 65px;
+      height: 1px;
+
+      background: #b99a8c;
+    }
+
+
+    .section-heading h2 {
+
+      color: #a4776b;
+
+      font-family: Arial, Helvetica, sans-serif;
+
+      font-size: 14px;
+
+      font-weight: 500;
+
+      letter-spacing: 5px;
+
+      text-transform: uppercase;
+    }
+
+
+    /* ==================================================
+       FOTOS
+    ================================================== */
+
+    .photo-gallery {
+
+      display: grid;
+
+      grid-template-columns: repeat(4, 1fr);
+
+      gap: 10px;
+    }
+
+
+    .photo-item {
+
+      width: 100%;
+
+      height: 390px;
+
+      overflow: hidden;
+
+      background: #e8dfd6;
+    }
+
+
+    .photo-item img {
+
+      width: 100%;
+      height: 100%;
+
+      display: block;
+
+      object-fit: cover;
+
+      transition: transform .6s ease;
+    }
+
+
+    .photo-item:hover img {
+
+      transform: scale(1.04);
+    }
+
+
+    /* ==================================================
+       REELS
+    ================================================== */
+
+    .reels-gallery {
+
+      display: grid;
+
+      grid-template-columns: repeat(4, 1fr);
+
+      gap: 12px;
+    }
+
+
+    .reel-item {
+
+      width: 100%;
+
+      aspect-ratio: 9 / 16;
+
+      overflow: hidden;
+
+      background: #e8dfd6;
+    }
+
+
+    .reel-item video {
+
+      width: 100%;
+      height: 100%;
+
+      display: block;
+
+      object-fit: cover;
+
+      background: #e8dfd6;
+    }
+
+
+    /* ==================================================
+       MENSAJE SI TODAVÍA NO HAY REELS
+    ================================================== */
+
+    .no-reels {
+
+      display: none;
+
+      padding: 50px 20px;
+
+      text-align: center;
+
+      color: #806e65;
+
+      font-family: Arial, Helvetica, sans-serif;
+
+      font-size: 12px;
+
+      letter-spacing: 3px;
+
+      text-transform: uppercase;
+    }
+
+
+    /* ==================================================
+       FRASE FINAL
+    ================================================== */
+
+    .gallery-closing {
+
+      width: 90%;
+
+      margin: 70px auto;
+
+      display: flex;
+
+      align-items: center;
+
+      justify-content: center;
+
+      gap: 20px;
+
+      text-align: center;
+    }
+
+
+    .gallery-closing::before,
+    .gallery-closing::after {
+
+      content: "";
+
+      width: 65px;
+      height: 1px;
+
+      background: #b99a8c;
+    }
+
+
+    .gallery-closing p {
+
+      color: #a4776b;
+
+      font-size: 31px;
+
+      font-style: italic;
+
+      line-height: 1.2;
+    }
+
+
+    /* ==================================================
+       FOOTER
+    ================================================== */
+
+    footer {
+
+      padding: 30px 5%;
+
+      border-top: 1px solid rgba(100, 80, 70, .2);
+
+      background: #f7f3ed;
+
+      display: flex;
+
+      align-items: center;
+
+      justify-content: space-between;
+
+      gap: 30px;
+
+      color: #766e68;
+
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+
+    .footer-left {
+
+      display: flex;
+
+      flex-direction: column;
+
+      gap: 4px;
+    }
+
+
+    .footer-brand {
+
+      color: #a4776b;
+
+      font-family: Georgia, "Times New Roman", serif;
+
+      font-size: 20px;
+
+      font-style: italic;
+    }
+
+
+    .footer-small {
+
+      font-size: 9px;
+
+      letter-spacing: 2px;
+
+      text-transform: uppercase;
+    }
+
+
+    .footer-center {
+
+      font-size: 10px;
+
+      letter-spacing: 2px;
+
+      text-transform: uppercase;
+
+      text-align: center;
+    }
+
+
+    .footer-social {
+
+      display: flex;
+
+      gap: 18px;
+
+      color: #a4776b;
+
+      font-size: 11px;
+    }
+
+
+    /* ==================================================
+       PANTALLAS GRANDES
+    ================================================== */
+
+    @media (min-width: 1600px) {
+
+      header {
+        padding-left: 5vw;
+        padding-right: 5vw;
+      }
+
+
+      .logo {
+        width: 300px;
+      }
+
+
+      nav {
+        gap: 42px;
+      }
+
+
+      nav a {
+        font-size: 18px;
+      }
+
+
+      .gallery-title {
+        font-size: 120px;
+      }
+
+
+      .photo-gallery,
+      .reels-gallery {
+        gap: 12px;
+      }
+
+
+      .photo-item {
+        height: 450px;
+      }
+
+    }
+
+
+    /* ==================================================
+       TABLET
+    ================================================== */
+
+    @media (max-width: 1100px) {
+
+      header {
+        padding: 0 4%;
+      }
+
+
+      .logo {
+        width: 230px;
+      }
+
+
+      nav {
+        gap: 22px;
+      }
+
+
+      nav a {
+
+        font-size: 15px;
+
+        letter-spacing: 1px;
+      }
+
+
+      .photo-gallery,
+      .reels-gallery {
+
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+
+      .photo-item {
+        height: 430px;
+      }
+
+    }
+
+
+    /* ==================================================
+       MÓVIL
+    ================================================== */
+
+    @media (max-width: 700px) {
+
+      header {
+
+        height: auto;
+
+        padding: 22px 6% 20px;
+
+        flex-direction: column;
+
+        gap: 18px;
+      }
+
+
+      .logo {
+        width: 195px;
+      }
+
+
+      nav {
+
+        width: 100%;
+
+        justify-content: center;
+
+        flex-wrap: wrap;
+
+        gap: 11px 17px;
+      }
+
+
+      nav a {
+
+        font-size: 11px;
+
+        letter-spacing: 1px;
+      }
+
+
+      .gallery-intro {
+
+        width: 88%;
+
+        padding: 45px 0 20px;
+      }
+
+
+      .eyebrow {
+
+        font-size: 10px;
+
+        letter-spacing: 2.5px;
+      }
+
+
+      .gallery-title {
+
+        font-size: clamp(60px, 17vw, 82px);
+
+        letter-spacing: -3px;
+      }
+
+
+      .gallery-subtitle {
+
+        margin-top: 20px;
+
+        font-size: 10px;
+
+        letter-spacing: 3px;
+
+        line-height: 1.7;
+      }
+
+
+      .gallery-section {
+
+        width: 88%;
+
+        margin-bottom: 60px;
+      }
+
+
+      .section-heading {
+
+        margin: 35px 0 25px;
+
+        gap: 15px;
+      }
+
+
+      .section-heading::before,
+      .section-heading::after {
+
+        width: 35px;
+      }
+
+
+      .section-heading h2 {
+
+        font-size: 11px;
+
+        letter-spacing: 3px;
+      }
+
+
+      .photo-gallery {
+
+        grid-template-columns: 1fr;
+
+        gap: 8px;
+      }
+
+
+      .photo-item {
+
+        height: 430px;
+      }
+
+
+      .reels-gallery {
+
+        grid-template-columns: 1fr 1fr;
+
+        gap: 8px;
+      }
+
+
+      .gallery-closing {
+
+        width: 88%;
+
+        margin: 50px auto 60px;
+
+        gap: 12px;
+      }
+
+
+      .gallery-closing::before,
+      .gallery-closing::after {
+
+        width: 30px;
+      }
+
+
+      .gallery-closing p {
+
+        font-size: 24px;
+      }
+
+
+      footer {
+
+        padding: 25px 6%;
+
+        flex-direction: column;
+
+        text-align: center;
+
+        gap: 17px;
+      }
+
+
+      .footer-center {
+        order: 2;
+      }
+
+
+      .footer-social {
+        order: 3;
+      }
+
+    }
+
+  </style>
+
+</head>
+
+
+<body>
+
+
+  <!-- ==================================================
+       CABECERA
+  ================================================== -->
+
+  <header>
+
+    <a href="index.html">
+
+      <img
+        src="assets/logo%202.jpg"
+        alt="Bodas Con Cati"
+        class="logo"
+      >
+
+    </a>
+
+
+    <nav>
+
+      <a href="index.html">
+        INICIO
+      </a>
+
+      <a href="sobre-mi.html">
+        SOBRE MÍ
+      </a>
+
+      <a href="servicios.html">
+        SERVICIOS
+      </a>
+
+      <a
+        href="galeria.html"
+        class="active"
+      >
+        GALERÍA
+      </a>
+
+      <a href="contacto.html">
+        CONTACTO
+      </a>
+
+    </nav>
+
+  </header>
+
+
+
+  <!-- ==================================================
+       INTRO
+  ================================================== -->
+
+  <section class="gallery-intro">
+
+    <p class="eyebrow">
+      BODAS CON CATI
+    </p>
+
+
+    <h1 class="gallery-title">
+
+      Momentos <em>que cuentan.</em>
+
+    </h1>
+
+
+    <p class="gallery-subtitle">
+
+      BODAS REALES · EMOCIONES · HISTORIAS
+
+    </p>
+
+  </section>
+
+
+
+  <!-- ==================================================
+       FOTOS
+  ================================================== -->
+
+  <section class="gallery-section">
+
+
+    <div class="section-heading">
+
+      <h2>
+        Fotos
+      </h2>
+
+    </div>
+
+
+    <div class="photo-gallery">
+
+
+      <div class="photo-item">
+        <img
+          src="galeria/01-zapatos-novia.jpg"
+          alt="Zapatos de novia · Bodas Con Cati"
+        >
+      </div>
+
+
+      <div class="photo-item">
+        <img
+          src="galeria/02-novia-ventana.jpg"
+          alt="Novia junto a la ventana · Bodas Con Cati"
+        >
+      </div>
+
+
+      <div class="photo-item">
+        <img
+          src="galeria/03-pareja-patio.jpg"
+          alt="Pareja de novios · Bodas Con Cati"
+        >
+      </div>
+
+
+      <div class="photo-item">
+        <img
+          src="galeria/04-novio-escaleras.jpg"
+          alt="Novio en las escaleras · Bodas Con Cati"
+        >
+      </div>
+
+
+      <div class="photo-item">
+        <img
+          src="galeria/05-luces-y-velas.jpg"
+          alt="Luces y velas de boda · Bodas Con Cati"
+        >
+      </div>
+
+
+      <div class="photo-item">
+        <img
+          src="galeria/06-momento-novio.jpg"
+          alt="Momento del novio · Bodas Con Cati"
+        >
+      </div>
+
+
+      <div class="photo-item">
+        <img
+          src="galeria/07-novia-vestido.jpg"
+          alt="Novia con vestido · Bodas Con Cati"
+        >
+      </div>
+
+
+      <div class="photo-item">
+        <img
+          src="galeria/08-familia-y-flores.jpg"
+          alt="Familia y flores · Bodas Con Cati"
+        >
+      </div>
+
+
+      <div class="photo-item">
+        <img
+          src="galeria/09-celebracion.jpg"
+          alt="Celebración de boda · Bodas Con Cati"
+        >
+      </div>
+
+
+      <div class="photo-item">
+        <img
+          src="galeria/10-detalle-novia-y-cati.jpg"
+          alt="Detalle de novia y Cati · Bodas Con Cati"
+        >
+      </div>
+
+
+      <div class="photo-item">
+        <img
+          src="galeria/11-brindis-con-cati.jpg"
+          alt="Brindis con Cati · Bodas Con Cati"
+        >
+      </div>
+
+
+      <div class="photo-item">
+        <img
+          src="galeria/12-cati.jpg"
+          alt="Cati · Bodas Con Cati"
+        >
+      </div>
+
+
+      <div class="photo-item">
+        <img
+          src="galeria/13-cati-ayudando-novia.jpg"
+          alt="Cati ayudando a una novia · Bodas Con Cati"
+        >
+      </div>
+
+
+    </div>
+
+  </section>
+
+
+
+  <!-- ==================================================
+       REELS
+  ================================================== -->
+
+  <section class="gallery-section">
+
+
+    <div class="section-heading">
+
+      <h2>
+        Reels
+      </h2>
+
+    </div>
+
+
+    <div
+      class="reels-gallery"
+      id="reelsGallery"
+    ></div>
+
+
+    <div
+      class="no-reels"
+      id="noReels"
+    >
+      Próximamente nuevos reels
+    </div>
+
+
+  </section>
+
+
+
+  <!-- ==================================================
+       FRASE FINAL
+  ================================================== -->
+
+  <div class="gallery-closing">
+
+    <p>
+      Historias que merece la pena recordar.
+    </p>
+
+  </div>
+
+
+
+  <!-- ==================================================
+       FOOTER
+  ================================================== -->
+
+  <footer>
+
+
+    <div class="footer-left">
+
+      <span class="footer-brand">
+        Bodas Con Cati
+      </span>
+
+      <span class="footer-small">
+        Wedding Planner en Mallorca
+      </span>
+
+    </div>
+
+
+    <div class="footer-center">
+
+      Experiencias que se recuerdan toda la vida
+
+    </div>
+
+
+    <div class="footer-social">
+
+      <span>
+        Instagram
+      </span>
+
+      <span>
+        Pinterest
+      </span>
+
+      <span>
+        WhatsApp
+      </span>
+
+    </div>
+
+
+  </footer>
+
+
+
+  <!-- ==================================================
+       CARGAR AUTOMÁTICAMENTE LOS REELS
+  ================================================== -->
+
+  <script>
+
+    async function cargarReels() {
+
+      const reelsGallery =
+        document.getElementById("reelsGallery");
+
+      const noReels =
+        document.getElementById("noReels");
+
+
+      try {
+
+        const respuesta = await fetch(
+          "https://api.github.com/repos/bodasconcati/bodasconcati.github.io/contents/reels"
+        );
+
+
+        if (!respuesta.ok) {
+          throw new Error("No se pudo acceder a la carpeta reels");
+        }
+
+
+        const archivos = await respuesta.json();
+
+
+        const videos = archivos.filter(
+          archivo =>
+            archivo.type === "file" &&
+            /\.(mp4|webm|ogg)$/i.test(archivo.name)
+        );
+
+
+        if (videos.length === 0) {
+
+          noReels.style.display = "block";
+
+          return;
+        }
+
+
+        videos.forEach(video => {
+
+          const contenedor =
+            document.createElement("div");
+
+          contenedor.className =
+            "reel-item";
+
+
+          const elementoVideo =
+            document.createElement("video");
+
+          elementoVideo.controls = true;
+
+          elementoVideo.playsInline = true;
+
+          elementoVideo.preload = "metadata";
+
+
+          const fuente =
+            document.createElement("source");
+
+          fuente.src =
+            "reels/" + encodeURIComponent(video.name);
+
+          fuente.type =
+            video.name.toLowerCase().endsWith(".webm")
+              ? "video/webm"
+              : video.name.toLowerCase().endsWith(".ogg")
+                ? "video/ogg"
+                : "video/mp4";
+
+
+          elementoVideo.appendChild(fuente);
+
+          contenedor.appendChild(elementoVideo);
+
+          reelsGallery.appendChild(contenedor);
+
+        });
+
+      }
+
+      catch (error) {
+
+        noReels.style.display = "block";
+
+      }
+
+    }
+
+
+    cargarReels();
+
+  </script>
+
+
+</body>
+
+</html>
