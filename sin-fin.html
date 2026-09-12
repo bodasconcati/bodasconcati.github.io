@@ -1,26 +1,1117 @@
-<nav>
+<!DOCTYPE html>
+<html lang="es">
 
-  <a href="index.html">
-    INICIO
-  </a>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <a href="sobre-mi.html">
-    SOBRE MÍ
-  </a>
+  <title>Paquete Sin Fin · Bodas Con Cati</title>
 
-  <a
-    href="servicios.html"
-    class="active"
-  >
-    SERVICIOS
-  </a>
+  <style>
 
-  <a href="galeria.html">
-    GALERÍA
-  </a>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-  <a href="contacto.html">
-    CONTACTO
-  </a>
+    html {
+      scroll-behavior: smooth;
+    }
 
-</nav>
+    body {
+      background: #f7f3ed;
+      color: #403936;
+      font-family: Georgia, "Times New Roman", serif;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    /* ==================================================
+       CABECERA
+    ================================================== */
+
+    header {
+      width: 100%;
+      height: 125px;
+      padding: 0 5vw;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      background: #f7f3ed;
+    }
+
+    .logo {
+      width: 260px;
+      height: auto;
+      display: block;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 38px;
+
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    nav a {
+      color: #514a45;
+
+      font-size: 18px;
+      font-weight: 500;
+
+      letter-spacing: 1.8px;
+      text-transform: uppercase;
+
+      white-space: nowrap;
+
+      transition: opacity .25s ease;
+    }
+
+    nav a:hover {
+      opacity: .55;
+    }
+
+    nav a.active {
+      color: #a4776b;
+    }
+
+    /* ==================================================
+       INTRO
+    ================================================== */
+
+    .service-intro {
+      width: 90%;
+      max-width: 1850px;
+
+      margin: 0 auto;
+
+      padding: 48px 0 35px;
+
+      position: relative;
+    }
+
+    .eyebrow {
+      margin-bottom: 15px;
+
+      color: #a4776b;
+
+      font-family: Arial, Helvetica, sans-serif;
+
+      font-size: 13px;
+      letter-spacing: 3px;
+
+      text-transform: uppercase;
+    }
+
+    .service-title {
+      display: flex;
+      align-items: baseline;
+
+      gap: 25px;
+
+      font-family: Georgia, "Times New Roman", serif;
+
+      font-size: clamp(72px, 7vw, 118px);
+
+      line-height: .9;
+
+      font-weight: 400;
+
+      letter-spacing: -5px;
+
+      color: #403936;
+    }
+
+    .service-title em {
+      color: #a4776b;
+      font-style: italic;
+    }
+
+    .service-subtitle {
+      display: flex;
+      align-items: center;
+
+      gap: 20px;
+
+      margin-top: 25px;
+
+      color: #9b7567;
+
+      font-family: Arial, Helvetica, sans-serif;
+
+      font-size: 13px;
+      letter-spacing: 5px;
+
+      text-transform: uppercase;
+    }
+
+    .service-subtitle::before {
+      content: "";
+
+      width: 70px;
+      height: 1px;
+
+      background: #a4776b;
+
+      display: block;
+    }
+
+    /* ==================================================
+       FRASE DECORATIVA
+    ================================================== */
+
+    .decorative-phrase {
+      position: absolute;
+
+      right: 5%;
+      top: 55px;
+
+      max-width: 390px;
+
+      font-family: Georgia, "Times New Roman", serif;
+
+      font-size: 42px;
+      line-height: 1.12;
+
+      font-style: italic;
+
+      color: #b18170;
+
+      text-align: center;
+
+      transform: rotate(-4deg);
+    }
+
+    /* ==================================================
+       CONTENIDO PRINCIPAL
+    ================================================== */
+
+    .service-content {
+      width: 90%;
+      max-width: 1850px;
+
+      margin: 0 auto;
+
+      display: grid;
+
+      grid-template-columns: 1.08fr .92fr;
+
+      gap: 55px;
+
+      align-items: start;
+    }
+
+    /* ==================================================
+       TEXTO
+    ================================================== */
+
+    .service-text {
+      padding-top: 5px;
+      padding-right: 5px;
+    }
+
+    .service-description {
+      margin-bottom: 27px;
+
+      font-size: 22px;
+      line-height: 1.42;
+
+      color: #403936;
+    }
+
+    /* ==================================================
+       APARTADOS
+    ================================================== */
+
+    .service-section {
+      position: relative;
+
+      padding-left: 76px;
+
+      margin-bottom: 27px;
+
+      min-height: 58px;
+    }
+
+    .service-section::before {
+      content: "";
+
+      position: absolute;
+
+      left: 0;
+      top: 0;
+
+      width: 1px;
+      height: 100%;
+
+      background: #b98a77;
+    }
+
+    .service-number {
+      position: absolute;
+
+      left: 14px;
+      top: -2px;
+
+      width: 42px;
+      height: 42px;
+
+      border-radius: 50%;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      background: #a9684f;
+
+      color: #fff;
+
+      font-family: Arial, Helvetica, sans-serif;
+
+      font-size: 13px;
+      letter-spacing: 1px;
+    }
+
+    .service-section h2 {
+      margin-bottom: 7px;
+
+      color: #a9684f;
+
+      font-size: 18px;
+      line-height: 1.25;
+
+      letter-spacing: 2px;
+
+      text-transform: uppercase;
+
+      font-weight: 500;
+    }
+
+    .service-section ul {
+      padding-left: 20px;
+
+      font-size: 17px;
+      line-height: 1.4;
+
+      color: #403936;
+    }
+
+    .service-section li {
+      margin-bottom: 4px;
+      padding-left: 3px;
+    }
+
+    /* ==================================================
+       GALERÍA
+    ================================================== */
+
+    .service-gallery {
+      width: 100%;
+
+      display: grid;
+
+      grid-template-columns: 1fr 1fr;
+
+      gap: 9px;
+
+      padding-top: 0;
+    }
+
+    .gallery-image {
+      width: 100%;
+
+      height: 315px;
+
+      overflow: hidden;
+
+      border-radius: 3px;
+    }
+
+    .gallery-image img {
+      width: 100%;
+      height: 100%;
+
+      display: block;
+
+      object-fit: cover;
+
+      transition: transform .5s ease;
+    }
+
+    .gallery-image:hover img {
+      transform: scale(1.03);
+    }
+
+    /* ==================================================
+       FRASE FINAL
+    ================================================== */
+
+    .text-closing {
+      margin-top: 38px;
+
+      display: flex;
+      align-items: center;
+
+      gap: 18px;
+    }
+
+    .text-closing::before {
+      content: "";
+
+      width: 60px;
+      height: 1px;
+
+      background: #a4776b;
+
+      flex-shrink: 0;
+    }
+
+    .text-closing p {
+      font-size: 32px;
+      line-height: 1.15;
+
+      color: #b07d6b;
+
+      font-style: italic;
+    }
+
+    /* ==================================================
+       FOOTER
+    ================================================== */
+
+    footer {
+      margin-top: 45px;
+
+      padding: 28px 5%;
+
+      border-top: 1px solid rgba(100, 80, 70, .2);
+
+      background: #f7f3ed;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      gap: 30px;
+
+      color: #766e68;
+
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .footer-left {
+      display: flex;
+      flex-direction: column;
+
+      gap: 4px;
+    }
+
+    .footer-brand {
+      font-family: Georgia, "Times New Roman", serif;
+
+      font-size: 19px;
+
+      font-style: italic;
+
+      color: #a4776b;
+    }
+
+    .footer-small {
+      font-size: 9px;
+
+      letter-spacing: 2px;
+
+      text-transform: uppercase;
+    }
+
+    .footer-center {
+      font-size: 10px;
+
+      letter-spacing: 2px;
+
+      text-transform: uppercase;
+
+      text-align: center;
+    }
+
+    .footer-social {
+      display: flex;
+
+      gap: 16px;
+
+      font-size: 11px;
+
+      color: #a4776b;
+    }
+
+    /* ==================================================
+       PANTALLAS GRANDES
+    ================================================== */
+
+    @media (min-width: 1600px) {
+
+      header {
+        padding-left: 5vw;
+        padding-right: 5vw;
+      }
+
+      .logo {
+        width: 300px;
+      }
+
+      nav {
+        gap: 42px;
+      }
+
+      nav a {
+        font-size: 18px;
+      }
+
+      .service-title {
+        font-size: 118px;
+      }
+
+      .service-content {
+        grid-template-columns: 1.08fr .92fr;
+
+        gap: 65px;
+      }
+
+      .gallery-image {
+        height: 345px;
+      }
+
+      .service-description {
+        font-size: 23px;
+      }
+
+      .service-section h2 {
+        font-size: 19px;
+      }
+
+      .service-section ul {
+        font-size: 18px;
+      }
+
+      .decorative-phrase {
+        font-size: 45px;
+
+        max-width: 450px;
+      }
+    }
+
+    /* ==================================================
+       TABLET
+    ================================================== */
+
+    @media (max-width: 1100px) {
+
+      header {
+        padding: 0 4%;
+      }
+
+      .logo {
+        width: 230px;
+      }
+
+      nav {
+        gap: 22px;
+      }
+
+      nav a {
+        font-size: 15px;
+
+        letter-spacing: 1px;
+      }
+
+      .service-intro {
+        padding-top: 45px;
+      }
+
+      .service-title {
+        font-size: 75px;
+
+        flex-wrap: wrap;
+
+        gap: 12px;
+      }
+
+      .decorative-phrase {
+        display: none;
+      }
+
+      .service-content {
+        grid-template-columns: 1fr;
+
+        gap: 45px;
+      }
+
+      .service-gallery {
+        order: 2;
+      }
+
+      .gallery-image {
+        height: 390px;
+      }
+    }
+
+    /* ==================================================
+       MÓVIL
+    ================================================== */
+
+    @media (max-width: 700px) {
+
+      header {
+        height: auto;
+
+        padding: 22px 6% 20px;
+
+        flex-direction: column;
+
+        gap: 18px;
+      }
+
+      .logo {
+        width: 195px;
+      }
+
+      nav {
+        width: 100%;
+
+        justify-content: center;
+
+        flex-wrap: wrap;
+
+        gap: 11px 17px;
+      }
+
+      nav a {
+        font-size: 11px;
+
+        letter-spacing: 1px;
+      }
+
+      .service-intro {
+        width: 88%;
+
+        padding: 40px 0 30px;
+      }
+
+      .eyebrow {
+        font-size: 10px;
+
+        letter-spacing: 2.5px;
+      }
+
+      .service-title {
+        display: block;
+
+        font-size: clamp(58px, 16vw, 82px);
+
+        line-height: .94;
+
+        letter-spacing: -3px;
+      }
+
+      .service-title em {
+        display: block;
+
+        margin-top: 5px;
+      }
+
+      .service-subtitle {
+        margin-top: 20px;
+
+        font-size: 10px;
+
+        letter-spacing: 3px;
+
+        gap: 12px;
+      }
+
+      .service-subtitle::before {
+        width: 45px;
+      }
+
+      .service-content {
+        width: 88%;
+
+        gap: 38px;
+      }
+
+      .service-description {
+        font-size: 19px;
+
+        line-height: 1.5;
+
+        margin-bottom: 28px;
+      }
+
+      .service-section {
+        padding-left: 55px;
+
+        margin-bottom: 25px;
+      }
+
+      .service-section::before {
+        left: 0;
+      }
+
+      .service-number {
+        left: 7px;
+
+        width: 37px;
+        height: 37px;
+
+        font-size: 11px;
+      }
+
+      .service-section h2 {
+        font-size: 14px;
+
+        letter-spacing: 1.4px;
+      }
+
+      .service-section ul {
+        font-size: 17px;
+
+        line-height: 1.45;
+
+        padding-left: 17px;
+      }
+
+      .service-gallery {
+        grid-template-columns: 1fr;
+
+        gap: 8px;
+      }
+
+      .gallery-image {
+        height: 390px;
+      }
+
+      .text-closing {
+        margin-top: 30px;
+      }
+
+      .text-closing p {
+        font-size: 27px;
+      }
+
+      footer {
+        margin-top: 40px;
+
+        padding: 25px 6%;
+
+        flex-direction: column;
+
+        text-align: center;
+
+        gap: 17px;
+      }
+
+      .footer-center {
+        order: 2;
+      }
+
+      .footer-social {
+        order: 3;
+      }
+
+    }
+
+  </style>
+
+</head>
+
+
+<body>
+
+
+  <!-- ==================================================
+       CABECERA
+  ================================================== -->
+
+  <header>
+
+    <a href="index.html">
+
+      <img
+        src="assets/logo%202.jpg"
+        alt="Bodas Con Cati"
+        class="logo"
+      >
+
+    </a>
+
+
+    <nav>
+
+      <a href="index.html">
+        INICIO
+      </a>
+
+      <a href="sobre-mi.html">
+        SOBRE MÍ
+      </a>
+
+      <a
+        href="servicios.html"
+        class="active"
+      >
+        SERVICIOS
+      </a>
+
+      <a href="galeria.html">
+        GALERÍA
+      </a>
+
+      <a href="contacto.html">
+        CONTACTO
+      </a>
+
+    </nav>
+
+  </header>
+
+
+
+  <!-- ==================================================
+       TÍTULO
+  ================================================== -->
+
+  <section class="service-intro">
+
+    <p class="eyebrow">
+      SERVICIOS · PAQUETE SIN FIN
+    </p>
+
+
+    <h1 class="service-title">
+
+      <span>
+        Paquete
+      </span>
+
+      <em>
+        Sin Fin
+      </em>
+
+    </h1>
+
+
+    <div class="service-subtitle">
+
+      TU FIN DE SEMANA, SIN PREOCUPACIONES
+
+    </div>
+
+
+    <div class="decorative-phrase">
+
+      Que la magia<br>
+      continúe...
+
+    </div>
+
+  </section>
+
+
+
+  <!-- ==================================================
+       CONTENIDO PRINCIPAL
+  ================================================== -->
+
+  <section class="service-content">
+
+
+    <!-- =================================================
+         TEXTO
+    ================================================= -->
+
+    <div class="service-text">
+
+
+      <p class="service-description">
+
+        La experiencia definitiva para parejas que no quieren que la magia
+        termine con el baile. Este paquete fusiona la organización integral
+        de vuestra boda con la gestión completa del día siguiente,
+        permitiéndoos cerrar un fin de semana inolvidable sin una sola
+        preocupación logística.
+
+      </p>
+
+
+
+      <!-- 01 -->
+
+      <div class="service-section">
+
+        <span class="service-number">
+          01
+        </span>
+
+
+        <h2>
+          La totalidad del Paquete Soñar
+        </h2>
+
+
+        <ul>
+
+          <li>
+            <strong>Diseño y Planificación Integral:</strong>
+            Creación del concepto, estilo y cronograma maestro desde cero.
+          </li>
+
+          <li>
+            <strong>Gestión de Proveedores:</strong>
+            Búsqueda, contratación y negociación con el equipo perfecto
+            (Finca, catering, foto, música...).
+          </li>
+
+          <li>
+            <strong>Control Financiero:</strong>
+            Seguimiento detallado del presupuesto y plazos de pago.
+          </li>
+
+          <li>
+            <strong>Coordinación del Día B:</strong>
+            Mi presencia y dirección total desde el montaje hasta el final
+            de la fiesta.
+          </li>
+
+        </ul>
+
+      </div>
+
+
+
+      <!-- 02 -->
+
+      <div class="service-section">
+
+        <span class="service-number">
+          02
+        </span>
+
+
+        <h2>
+          Organización del evento de despedida · Post-boda
+        </h2>
+
+
+        <ul>
+
+          <li>
+            Diseño y organización de vuestra celebración post-boda:
+            ya sea una paella relajada, un brunch sofisticado o una
+            barbacoa con amigos.
+          </li>
+
+          <li>
+            Búsqueda de localización (si es distinta a la finca) y
+            contratación de proveedores específicos (catering ligero,
+            música ambiente, transporte).
+          </li>
+
+        </ul>
+
+      </div>
+
+
+
+      <!-- 03 -->
+
+      <div class="service-section">
+
+        <span class="service-number">
+          03
+        </span>
+
+
+        <h2>
+          Coordinación y presencia
+        </h2>
+
+
+        <ul>
+
+          <li>
+            Asistencia de la Wedding Planner durante el evento del día
+            siguiente para recibir a los invitados y coordinar el servicio.
+          </li>
+
+          <li>
+            Vosotros solo tenéis que llegar, comentar las anécdotas de la
+            noche anterior y disfrutar; yo me ocupo de que las copas estén
+            llenas y el ambiente sea perfecto.
+          </li>
+
+        </ul>
+
+      </div>
+
+
+
+      <!-- 04 -->
+
+      <div class="service-section">
+
+        <span class="service-number">
+          04
+        </span>
+
+
+        <h2>
+          Cierre y desmontaje final
+        </h2>
+
+
+        <ul>
+
+          <li>
+            Gestión integral del desmontaje de ambos días. Me aseguro de
+            que no quede nada vuestro olvidado en la finca ni devoluciones
+            pendientes.
+          </li>
+
+          <li>
+            Cierre definitivo con proveedores, para que vuestro lunes
+            comience con la tranquilidad absoluta del trabajo bien hecho.
+          </li>
+
+        </ul>
+
+      </div>
+
+
+
+      <!-- FRASE FINAL -->
+
+      <div class="text-closing">
+
+        <p>
+          Hacemos que vuestro fin de semana<br>
+          sea inolvidable.
+        </p>
+
+      </div>
+
+
+    </div>
+
+
+
+    <!-- =================================================
+         GALERÍA
+    ================================================== -->
+
+    <div class="service-gallery">
+
+
+      <div class="gallery-image">
+
+        <img
+          src="assets/sf1.jpg"
+          alt="Boda · Bodas Con Cati"
+        >
+
+      </div>
+
+
+      <div class="gallery-image">
+
+        <img
+          src="assets/sf2.jpg"
+          alt="Celebración de boda · Bodas Con Cati"
+        >
+
+      </div>
+
+
+      <div class="gallery-image">
+
+        <img
+          src="assets/sf3.jpg"
+          alt="Detalles de boda · Bodas Con Cati"
+        >
+
+      </div>
+
+
+      <div class="gallery-image">
+
+        <img
+          src="assets/sf4.jpg"
+          alt="Celebración post-boda · Bodas Con Cati"
+        >
+
+      </div>
+
+
+    </div>
+
+
+  </section>
+
+
+
+  <!-- ==================================================
+       FOOTER
+  ================================================== -->
+
+  <footer>
+
+
+    <div class="footer-left">
+
+      <span class="footer-brand">
+        Bodas Con Cati
+      </span>
+
+      <span class="footer-small">
+        Wedding Planner en Mallorca
+      </span>
+
+    </div>
+
+
+    <div class="footer-center">
+
+      Experiencias que se recuerdan toda la vida
+
+    </div>
+
+
+    <div class="footer-social">
+
+      <span>
+        Instagram
+      </span>
+
+      <span>
+        Pinterest
+      </span>
+
+      <span>
+        WhatsApp
+      </span>
+
+    </div>
+
+
+  </footer>
+
+
+</body>
+
+</html>
