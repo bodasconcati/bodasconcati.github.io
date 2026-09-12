@@ -4,6 +4,7 @@
 <head>
 
   <meta charset="UTF-8">
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>Contacto · Bodas Con Cati</title>
@@ -32,13 +33,13 @@
     }
 
 
-    /* =========================================
+    /* ==================================================
        HEADER
-    ========================================= */
+    ================================================== */
 
     header {
-      height: 125px;
       width: 100%;
+      min-height: 125px;
 
       padding: 0 5vw;
 
@@ -60,7 +61,7 @@
     nav {
       display: flex;
       align-items: center;
-      gap: 48px;
+      gap: 45px;
     }
 
 
@@ -107,24 +108,18 @@
 
 
 
-    /* =========================================
+    /* ==================================================
        INTRO
-    ========================================= */
+    ================================================== */
 
     .intro {
-
-      width: 100%;
-
       text-align: center;
 
-      padding: 0 3vw 32px;
+      padding: 20px 30px 45px;
     }
 
 
     .eyebrow {
-
-      margin-bottom: 9px;
-
       font-family: Arial, Helvetica, sans-serif;
 
       font-size: 16px;
@@ -132,93 +127,91 @@
 
       letter-spacing: 4px;
 
-      color: #b4785b;
+      color: #b8785c;
+
+      margin-bottom: 12px;
     }
 
 
     .intro h1 {
-
-      font-size: clamp(78px, 7vw, 115px);
+      font-size: clamp(70px, 6.2vw, 105px);
 
       font-weight: 400;
 
-      line-height: 0.93;
+      line-height: 0.95;
 
-      letter-spacing: -5px;
+      letter-spacing: -4px;
 
       color: #49382f;
     }
 
 
     .intro h1 em {
-
       color: #bd785d;
-
       font-style: italic;
     }
 
 
     .intro p {
+      max-width: 900px;
 
-      max-width: 1050px;
+      margin: 20px auto 0;
 
-      margin: 15px auto 0;
+      font-size: 25px;
 
-      font-size: 26px;
-
-      line-height: 1.3;
+      line-height: 1.35;
 
       color: #624c40;
     }
 
 
 
-    /* =========================================
-       BLOQUE PRINCIPAL
-    ========================================= */
+    /* ==================================================
+       CONTENIDO PRINCIPAL
+    ================================================== */
 
     .contact-section {
 
-      width: 96%;
+      width: calc(100% - 90px);
 
-      max-width: 1600px;
+      max-width: 1550px;
 
-      margin: 0 auto 22px;
+      margin: 0 auto 70px;
 
       display: grid;
 
       grid-template-columns: 1fr 1fr;
 
-      gap: 20px;
+      gap: 30px;
 
       align-items: stretch;
     }
 
 
 
-    /* =========================================
+    /* ==================================================
        FORMULARIO
-    ========================================= */
+    ================================================== */
 
     .contact-form {
 
-      background: #f1e6db;
+      background: #efe2d4;
 
-      padding: 40px 48px 38px;
+      padding: 48px 50px 45px;
     }
 
 
     .contact-form h2 {
 
-      font-size: clamp(54px, 4.2vw, 72px);
+      font-size: clamp(48px, 4vw, 68px);
 
       font-weight: 400;
 
-      line-height: 0.95;
+      line-height: 1;
+
+      margin-bottom: 10px;
 
       color: #49382f;
-
-      margin-bottom: 13px;
     }
 
 
@@ -232,31 +225,19 @@
 
     .form-intro {
 
-      font-size: 21px;
+      font-size: 20px;
 
-      line-height: 1.35;
+      line-height: 1.4;
+
+      margin-bottom: 28px;
 
       color: #624c40;
-
-      margin-bottom: 25px;
-
-      max-width: 750px;
-    }
-
-
-    form {
-
-      display: flex;
-
-      flex-direction: column;
-
-      gap: 15px;
     }
 
 
     .field {
 
-      width: 100%;
+      margin-bottom: 18px;
     }
 
 
@@ -264,15 +245,17 @@
 
       display: block;
 
-      margin-bottom: 6px;
+      margin-bottom: 7px;
 
       font-family: Arial, Helvetica, sans-serif;
 
-      font-size: 12px;
+      font-size: 13px;
 
-      letter-spacing: 2px;
+      font-weight: 600;
 
-      color: #735d51;
+      letter-spacing: 1.5px;
+
+      color: #776157;
     }
 
 
@@ -285,7 +268,7 @@
 
       outline: none;
 
-      background: rgba(255, 252, 248, 0.85);
+      background: #fbf8f4;
 
       color: #49382f;
 
@@ -293,13 +276,9 @@
 
       font-size: 18px;
 
-      padding: 13px 16px;
+      padding: 14px 15px;
 
       border: 1px solid transparent;
-
-      border-radius: 0;
-
-      transition: border 0.3s ease;
     }
 
 
@@ -311,43 +290,36 @@
 
     .field textarea {
 
-      height: 135px;
-
-      min-height: 135px;
+      min-height: 145px;
 
       resize: vertical;
-
-      line-height: 1.45;
     }
 
 
     .field input:focus,
     .field textarea:focus {
 
-      border: 1px solid #c98a69;
+      border-color: #c98a69;
     }
 
 
-
-    /* =========================================
-       BOTÓN
-    ========================================= */
-
     .send-button {
 
-      width: 320px;
+      display: block;
 
-      max-width: 100%;
+      width: 235px;
 
-      margin: 4px auto 0;
+      margin: 24px auto 0;
 
       padding: 17px 20px;
 
       border: none;
 
+      cursor: pointer;
+
       background: #c98a69;
 
-      color: #fff;
+      color: #fffaf5;
 
       font-family: Arial, Helvetica, sans-serif;
 
@@ -357,11 +329,9 @@
 
       letter-spacing: 2px;
 
-      cursor: pointer;
+      text-align: center;
 
-      transition:
-        background 0.3s ease,
-        transform 0.3s ease;
+      transition: 0.3s ease;
     }
 
 
@@ -374,32 +344,25 @@
 
 
 
-    /* =========================================
-       COLUMNA DERECHA
-    ========================================= */
+    /* ==================================================
+       FOTO + INFORMACIÓN
+    ================================================== */
 
-    .contact-info {
+    .contact-right {
 
-      background: #f1e6db;
+      background: #efe2d4;
 
       display: flex;
 
       flex-direction: column;
-
-      min-width: 0;
     }
 
-
-
-    /* =========================================
-       FOTO
-    ========================================= */
 
     .contact-photo {
 
       width: 100%;
 
-      height: 500px;
+      height: 530px;
 
       overflow: hidden;
     }
@@ -413,30 +376,17 @@
 
       object-fit: cover;
 
-      object-position: center;
+      object-position: center top;
 
       display: block;
-
-      transition: transform 0.5s ease;
     }
 
 
-    .contact-info:hover .contact-photo img {
-
-      transform: scale(1.02);
-    }
-
-
-
-    /* =========================================
-       INFORMACIÓN
-    ========================================= */
-
-    .contact-details {
+    .contact-info {
 
       flex: 1;
 
-      padding: 30px 35px 34px;
+      padding: 35px 35px 38px;
 
       text-align: center;
 
@@ -452,38 +402,35 @@
 
     .contact-quote {
 
-      max-width: 750px;
+      max-width: 700px;
 
-      font-size: 31px;
+      font-size: 27px;
 
       line-height: 1.25;
 
       font-style: italic;
 
-      color: #a66e57;
+      font-weight: 600;
 
-      margin-bottom: 20px;
+      color: #a96d53;
+
+      margin-bottom: 22px;
     }
 
 
-    .contact-line {
+    .quote-line {
 
-      width: 70px;
+      width: 65px;
 
       height: 1px;
 
-      background: #b8876f;
+      background: #bd8b73;
 
-      margin-bottom: 25px;
+      margin-bottom: 28px;
     }
 
 
-
-    /* =========================================
-       DATOS
-    ========================================= */
-
-    .contact-data {
+    .info-grid {
 
       width: 100%;
 
@@ -491,123 +438,193 @@
 
       grid-template-columns: repeat(3, 1fr);
 
-      gap: 25px;
+      gap: 20px;
     }
 
 
-    .data-item {
-
-      display: flex;
-
-      flex-direction: column;
-
-      align-items: center;
-
-      gap: 8px;
-
-      min-width: 0;
-    }
-
-
-    .data-icon {
-
-      width: 34px;
-
-      height: 34px;
-
-      display: flex;
-
-      align-items: center;
-
-      justify-content: center;
-
-      color: #bd785d;
-    }
-
-
-    .data-icon svg {
-
-      width: 28px;
-
-      height: 28px;
-
-      stroke: currentColor;
-
-      fill: none;
-
-      stroke-width: 1.6;
-
-      stroke-linecap: round;
-
-      stroke-linejoin: round;
-    }
-
-
-    .data-label {
-
-      font-family: Arial, Helvetica, sans-serif;
-
-      font-size: 11px;
-
-      letter-spacing: 2px;
-
-      color: #9a8175;
-
-      text-transform: uppercase;
-    }
-
-
-    .data-item a,
-    .data-item span:not(.data-label) {
-
-      font-size: 18px;
-
-      line-height: 1.3;
-
-      color: #604a3e;
-
-      word-break: break-word;
+    .info-item {
 
       text-align: center;
     }
 
 
-    .data-item a:hover {
+    .info-icon {
+
+      font-size: 23px;
+
+      color: #c77f60;
+
+      margin-bottom: 9px;
+    }
+
+
+    .info-title {
+
+      font-family: Arial, Helvetica, sans-serif;
+
+      font-size: 13px;
+
+      font-weight: 600;
+
+      letter-spacing: 1.5px;
+
+      color: #79645a;
+
+      margin-bottom: 7px;
+    }
+
+
+    .info-item a,
+    .info-item span {
+
+      display: block;
+
+      font-size: 17px;
+
+      line-height: 1.35;
+
+      color: #574239;
+    }
+
+
+    .info-item a:hover {
 
       color: #b87558;
     }
 
 
 
-    /* =========================================
+    /* ==================================================
+       ENLACES EXTERNOS
+    ================================================== */
+
+    .links-section {
+
+      width: calc(100% - 90px);
+
+      max-width: 1550px;
+
+      margin: 0 auto 70px;
+
+      padding: 45px 50px;
+
+      background: #eee1d3;
+
+      text-align: center;
+    }
+
+
+    .links-section h2 {
+
+      font-size: 42px;
+
+      font-weight: 400;
+
+      margin-bottom: 10px;
+    }
+
+
+    .links-section h2 em {
+
+      color: #bd785d;
+
+      font-style: italic;
+    }
+
+
+    .links-section p {
+
+      font-size: 19px;
+
+      color: #624c40;
+
+      margin-bottom: 30px;
+    }
+
+
+    .social-links {
+
+      display: flex;
+
+      justify-content: center;
+
+      align-items: center;
+
+      gap: 20px;
+
+      flex-wrap: wrap;
+    }
+
+
+    .social-link {
+
+      min-width: 230px;
+
+      padding: 15px 25px;
+
+      border: 1px solid #c58a70;
+
+      color: #704c3c;
+
+      font-family: Arial, Helvetica, sans-serif;
+
+      font-size: 13px;
+
+      font-weight: 600;
+
+      letter-spacing: 1.5px;
+
+      transition: 0.3s ease;
+    }
+
+
+    .social-link:hover {
+
+      background: #c98a69;
+
+      color: white;
+    }
+
+
+
+    /* ==================================================
        FRASE FINAL
-    ========================================= */
+    ================================================== */
 
     .closing {
 
       width: 100%;
 
-      min-height: 150px;
+      min-height: 190px;
 
-      padding: 38px 25px 42px;
+      padding: 45px 30px 50px;
 
       display: flex;
 
       flex-direction: column;
 
-      align-items: center;
-
       justify-content: center;
+
+      align-items: center;
 
       text-align: center;
 
-      background: #f7f1e9;
+      background:
+        linear-gradient(
+          rgba(247, 241, 233, 0.68),
+          rgba(247, 241, 233, 0.68)
+        ),
+        url("assets/hero%201.jpg");
+
+      background-size: cover;
+
+      background-position: center;
     }
 
 
     .closing p {
 
-      font-size: 31px;
+      font-size: 30px;
 
       line-height: 1.3;
 
@@ -615,15 +632,13 @@
 
       color: #704c3c;
 
-      max-width: 1000px;
-
-      margin-bottom: 20px;
+      margin-bottom: 22px;
     }
 
 
     .closing-line {
 
-      width: 70px;
+      width: 75px;
 
       height: 1px;
 
@@ -632,13 +647,13 @@
 
 
 
-    /* =========================================
+    /* ==================================================
        FOOTER
-    ========================================= */
+    ================================================== */
 
     footer {
 
-      padding: 25px 20px;
+      padding: 27px 20px;
 
       text-align: center;
 
@@ -657,95 +672,83 @@
 
 
 
-    /* =========================================
+    /* ==================================================
        TABLET
-    ========================================= */
+    ================================================== */
 
     @media (max-width: 1100px) {
 
       header {
-
         padding: 0 30px;
       }
 
 
       .logo {
-
-        width: 245px;
+        width: 250px;
       }
 
 
       nav {
-
         gap: 25px;
       }
 
 
       nav a {
-
         font-size: 15px;
       }
 
 
       .intro h1 {
-
         font-size: 76px;
       }
 
 
       .intro p {
-
         font-size: 22px;
       }
 
 
       .contact-section {
+        width: calc(100% - 40px);
 
-        width: 95%;
-
-        gap: 16px;
+        gap: 20px;
       }
 
 
       .contact-form {
-
-        padding: 32px 28px;
+        padding: 35px 30px;
       }
 
 
       .contact-photo {
-
-        height: 430px;
+        height: 450px;
       }
 
 
       .contact-quote {
-
-        font-size: 25px;
+        font-size: 23px;
       }
 
 
-      .data-item a,
-      .data-item span:not(.data-label) {
-
-        font-size: 14px;
+      .links-section {
+        width: calc(100% - 40px);
       }
 
     }
 
 
 
-    /* =========================================
+    /* ==================================================
        MÓVIL
-    ========================================= */
+    ================================================== */
 
     @media (max-width: 760px) {
 
       header {
 
-        height: auto;
+        min-height: auto;
 
-        padding: 22px 20px 24px;
+        padding: 22px 20px 25px;
 
         flex-direction: column;
 
@@ -754,7 +757,6 @@
 
 
       .logo {
-
         width: 200px;
       }
 
@@ -780,7 +782,6 @@
 
 
       nav a.active::after {
-
         bottom: -5px;
       }
 
@@ -790,7 +791,7 @@
 
       .intro {
 
-        padding: 40px 18px 28px;
+        padding: 40px 18px 35px;
       }
 
 
@@ -799,8 +800,6 @@
         font-size: 12px;
 
         letter-spacing: 3px;
-
-        margin-bottom: 15px;
       }
 
 
@@ -825,106 +824,65 @@
 
 
 
-      /* BLOQUE */
+      /* CONTENIDO */
 
       .contact-section {
 
-        width: calc(100% - 18px);
+        width: calc(100% - 20px);
 
         display: flex;
 
         flex-direction: column;
 
-        gap: 18px;
+        gap: 22px;
 
-        margin-bottom: 18px;
+        margin-bottom: 45px;
       }
 
 
-
-      /* FORMULARIO */
-
       .contact-form {
 
-        padding: 30px 20px 32px;
+        padding: 30px 22px 30px;
       }
 
 
       .contact-form h2 {
 
-        font-size: 49px;
-
-        line-height: 1;
-
-        margin-bottom: 14px;
+        font-size: 48px;
       }
 
 
       .form-intro {
 
-        font-size: 19px;
-
-        line-height: 1.4;
-
-        margin-bottom: 24px;
-      }
-
-
-      form {
-
-        gap: 14px;
-      }
-
-
-      .field label {
-
-        font-size: 10px;
-
-        letter-spacing: 1.6px;
+        font-size: 18px;
       }
 
 
       .field input {
 
-        height: 47px;
-
-        font-size: 16px;
+        height: 50px;
       }
 
 
       .field textarea {
 
-        height: 145px;
-
-        min-height: 145px;
-
-        font-size: 16px;
+        min-height: 150px;
       }
 
 
       .send-button {
 
-        width: 100%;
-
-        font-size: 12px;
-
-        padding: 16px;
+        width: 220px;
       }
 
-
-
-      /* FOTO */
 
       .contact-photo {
 
-        height: 400px;
+        height: 500px;
       }
 
 
-
-      /* INFORMACIÓN */
-
-      .contact-details {
+      .contact-info {
 
         padding: 30px 20px 35px;
       }
@@ -932,15 +890,11 @@
 
       .contact-quote {
 
-        font-size: 24px;
-
-        line-height: 1.35;
-
-        margin-bottom: 18px;
+        font-size: 23px;
       }
 
 
-      .contact-data {
+      .info-grid {
 
         grid-template-columns: 1fr;
 
@@ -948,16 +902,46 @@
       }
 
 
-      .data-item {
 
-        gap: 6px;
+      /* ENLACES */
+
+      .links-section {
+
+        width: calc(100% - 20px);
+
+        padding: 35px 20px;
+
+        margin-bottom: 45px;
       }
 
 
-      .data-item a,
-      .data-item span:not(.data-label) {
+      .links-section h2 {
 
-        font-size: 16px;
+        font-size: 38px;
+      }
+
+
+      .links-section p {
+
+        font-size: 18px;
+
+        line-height: 1.4;
+      }
+
+
+      .social-links {
+
+        flex-direction: column;
+
+        width: 100%;
+      }
+
+
+      .social-link {
+
+        width: 100%;
+
+        min-width: 0;
       }
 
 
@@ -966,7 +950,7 @@
 
       .closing {
 
-        min-height: 155px;
+        min-height: 175px;
 
         padding: 45px 25px;
       }
@@ -978,16 +962,15 @@
       }
 
 
-
       /* FOOTER */
 
       footer {
 
-        padding: 27px 20px;
-
         font-size: 10px;
 
         line-height: 1.6;
+
+        padding: 27px 20px;
       }
 
     }
@@ -1000,9 +983,9 @@
 <body>
 
 
-  <!-- =========================================
-       HEADER
-  ========================================= -->
+  <!-- ==================================================
+       CABECERA
+  ================================================== -->
 
   <header>
 
@@ -1048,9 +1031,9 @@
 
 
 
-  <!-- =========================================
+  <!-- ==================================================
        INTRO
-  ========================================= -->
+  ================================================== -->
 
   <section class="intro">
 
@@ -1058,45 +1041,63 @@
       CONTACTO
     </div>
 
+
     <h1>
+
       Hablemos de
       <em>vuestra boda.</em>
+
     </h1>
 
+
     <p>
-      Estoy aquí para escucharos, resolver vuestras dudas y acompañaros
-      en cada paso de este viaje tan especial.
+
+      Estoy aquí para escucharos, resolver vuestras dudas
+      y acompañaros en cada paso de este viaje tan especial.
+
     </p>
 
   </section>
 
 
 
-  <!-- =========================================
-       BLOQUE PRINCIPAL
-  ========================================= -->
+  <!-- ==================================================
+       FORMULARIO + FOTO
+  ================================================== -->
 
   <main class="contact-section">
 
 
-    <!-- =====================================
-         FORMULARIO
-    ====================================== -->
+    <!-- FORMULARIO -->
 
     <section class="contact-form">
 
 
       <h2>
+
         Cuéntame
         <em>tu historia</em>
+
       </h2>
 
 
       <p class="form-intro">
+
         Rellena el formulario y me pondré en contacto contigo
         lo antes posible.
+
       </p>
 
+
+      <!--
+        FORMULARIO
+
+        Los mensajes se enviarán a:
+        bodasconcati@gmail.com
+
+        La primera vez FormSubmit puede pedirte
+        activar el formulario desde un correo.
+      -->
 
       <form
         action="https://formsubmit.co/bodasconcati@gmail.com"
@@ -1107,7 +1108,7 @@
         <input
           type="hidden"
           name="_subject"
-          value="Nuevo contacto desde Bodas Con Cati"
+          value="Nuevo mensaje desde Bodas Con Cati"
         >
 
 
@@ -1125,7 +1126,13 @@
         >
 
 
-        <!-- NOMBRE -->
+        <input
+          type="hidden"
+          name="_next"
+          value="https://bodasconcati.com/contacto.html"
+        >
+
+
 
         <div class="field">
 
@@ -1143,7 +1150,6 @@
         </div>
 
 
-        <!-- EMAIL -->
 
         <div class="field">
 
@@ -1161,7 +1167,6 @@
         </div>
 
 
-        <!-- TELÉFONO -->
 
         <div class="field">
 
@@ -1178,7 +1183,6 @@
         </div>
 
 
-        <!-- FECHA -->
 
         <div class="field">
 
@@ -1196,7 +1200,6 @@
         </div>
 
 
-        <!-- MENSAJE -->
 
         <div class="field">
 
@@ -1213,7 +1216,6 @@
         </div>
 
 
-        <!-- BOTÓN -->
 
         <button
           type="submit"
@@ -1225,79 +1227,53 @@
 
       </form>
 
-
     </section>
 
 
 
-    <!-- =====================================
-         FOTO + DATOS
-    ====================================== -->
+    <!-- FOTO + INFORMACIÓN -->
 
-    <section class="contact-info">
+    <section class="contact-right">
 
-
-      <!-- FOTO -->
 
       <div class="contact-photo">
 
         <img
-          src="assets/contacto.jpg"
-          alt="Bodas Con Cati · Contacto"
+          src="assets/contacto.png"
+          alt="Cati · Bodas Con Cati"
         >
 
       </div>
 
 
-      <!-- INFORMACIÓN -->
-
-      <div class="contact-details">
+      <div class="contact-info">
 
 
         <p class="contact-quote">
-          “Las mejores bodas comienzan con una buena conversación.”
+
+          “Las mejores bodas comienzan con una
+          buena conversación.”
+
         </p>
 
 
-        <div class="contact-line"></div>
+        <div class="quote-line"></div>
 
 
-        <div class="contact-data">
+        <div class="info-grid">
 
 
           <!-- TELÉFONO -->
 
-          <div class="data-item">
+          <div class="info-item">
 
-            <div class="data-icon">
-
-              <svg
-                viewBox="0 0 24 24"
-                aria-hidden="true"
-              >
-
-                <path
-                  d="M22 16.92v3a2 2 0 0 1-2.18 2
-                  19.79 19.79 0 0 1-8.63-3.07
-                  19.5 19.5 0 0 1-6-6
-                  19.79 19.79 0 0 1-3.07-8.67
-                  A2 2 0 0 1 4.11 2h3
-                  a2 2 0 0 1 2 1.72
-                  12.84 12.84 0 0 0 .7 2.81
-                  2 2 0 0 1-.45 2.11L8.09 9.91
-                  a16 16 0 0 0 6 6l1.27-1.27
-                  a2 2 0 0 1 2.11-.45
-                  12.84 12.84 0 0 0 2.81.7
-                  A2 2 0 0 1 22 16.92z"
-                ></path>
-
-              </svg>
-
+            <div class="info-icon">
+              ☎
             </div>
 
-            <span class="data-label">
+            <div class="info-title">
               TELÉFONO
-            </span>
+            </div>
 
             <a href="tel:+34645242153">
               +34 645 24 21 53
@@ -1309,34 +1285,15 @@
 
           <!-- EMAIL -->
 
-          <div class="data-item">
+          <div class="info-item">
 
-            <div class="data-icon">
-
-              <svg
-                viewBox="0 0 24 24"
-                aria-hidden="true"
-              >
-
-                <rect
-                  x="3"
-                  y="5"
-                  width="18"
-                  height="14"
-                  rx="2"
-                ></rect>
-
-                <polyline
-                  points="3,7 12,13 21,7"
-                ></polyline>
-
-              </svg>
-
+            <div class="info-icon">
+              ✉
             </div>
 
-            <span class="data-label">
+            <div class="info-title">
               EMAIL
-            </span>
+            </div>
 
             <a href="mailto:bodasconcati@gmail.com">
               bodasconcati@gmail.com
@@ -1346,35 +1303,17 @@
 
 
 
-          <!-- UBICACIÓN -->
+          <!-- MALLORCA -->
 
-          <div class="data-item">
+          <div class="info-item">
 
-            <div class="data-icon">
-
-              <svg
-                viewBox="0 0 24 24"
-                aria-hidden="true"
-              >
-
-                <path
-                  d="M20 10c0 5-8 12-8 12
-                  S4 15 4 10a8 8 0 1 1 16 0z"
-                ></path>
-
-                <circle
-                  cx="12"
-                  cy="10"
-                  r="2.5"
-                ></circle>
-
-              </svg>
-
+            <div class="info-icon">
+              ⌖
             </div>
 
-            <span class="data-label">
+            <div class="info-title">
               UBICACIÓN
-            </span>
+            </div>
 
             <span>
               Mallorca, España
@@ -1387,7 +1326,6 @@
 
       </div>
 
-
     </section>
 
 
@@ -1395,15 +1333,85 @@
 
 
 
-  <!-- =========================================
+  <!-- ==================================================
+       BODAS.NET / INSTAGRAM / GOOGLE
+  ================================================== -->
+
+  <section class="links-section">
+
+
+    <h2>
+
+      También puedes
+      <em>encontrarme aquí.</em>
+
+    </h2>
+
+
+    <p>
+
+      Conoce un poquito más de mi trabajo,
+      descubre las opiniones de otras parejas
+      y sígueme en Instagram.
+
+    </p>
+
+
+    <div class="social-links">
+
+
+      <!-- BODAS.NET -->
+
+      <a
+        class="social-link"
+        href="https://www.bodas.net/organizacion-bodas/bodas-con-cati--e303209"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        BODAS.NET →
+      </a>
+
+
+
+      <!-- INSTAGRAM -->
+
+      <a
+        class="social-link"
+        href="https://www.instagram.com/bodasconcati/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        INSTAGRAM · @BODASCONCATI →
+      </a>
+
+
+
+      <!-- GOOGLE -->
+
+      <a
+        class="social-link"
+        href="https://g.page/r/CYMDdE5YfUXeEBM/review"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        DEJAR UNA RESEÑA EN GOOGLE →
+      </a>
+
+
+    </div>
+
+  </section>
+
+
+
+  <!-- ==================================================
        FRASE FINAL
-  ========================================= -->
+  ================================================== -->
 
   <section class="closing">
 
     <p>
-      Porque cada historia merece ser vivida
-      a su manera.
+      Porque cada historia merece ser vivida a su manera.
     </p>
 
     <div class="closing-line"></div>
@@ -1412,9 +1420,9 @@
 
 
 
-  <!-- =========================================
+  <!-- ==================================================
        FOOTER
-  ========================================= -->
+  ================================================== -->
 
   <footer>
 
