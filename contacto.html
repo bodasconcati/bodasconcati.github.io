@@ -21,35 +21,34 @@
     }
 
     body {
-      font-family: Arial, Helvetica, sans-serif;
-      background: #f7f2ec;
+      background: #f7f3ed;
       color: #403936;
+      font-family: Arial, Helvetica, sans-serif;
     }
 
     a {
-      text-decoration: none;
       color: inherit;
+      text-decoration: none;
     }
 
 
-    /* =====================================
-       HEADER
-    ===================================== */
+    /* ==================================================
+       CABECERA
+       IGUAL QUE LAS OTRAS PÁGINAS
+    ================================================== */
 
     header {
+      width: 100%;
       height: 125px;
+
       padding: 0 5vw;
 
       display: flex;
       align-items: center;
       justify-content: space-between;
 
-      background: #f7f2ec;
-
-      position: relative;
-      z-index: 10;
+      background: #f7f3ed;
     }
-
 
     .logo {
       width: 260px;
@@ -57,112 +56,115 @@
       display: block;
     }
 
-
     nav {
       display: flex;
       align-items: center;
-      gap: 43px;
+      gap: 38px;
     }
-
 
     nav a {
-      font-size: 18px;
-      font-weight: 500;
-      letter-spacing: 1.8px;
-
       color: #514a45;
 
-      transition: opacity 0.3s ease;
-    }
+      font-size: 18px;
+      font-weight: 500;
 
+      letter-spacing: 1.8px;
+
+      text-transform: uppercase;
+
+      white-space: nowrap;
+
+      transition: opacity 0.25s ease;
+    }
 
     nav a:hover {
       opacity: 0.55;
     }
 
-
     nav a.active {
-      color: #9b6f63;
+      color: #a4776b;
     }
 
 
-
-    /* =====================================
+    /* ==================================================
        INTRO
-    ===================================== */
+    ================================================== */
 
     .intro {
+
       width: 90%;
-      max-width: 1750px;
+      max-width: 1850px;
 
       margin: 0 auto;
 
-      padding: 60px 0 48px;
+      padding: 45px 0 42px;
     }
 
-
     .eyebrow {
-      margin-bottom: 20px;
+
+      margin-bottom: 18px;
+
+      color: #a4776b;
 
       font-size: 14px;
+
       letter-spacing: 4px;
 
       text-transform: uppercase;
-
-      color: #9b6f63;
     }
 
-
     .intro h1 {
+
       width: 100%;
 
       font-family: Georgia, "Times New Roman", serif;
 
-      font-size: clamp(65px, 6vw, 105px);
+      font-size: clamp(70px, 6vw, 105px);
 
       line-height: 0.98;
 
-      font-weight: normal;
+      font-weight: 400;
 
       letter-spacing: -4px;
 
-      color: #403936;
-
       white-space: nowrap;
+
+      color: #403936;
     }
 
-
     .intro h1 em {
+
       color: #a4776b;
+
       font-style: italic;
     }
 
-
     .intro-text {
-      width: 100%;
-      max-width: 1450px;
 
-      margin-top: 30px;
+      width: 100%;
+
+      max-width: 1600px;
+
+      margin-top: 24px;
 
       font-family: Georgia, "Times New Roman", serif;
 
-      font-size: 23px;
+      font-size: 22px;
 
-      line-height: 1.5;
+      line-height: 1.45;
 
       color: #514a45;
     }
 
 
-
-    /* =====================================
-       BLOQUE PRINCIPAL
-    ===================================== */
+    /* ==================================================
+       BLOQUE FORMULARIO + FOTO
+    ================================================== */
 
     .contact-layout {
 
       width: 90%;
-      max-width: 1750px;
+      max-width: 1850px;
 
       margin: 0 auto;
 
@@ -170,89 +172,81 @@
 
       grid-template-columns: 1fr 1fr;
 
-      gap: 65px;
+      gap: 55px;
 
       align-items: start;
     }
 
 
-
-    /* =====================================
-       FORMULARIO — IZQUIERDA
-    ===================================== */
+    /* ==================================================
+       FORMULARIO IZQUIERDA
+    ================================================== */
 
     .form-box {
 
-      background: #eee3da;
+      background: #eaded4;
 
-      padding: 45px 52px 48px;
-
-      min-height: 535px;
+      padding: 38px 48px 40px;
     }
-
 
     .form-box h2 {
 
+      margin-bottom: 12px;
+
       font-family: Georgia, "Times New Roman", serif;
 
-      font-size: 45px;
+      font-size: 42px;
 
       line-height: 1.05;
 
-      font-weight: normal;
+      font-weight: 400;
 
       letter-spacing: -2px;
 
       color: #403936;
-
-      margin-bottom: 17px;
     }
-
 
     .form-intro {
 
-      max-width: 650px;
+      max-width: 700px;
+
+      margin-bottom: 23px;
 
       font-family: Georgia, "Times New Roman", serif;
 
-      font-size: 18px;
+      font-size: 17px;
 
-      line-height: 1.5;
+      line-height: 1.4;
 
       color: #514a45;
-
-      margin-bottom: 30px;
     }
 
 
-
-    /* =====================================
+    /* ==================================================
        CAMPOS
-    ===================================== */
+    ================================================== */
 
     .field {
 
-      margin-bottom: 19px;
+      margin-bottom: 14px;
     }
-
 
     .field label {
 
       display: block;
 
-      margin-bottom: 6px;
-
-      font-size: 12px;
-
-      letter-spacing: 1.8px;
-
-      text-transform: uppercase;
+      margin-bottom: 5px;
 
       color: #9b6f63;
 
-      font-weight: 600;
-    }
+      font-size: 11px;
 
+      font-weight: 600;
+
+      letter-spacing: 1.7px;
+
+      text-transform: uppercase;
+    }
 
     .field input,
     .field textarea {
@@ -261,72 +255,71 @@
 
       border: none;
 
-      border-bottom: 1px solid #a98974;
+      border-bottom: 1px solid #a98b79;
+
+      border-radius: 0;
+
+      outline: none;
 
       background: transparent;
 
-      padding: 8px 0 10px;
+      padding: 6px 0 8px;
 
       color: #403936;
 
       font-family: Arial, Helvetica, sans-serif;
 
-      font-size: 17px;
-
-      outline: none;
+      font-size: 16px;
     }
-
 
     .field input:focus,
     .field textarea:focus {
 
-      border-bottom-color: #8f675d;
+      border-bottom-color: #8e6559;
     }
-
 
     .field input::placeholder,
     .field textarea::placeholder {
 
-      color: #9a877d;
+      color: #9b877b;
 
       opacity: 1;
     }
 
-
     .field textarea {
 
-      height: 78px;
+      height: 62px;
 
       resize: none;
     }
 
 
-
-    /* =====================================
+    /* ==================================================
        BOTÓN
-    ===================================== */
+    ================================================== */
 
     .submit {
 
-      margin-top: 8px;
+      margin-top: 4px;
 
-      padding: 16px 30px;
+      padding: 14px 27px;
 
       border: 1px solid #9b6f63;
 
       background: #9b6f63;
 
-      color: #ffffff;
+      color: white;
 
-      font-size: 13px;
+      font-size: 12px;
 
-      letter-spacing: 1.8px;
+      font-weight: 500;
+
+      letter-spacing: 1.7px;
 
       cursor: pointer;
 
-      transition: all 0.3s ease;
+      transition: all 0.25s ease;
     }
-
 
     .submit:hover {
 
@@ -336,16 +329,14 @@
     }
 
 
-
-    /* =====================================
-       FOTO — DERECHA
-    ===================================== */
+    /* ==================================================
+       FOTO DERECHA
+    ================================================== */
 
     .photo-column {
 
       width: 100%;
     }
-
 
     .photo {
 
@@ -355,7 +346,6 @@
 
       overflow: hidden;
     }
-
 
     .photo img {
 
@@ -370,123 +360,115 @@
     }
 
 
-
-    /* =====================================
+    /* ==================================================
        CONTACTOS DEBAJO DE LA FOTO
-    ===================================== */
+    ================================================== */
 
     .contact-details {
 
-      padding: 25px 0 10px;
+      padding: 20px 0 8px;
 
       display: grid;
 
       grid-template-columns: 1fr 1fr;
 
-      gap: 20px 50px;
+      gap: 17px 40px;
 
       border-bottom: 1px solid rgba(100, 80, 70, 0.25);
     }
-
 
     .detail:last-child {
 
       grid-column: 1 / -1;
     }
 
-
     .detail-title {
 
-      margin-bottom: 6px;
+      margin-bottom: 4px;
 
-      font-size: 12px;
+      color: #a4776b;
 
-      letter-spacing: 1.8px;
-
-      text-transform: uppercase;
-
-      color: #9b6f63;
+      font-size: 11px;
 
       font-weight: 600;
-    }
 
+      letter-spacing: 1.6px;
+
+      text-transform: uppercase;
+    }
 
     .detail a,
     .detail p {
 
-      font-size: 20px;
-
-      line-height: 1.35;
-
       color: #403936;
-    }
 
+      font-size: 18px;
+
+      line-height: 1.3;
+    }
 
     .detail a:hover {
 
-      color: #9b6f63;
+      color: #a4776b;
     }
 
 
-
-    /* =====================================
+    /* ==================================================
        FRASE
-    ===================================== */
+    ================================================== */
 
     .quote {
 
       width: 90%;
       max-width: 1450px;
 
-      margin: 85px auto;
+      margin: 62px auto;
 
       text-align: center;
     }
-
 
     .quote p {
 
       font-family: Georgia, "Times New Roman", serif;
 
-      font-size: clamp(40px, 4vw, 64px);
+      font-size: clamp(38px, 3.8vw, 58px);
 
       line-height: 1.15;
 
       font-style: italic;
 
-      color: #9b6f63;
+      color: #a4776b;
     }
 
 
-
-    /* =====================================
+    /* ==================================================
        ENLACES
-    ===================================== */
+    ================================================== */
 
     .links-section {
 
       width: 90%;
-      max-width: 1750px;
+      max-width: 1850px;
 
-      margin: 0 auto 90px;
+      margin: 0 auto 65px;
     }
-
 
     .links-section h2 {
 
-      margin-bottom: 32px;
+      margin-bottom: 25px;
 
       font-family: Georgia, "Times New Roman", serif;
 
-      font-size: 45px;
+      font-size: 42px;
 
-      line-height: 1.1;
+      line-height: 1.05;
 
-      font-weight: normal;
+      font-weight: 400;
 
       letter-spacing: -2px;
-    }
 
+      color: #403936;
+    }
 
     .links-grid {
 
@@ -494,15 +476,14 @@
 
       grid-template-columns: repeat(3, 1fr);
 
-      gap: 22px;
+      gap: 20px;
     }
-
 
     .external-link {
 
-      min-height: 135px;
+      min-height: 115px;
 
-      padding: 27px;
+      padding: 22px;
 
       border: 1px solid #cbb9aa;
 
@@ -514,125 +495,119 @@
 
       color: #403936;
 
-      transition: all 0.3s ease;
+      transition: all 0.25s ease;
     }
-
 
     .external-link span:first-child {
 
-      color: #9b6f63;
+      color: #a4776b;
 
-      font-size: 12px;
-
-      letter-spacing: 1.8px;
-
-      text-transform: uppercase;
+      font-size: 11px;
 
       font-weight: 600;
-    }
 
+      letter-spacing: 1.7px;
+
+      text-transform: uppercase;
+    }
 
     .external-link span:last-child {
 
-      font-size: 19px;
+      font-size: 18px;
     }
-
 
     .external-link:hover {
 
       background: #403936;
 
-      color: #f7f2ec;
-
       border-color: #403936;
-    }
 
+      color: #f7f3ed;
+    }
 
     .external-link:hover span:first-child {
 
-      color: #f7f2ec;
+      color: #f7f3ed;
     }
 
 
-
-    /* =====================================
+    /* ==================================================
        CIERRE
-    ===================================== */
+    ================================================== */
 
     .closing {
 
       width: 90%;
       max-width: 1400px;
 
-      margin: 0 auto 90px;
+      margin: 0 auto 65px;
 
       text-align: center;
     }
-
 
     .closing p {
 
       font-family: Georgia, "Times New Roman", serif;
 
-      font-size: 36px;
+      font-size: 34px;
 
-      line-height: 1.3;
+      line-height: 1.25;
 
       font-style: italic;
 
-      color: #9b6f63;
+      color: #a4776b;
     }
 
 
-
-    /* =====================================
+    /* ==================================================
        FOOTER
-    ===================================== */
+    ================================================== */
 
     footer {
 
-      padding: 35px 20px;
-
-      text-align: center;
-
-      background: #f7f2ec;
+      padding: 30px 20px;
 
       border-top: 1px solid rgba(100, 80, 70, 0.15);
 
+      background: #f7f3ed;
+
       color: #766e68;
 
-      font-size: 13px;
+      text-align: center;
 
-      letter-spacing: 1.5px;
+      font-size: 12px;
+
+      letter-spacing: 1.4px;
+
+      line-height: 1.5;
     }
 
 
-
-    /* =====================================
+    /* ==================================================
        PANTALLAS GRANDES
-    ===================================== */
+    ================================================== */
 
     @media (min-width: 1600px) {
 
+      header {
+
+        padding-left: 5vw;
+        padding-right: 5vw;
+      }
+
       .logo {
+
         width: 300px;
       }
 
       nav {
-        gap: 45px;
+
+        gap: 42px;
       }
 
       nav a {
+
         font-size: 18px;
-      }
-
-      .intro,
-      .contact-layout,
-      .links-section {
-
-        width: 90%;
-
-        max-width: 1900px;
       }
 
       .intro h1 {
@@ -640,91 +615,80 @@
         font-size: 105px;
       }
 
+      .intro-text {
+
+        font-size: 23px;
+      }
+
       .photo {
 
-        height: 560px;
+        height: 570px;
       }
 
       .form-box {
 
-        padding: 48px 58px 50px;
+        padding: 45px 55px 45px;
       }
 
     }
 
 
-
-    /* =====================================
+    /* ==================================================
        TABLET
-    ===================================== */
+    ================================================== */
 
     @media (max-width: 1100px) {
 
       header {
 
-        padding: 0 30px;
+        padding: 0 4%;
       }
-
 
       .logo {
 
         width: 230px;
       }
 
-
       nav {
 
-        gap: 25px;
+        gap: 23px;
       }
-
 
       nav a {
 
-        font-size: 16px;
+        font-size: 15px;
 
-        letter-spacing: 1px;
+        letter-spacing: 1.2px;
       }
-
 
       .intro h1 {
 
-        font-size: 72px;
+        font-size: 70px;
 
         white-space: normal;
       }
-
-
-      .intro-text {
-
-        font-size: 21px;
-      }
-
 
       .contact-layout {
 
         grid-template-columns: 1fr;
 
-        gap: 50px;
+        gap: 45px;
       }
-
 
       .form-box {
 
         order: 1;
       }
 
-
       .photo-column {
 
         order: 2;
       }
 
-
       .photo {
 
         height: 600px;
       }
-
 
       .links-grid {
 
@@ -734,30 +698,27 @@
     }
 
 
-
-    /* =====================================
+    /* ==================================================
        MÓVIL
-    ===================================== */
+    ================================================== */
 
-    @media (max-width: 760px) {
+    @media (max-width: 700px) {
 
       header {
 
         height: auto;
 
-        padding: 24px 20px;
+        padding: 22px 6% 20px;
 
         flex-direction: column;
 
-        gap: 20px;
+        gap: 18px;
       }
-
 
       .logo {
 
-        width: 190px;
+        width: 195px;
       }
-
 
       nav {
 
@@ -767,25 +728,22 @@
 
         flex-wrap: wrap;
 
-        gap: 13px 18px;
+        gap: 11px 17px;
       }
-
 
       nav a {
 
-        font-size: 12px;
+        font-size: 11px;
 
         letter-spacing: 1px;
       }
-
 
       .intro {
 
         width: 88%;
 
-        padding: 55px 0 40px;
+        padding: 45px 0 35px;
       }
-
 
       .eyebrow {
 
@@ -793,59 +751,50 @@
 
         letter-spacing: 3px;
 
-        margin-bottom: 20px;
+        margin-bottom: 18px;
       }
-
 
       .intro h1 {
 
-        font-size: clamp(53px, 14vw, 75px);
+        font-size: clamp(52px, 14vw, 75px);
 
-        line-height: .96;
+        line-height: .97;
 
         letter-spacing: -2.5px;
 
         white-space: normal;
       }
 
-
       .intro-text {
 
-        margin-top: 25px;
+        margin-top: 22px;
 
-        font-size: 20px;
+        font-size: 19px;
 
-        line-height: 1.55;
+        line-height: 1.5;
       }
-
 
       .contact-layout {
 
         width: 88%;
 
-        gap: 40px;
+        gap: 35px;
       }
-
 
       .form-box {
 
-        padding: 34px 24px 38px;
+        padding: 30px 23px 34px;
       }
-
 
       .form-box h2 {
 
-        font-size: 36px;
-
-        letter-spacing: -1.5px;
+        font-size: 34px;
       }
-
 
       .form-intro {
 
-        font-size: 17px;
+        font-size: 16px;
       }
-
 
       .field input,
       .field textarea {
@@ -853,28 +802,24 @@
         font-size: 16px;
       }
 
-
       .photo {
 
         height: 430px;
       }
 
-
       .contact-details {
 
         grid-template-columns: 1fr;
 
-        gap: 20px;
+        gap: 18px;
 
-        padding-top: 25px;
+        padding-top: 22px;
       }
-
 
       .detail:last-child {
 
         grid-column: auto;
       }
-
 
       .detail a,
       .detail p {
@@ -882,68 +827,52 @@
         font-size: 18px;
       }
 
-
       .quote {
 
         width: 88%;
 
-        margin: 70px auto;
+        margin: 60px auto;
       }
-
 
       .quote p {
 
-        font-size: 33px;
+        font-size: 31px;
       }
-
 
       .links-section {
 
         width: 88%;
-      }
 
+        margin-bottom: 60px;
+      }
 
       .links-section h2 {
 
-        font-size: 35px;
+        font-size: 34px;
       }
-
 
       .external-link {
 
-        min-height: 125px;
-
-        padding: 24px;
+        min-height: 115px;
       }
-
-
-      .external-link span:last-child {
-
-        font-size: 18px;
-      }
-
 
       .closing {
 
         width: 88%;
 
-        margin-bottom: 70px;
+        margin-bottom: 60px;
       }
-
 
       .closing p {
 
         font-size: 27px;
       }
 
-
       footer {
 
-        padding: 30px 20px;
+        padding: 28px 18px;
 
         font-size: 10px;
-
-        line-height: 1.6;
       }
 
     }
@@ -956,9 +885,9 @@
 <body>
 
 
-<!-- =====================================
-     HEADER
-===================================== -->
+<!-- ==================================================
+     CABECERA
+================================================== -->
 
 <header>
 
@@ -976,22 +905,26 @@
   <nav>
 
     <a href="index.html">
-      Inicio
+      INICIO
     </a>
 
     <a href="sobre-mi.html">
-      Sobre mí
+      SOBRE MÍ
     </a>
 
     <a href="servicios.html">
-      Servicios
+      SERVICIOS
+    </a>
+
+    <a href="index.html">
+      MALLORCA
     </a>
 
     <a
       href="contacto.html"
       class="active"
     >
-      Contacto
+      CONTACTO
     </a>
 
   </nav>
@@ -1000,9 +933,9 @@
 
 
 
-<!-- =====================================
+<!-- ==================================================
      INTRO
-===================================== -->
+================================================== -->
 
 <section class="intro">
 
@@ -1012,9 +945,7 @@
 
 
   <h1>
-
     Hablemos de <em>vuestra boda.</em>
-
   </h1>
 
 
@@ -1030,16 +961,16 @@
 
 
 
-<!-- =====================================
-     BLOQUE PRINCIPAL
-===================================== -->
+<!-- ==================================================
+     FORMULARIO + FOTO
+================================================== -->
 
 <section class="contact-layout">
 
 
-  <!-- ===================================
-       FORMULARIO — IZQUIERDA
-  ==================================== -->
+  <!-- ================================================
+       FORMULARIO
+  ================================================= -->
 
   <div class="form-box">
 
@@ -1090,13 +1021,12 @@
       >
 
 
-
       <!-- NOMBRE -->
 
       <div class="field">
 
         <label for="nombre">
-          Nombre y apellidos *
+          NOMBRE Y APELLIDOS *
         </label>
 
         <input
@@ -1109,13 +1039,12 @@
       </div>
 
 
-
       <!-- EMAIL -->
 
       <div class="field">
 
         <label for="email">
-          Email *
+          EMAIL *
         </label>
 
         <input
@@ -1128,13 +1057,12 @@
       </div>
 
 
-
       <!-- TELÉFONO -->
 
       <div class="field">
 
         <label for="telefono">
-          Teléfono
+          TELÉFONO
         </label>
 
         <input
@@ -1146,13 +1074,12 @@
       </div>
 
 
-
       <!-- FECHA -->
 
       <div class="field">
 
         <label for="fecha">
-          Fecha de la boda (aproximada)
+          FECHA DE LA BODA (APROXIMADA)
         </label>
 
         <input
@@ -1165,13 +1092,12 @@
       </div>
 
 
-
       <!-- MENSAJE -->
 
       <div class="field">
 
         <label for="mensaje">
-          Cuéntame un poco sobre vuestra boda *
+          CUÉNTAME UN POCO SOBRE VUESTRA BODA *
         </label>
 
         <textarea
@@ -1183,16 +1109,13 @@
       </div>
 
 
-
       <!-- BOTÓN -->
 
       <button
         type="submit"
         class="submit"
       >
-
         ENVIAR MENSAJE →
-
       </button>
 
 
@@ -1202,14 +1125,12 @@
 
 
 
-  <!-- ===================================
-       FOTO + CONTACTOS — DERECHA
-  ==================================== -->
+  <!-- ================================================
+       FOTO + CONTACTOS
+  ================================================= -->
 
   <div class="photo-column">
 
-
-    <!-- FOTO -->
 
     <div class="photo">
 
@@ -1221,8 +1142,7 @@
     </div>
 
 
-
-    <!-- CONTACTOS -->
+    <!-- CONTACTOS DEBAJO DE LA FOTO -->
 
     <div class="contact-details">
 
@@ -1230,39 +1150,33 @@
       <div class="detail">
 
         <p class="detail-title">
-          Teléfono
+          TELÉFONO
         </p>
 
         <a href="tel:+34645242153">
-
           +34 645 24 21 53
-
         </a>
 
       </div>
 
 
-
       <div class="detail">
 
         <p class="detail-title">
-          Email
+          EMAIL
         </p>
 
         <a href="mailto:bodasconcati@gmail.com">
-
           bodasconcati@gmail.com
-
         </a>
 
       </div>
 
 
-
       <div class="detail">
 
         <p class="detail-title">
-          Ubicación
+          UBICACIÓN
         </p>
 
         <p>
@@ -1281,32 +1195,28 @@
 
 
 
-<!-- =====================================
+<!-- ==================================================
      FRASE
-===================================== -->
+================================================== -->
 
 <section class="quote">
 
   <p>
-
     “Las mejores bodas comienzan con una buena conversación.”
-
   </p>
 
 </section>
 
 
 
-<!-- =====================================
+<!-- ==================================================
      ENLACES
-===================================== -->
+================================================== -->
 
 <section class="links-section">
 
   <h2>
-
     También puedes encontrarme aquí.
-
   </h2>
 
 
@@ -1323,7 +1233,7 @@
     >
 
       <span>
-        Bodas.net
+        BODAS.NET
       </span>
 
       <span>
@@ -1331,7 +1241,6 @@
       </span>
 
     </a>
-
 
 
     <!-- INSTAGRAM -->
@@ -1344,7 +1253,7 @@
     >
 
       <span>
-        Instagram
+        INSTAGRAM
       </span>
 
       <span>
@@ -1352,7 +1261,6 @@
       </span>
 
     </a>
-
 
 
     <!-- GOOGLE -->
@@ -1365,7 +1273,7 @@
     >
 
       <span>
-        Google
+        GOOGLE
       </span>
 
       <span>
@@ -1381,25 +1289,23 @@
 
 
 
-<!-- =====================================
+<!-- ==================================================
      CIERRE
-===================================== -->
+================================================== -->
 
 <section class="closing">
 
   <p>
-
     Porque cada historia merece ser vivida a su manera.
-
   </p>
 
 </section>
 
 
 
-<!-- =====================================
+<!-- ==================================================
      FOOTER
-===================================== -->
+================================================== -->
 
 <footer>
 
