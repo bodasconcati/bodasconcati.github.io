@@ -3,572 +3,530 @@
 
 <head>
 
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Servicios · Bodas Con Cati</title>
+
+<style>
+
+*{
+box-sizing:border-box;
+margin:0;
+padding:0;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+background:#f7f1e9;
+color:#49382f;
+font-family:Georgia,"Times New Roman",serif;
+}
+
+a{
+color:inherit;
+text-decoration:none;
+}
+
+
+/* =========================
+HEADER
+========================= */
+
+header{
+height:125px;
+width:100%;
+padding:0 5vw;
+
+display:flex;
+align-items:center;
+justify-content:space-between;
+
+background:#f7f1e9;
+}
 
-  <title>Servicios · Bodas Con Cati</title>
+.logo{
+width:300px;
+height:auto;
+display:block;
+}
 
-  <style>
+nav{
+display:flex;
+align-items:center;
+gap:45px;
+}
 
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+nav a{
+position:relative;
 
-    html {
-      scroll-behavior: smooth;
-    }
+font-family:Arial,Helvetica,sans-serif;
+font-size:18px;
+font-weight:400;
+letter-spacing:1.5px;
 
-    body {
-      background: #f7f1e9;
-      color: #49382f;
-      font-family: Georgia, "Times New Roman", serif;
-    }
+color:#493b34;
+padding:8px 0;
+}
 
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
+nav a:hover{
+color:#a66e57;
+}
 
+nav a.active{
+font-weight:600;
+}
 
-    /* =========================
-       HEADER
-    ========================= */
+nav a.active::after{
+content:"";
 
-    header {
-      height: 125px;
-      padding: 0 7.5vw;
+position:absolute;
+left:0;
+right:0;
+bottom:-9px;
 
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
+height:1px;
+background:#a66e57;
+}
 
-      background: #f7f1e9;
-    }
 
-    .logo {
-      width: 260px;
-      height: auto;
-      display: block;
-    }
+/* =========================
+INTRO
+========================= */
 
-    nav {
-      display: flex;
-      align-items: center;
-      gap: 43px;
-    }
+.intro{
+width:100%;
+text-align:center;
+padding:0 30px 30px;
+}
 
-    nav a {
-      position: relative;
+.eyebrow{
+font-family:Arial,Helvetica,sans-serif;
+font-size:16px;
+font-weight:600;
+letter-spacing:4px;
+color:#b4785b;
 
-      font-family: Arial, Helvetica, sans-serif;
-      font-size: 18px;
-      font-weight: 400;
+margin-bottom:10px;
+}
 
-      letter-spacing: 1.4px;
+.intro h1{
+font-size:clamp(70px,6.8vw,112px);
+font-weight:400;
+line-height:.95;
+letter-spacing:-4px;
+}
 
-      color: #493b34;
+.intro h1 em{
+color:#bd785d;
+font-style:italic;
+}
 
-      padding: 8px 0;
-    }
+.intro p{
+margin:15px auto 0;
+max-width:1100px;
 
-    nav a:hover {
-      color: #a66e57;
-    }
+font-size:25px;
+line-height:1.3;
 
-    nav a.active {
-      font-weight: 600;
-    }
+color:#624c40;
+}
 
-    nav a.active::after {
-      content: "";
 
-      position: absolute;
+/* =========================
+SERVICIOS
+========================= */
 
-      left: 0;
-      right: 0;
-      bottom: -9px;
+.services{
+width:calc(100% - 70px);
+max-width:1750px;
 
-      height: 1px;
+margin:0 auto 22px;
 
-      background: #a66e57;
-    }
+display:grid;
+grid-template-columns:repeat(3,minmax(0,1fr));
 
+gap:25px;
+}
 
-    /* =========================
-       INTRO
-    ========================= */
+.service-card{
+background:#f1e6db;
 
-    .intro {
-      text-align: center;
+text-align:center;
+overflow:hidden;
 
-      padding: 0 5vw 25px;
-    }
+display:flex;
+flex-direction:column;
 
-    .eyebrow {
-      margin-bottom: 13px;
+min-width:0;
+}
 
-      font-family: Arial, Helvetica, sans-serif;
-      font-size: 15px;
-      font-weight: 600;
 
-      letter-spacing: 4px;
+/* FOTOS */
 
-      color: #b4785b;
-    }
+.service-image{
+width:100%;
+height:430px;
 
-    .intro h1 {
-      font-size: clamp(68px, 7vw, 105px);
-      font-weight: 400;
+overflow:hidden;
+background:#eadfd4;
+}
 
-      line-height: 0.98;
-      letter-spacing: -3px;
+.service-image img{
+width:100%;
+height:100%;
 
-      color: #49382f;
-    }
+object-fit:cover;
+object-position:center;
 
-    .intro h1 em {
-      color: #bd785d;
-      font-style: italic;
-    }
+display:block;
 
-    .intro p {
-      margin-top: 18px;
+transition:transform .5s ease;
+}
 
-      font-size: 25px;
-      line-height: 1.35;
+.service-card:hover .service-image img{
+transform:scale(1.03);
+}
 
-      color: #624c40;
-    }
 
+/* CONTENIDO */
 
-    /* =========================
-       TARJETAS
-    ========================= */
+.service-content{
+padding:22px 32px 25px;
 
-    .services {
-      width: 84%;
-      max-width: 1320px;
+flex:1;
 
-      margin: 0 auto 22px;
+display:flex;
+flex-direction:column;
+align-items:center;
+}
 
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
+.service-content h2{
+font-size:clamp(52px,4vw,72px);
+font-weight:400;
+font-style:italic;
 
-      gap: 32px;
-    }
+line-height:.95;
 
-    .service-card {
-      background: #f3e8dd;
+margin-bottom:12px;
+}
 
-      text-align: center;
+.service-line{
+width:55px;
+height:1px;
 
-      overflow: hidden;
+background:#b88870;
 
-      display: flex;
-      flex-direction: column;
-    }
+margin-bottom:14px;
+}
 
+.service-intro{
+font-size:21px;
+line-height:1.35;
 
-    /* FOTO */
+color:#574239;
 
-    .service-image {
-      width: 100%;
-      height: 540px;
+margin-bottom:25px;
+}
 
-      overflow: hidden;
-    }
+.service-list{
+width:100%;
 
-    .service-image img {
-      width: 100%;
-      height: 100%;
+list-style:none;
 
-      object-fit: cover;
+font-size:20px;
+line-height:1.45;
 
-      display: block;
+color:#6a5143;
 
-      transition: transform 0.5s ease;
-    }
+margin-bottom:28px;
+}
 
-    .service-card:hover .service-image img {
-      transform: scale(1.03);
-    }
+.service-list li{
+margin-bottom:5px;
+}
 
 
-    /* CONTENIDO */
+/* BOTONES */
 
-    .service-content {
-      padding: 18px 30px 17px;
+.service-button{
+margin-top:auto;
 
-      flex: 1;
+width:230px;
 
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
+padding:15px 20px;
 
-    .service-number {
-      display: none;
-    }
+background:#c98a69;
+color:#fffaf5;
 
-    .service-content h2 {
-      font-size: clamp(55px, 4.5vw, 75px);
+font-family:Arial,Helvetica,sans-serif;
 
-      font-weight: 400;
-      font-style: italic;
+font-size:14px;
+font-weight:600;
 
-      line-height: 0.95;
+letter-spacing:2px;
 
-      color: #49382f;
+transition:
+background .3s ease,
+transform .3s ease;
+}
 
-      margin-bottom: 12px;
-    }
+.service-button:hover{
+background:#b87558;
+transform:translateY(-2px);
+}
 
-    .service-line {
-      width: 52px;
-      height: 1px;
 
-      background: #b88870;
+/* =========================
+CIERRE
+========================= */
 
-      margin-bottom: 12px;
-    }
+.closing{
+width:100%;
 
-    .service-intro {
-      font-size: 20px;
-      line-height: 1.35;
+min-height:180px;
 
-      margin-bottom: 28px;
+padding:45px 30px 50px;
 
-      color: #574239;
-    }
+display:flex;
+flex-direction:column;
+align-items:center;
+justify-content:center;
 
-    .service-list {
-      list-style: none;
+text-align:center;
 
-      width: 100%;
+background:
+linear-gradient(
+rgba(247,241,233,.68),
+rgba(247,241,233,.68)
+),
+url("assets/hero%201.jpg");
 
-      font-size: 21px;
-      line-height: 1.45;
+background-size:cover;
+background-position:center 55%;
+}
 
-      color: #6a5143;
+.closing p{
+font-size:30px;
+line-height:1.3;
+font-style:italic;
 
-      margin-bottom: 27px;
-    }
+color:#704c3c;
 
-    .service-list li {
-      margin-bottom: 3px;
-    }
+margin-bottom:22px;
+}
 
+.closing-line{
+width:75px;
+height:1px;
 
-    /* BOTÓN */
+background:#b8876f;
+}
 
-    .service-button {
-      margin-top: auto;
 
-      width: 230px;
+/* =========================
+FOOTER
+========================= */
 
-      padding: 15px 20px;
+footer{
+padding:26px 20px;
 
-      background: #c98a69;
+text-align:center;
 
-      color: #fffaf5;
+background:#f7f1e9;
 
-      font-family: Arial, Helvetica, sans-serif;
+border-top:1px solid rgba(120,90,75,.15);
 
-      font-size: 14px;
-      font-weight: 600;
+font-family:Arial,Helvetica,sans-serif;
 
-      letter-spacing: 2px;
+font-size:13px;
+letter-spacing:1.4px;
 
-      transition:
-        background 0.3s ease,
-        transform 0.3s ease;
-    }
+color:#75665e;
+}
 
-    .service-button:hover {
-      background: #b87558;
 
-      transform: translateY(-2px);
-    }
+/* =========================
+TABLET
+========================= */
 
+@media(max-width:1100px){
 
-    /* =========================
-       CIERRE
-    ========================= */
+header{
+padding:0 30px;
+}
 
-    .closing {
-      min-height: 160px;
+.logo{
+width:250px;
+}
 
-      margin-top: 20px;
+nav{
+gap:25px;
+}
 
-      padding: 45px 20px 55px;
+nav a{
+font-size:15px;
+}
 
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
+.intro h1{
+font-size:76px;
+}
 
-      text-align: center;
+.intro p{
+font-size:22px;
+}
 
-      background:
-        linear-gradient(
-          rgba(247,241,233,0.72),
-          rgba(247,241,233,0.72)
-        ),
-        url("assets/hero%201.jpg");
+.services{
+width:calc(100% - 40px);
+gap:18px;
+}
 
-      background-size: cover;
-      background-position: center 58%;
-    }
+.service-image{
+height:360px;
+}
 
-    .closing p {
-      font-size: 29px;
+.service-content{
+padding:18px 18px 22px;
+}
 
-      font-style: italic;
+.service-content h2{
+font-size:55px;
+}
 
-      line-height: 1.3;
+.service-intro{
+font-size:18px;
+}
 
-      color: #704c3c;
+.service-list{
+font-size:18px;
+}
 
-      margin-bottom: 23px;
-    }
+.service-button{
+width:200px;
+font-size:12px;
+}
 
-    .closing-line {
-      width: 75px;
-      height: 1px;
+}
 
-      background: #b8876f;
-    }
 
+/* =========================
+MÓVIL
+========================= */
 
-    /* =========================
-       FOOTER
-    ========================= */
+@media(max-width:760px){
 
-    footer {
-      padding: 30px 20px;
+header{
+height:auto;
+padding:22px 20px 24px;
 
-      text-align: center;
+flex-direction:column;
+gap:20px;
+}
 
-      background: #f7f1e9;
+.logo{
+width:200px;
+}
 
-      border-top: 1px solid rgba(120, 90, 75, 0.15);
+nav{
+width:100%;
 
-      font-family: Arial, Helvetica, sans-serif;
+justify-content:center;
+flex-wrap:wrap;
 
-      font-size: 13px;
-      letter-spacing: 1.4px;
+gap:11px 17px;
+}
 
-      color: #75665e;
-    }
+nav a{
+font-size:12px;
+letter-spacing:1.1px;
+}
 
+nav a.active::after{
+bottom:-5px;
+}
 
-    /* =========================
-       TABLET
-    ========================= */
+.intro{
+padding:40px 18px 30px;
+}
 
-    @media (max-width: 1100px) {
+.eyebrow{
+font-size:12px;
+letter-spacing:3px;
+margin-bottom:16px;
+}
 
-      header {
-        padding: 0 35px;
-      }
+.intro h1{
+font-size:clamp(50px,14vw,72px);
+line-height:1;
+letter-spacing:-2px;
+}
 
-      .logo {
-        width: 230px;
-      }
+.intro p{
+font-size:20px;
+line-height:1.4;
+margin-top:18px;
+}
 
-      nav {
-        gap: 25px;
-      }
+.services{
+width:calc(100% - 20px);
 
-      nav a {
-        font-size: 16px;
-      }
+display:flex;
+flex-direction:column;
 
-      .services {
-        width: 92%;
-        gap: 22px;
-      }
+gap:22px;
 
-      .service-image {
-        height: 470px;
-      }
+margin-bottom:22px;
+}
 
-      .service-content {
-        padding-left: 20px;
-        padding-right: 20px;
-      }
+.service-image{
+height:430px;
+}
 
-      .service-content h2 {
-        font-size: 58px;
-      }
+.service-content{
+padding:23px 22px 27px;
+}
 
-      .service-intro {
-        font-size: 19px;
-      }
+.service-content h2{
+font-size:62px;
+}
 
-      .service-list {
-        font-size: 19px;
-      }
+.service-intro{
+font-size:20px;
+margin-bottom:25px;
+}
 
-    }
+.service-list{
+font-size:20px;
+line-height:1.5;
+}
 
+.service-button{
+width:220px;
+font-size:12px;
+padding:16px 18px;
+}
 
-    /* =========================
-       MÓVIL
-    ========================= */
+.closing{
+min-height:175px;
+padding:50px 25px;
+}
 
-    @media (max-width: 760px) {
+.closing p{
+font-size:27px;
+}
 
-      header {
-        height: auto;
+footer{
+padding:27px 20px;
+font-size:10px;
+line-height:1.6;
+}
 
-        padding: 22px 20px 24px;
+}
 
-        flex-direction: column;
-
-        gap: 20px;
-      }
-
-      .logo {
-        width: 190px;
-      }
-
-      nav {
-        width: 100%;
-
-        justify-content: center;
-
-        flex-wrap: wrap;
-
-        gap: 11px 17px;
-      }
-
-      nav a {
-        font-size: 12px;
-
-        letter-spacing: 1.1px;
-      }
-
-      nav a.active::after {
-        bottom: -5px;
-      }
-
-
-      /* INTRO */
-
-      .intro {
-        padding: 45px 20px 30px;
-      }
-
-      .eyebrow {
-        font-size: 12px;
-
-        letter-spacing: 3px;
-
-        margin-bottom: 17px;
-      }
-
-      .intro h1 {
-        font-size: clamp(50px, 14vw, 72px);
-
-        line-height: 1;
-
-        letter-spacing: -2px;
-      }
-
-      .intro p {
-        margin-top: 20px;
-
-        font-size: 21px;
-
-        line-height: 1.4;
-      }
-
-
-      /* TARJETAS */
-
-      .services {
-        width: calc(100% - 30px);
-
-        margin: 0 auto 25px;
-
-        display: flex;
-        flex-direction: column;
-
-        gap: 25px;
-      }
-
-      .service-image {
-        height: 460px;
-      }
-
-      .service-content {
-        padding: 22px 22px 25px;
-      }
-
-      .service-content h2 {
-        font-size: 62px;
-
-        margin-bottom: 14px;
-      }
-
-      .service-line {
-        margin-bottom: 15px;
-      }
-
-      .service-intro {
-        font-size: 20px;
-
-        margin-bottom: 25px;
-      }
-
-      .service-list {
-        font-size: 20px;
-
-        line-height: 1.5;
-
-        margin-bottom: 28px;
-      }
-
-      .service-button {
-        width: 220px;
-
-        padding: 15px 18px;
-
-        font-size: 12px;
-      }
-
-
-      /* CIERRE */
-
-      .closing {
-        min-height: 180px;
-
-        margin-top: 0;
-
-        padding: 50px 25px;
-      }
-
-      .closing p {
-        font-size: 27px;
-      }
-
-
-      /* FOOTER */
-
-      footer {
-        padding: 27px 20px;
-
-        font-size: 10px;
-
-        line-height: 1.6;
-      }
-
-    }
-
-  </style>
+</style>
 
 </head>
 
@@ -576,337 +534,310 @@
 <body>
 
 
-  <!-- =========================
-       CABECERA
-  ========================= -->
+<header>
 
-  <header>
+<a href="index.html">
 
-    <a href="index.html">
+<img
+src="assets/logo%202.jpg"
+alt="Bodas Con Cati"
+class="logo"
+>
 
-      <img
-        src="assets/logo%202.jpg"
-        alt="Bodas Con Cati"
-        class="logo"
-      >
+</a>
 
-    </a>
 
+<nav>
 
-    <nav>
+<a href="index.html">
+INICIO
+</a>
 
-      <a href="index.html">
-        INICIO
-      </a>
+<a href="sobre-mi.html">
+SOBRE MÍ
+</a>
 
-      <a href="sobre-mi.html">
-        SOBRE MÍ
-      </a>
+<a
+href="servicios.html"
+class="active"
+>
+SERVICIOS
+</a>
 
-      <a
-        href="servicios.html"
-        class="active"
-      >
-        SERVICIOS
-      </a>
+<a href="mallorca.html">
+MALLORCA
+</a>
 
-      <a href="mallorca.html">
-        MALLORCA
-      </a>
+<a href="contacto.html">
+CONTACTO
+</a>
 
-      <a href="contacto.html">
-        CONTACTO
-      </a>
+</nav>
 
-    </nav>
+</header>
 
-  </header>
 
 
+<section class="intro">
 
-  <!-- =========================
-       INTRODUCCIÓN
-  ========================= -->
+<div class="eyebrow">
+SERVICIOS
+</div>
 
-  <section class="intro">
+<h1>
 
-    <div class="eyebrow">
-      SERVICIOS
-    </div>
+Tres formas de vivir
+<em>vuestra boda.</em>
 
-    <h1>
-      Tres formas de vivir
-      <em>vuestra boda.</em>
-    </h1>
+</h1>
 
-    <p>
-      Cada pareja es única, y por eso cada servicio se adapta a lo que necesitáis.
-    </p>
+<p>
 
-  </section>
+Cada pareja es única, y por eso cada servicio se adapta
+a lo que necesitáis.
 
+</p>
 
+</section>
 
-  <!-- =========================
-       SERVICIOS
-  ========================= -->
 
-  <main class="services">
 
+<main class="services">
 
-    <!-- =====================
-         SENTIR
-    ====================== -->
 
-    <article class="service-card">
+<!-- =================================
+SENTIR
+================================= -->
 
+<article class="service-card">
 
-      <div class="service-image">
+<div class="service-image">
 
-        <img
-          src="assets/sentir%201.jpg"
-          alt="Sentir · Bodas Con Cati"
-        >
+<img
+src="assets/sentir%201.jpg"
+alt="Sentir · Bodas Con Cati"
+>
 
-      </div>
+</div>
 
 
-      <div class="service-content">
+<div class="service-content">
 
+<h2>
+Sentir
+</h2>
 
-        <h2>
-          Sentir
-        </h2>
+<div class="service-line"></div>
 
 
-        <div class="service-line"></div>
+<p class="service-intro">
 
+Planificación y consulta<br>
+Max 120 personas
 
-        <p class="service-intro">
+</p>
 
-          Planificación y consulta<br>
-          Max 120 personas
 
-        </p>
+<ul class="service-list">
 
+<li>
+Para parejas que ya lo tienen todo listo.
+</li>
 
-        <ul class="service-list">
+<li>
+Os libero de preocupaciones 1 mes antes.
+</li>
 
-          <li>
-            Para parejas que ya lo tienen todo listo.
-          </li>
+<li>
+Cuido con mimo a vuestros invitados y equipo.
+</li>
 
-          <li>
-            Os libero de preocupaciones 1 mes antes.
-          </li>
+<li>
+Vigilando cada instante para que todo fluya.
+</li>
 
-          <li>
-            Cuido con mimo a vuestros invitados y equipo.
-          </li>
+<li>
+Vosotros vivís el momento, yo cuido los detalles.
+</li>
 
-          <li>
-            Vigilando cada instante para que todo fluya.
-          </li>
+</ul>
 
-          <li>
-            Vosotros vivís el momento, yo cuido los detalles.
-          </li>
 
-        </ul>
+<a
+href="sentir.html"
+class="service-button"
+>
+SABER MÁS →
+</a>
 
+</div>
 
-        <a
-          href="#"
-          class="service-button"
-        >
-          SABER MÁS →
-        </a>
+</article>
 
 
-      </div>
 
-    </article>
+<!-- =================================
+SOÑAR
+================================= -->
 
+<article class="service-card">
 
+<div class="service-image">
 
-    <!-- =====================
-         SOÑAR
-    ====================== -->
+<img
+src="assets/soñar%201.jpg"
+alt="Soñar · Bodas Con Cati"
+>
 
-    <article class="service-card">
+</div>
 
 
-      <div class="service-image">
+<div class="service-content">
 
-        <img
-          src="assets/so%C3%B1ar%201.jpg"
-          alt="Soñar · Bodas Con Cati"
-        >
+<h2>
+Soñar
+</h2>
 
-      </div>
+<div class="service-line"></div>
 
 
-      <div class="service-content">
+<p class="service-intro">
 
+Planificación y consulta<br>
+Max 120 personas
 
-        <h2>
-          Soñar
-        </h2>
+</p>
 
 
-        <div class="service-line"></div>
+<ul class="service-list">
 
+<li>
+Diseñamos juntos una boda con vuestra esencia.
+</li>
 
-        <p class="service-intro">
+<li>
+Busco al equipo de proveedores perfecto para vosotros.
+</li>
 
-          Planificación y consulta<br>
-          Max 120 personas
+<li>
+Os quito el estrés del presupuesto y papeleo.
+</li>
 
-        </p>
+<li>
+Estoy en cada paso, visita y decisión.
+</li>
 
+<li>
+Hacemos realidad el “Sí, quiero” que imagináis.
+</li>
 
-        <ul class="service-list">
+</ul>
 
-          <li>
-            Diseñamos juntos una boda con vuestra esencia.
-          </li>
 
-          <li>
-            Busco al equipo de proveedores perfecto para vosotros.
-          </li>
+<a
+href="sonar.html"
+class="service-button"
+>
+SABER MÁS →
+</a>
 
-          <li>
-            Os quito el estrés del presupuesto y papeleo.
-          </li>
+</div>
 
-          <li>
-            Estoy en cada paso, visita y decisión.
-          </li>
+</article>
 
-          <li>
-            Hacemos realidad el “Sí, quiero” que imagináis.
-          </li>
 
-        </ul>
 
+<!-- =================================
+SIN FIN
+================================= -->
 
-        <a
-          href="#"
-          class="service-button"
-        >
-          SABER MÁS →
-        </a>
+<article class="service-card">
 
+<div class="service-image">
 
-      </div>
+<img
+src="assets/sin%20fin%201.jpg"
+alt="Sin Fin · Bodas Con Cati"
+>
 
-    </article>
+</div>
 
 
+<div class="service-content">
 
-    <!-- =====================
-         SIN FIN
-    ====================== -->
+<h2>
+Sin Fin
+</h2>
 
-    <article class="service-card">
+<div class="service-line"></div>
 
 
-      <div class="service-image">
+<p class="service-intro">
 
-        <img
-          src="assets/sin%20fin%201.jpg"
-          alt="Sin Fin · Bodas Con Cati"
-        >
+Un fin de semana inolvidable
 
-      </div>
+</p>
 
 
-      <div class="service-content">
+<ul class="service-list">
 
+<li>
+Incluye toda la magia del Pack Soñar.
+</li>
 
-        <h2>
-          Sin Fin
-        </h2>
+<li>
+¿Y al despertar? Sigo a vuestro lado.
+</li>
 
+<li>
+Organizo vuestra post boda.
+</li>
 
-        <div class="service-line"></div>
+<li>
+Gestiono el cierre final para que descanséis.
+</li>
 
+<li>
+Vuestro único plan: disfrutar sin prisas.
+</li>
 
-        <p class="service-intro">
+</ul>
 
-          Un fin de semana inolvidable
 
-        </p>
+<a
+href="sin-fin.html"
+class="service-button"
+>
+SABER MÁS →
+</a>
 
+</div>
 
-        <ul class="service-list">
+</article>
 
-          <li>
-            Incluye toda la magia del Pack Soñar.
-          </li>
 
-          <li>
-            ¿Y al despertar? Sigo a vuestro lado.
-          </li>
+</main>
 
-          <li>
-            Organizo vuestra post boda.
-          </li>
 
-          <li>
-            Gestiono el cierre final para que descanséis.
-          </li>
 
-          <li>
-            Vuestro único plan: disfrutar sin prisas.
-          </li>
+<section class="closing">
 
-        </ul>
+<p>
+Porque cada historia merece ser vivida a su manera.
+</p>
 
+<div class="closing-line"></div>
 
-        <a
-          href="#"
-          class="service-button"
-        >
-          SABER MÁS →
-        </a>
+</section>
 
 
-      </div>
 
-    </article>
+<footer>
 
+Bodas Con Cati · Wedding Planner en Mallorca ·
+Experiencias que se recuerdan toda la vida
 
-  </main>
-
-
-
-  <!-- =========================
-       FRASE FINAL
-  ========================= -->
-
-  <section class="closing">
-
-    <p>
-      Porque cada historia merece ser vivida a su manera.
-    </p>
-
-    <div class="closing-line"></div>
-
-  </section>
-
-
-
-  <!-- =========================
-       FOOTER
-  ========================= -->
-
-  <footer>
-
-    Bodas Con Cati · Wedding Planner en Mallorca ·
-    Experiencias que se recuerdan toda la vida
-
-  </footer>
+</footer>
 
 
 </body>
