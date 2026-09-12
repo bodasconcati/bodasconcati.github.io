@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
+
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -20,33 +20,37 @@
     }
 
     body {
-      background: #f7f3ed;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f7f2ec;
       color: #403936;
-      font-family: Georgia, "Times New Roman", serif;
     }
 
     a {
-      color: inherit;
       text-decoration: none;
+      color: inherit;
     }
 
 
-    /* ==================================================
-       CABECERA
-    ================================================== */
+    /* =====================================
+       HEADER
+    ===================================== */
 
     header {
-      width: 100%;
       height: 125px;
-
       padding: 0 5vw;
 
       display: flex;
       align-items: center;
       justify-content: space-between;
 
-      background: #f7f3ed;
+      background: #f7f2ec;
+
+      position: relative;
+      z-index: 10;
     }
+
+
+    /* LOGO CLARO PARA SOBRE MÍ */
 
     .logo {
       width: 260px;
@@ -54,348 +58,258 @@
       display: block;
     }
 
+
+    /* MENÚ */
+
     nav {
       display: flex;
       align-items: center;
-      gap: 38px;
-
-      font-family: Arial, Helvetica, sans-serif;
+      gap: 43px;
     }
 
     nav a {
-      color: #514a45;
-
       font-size: 18px;
       font-weight: 500;
-
       letter-spacing: 1.8px;
+      color: #514a45;
 
-      text-transform: uppercase;
-
-      white-space: nowrap;
-
-      transition: opacity .25s ease;
+      transition: opacity 0.3s ease;
     }
 
     nav a:hover {
-      opacity: .55;
+      opacity: 0.55;
     }
 
     nav a.active {
-      color: #a4776b;
+      color: #9b6f63;
     }
 
 
-    /* ==================================================
-       CONTENIDO PRINCIPAL
-    ================================================== */
+    /* =====================================
+       SOBRE MÍ
+    ===================================== */
 
-    .about-page {
-      width: 90%;
-      max-width: 1800px;
-
-      margin: 0 auto;
-
-      padding: 55px 0 70px;
-    }
-
-    .about-grid {
+    .about-hero {
       display: grid;
-
       grid-template-columns: 42% 58%;
-
-      gap: 70px;
-
-      align-items: center;
+      min-height: calc(100vh - 125px);
     }
 
 
-    /* ==================================================
+    /* =====================================
+       COLUMNA IZQUIERDA
+    ===================================== */
+
+    .about-text {
+      padding: 70px 6vw 90px 5vw;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+
+    .about-eyebrow {
+      font-size: 15px;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+
+      color: #9b6f63;
+
+      margin-bottom: 28px;
+    }
+
+
+    .about-title {
+      font-family: Georgia, "Times New Roman", serif;
+      font-weight: normal;
+
+      font-size: clamp(68px, 5.4vw, 92px);
+
+      line-height: 0.95;
+      letter-spacing: -3.5px;
+
+      color: #403936;
+
+      margin-bottom: 32px;
+    }
+
+
+    .about-title em {
+      color: #a4776b;
+      font-style: italic;
+    }
+
+
+    .about-line {
+      width: 65px;
+      height: 1px;
+
+      background: #9b6f63;
+
+      margin-bottom: 32px;
+    }
+
+
+    /* =====================================
+       TEXTO
+    ===================================== */
+
+    .about-text p {
+      font-family: Georgia, "Times New Roman", serif;
+
+      font-size: 25px;
+      line-height: 1.55;
+
+      color: #514a45;
+
+      margin-bottom: 26px;
+    }
+
+
+    .about-text p strong {
+      font-weight: normal;
+      font-style: italic;
+
+      color: #8f675d;
+    }
+
+
+    /* =====================================
+       FIRMA
+    ===================================== */
+
+    .signature {
+      font-family: Georgia, "Times New Roman", serif;
+
+      font-style: italic;
+
+      font-size: 58px;
+
+      color: #9b6f63;
+
+      margin-top: 22px;
+    }
+
+
+    /* =====================================
        FOTO
-    ================================================== */
+    ===================================== */
 
     .about-photo {
       position: relative;
 
-      width: 100%;
-
-      min-height: 720px;
+      min-height: calc(100vh - 125px);
 
       overflow: hidden;
+
+      background: #ddd;
     }
+
 
     .about-photo img {
       width: 100%;
       height: 100%;
 
-      display: block;
-
       object-fit: cover;
+
+      object-position: center;
+
+      display: block;
     }
 
 
-    /* ==================================================
+    /* =====================================
        FRASE SOBRE LA FOTO
-    ================================================== */
+    ===================================== */
 
     .photo-quote {
       position: absolute;
 
-      left: 8%;
-      right: 8%;
-      bottom: 8%;
+      left: 45px;
+      right: 45px;
+      bottom: 45px;
 
-      padding: 24px 28px;
+      padding: 32px 38px;
 
-      background: rgba(247, 243, 237, .92);
+      background: rgba(247, 242, 236, 0.94);
 
-      color: #403936;
+      max-width: 700px;
+    }
+
+
+    .photo-quote p {
+      font-family: Georgia, "Times New Roman", serif;
+
+      font-style: italic;
 
       font-size: 27px;
 
-      line-height: 1.25;
+      line-height: 1.35;
 
-      font-style: italic;
+      color: #76574f;
+    }
+
+
+    /* =====================================
+       CIERRE
+    ===================================== */
+
+    .closing {
+      padding: 95px 30px 110px;
 
       text-align: center;
+
+      background: #eee3da;
     }
 
 
-    /* ==================================================
-       TEXTO
-    ================================================== */
-
-    .about-text {
-      padding-right: 4%;
-    }
-
-    .eyebrow {
-      margin-bottom: 18px;
-
-      color: #a4776b;
-
-      font-family: Arial, Helvetica, sans-serif;
-
-      font-size: 13px;
-
-      letter-spacing: 3px;
-
-      text-transform: uppercase;
-    }
-
-    .about-title {
-      margin-bottom: 35px;
-
-      color: #403936;
-
-      font-size: clamp(68px, 5.4vw, 92px);
-
-      line-height: .92;
-
-      font-weight: 400;
-
-      letter-spacing: -4px;
-    }
-
-    .about-title em {
-      color: #a4776b;
-
-      font-style: italic;
-    }
-
-    .about-text p {
-      margin-bottom: 22px;
-
-      color: #403936;
-
-      font-size: 25px;
-
-      line-height: 1.45;
-    }
-
-    .about-text p:last-of-type {
-      margin-bottom: 0;
-    }
-
-    .about-text strong {
-      font-weight: 400;
-    }
-
-    .about-text em {
-      font-style: italic;
-    }
-
-
-    /* ==================================================
-       FIRMA
-    ================================================== */
-
-    .signature {
-      margin-top: 35px;
-
-      color: #a4776b;
-
+    .closing p {
       font-family: Georgia, "Times New Roman", serif;
 
-      font-size: 43px;
-
       font-style: italic;
-    }
 
-
-    /* ==================================================
-       FRASE FINAL
-    ================================================== */
-
-    .about-closing {
-      margin-top: 65px;
-
-      padding-top: 35px;
-
-      border-top: 1px solid rgba(100, 80, 70, .2);
-
-      text-align: center;
-    }
-
-    .about-closing p {
-      color: #a4776b;
-
-      font-size: 32px;
+      font-size: clamp(42px, 4.2vw, 64px);
 
       line-height: 1.2;
 
-      font-style: italic;
+      color: #8f675d;
+
+      max-width: 1050px;
+
+      margin: 0 auto;
     }
 
 
-    /* ==================================================
+    /* =====================================
        FOOTER
-    ================================================== */
+    ===================================== */
 
     footer {
-      margin-top: 0;
+      padding: 35px 20px;
 
-      padding: 28px 5%;
+      text-align: center;
 
-      border-top: 1px solid rgba(100, 80, 70, .2);
+      background: #f7f2ec;
 
-      background: #f7f3ed;
-
-      display: flex;
-
-      align-items: center;
-
-      justify-content: space-between;
-
-      gap: 30px;
+      border-top: 1px solid rgba(100,80,70,0.15);
 
       color: #766e68;
 
-      font-family: Arial, Helvetica, sans-serif;
-    }
+      font-size: 13px;
 
-    .footer-left {
-      display: flex;
-
-      flex-direction: column;
-
-      gap: 4px;
-    }
-
-    .footer-brand {
-      color: #a4776b;
-
-      font-family: Georgia, "Times New Roman", serif;
-
-      font-size: 19px;
-
-      font-style: italic;
-    }
-
-    .footer-small {
-      font-size: 9px;
-
-      letter-spacing: 2px;
-
-      text-transform: uppercase;
-    }
-
-    .footer-center {
-      font-size: 10px;
-
-      letter-spacing: 2px;
-
-      text-transform: uppercase;
-
-      text-align: center;
-    }
-
-    .footer-social {
-      display: flex;
-
-      gap: 16px;
-
-      color: #a4776b;
-
-      font-size: 11px;
+      letter-spacing: 1.5px;
     }
 
 
-    /* ==================================================
-       PANTALLAS GRANDES
-    ================================================== */
-
-    @media (min-width: 1600px) {
-
-      header {
-        padding-left: 5vw;
-        padding-right: 5vw;
-      }
-
-      .logo {
-        width: 300px;
-      }
-
-      nav {
-        gap: 42px;
-      }
-
-      nav a {
-        font-size: 18px;
-      }
-
-      .about-page {
-        width: 90%;
-      }
-
-      .about-grid {
-        grid-template-columns: 42% 58%;
-
-        gap: 80px;
-      }
-
-      .about-photo {
-        min-height: 800px;
-      }
-
-      .about-text p {
-        font-size: 26px;
-      }
-
-      .photo-quote {
-        font-size: 29px;
-      }
-    }
-
-
-    /* ==================================================
+    /* =====================================
        TABLET
-    ================================================== */
+    ===================================== */
 
     @media (max-width: 1100px) {
 
       header {
-        padding: 0 4%;
+        padding: 0 30px;
       }
 
       .logo {
@@ -403,73 +317,74 @@
       }
 
       nav {
-        gap: 22px;
+        gap: 25px;
       }
 
       nav a {
-        font-size: 15px;
-
-        letter-spacing: 1px;
+        font-size: 16px;
       }
 
-      .about-page {
-        width: 90%;
-
-        padding-top: 45px;
-      }
-
-      .about-grid {
-        grid-template-columns: 1fr;
-
-        gap: 50px;
-      }
-
-      .about-photo {
-        min-height: 650px;
-
-        order: 1;
+      .about-hero {
+        grid-template-columns: 45% 55%;
       }
 
       .about-text {
-        order: 2;
+        padding: 65px 35px 80px 30px;
+      }
 
-        padding-right: 0;
+      .about-eyebrow {
+        font-size: 14px;
       }
 
       .about-title {
-        font-size: 75px;
+        font-size: 68px;
       }
 
       .about-text p {
         font-size: 23px;
+        line-height: 1.55;
+      }
+
+      .signature {
+        font-size: 54px;
       }
 
       .photo-quote {
+        left: 30px;
+        right: 30px;
+        bottom: 30px;
+
+        padding: 28px 30px;
+      }
+
+      .photo-quote p {
         font-size: 24px;
       }
 
     }
 
 
-    /* ==================================================
+    /* =====================================
        MÓVIL
-    ================================================== */
+    ===================================== */
 
-    @media (max-width: 700px) {
+    @media (max-width: 760px) {
 
       header {
         height: auto;
 
-        padding: 22px 6% 20px;
+        padding: 24px 20px;
 
         flex-direction: column;
 
-        gap: 18px;
+        gap: 20px;
       }
 
+
       .logo {
-        width: 195px;
+        width: 190px;
       }
+
 
       nav {
         width: 100%;
@@ -478,128 +393,130 @@
 
         flex-wrap: wrap;
 
-        gap: 11px 17px;
+        gap: 13px 18px;
       }
+
 
       nav a {
-        font-size: 11px;
+        font-size: 12px;
 
-        letter-spacing: 1px;
+        letter-spacing: 1.2px;
       }
 
 
-      .about-page {
-        width: 88%;
+      /* CONTENIDO */
 
-        padding: 40px 0 55px;
-      }
-
-      .about-grid {
+      .about-hero {
         display: flex;
 
         flex-direction: column;
 
-        gap: 38px;
-      }
-
-
-      /* FOTO */
-
-      .about-photo {
-        width: 100%;
-
-        min-height: 540px;
-
-        order: 1;
-      }
-
-      .photo-quote {
-        left: 6%;
-        right: 6%;
-        bottom: 6%;
-
-        padding: 18px 18px;
-
-        font-size: 20px;
-
-        line-height: 1.3;
+        min-height: auto;
       }
 
 
       /* TEXTO */
 
       .about-text {
-        width: 100%;
+        padding: 65px 25px 70px;
 
-        order: 2;
+        display: block;
       }
 
-      .eyebrow {
-        margin-bottom: 13px;
 
-        font-size: 10px;
+      .about-eyebrow {
+        font-size: 12px;
 
-        letter-spacing: 2.5px;
+        letter-spacing: 3px;
+
+        margin-bottom: 21px;
       }
+
 
       .about-title {
-        margin-bottom: 28px;
+        font-size: clamp(54px, 15vw, 76px);
 
-        font-size: clamp(58px, 16vw, 82px);
+        line-height: 0.95;
 
-        line-height: .94;
+        letter-spacing: -2.5px;
 
-        letter-spacing: -3px;
+        margin-bottom: 30px;
       }
+
+
+      .about-line {
+        width: 60px;
+
+        margin-bottom: 30px;
+      }
+
 
       .about-text p {
-        margin-bottom: 20px;
-
         font-size: 21px;
 
-        line-height: 1.48;
+        line-height: 1.58;
+
+        margin-bottom: 23px;
       }
+
 
       .signature {
-        margin-top: 30px;
+        font-size: 50px;
 
-        font-size: 37px;
+        margin-top: 28px;
       }
 
 
-      /* FRASE FINAL */
+      /* FOTO */
 
-      .about-closing {
-        margin-top: 45px;
+      .about-photo {
+        min-height: 650px;
 
-        padding-top: 28px;
+        height: 75vh;
       }
 
-      .about-closing p {
-        font-size: 27px;
 
-        line-height: 1.25;
+      .about-photo img {
+        object-position: center;
+      }
+
+
+      .photo-quote {
+        left: 20px;
+        right: 20px;
+        bottom: 20px;
+
+        padding: 25px 25px;
+      }
+
+
+      .photo-quote p {
+        font-size: 20px;
+
+        line-height: 1.4;
+      }
+
+
+      /* CIERRE */
+
+      .closing {
+        padding: 70px 25px 80px;
+      }
+
+
+      .closing p {
+        font-size: 39px;
       }
 
 
       /* FOOTER */
 
       footer {
-        padding: 25px 6%;
+        font-size: 10px;
 
-        flex-direction: column;
+        line-height: 1.6;
 
-        text-align: center;
-
-        gap: 17px;
-      }
-
-      .footer-center {
-        order: 2;
-      }
-
-      .footer-social {
-        order: 3;
+        padding: 30px 20px;
       }
 
     }
@@ -612,9 +529,9 @@
 <body>
 
 
-  <!-- ==================================================
+  <!-- =====================================
        CABECERA
-  ================================================== -->
+  ===================================== -->
 
   <header>
 
@@ -635,6 +552,7 @@
         INICIO
       </a>
 
+
       <a
         href="sobre-mi.html"
         class="active"
@@ -642,13 +560,18 @@
         SOBRE MÍ
       </a>
 
+
       <a href="servicios.html">
         SERVICIOS
       </a>
 
+
+      <!-- ÚNICO CAMBIO: antes MALLORCA -->
+
       <a href="galeria.html">
         GALERÍA
       </a>
+
 
       <a href="contacto.html">
         CONTACTO
@@ -659,63 +582,39 @@
   </header>
 
 
-  <!-- ==================================================
+  <!-- =====================================
        SOBRE MÍ
-  ================================================== -->
+  ===================================== -->
 
-  <main class="about-page">
+  <main>
 
-
-    <section class="about-grid">
-
-
-      <!-- =================================================
-           FOTO
-      ================================================== -->
-
-      <div class="about-photo">
-
-        <img
-          src="assets/cati%201.jpg"
-          alt="Cati · Bodas Con Cati"
-        >
+    <section class="about-hero">
 
 
-        <div class="photo-quote">
-
-          “Detrás de cada boda hay una gran historia.
-          Y me encanta formar parte de ella.”
-
-        </div>
-
-      </div>
-
-
-      <!-- =================================================
+      <!-- =================================
            TEXTO
-      ================================================== -->
+      ================================= -->
 
       <div class="about-text">
 
 
-        <p class="eyebrow">
+        <div class="about-eyebrow">
           SOBRE MÍ
-        </p>
+        </div>
 
 
         <h1 class="about-title">
 
-          Soy Cati.<br>
+          Más de diez años creando momentos.
 
           <em>
-            Y me encanta
-          </em><br>
-
-          hacer realidad<br>
-
-          vuestra historia.
+            Y una pasión que empezó con las bodas.
+          </em>
 
         </h1>
+
+
+        <div class="about-line"></div>
 
 
         <p>
@@ -739,8 +638,9 @@
 
         <p>
 
-          Me adapto a vosotros, a vuestra personalidad, a vuestras
-          ideas y, por supuesto, al tipo de boda que soñáis.
+          Me adapto a vosotros, a vuestra personalidad, a
+          vuestras ideas y, por supuesto, al tipo de boda que
+          soñáis.
 
         </p>
 
@@ -765,8 +665,9 @@
 
         <p>
 
-          Por eso, durante todo el proceso, nos reunimos, hablamos,
-          organizamos y vamos dando forma juntos a cada detalle.
+          Por eso, durante todo el proceso, nos reunimos,
+          hablamos, organizamos y vamos dando forma juntos a
+          cada detalle.
 
         </p>
 
@@ -774,11 +675,11 @@
         <p>
 
           <strong>
-            <em>
-              Porque para mí, organizar una boda no consiste solo
-              en que todo salga perfecto. Consiste en que vosotros
-              disfrutéis del camino tanto como del gran día.
-            </em>
+
+            Porque para mí, organizar una boda no consiste solo
+            en que todo salga perfecto. Consiste en que vosotros
+            disfrutéis del camino tanto como del gran día.
+
           </strong>
 
         </p>
@@ -791,17 +692,49 @@
 
       </div>
 
+
+      <!-- =================================
+           FOTO
+      ================================= -->
+
+      <div class="about-photo">
+
+
+        <img
+          src="assets/cati%201.jpg"
+          alt="Cati · Bodas Con Cati"
+        >
+
+
+        <div class="photo-quote">
+
+          <p>
+
+            “Detrás de cada boda hay una gran historia.
+            Y me encanta formar parte de ella.”
+
+          </p>
+
+        </div>
+
+
+      </div>
+
+
     </section>
 
 
-    <!-- ==================================================
+    <!-- =================================
          FRASE FINAL
-    ================================================== -->
+    ================================= -->
 
-    <section class="about-closing">
+    <section class="closing">
 
       <p>
-        Porque vuestra boda no tiene que parecerse a ninguna otra.
+
+        Porque vuestra boda no tiene que parecerse
+        a ninguna otra.
+
       </p>
 
     </section>
@@ -810,47 +743,14 @@
   </main>
 
 
-  <!-- ==================================================
+  <!-- =====================================
        FOOTER
-  ================================================== -->
+  ===================================== -->
 
   <footer>
 
-
-    <div class="footer-left">
-
-      <span class="footer-brand">
-        Bodas Con Cati
-      </span>
-
-      <span class="footer-small">
-        Wedding Planner en Mallorca
-      </span>
-
-    </div>
-
-
-    <div class="footer-center">
-      Experiencias que se recuerdan toda la vida
-    </div>
-
-
-    <div class="footer-social">
-
-      <span>
-        Instagram
-      </span>
-
-      <span>
-        Pinterest
-      </span>
-
-      <span>
-        WhatsApp
-      </span>
-
-    </div>
-
+    Bodas Con Cati · Wedding Planner en Mallorca ·
+    Experiencias que se recuerdan toda la vida
 
   </footer>
 
