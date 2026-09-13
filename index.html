@@ -4,9 +4,14 @@
 <head>
 
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
 
   <title>Bodas Con Cati · Wedding Planner en Mallorca</title>
+
 
   <style>
 
@@ -16,9 +21,11 @@
       padding: 0;
     }
 
+
     html {
       scroll-behavior: smooth;
     }
+
 
     body {
       font-family: Arial, Helvetica, sans-serif;
@@ -26,10 +33,12 @@
       background: #f7f2ec;
     }
 
+
     a {
       text-decoration: none;
       color: inherit;
     }
+
 
 
     /* =====================================
@@ -37,7 +46,9 @@
     ===================================== */
 
     .hero {
+
       min-height: 76vh;
+
       position: relative;
 
       background-image:
@@ -50,10 +61,12 @@
         url("assets/hero%201.jpg");
 
       background-size: cover;
+
       background-position: center;
 
       color: white;
     }
+
 
 
     /* =====================================
@@ -61,54 +74,76 @@
     ===================================== */
 
     header {
+
       height: 120px;
 
       padding: 0 5vw;
 
       display: flex;
+
       align-items: center;
+
       justify-content: space-between;
 
       position: relative;
+
       z-index: 10;
     }
+
 
 
     /* LOGO */
 
     .logo {
+
       width: 260px;
+
       height: auto;
+
       display: block;
     }
+
 
 
     /* MENÚ */
 
     nav {
+
       display: flex;
+
       align-items: center;
+
       gap: 43px;
     }
 
+
     nav a {
+
       color: white;
 
       font-size: 18px;
+
       font-weight: 500;
 
       letter-spacing: 1.8px;
 
+      white-space: nowrap;
+
       transition: opacity 0.3s ease;
     }
 
+
     nav a:hover {
+
       opacity: 0.65;
     }
 
+
     nav a.active {
+
       opacity: 1;
     }
+
 
 
     /* =====================================
@@ -116,7 +151,9 @@
     ===================================== */
 
     .hero-content {
+
       width: 790px;
+
       max-width: 68%;
 
       position: absolute;
@@ -129,7 +166,11 @@
     }
 
 
+
+    /* EYEBROW */
+
     .eyebrow {
+
       font-size: 15px;
 
       letter-spacing: 4px;
@@ -142,7 +183,11 @@
     }
 
 
+
+    /* TÍTULO */
+
     .hero h1 {
+
       font-family: Georgia, "Times New Roman", serif;
 
       font-weight: normal;
@@ -156,13 +201,20 @@
       margin-bottom: 27px;
     }
 
+
     .hero h1 em {
+
       color: #d3a394;
+
       font-style: italic;
     }
 
 
+
+    /* TEXTO */
+
     .hero-text {
+
       max-width: 760px;
 
       font-size: 23px;
@@ -175,11 +227,13 @@
     }
 
 
+
     /* =====================================
        BOTÓN
     ===================================== */
 
     .hero-button {
+
       display: inline-block;
 
       padding: 15px 24px;
@@ -197,10 +251,14 @@
         color 0.3s ease;
     }
 
+
     .hero-button:hover {
+
       background: white;
+
       color: #403936;
     }
+
 
 
     /* =====================================
@@ -208,6 +266,7 @@
     ===================================== */
 
     .services-strip {
+
       background: #eee3da;
 
       display: grid;
@@ -219,22 +278,29 @@
 
 
     .service {
+
       padding: 0 30px;
 
       border-right: 1px solid rgba(100,80,70,0.18);
     }
 
+
     .service:first-child {
+
       padding-left: 0;
     }
 
+
     .service:last-child {
+
       border-right: none;
+
       padding-right: 0;
     }
 
 
     .service-number {
+
       font-size: 13px;
 
       letter-spacing: 3px;
@@ -246,6 +312,7 @@
 
 
     .service h2 {
+
       font-family: Georgia, "Times New Roman", serif;
 
       font-size: 27px;
@@ -259,6 +326,7 @@
 
 
     .service p {
+
       font-size: 17px;
 
       line-height: 1.45;
@@ -267,11 +335,13 @@
     }
 
 
+
     /* =====================================
        FOOTER
     ===================================== */
 
     footer {
+
       padding: 28px 20px;
 
       text-align: center;
@@ -288,6 +358,7 @@
     }
 
 
+
     /* =====================================
        TABLET
     ===================================== */
@@ -295,51 +366,74 @@
     @media (max-width: 1100px) {
 
       header {
+
         padding: 0 30px;
       }
 
+
       .logo {
+
         width: 210px;
       }
 
+
       nav {
+
         gap: 25px;
       }
 
+
       nav a {
+
         font-size: 14px;
       }
 
+
       .hero-content {
+
         max-width: 72%;
       }
 
+
       .hero h1 {
+
         font-size: 72px;
       }
 
+
       .hero-text {
+
         font-size: 20px;
       }
 
+
       .services-strip {
+
         padding-left: 30px;
+
         padding-right: 30px;
       }
 
+
       .service {
+
         padding: 0 20px;
       }
 
+
       .service h2 {
+
         font-size: 23px;
       }
 
+
       .service p {
+
         font-size: 15px;
       }
 
     }
+
 
 
     /* =====================================
@@ -348,8 +442,14 @@
 
     @media (max-width: 760px) {
 
+
+      /* =====================================
+         HERO MÓVIL
+      ===================================== */
+
       .hero {
-        min-height: 850px;
+
+        min-height: 1080px;
 
         background-position: 62% center;
 
@@ -364,104 +464,170 @@
       }
 
 
-      /* HEADER */
+
+      /* =====================================
+         HEADER MÓVIL
+      ===================================== */
 
       header {
+
         height: auto;
 
-        padding: 22px 20px;
+        padding: 20px 18px 18px;
 
         flex-direction: column;
 
-        gap: 18px;
+        gap: 16px;
       }
 
 
-      /* LOGO MÓVIL */
+
+      /* LOGO */
 
       .logo {
+
         width: 190px;
       }
 
 
-      /* MENÚ MÓVIL */
+
+      /* =====================================
+         MENÚ MÓVIL
+      ===================================== */
 
       nav {
+
         width: 100%;
+
+        display: flex;
 
         justify-content: center;
 
-        flex-wrap: wrap;
+        align-items: center;
 
-        gap: 12px 18px;
+        flex-wrap: nowrap;
+
+        gap: 0;
+
+        padding: 0;
+
       }
+
 
       nav a {
-        font-size: 12px;
 
-        letter-spacing: 1.2px;
+        font-size: 10px;
+
+        letter-spacing: 0.8px;
+
+        white-space: nowrap;
+
+        text-align: center;
+
+        flex: 1;
       }
 
 
-      /* HERO MÓVIL */
+
+      /* =====================================
+         CONTENIDO HERO MÓVIL
+      ===================================== */
 
       .hero-content {
+
         width: auto;
 
         max-width: none;
 
-        left: 22px;
-        right: 22px;
+        left: 25px;
+
+        right: 25px;
 
         top: auto;
 
-        bottom: 55px;
+        bottom: 48px;
 
         transform: none;
       }
 
 
+
+      /* EYEBROW */
+
       .eyebrow {
+
         font-size: 10px;
 
-        letter-spacing: 3px;
+        letter-spacing: 2.8px;
 
-        margin-bottom: 18px;
+        margin-bottom: 17px;
+
+        line-height: 1.4;
       }
 
+
+
+      /* =====================================
+         TÍTULO MÓVIL
+      ===================================== */
 
       .hero h1 {
-        font-size: clamp(55px, 15vw, 78px);
 
-        line-height: 0.95;
+        font-size: clamp(52px, 13.5vw, 70px);
+
+        line-height: 1.02;
 
         letter-spacing: -2.5px;
-
-        margin-bottom: 23px;
-      }
-
-
-      .hero-text {
-        font-size: 19px;
-
-        line-height: 1.48;
 
         margin-bottom: 25px;
       }
 
 
-      .hero-button {
-        padding: 14px 19px;
+      .hero h1 em {
 
-        font-size: 11px;
-
-        letter-spacing: 1.7px;
+        white-space: nowrap;
       }
 
 
-      /* SERVICIOS MÓVIL */
+
+      /* =====================================
+         TEXTO MÓVIL
+      ===================================== */
+
+      .hero-text {
+
+        max-width: none;
+
+        font-size: 18px;
+
+        line-height: 1.5;
+
+        margin-bottom: 25px;
+      }
+
+
+
+      /* =====================================
+         BOTÓN MÓVIL
+      ===================================== */
+
+      .hero-button {
+
+        padding: 14px 18px;
+
+        font-size: 10px;
+
+        letter-spacing: 1.5px;
+      }
+
+
+
+      /* =====================================
+         SERVICIOS MÓVIL
+      ===================================== */
 
       .services-strip {
+
         display: block;
 
         padding: 55px 25px;
@@ -469,6 +635,7 @@
 
 
       .service {
+
         padding: 0 0 35px;
 
         margin-bottom: 35px;
@@ -480,11 +647,13 @@
 
 
       .service:first-child {
+
         padding-left: 0;
       }
 
 
       .service:last-child {
+
         border-bottom: none;
 
         margin-bottom: 0;
@@ -494,11 +663,13 @@
 
 
       .service-number {
+
         margin-bottom: 11px;
       }
 
 
       .service h2 {
+
         font-size: 30px;
 
         margin-bottom: 12px;
@@ -506,15 +677,20 @@
 
 
       .service p {
+
         font-size: 18px;
 
         line-height: 1.5;
       }
 
 
-      /* FOOTER */
+
+      /* =====================================
+         FOOTER MÓVIL
+      ===================================== */
 
       footer {
+
         font-size: 10px;
 
         line-height: 1.6;
@@ -529,6 +705,7 @@
 </head>
 
 
+
 <body>
 
 
@@ -539,9 +716,12 @@
   <section class="hero">
 
 
-    <!-- HEADER -->
+    <!-- =====================================
+         HEADER
+    ===================================== -->
 
     <header>
+
 
       <a href="index.html">
 
@@ -554,23 +734,31 @@
       </a>
 
 
+
       <nav>
 
-        <a href="index.html" class="active">
+        <a
+          href="index.html"
+          class="active"
+        >
           INICIO
         </a>
+
 
         <a href="sobre-mi.html">
           SOBRE MÍ
         </a>
 
+
         <a href="servicios.html">
           SERVICIOS
         </a>
 
+
         <a href="galeria.html">
           GALERÍA
         </a>
+
 
         <a href="contacto.html">
           CONTACTO
@@ -578,26 +766,38 @@
 
       </nav>
 
+
     </header>
 
 
 
-    <!-- CONTENIDO HERO -->
+    <!-- =====================================
+         CONTENIDO HERO
+    ===================================== -->
 
     <div class="hero-content">
 
 
       <div class="eyebrow">
+
         WEDDING PLANNER · MALLORCA
+
       </div>
 
 
+
       <h1>
+
         Que organizar<br>
+
         <em>vuestra boda</em><br>
+
         también sea parte<br>
+
         de la magia.
+
       </h1>
+
 
 
       <p class="hero-text">
@@ -611,15 +811,19 @@
       </p>
 
 
+
       <a
         href="sobre-mi.html"
         class="hero-button"
       >
+
         QUIERO SABER MÁS →
+
       </a>
 
 
     </div>
+
 
   </section>
 
@@ -636,18 +840,24 @@
 
     <article class="service">
 
+
       <div class="service-number">
         01
       </div>
+
 
       <h2>
         Organización completa
       </h2>
 
+
       <p>
+
         Me encargo de la planificación y de cada paso para que
         disfrutéis del proceso.
+
       </p>
+
 
     </article>
 
@@ -657,17 +867,23 @@
 
     <article class="service">
 
+
       <div class="service-number">
         02
       </div>
+
 
       <h2>
         Coordinación del día
       </h2>
 
+
       <p>
+
         Para que viváis cada momento sin preocuparos de nada.
+
       </p>
+
 
     </article>
 
@@ -677,18 +893,24 @@
 
     <article class="service">
 
+
       <div class="service-number">
         03
       </div>
+
 
       <h2>
         Gestión de proveedores
       </h2>
 
+
       <p>
+
         Os ayudo a encontrar, elegir y coordinar al equipo
         perfecto para vuestra boda.
+
       </p>
+
 
     </article>
 
@@ -698,18 +920,24 @@
 
     <article class="service">
 
+
       <div class="service-number">
         04
       </div>
+
 
       <h2>
         Galería
       </h2>
 
+
       <p>
+
         Descubrid algunos de los momentos, detalles y bodas
         que he tenido la suerte de acompañar.
+
       </p>
+
 
     </article>
 
