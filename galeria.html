@@ -302,12 +302,11 @@
 
 
     /* ==================================================
-       MENSAJE SI TODAVÍA NO HAY REELS
+       MENSAJES
     ================================================== */
 
-    .no-reels {
-
-      display: none;
+    .loading,
+    .no-content {
 
       padding: 50px 20px;
 
@@ -322,6 +321,11 @@
       letter-spacing: 3px;
 
       text-transform: uppercase;
+    }
+
+
+    .no-content {
+      display: none;
     }
 
 
@@ -460,6 +464,7 @@
     @media (min-width: 1600px) {
 
       header {
+
         padding-left: 5vw;
         padding-right: 5vw;
       }
@@ -487,6 +492,7 @@
 
       .photo-gallery,
       .reels-gallery {
+
         gap: 12px;
       }
 
@@ -505,6 +511,7 @@
     @media (max-width: 1100px) {
 
       header {
+
         padding: 0 4%;
       }
 
@@ -809,7 +816,6 @@
 
   <section class="gallery-section">
 
-
     <div class="section-heading">
 
       <h2>
@@ -819,113 +825,25 @@
     </div>
 
 
-    <div class="photo-gallery">
+    <div
+      id="photo-gallery"
+      class="photo-gallery"
+    ></div>
 
 
-      <div class="photo-item">
-        <img
-          src="galeria/01-zapatos-novia.jpg"
-          alt="Zapatos de novia · Bodas Con Cati"
-        >
-      </div>
+    <div
+      id="photo-loading"
+      class="loading"
+    >
+      Cargando fotos...
+    </div>
 
 
-      <div class="photo-item">
-        <img
-          src="galeria/02-novia-ventana.jpg"
-          alt="Novia junto a la ventana · Bodas Con Cati"
-        >
-      </div>
-
-
-      <div class="photo-item">
-        <img
-          src="galeria/03-pareja-patio.jpg"
-          alt="Pareja de novios · Bodas Con Cati"
-        >
-      </div>
-
-
-      <div class="photo-item">
-        <img
-          src="galeria/04-novio-escaleras.jpg"
-          alt="Novio en las escaleras · Bodas Con Cati"
-        >
-      </div>
-
-
-      <div class="photo-item">
-        <img
-          src="galeria/05-luces-y-velas.jpg"
-          alt="Luces y velas de boda · Bodas Con Cati"
-        >
-      </div>
-
-
-      <div class="photo-item">
-        <img
-          src="galeria/06-momento-novio.jpg"
-          alt="Momento del novio · Bodas Con Cati"
-        >
-      </div>
-
-
-      <div class="photo-item">
-        <img
-          src="galeria/07-novia-vestido.jpg"
-          alt="Novia con vestido · Bodas Con Cati"
-        >
-      </div>
-
-
-      <div class="photo-item">
-        <img
-          src="galeria/08-familia-y-flores.jpg"
-          alt="Familia y flores · Bodas Con Cati"
-        >
-      </div>
-
-
-      <div class="photo-item">
-        <img
-          src="galeria/09-celebracion.jpg"
-          alt="Celebración de boda · Bodas Con Cati"
-        >
-      </div>
-
-
-      <div class="photo-item">
-        <img
-          src="galeria/10-detalle-novia-y-cati.jpg"
-          alt="Detalle de novia y Cati · Bodas Con Cati"
-        >
-      </div>
-
-
-      <div class="photo-item">
-        <img
-          src="galeria/11-brindis-con-cati.jpg"
-          alt="Brindis con Cati · Bodas Con Cati"
-        >
-      </div>
-
-
-      <div class="photo-item">
-        <img
-          src="galeria/12-cati.jpg"
-          alt="Cati · Bodas Con Cati"
-        >
-      </div>
-
-
-      <div class="photo-item">
-        <img
-          src="galeria/13-cati-ayudando-novia.jpg"
-          alt="Cati ayudando a una novia · Bodas Con Cati"
-        >
-      </div>
-
-
+    <div
+      id="photo-empty"
+      class="no-content"
+    >
+      Todavía no hay fotos en la galería
     </div>
 
   </section>
@@ -938,7 +856,6 @@
 
   <section class="gallery-section">
 
-
     <div class="section-heading">
 
       <h2>
@@ -949,18 +866,25 @@
 
 
     <div
+      id="reels-gallery"
       class="reels-gallery"
-      id="reelsGallery"
     ></div>
 
 
     <div
-      class="no-reels"
-      id="noReels"
+      id="reel-loading"
+      class="loading"
+    >
+      Cargando reels...
+    </div>
+
+
+    <div
+      id="reel-empty"
+      class="no-content"
     >
       Próximamente nuevos reels
     </div>
-
 
   </section>
 
@@ -973,7 +897,7 @@
   <div class="gallery-closing">
 
     <p>
-      Historias que merece la pena recordar.
+      Historias que merecen ser recordadas.
     </p>
 
   </div>
@@ -989,37 +913,39 @@
 
     <div class="footer-left">
 
-      <span class="footer-brand">
+      <div class="footer-brand">
         Bodas Con Cati
-      </span>
+      </div>
 
-      <span class="footer-small">
+      <div class="footer-small">
         Wedding Planner en Mallorca
-      </span>
+      </div>
 
     </div>
 
 
     <div class="footer-center">
-
       Experiencias que se recuerdan toda la vida
-
     </div>
 
 
     <div class="footer-social">
 
-      <span>
-        Instagram
-      </span>
+      <a
+        href="https://www.instagram.com/bodasconcati/"
+        target="_blank"
+        rel="noopener"
+      >
+        INSTAGRAM
+      </a>
 
-      <span>
-        Pinterest
-      </span>
-
-      <span>
-        WhatsApp
-      </span>
+      <a
+        href="https://www.bodas.net/organizacion-bodas/bodas-con-cati--e303209"
+        target="_blank"
+        rel="noopener"
+      >
+        BODAS.NET
+      </a>
 
     </div>
 
@@ -1029,103 +955,266 @@
 
 
   <!-- ==================================================
-       CARGAR AUTOMÁTICAMENTE LOS REELS
+       CARGA AUTOMÁTICA DE FOTOS Y REELS
   ================================================== -->
 
   <script>
 
-    async function cargarReels() {
+    const REPO = "bodasconcati/bodasconcati.github.io";
 
-      const reelsGallery =
-        document.getElementById("reelsGallery");
+    const BRANCH = "main";
 
-      const noReels =
-        document.getElementById("noReels");
+
+    /* ==================================================
+       TIPOS DE ARCHIVO
+    ================================================== */
+
+    function isImage(filename) {
+
+      return /\.(jpg|jpeg|png|webp|gif|avif)$/i.test(filename);
+
+    }
+
+
+    function isVideo(filename) {
+
+      return /\.(mp4|webm|ogg|mov)$/i.test(filename);
+
+    }
+
+
+    /* ==================================================
+       LEER UNA CARPETA DE GITHUB
+    ================================================== */
+
+    async function readFolder(folder) {
+
+      const url =
+        `https://api.github.com/repos/${REPO}/contents/${folder}?ref=${BRANCH}`;
+
+      const response = await fetch(url);
+
+      if (!response.ok) {
+
+        throw new Error(
+          `No se ha podido leer la carpeta ${folder}`
+        );
+
+      }
+
+      return await response.json();
+
+    }
+
+
+    /* ==================================================
+       CARGAR TODAS LAS FOTOS
+    ================================================== */
+
+    async function loadPhotos() {
+
+      const gallery =
+        document.getElementById("photo-gallery");
+
+      const loading =
+        document.getElementById("photo-loading");
+
+      const empty =
+        document.getElementById("photo-empty");
 
 
       try {
 
-        const respuesta = await fetch(
-          "https://api.github.com/repos/bodasconcati/bodasconcati.github.io/contents/reels"
-        );
+        const files =
+          await readFolder("galeria");
 
 
-        if (!respuesta.ok) {
-          throw new Error("No se pudo acceder a la carpeta reels");
-        }
+        const photos =
+          files
+
+            .filter(file => {
+
+              return (
+                file.type === "file" &&
+                isImage(file.name)
+              );
+
+            })
+
+            .sort((a, b) => {
+
+              return a.name.localeCompare(
+                b.name,
+                undefined,
+                {
+                  numeric: true,
+                  sensitivity: "base"
+                }
+              );
+
+            });
 
 
-        const archivos = await respuesta.json();
+        loading.style.display = "none";
 
 
-        const videos = archivos.filter(
-          archivo =>
-            archivo.type === "file" &&
-            /\.(mp4|webm|ogg)$/i.test(archivo.name)
-        );
+        if (photos.length === 0) {
 
-
-        if (videos.length === 0) {
-
-          noReels.style.display = "block";
+          empty.style.display = "block";
 
           return;
+
         }
 
 
-        videos.forEach(video => {
+        photos.forEach(file => {
 
-          const contenedor =
+          const item =
             document.createElement("div");
 
-          contenedor.className =
-            "reel-item";
+          item.className = "photo-item";
 
 
-          const elementoVideo =
-            document.createElement("video");
+          const image =
+            document.createElement("img");
 
-          elementoVideo.controls = true;
+          image.src = file.download_url;
 
-          elementoVideo.playsInline = true;
+          image.alt =
+            `Boda · ${file.name
+              .replace(/\.[^/.]+$/, "")
+              .replace(/[-_]/g, " ")}`;
 
-          elementoVideo.preload = "metadata";
-
-
-          const fuente =
-            document.createElement("source");
-
-          fuente.src =
-            "reels/" + encodeURIComponent(video.name);
-
-          fuente.type =
-            video.name.toLowerCase().endsWith(".webm")
-              ? "video/webm"
-              : video.name.toLowerCase().endsWith(".ogg")
-                ? "video/ogg"
-                : "video/mp4";
+          image.loading = "lazy";
 
 
-          elementoVideo.appendChild(fuente);
+          item.appendChild(image);
 
-          contenedor.appendChild(elementoVideo);
-
-          reelsGallery.appendChild(contenedor);
+          gallery.appendChild(item);
 
         });
 
-      }
 
-      catch (error) {
+      } catch (error) {
 
-        noReels.style.display = "block";
+        console.error(error);
+
+        loading.textContent =
+          "No se han podido cargar las fotos";
 
       }
 
     }
 
 
-    cargarReels();
+
+    /* ==================================================
+       CARGAR TODOS LOS REELS
+    ================================================== */
+
+    async function loadReels() {
+
+      const gallery =
+        document.getElementById("reels-gallery");
+
+      const loading =
+        document.getElementById("reel-loading");
+
+      const empty =
+        document.getElementById("reel-empty");
+
+
+      try {
+
+        const files =
+          await readFolder("reels");
+
+
+        const reels =
+          files
+
+            .filter(file => {
+
+              return (
+                file.type === "file" &&
+                isVideo(file.name)
+              );
+
+            })
+
+            .sort((a, b) => {
+
+              return a.name.localeCompare(
+                b.name,
+                undefined,
+                {
+                  numeric: true,
+                  sensitivity: "base"
+                }
+              );
+
+            });
+
+
+        loading.style.display = "none";
+
+
+        if (reels.length === 0) {
+
+          empty.style.display = "block";
+
+          return;
+
+        }
+
+
+        reels.forEach(file => {
+
+          const item =
+            document.createElement("div");
+
+          item.className = "reel-item";
+
+
+          const video =
+            document.createElement("video");
+
+          video.src = file.download_url;
+
+          video.controls = true;
+
+          video.playsInline = true;
+
+          video.preload = "metadata";
+
+
+          item.appendChild(video);
+
+          gallery.appendChild(item);
+
+        });
+
+
+      } catch (error) {
+
+        console.error(error);
+
+        loading.textContent =
+          "No se han podido cargar los reels";
+
+      }
+
+    }
+
+
+
+    /* ==================================================
+       ARRANCAR
+    ================================================== */
+
+    loadPhotos();
+
+    loadReels();
 
   </script>
 
